@@ -27,7 +27,6 @@ const debugSetting = {};
 debugSetting.control = {
   showcase: {},
   bookmark: {},
-  icon: {}
 };
 
 debugSetting.showcase = (parent) => {
@@ -239,40 +238,6 @@ debugSetting.bookmark = (parent) => {
               debugSetting.control.bookmark.add.group.wrap(),
               debugSetting.control.bookmark.add.bookmark.wrap()
             ]
-          })
-        ]
-      })
-    ])
-  );
-
-};
-
-debugSetting.icon = (parent) => {
-
-  debugSetting.control.icon = [];
-
-  for (let key in icon.all) {
-    debugSetting.control.icon.push(
-      form.wrap({
-        children: [
-          node('div|class:d-flex d-horizontal d-gap d-center', [
-            node('div|class:large', [icon.render(key)]),
-            node(`p:${key}|class:small`)
-          ])
-        ]
-      })
-    );
-  }
-
-  parent.appendChild(
-    node('div', [
-      form.wrap({
-        children: [
-          form.inline({
-            gap: 'small',
-            wrap: true,
-            equalGap: true,
-            children: debugSetting.control.icon
           })
         ]
       })

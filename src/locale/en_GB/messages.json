@@ -23,10 +23,6 @@
     "message": "Bookmark",
     "description": "Label for the settings menu navigation."
   },
-  "menuNavDebugSubNavIcon": {
-    "message": "Icon",
-    "description": "Label for the settings menu navigation."
-  },
   "menuNavThemeLabel": {
     "message": "Theme",
     "description": "Label for the settings menu navigation."

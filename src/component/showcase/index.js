@@ -1,5 +1,6 @@
 import { state } from '../state';
 import { theme } from '../theme';
+import { icon } from '../icon';
 
 import * as form from '../form';
 
@@ -19,8 +20,9 @@ import { Control_slider } from '../control/slider';
 import { Control_sliderSlim } from '../control/sliderSlim';
 import { Control_sliderDouble } from '../control/sliderDouble';
 import { Control_colorMixer } from '../control/colorMixer';
-import { Control_textReset } from '../control/textReset';
+import { Control_text } from '../control/text';
 import { Control_textarea } from '../control/textarea';
+import { Control_textReset } from '../control/textReset';
 import { Control_inputButton } from '../control/inputButton';
 import { Control_radioGrid } from '../control/radioGrid';
 
@@ -42,7 +44,7 @@ showcase.element = {
 
 showcase.state = {
   input: {
-    radio: { a: '1', b: '1', c: '1', d: '1', e: '1', grid3x3: '1', grid3x1: '1', grid1x3: '1' },
+    radio: { a: '1', b: '1', c: '1', grid3x3: '1', grid3x1: '1', grid1x3: '1' },
     checkbox: { a: true, b: true, c: false }
   }
 };
@@ -53,7 +55,7 @@ showcase.control = {
   dropdown: {},
   button: {},
   bookmark: {},
-  icon: {},
+  icon: [],
 };
 
 showcase.area = {};
@@ -197,9 +199,9 @@ showcase.area.assemble = () => {
     a: new Control_radio({
       object: showcase.state,
       radioGroup: [
-        { id: 'input-radio-a-1', labelText: 'Radio A 1', description: 'Description for radio A 1.', value: '1' },
-        { id: 'input-radio-a-2', labelText: 'Radio A 2', description: 'Description for radio A 2.', value: '2' },
-        { id: 'input-radio-a-3', labelText: 'Radio A 3', description: 'Description for radio A 3.', value: '3' }
+        { id: 'input-radio-a-1', labelText: 'Radio A 1', description: 'Description for radio A 1', value: '1' },
+        { id: 'input-radio-a-2', labelText: 'Radio A 2', description: 'Description for radio A 2', value: '2' },
+        { id: 'input-radio-a-3', labelText: 'Radio A 3', description: 'Description for radio A 3', value: '3' }
       ],
       label: 'Radio group A',
       groupName: 'input-radio-a',
@@ -213,9 +215,10 @@ showcase.area.assemble = () => {
         { id: 'input-radio-b-2', labelText: 'B 2', value: '2' },
         { id: 'input-radio-b-3', labelText: 'B 3', value: '3' }
       ],
-      label: 'Radio group B',
       groupName: 'input-radio-b',
       path: 'input.radio.b',
+      inputButton: true,
+      inputButtonStyle: ['line'],
       action: () => { console.log(showcase.state); }
     }),
     c: new Control_radio({
@@ -228,33 +231,6 @@ showcase.area.assemble = () => {
       label: 'Radio group',
       groupName: 'input-radio-c',
       path: 'input.radio.c',
-      inputButton: true,
-      action: () => { console.log(showcase.state); }
-    }),
-    d: new Control_radio({
-      object: showcase.state,
-      radioGroup: [
-        { id: 'input-radio-d-1', labelText: 'D 1', value: '1' },
-        { id: 'input-radio-d-2', labelText: 'D 2', value: '2' },
-        { id: 'input-radio-d-3', labelText: 'D 3', value: '3' }
-      ],
-      label: 'Radio group',
-      groupName: 'input-radio-d',
-      path: 'input.radio.d',
-      inputButton: true,
-      inputButtonStyle: ['line'],
-      action: () => { console.log(showcase.state); }
-    }),
-    e: new Control_radio({
-      object: showcase.state,
-      radioGroup: [
-        { id: 'input-radio-e-1', labelText: 'E 1', value: '1' },
-        { id: 'input-radio-e-2', labelText: 'E 2', value: '2' },
-        { id: 'input-radio-e-3', labelText: 'E 3', value: '3' }
-      ],
-      label: 'Radio group',
-      groupName: 'input-radio-e',
-      path: 'input.radio.e',
       inputButton: true,
       inputHide: true,
       inputButtonStyle: ['ring'],
@@ -313,7 +289,7 @@ showcase.area.assemble = () => {
       id: 'input-checkbox-a',
       path: 'input.checkbox.a',
       labelText: 'Checkbox A',
-      description: 'Description for checkbox A.',
+      description: 'Description for checkbox A',
       action: () => { console.log(showcase.state); }
     }),
     b: new Control_checkbox({
@@ -321,7 +297,7 @@ showcase.area.assemble = () => {
       id: 'input-checkbox-b',
       path: 'input.checkbox.b',
       labelText: 'Checkbox B',
-      description: 'Description for checkbox B.',
+      description: 'Description for checkbox B',
       action: () => { console.log(showcase.state); }
     }),
     c: new Control_checkbox({
@@ -329,19 +305,14 @@ showcase.area.assemble = () => {
       id: 'input-checkbox-c',
       path: 'input.checkbox.c',
       labelText: 'Checkbox C',
-      description: 'Description for checkbox C.',
+      description: 'Description for checkbox C',
       action: () => { console.log(showcase.state); }
     }),
   };
 
-  showcase.control.button = {
-    a: new Button({ text: 'Button' }).wrap(),
-    b: new Button({ text: 'Button line', style: ['line'] }).wrap(),
-    c: new Button({ text: 'Button ring', style: ['ring'] }).wrap(),
-    d: new Button({ text: 'Button small', style: ['line'], size: 'small' }).wrap(),
-    e: new Button({ text: 'Button medium', style: ['line'] }).wrap(),
-    f: new Button({ text: 'Button large', style: ['line'], size: 'large' }).wrap(),
-  };
+  showcase.control.input.text = new Control_text({ labelText: 'Text', placeholder: 'Placeholder' });
+
+  showcase.control.input.textarea = new Control_textarea({ labelText: 'Text', placeholder: 'Placeholder' });
 
   showcase.control.input.dropdown = new Dropdown({
     text: 'Dropdown',
@@ -353,6 +324,27 @@ showcase.area.assemble = () => {
       { text: 'Two', iconName: 'addBookmark' }
     ]
   });
+
+  showcase.control.button = {
+    a: new Button({ text: 'Button' }).wrap(),
+    b: new Button({ text: 'Button line', style: ['line'] }).wrap(),
+    c: new Button({ text: 'Button ring', style: ['ring'] }).wrap(),
+    d: new Button({ text: 'Button small', style: ['line'], size: 'small' }).wrap(),
+    e: new Button({ text: 'Button medium', style: ['line'] }).wrap(),
+    f: new Button({ text: 'Button large', style: ['line'], size: 'large' }).wrap(),
+  };
+
+  for (let key in icon.all) {
+    showcase.control.icon.push(
+      form.wrap({
+        children: [
+          node('div|class:d-flex d-horizontal d-gap d-center', [
+            node('div', [icon.render(key)])
+          ])
+        ]
+      })
+    );
+  };
 
   showcase.element.showcase.appendChild(
     node('div|class:showcase-side', [
@@ -386,10 +378,8 @@ showcase.area.assemble = () => {
         ]
       }),
       node('hr'),
-      showcase.control.input.radio.b.inline(),
+      showcase.control.input.radio.b.inputButton(),
       showcase.control.input.radio.c.inputButton(),
-      showcase.control.input.radio.d.inputButton(),
-      showcase.control.input.radio.e.inputButton(),
       node('hr'),
       form.wrap({
         children: [
@@ -404,22 +394,58 @@ showcase.area.assemble = () => {
         ]
       }),
       node('hr'),
-      form.inline({
+      form.wrap({
         children: [
-          showcase.control.button.a,
-          showcase.control.button.b,
-          showcase.control.button.c,
-        ]
-      }),
-      form.inline({
-        children: [
-          showcase.control.button.d,
-          showcase.control.button.e,
-          showcase.control.button.f,
+          form.inline({
+            gap: 'small',
+            children: [
+              form.wrap({
+                children: [
+                  form.inline({
+                    gap: 'small',
+                    children: [
+                      showcase.control.button.a,
+                      showcase.control.button.b,
+                      showcase.control.button.c,
+                    ]
+                  })
+                ]
+              }),
+              form.wrap({
+                children: [
+                  form.inline({
+                    gap: 'small',
+                    children: [
+                      showcase.control.button.d,
+                      showcase.control.button.e,
+                      showcase.control.button.f,
+                    ]
+                  })
+                ]
+              }),
+              form.wrap({
+                children: [
+                  showcase.control.input.dropdown.toggle
+                ]
+              }),
+            ]
+          })
         ]
       }),
       node('hr'),
-      showcase.control.input.dropdown.toggle,
+      showcase.control.input.text.wrap(),
+      showcase.control.input.textarea.wrap(),
+      node('hr'),
+      form.wrap({
+        children: [
+          form.inline({
+            gap: 'small',
+            wrap: true,
+            equalGap: true,
+            children: showcase.control.icon
+          })
+        ]
+      }),
     ])
   );
 
