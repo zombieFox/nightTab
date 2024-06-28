@@ -19,14 +19,6 @@
     "message": "Showcase",
     "description": "Label for the settings menu navigation."
   },
-  "menuNavDebugSubNavInput": {
-    "message": "Input",
-    "description": "Label for the settings menu navigation."
-  },
-  "menuNavDebugSubNavButton": {
-    "message": "Button",
-    "description": "Label for the settings menu navigation."
-  },
   "menuNavDebugSubNavBookmark": {
     "message": "Bookmark",
     "description": "Label for the settings menu navigation."

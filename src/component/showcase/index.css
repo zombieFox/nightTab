@@ -8,5 +8,15 @@
 .showcase {
   display: grid;
   gap: 4em;
-  grid-template-columns: 2fr 5fr;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+    "side content"
+}
+
+.showcase-side {
+  grid-area: side;
+}
+
+.showcase-content {
+  grid-area: content;
 }
