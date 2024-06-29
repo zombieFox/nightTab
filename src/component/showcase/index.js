@@ -43,10 +43,61 @@ showcase.element = {
 };
 
 showcase.state = {
+  disable: false,
   input: {
     radio: { a: '1', b: '1', c: '1', grid3x3: '1', grid3x1: '1', grid1x3: '1' },
     checkbox: { a: true, b: true, c: false }
   }
+};
+
+showcase.disable = () => {
+
+  showcase.state.disable = !showcase.state.disable;
+
+  if (showcase.state.disable) {
+
+    showcase.control.input.radio.a.disable();
+    showcase.control.input.radio.b.disable();
+    showcase.control.input.radio.c.disable();
+    showcase.control.input.radio.grid3x3.disable();
+    showcase.control.input.radio.grid3x1.disable();
+    showcase.control.input.radio.grid1x3.disable();
+    showcase.control.input.checkbox.a.disable();
+    showcase.control.input.checkbox.b.disable();
+    showcase.control.input.checkbox.c.disable();
+    showcase.control.button.a.disable();
+    showcase.control.button.b.disable();
+    showcase.control.button.c.disable();
+    showcase.control.button.d.disable();
+    showcase.control.button.e.disable();
+    showcase.control.button.f.disable();
+    showcase.control.input.dropdown.disable();
+    showcase.control.input.text.disable();
+    showcase.control.input.textarea.disable();
+
+  } else {
+
+    showcase.control.input.radio.a.enable();
+    showcase.control.input.radio.b.enable();
+    showcase.control.input.radio.c.enable();
+    showcase.control.input.radio.grid3x3.enable();
+    showcase.control.input.radio.grid3x1.enable();
+    showcase.control.input.radio.grid1x3.enable();
+    showcase.control.input.checkbox.a.enable();
+    showcase.control.input.checkbox.b.enable();
+    showcase.control.input.checkbox.c.enable();
+    showcase.control.button.a.enable();
+    showcase.control.button.b.enable();
+    showcase.control.button.c.enable();
+    showcase.control.button.d.enable();
+    showcase.control.button.e.enable();
+    showcase.control.button.f.enable();
+    showcase.control.input.dropdown.enable();
+    showcase.control.input.text.enable();
+    showcase.control.input.textarea.enable();
+
+  }
+
 };
 
 showcase.control = {
@@ -193,6 +244,7 @@ showcase.area.assemble = () => {
         applyCSSVar('theme.radius');
       }
     }),
+    disable: new Button({ text: 'Disable/Enable', style: ['ring'], func: () => { showcase.disable(); } }),
   };
 
   showcase.control.input.radio = {
@@ -312,7 +364,7 @@ showcase.area.assemble = () => {
 
   showcase.control.input.text = new Control_text({ labelText: 'Text', placeholder: 'Placeholder' });
 
-  showcase.control.input.textarea = new Control_textarea({ labelText: 'Text', placeholder: 'Placeholder' });
+  showcase.control.input.textarea = new Control_textarea({ labelText: 'Textarea', placeholder: 'Placeholder' });
 
   showcase.control.input.dropdown = new Dropdown({
     text: 'Dropdown',
@@ -326,12 +378,12 @@ showcase.area.assemble = () => {
   });
 
   showcase.control.button = {
-    a: new Button({ text: 'Button' }).wrap(),
-    b: new Button({ text: 'Button line', style: ['line'] }).wrap(),
-    c: new Button({ text: 'Button ring', style: ['ring'] }).wrap(),
-    d: new Button({ text: 'Button small', style: ['line'], size: 'small' }).wrap(),
-    e: new Button({ text: 'Button medium', style: ['line'] }).wrap(),
-    f: new Button({ text: 'Button large', style: ['line'], size: 'large' }).wrap(),
+    a: new Button({ text: 'Button' }),
+    b: new Button({ text: 'Button line', style: ['line'] }),
+    c: new Button({ text: 'Button ring', style: ['ring'] }),
+    d: new Button({ text: 'Button small', style: ['line'], size: 'small' }),
+    e: new Button({ text: 'Button medium', style: ['line'] }),
+    f: new Button({ text: 'Button large', style: ['line'], size: 'large' }),
   };
 
   for (let key in icon.all) {
@@ -349,7 +401,18 @@ showcase.area.assemble = () => {
   showcase.element.showcase.appendChild(
     node('div|class:showcase-side', [
       showcase.control.side.shade.shadeBar(),
-      showcase.control.side.style.inputButton(),
+      form.wrap({
+        children: [
+          form.inline({
+            align: 'top',
+            gap: 'small',
+            children: [
+              showcase.control.side.style.inputButton(),
+              showcase.control.side.disable.wrap(),
+            ]
+          })
+        ]
+      }),
       node('hr'),
       showcase.control.side.h.wrap(),
       showcase.control.side.s.wrap(),
@@ -378,8 +441,17 @@ showcase.area.assemble = () => {
         ]
       }),
       node('hr'),
-      showcase.control.input.radio.b.inputButton(),
-      showcase.control.input.radio.c.inputButton(),
+      form.wrap({
+        children: [
+          form.inline({
+            align: 'top',
+            children: [
+              showcase.control.input.radio.b.inputButton(),
+              showcase.control.input.radio.c.inputButton(),
+            ]
+          })
+        ]
+      }),
       node('hr'),
       form.wrap({
         children: [
@@ -404,9 +476,9 @@ showcase.area.assemble = () => {
                   form.inline({
                     gap: 'small',
                     children: [
-                      showcase.control.button.a,
-                      showcase.control.button.b,
-                      showcase.control.button.c,
+                      showcase.control.button.a.wrap(),
+                      showcase.control.button.b.wrap(),
+                      showcase.control.button.c.wrap(),
                     ]
                   })
                 ]
@@ -416,9 +488,9 @@ showcase.area.assemble = () => {
                   form.inline({
                     gap: 'small',
                     children: [
-                      showcase.control.button.d,
-                      showcase.control.button.e,
-                      showcase.control.button.f,
+                      showcase.control.button.d.wrap(),
+                      showcase.control.button.e.wrap(),
+                      showcase.control.button.f.wrap(),
                     ]
                   })
                 ]

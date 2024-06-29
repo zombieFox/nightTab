@@ -199,6 +199,14 @@ export const Dropdown = function({
 
   };
 
+  this.disable = () => {
+    this.element.toggle.disable();
+  };
+
+  this.enable = () => {
+    this.element.toggle.enable();
+  };
+
   this.assemble();
 
 };
