@@ -46,7 +46,23 @@ showcase.state = {
   disable: false,
   input: {
     radio: { a: '1', b: '1', c: '1', grid3x3: '1', grid3x1: '1', grid1x3: '1' },
-    checkbox: { a: true, b: true, c: false }
+    checkbox: { a: true, b: true, c: false },
+    color: { hsl: { h: 221, s: 100, l: 50 }, rgb: { r: 0, g: 80, b: 255 } },
+  }
+};
+
+showcase.default = {
+  input: {
+    color: { hsl: { h: 221, s: 100, l: 50 }, rgb: { r: 0, g: 80, b: 255 } },
+  }
+};
+
+showcase.minMax = {
+  input: {
+    color: {
+      hsl: { h: { min: 0, max: 359 }, s: { min: 0, max: 100 }, l: { min: 0, max: 100 } },
+      rgb: { r: { min: 0, max: 255 }, g: { min: 0, max: 255 }, b: { min: 0, max: 255 } },
+    },
   }
 };
 
@@ -55,6 +71,8 @@ showcase.disable = () => {
   showcase.state.disable = !showcase.state.disable;
 
   if (showcase.state.disable) {
+
+    showcase.control.side.disable.active();
 
     showcase.control.input.radio.a.disable();
     showcase.control.input.radio.b.disable();
@@ -74,8 +92,11 @@ showcase.disable = () => {
     showcase.control.input.dropdown.disable();
     showcase.control.input.text.disable();
     showcase.control.input.textarea.disable();
+    showcase.control.input.color.disable();
 
   } else {
+
+    showcase.control.side.disable.deactive();
 
     showcase.control.input.radio.a.enable();
     showcase.control.input.radio.b.enable();
@@ -95,6 +116,7 @@ showcase.disable = () => {
     showcase.control.input.dropdown.enable();
     showcase.control.input.text.enable();
     showcase.control.input.textarea.enable();
+    showcase.control.input.color.enable();
 
   }
 
@@ -142,6 +164,7 @@ showcase.area.assemble = () => {
         applyCSSClass('theme.style');
       }
     }),
+    disable: new Button({ text: 'Disable', style: ['ring'], func: () => { showcase.disable(); } }),
     h: new Control_sliderSlim({
       object: state.get.current(),
       path: 'theme.color.range.primary.h',
@@ -244,7 +267,6 @@ showcase.area.assemble = () => {
         applyCSSVar('theme.radius');
       }
     }),
-    disable: new Button({ text: 'Disable/Enable', style: ['ring'], func: () => { showcase.disable(); } }),
   };
 
   showcase.control.input.radio = {
@@ -377,6 +399,17 @@ showcase.area.assemble = () => {
     ]
   });
 
+  showcase.control.input.color = new Control_colorMixer({
+    object: showcase.state,
+    path: 'input.color',
+    id: 'input-color',
+    labelText: 'Colour',
+    defaultValue: showcase.default.input.color.rgb,
+    minMaxObject: showcase.minMax,
+    randomColor: true,
+    action: () => { console.log(showcase.state); }
+  });
+
   showcase.control.button = {
     a: new Button({ text: 'Button' }),
     b: new Button({ text: 'Button line', style: ['line'] }),
@@ -471,42 +504,34 @@ showcase.area.assemble = () => {
           form.inline({
             gap: 'small',
             children: [
-              form.wrap({
-                children: [
-                  form.inline({
-                    gap: 'small',
-                    children: [
-                      showcase.control.button.a.wrap(),
-                      showcase.control.button.b.wrap(),
-                      showcase.control.button.c.wrap(),
-                    ]
-                  })
-                ]
-              }),
-              form.wrap({
-                children: [
-                  form.inline({
-                    gap: 'small',
-                    children: [
-                      showcase.control.button.d.wrap(),
-                      showcase.control.button.e.wrap(),
-                      showcase.control.button.f.wrap(),
-                    ]
-                  })
-                ]
-              }),
-              form.wrap({
-                children: [
-                  showcase.control.input.dropdown.toggle
-                ]
-              }),
+              showcase.control.button.a.wrap(),
+              showcase.control.button.b.wrap(),
+              showcase.control.button.c.wrap(),
             ]
           })
+        ]
+      }),
+      form.wrap({
+        children: [
+          form.inline({
+            gap: 'small',
+            children: [
+              showcase.control.button.d.wrap(),
+              showcase.control.button.e.wrap(),
+              showcase.control.button.f.wrap(),
+            ]
+          })
+        ]
+      }),
+      form.wrap({
+        children: [
+          showcase.control.input.dropdown.toggle
         ]
       }),
       node('hr'),
       showcase.control.input.text.wrap(),
       showcase.control.input.textarea.wrap(),
+      showcase.control.input.color.wrap(),
       node('hr'),
       form.wrap({
         children: [
