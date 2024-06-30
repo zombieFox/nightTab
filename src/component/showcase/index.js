@@ -12,6 +12,7 @@ import { Alert } from '../alert';
 import { Link } from '../link';
 import { Dropdown } from '../dropdown';
 import { ShadeBar } from '../shadeBar';
+import { Tab } from '../tab';
 
 import { Control_helperText } from '../control/helperText';
 import { Control_radio } from '../control/radio';
@@ -48,12 +49,16 @@ showcase.state = {
     radio: { a: '1', b: '1', c: '1', grid3x3: '1', grid3x1: '1', grid1x3: '1' },
     checkbox: { a: true, b: true, c: false },
     color: { hsl: { h: 221, s: 100, l: 50 }, rgb: { r: 0, g: 80, b: 255 } },
+    number: 50,
+    numberRange: { start: 20, end: 80 },
   }
 };
 
 showcase.default = {
   input: {
     color: { hsl: { h: 221, s: 100, l: 50 }, rgb: { r: 0, g: 80, b: 255 } },
+    number: 50,
+    numberRange: { start: 20, end: 80 },
   }
 };
 
@@ -63,6 +68,8 @@ showcase.minMax = {
       hsl: { h: { min: 0, max: 359 }, s: { min: 0, max: 100 }, l: { min: 0, max: 100 } },
       rgb: { r: { min: 0, max: 255 }, g: { min: 0, max: 255 }, b: { min: 0, max: 255 } },
     },
+    number: { min: 0, max: 255 },
+    numberRange: { start: { min: 0, max: 100 }, end: { min: 0, max: 100 } },
   }
 };
 
@@ -89,10 +96,14 @@ showcase.disable = () => {
     showcase.control.button.d.disable();
     showcase.control.button.e.disable();
     showcase.control.button.f.disable();
-    showcase.control.input.dropdown.disable();
+    showcase.control.button.dropdown.disable();
+    showcase.control.tab.disable();
     showcase.control.input.text.disable();
     showcase.control.input.textarea.disable();
     showcase.control.input.color.disable();
+    showcase.control.input.color.disable();
+    showcase.control.input.number.disable();
+    showcase.control.input.numberRange.disable();
 
   } else {
 
@@ -113,10 +124,14 @@ showcase.disable = () => {
     showcase.control.button.d.enable();
     showcase.control.button.e.enable();
     showcase.control.button.f.enable();
-    showcase.control.input.dropdown.enable();
+    showcase.control.button.dropdown.enable();
+    showcase.control.tab.enable();
     showcase.control.input.text.enable();
     showcase.control.input.textarea.enable();
     showcase.control.input.color.enable();
+    showcase.control.input.color.enable();
+    showcase.control.input.number.enable();
+    showcase.control.input.numberRange.enable();
 
   }
 
@@ -388,17 +403,6 @@ showcase.area.assemble = () => {
 
   showcase.control.input.textarea = new Control_textarea({ labelText: 'Textarea', placeholder: 'Placeholder' });
 
-  showcase.control.input.dropdown = new Dropdown({
-    text: 'Dropdown',
-    buttonStyle: ['line'],
-    iconName: 'add',
-    persist: true,
-    menuItem: [
-      { text: 'One', iconName: 'addGroup' },
-      { text: 'Two', iconName: 'addBookmark' }
-    ]
-  });
-
   showcase.control.input.color = new Control_colorMixer({
     object: showcase.state,
     path: 'input.color',
@@ -410,6 +414,71 @@ showcase.area.assemble = () => {
     action: () => { console.log(showcase.state); }
   });
 
+  showcase.control.input.number = new Control_slider({
+    object: showcase.state,
+    path: 'input.number',
+    id: 'input-number',
+    labelText: 'Number',
+    value: showcase.state.input.number,
+    defaultValue: showcase.default.input.number,
+    min: showcase.minMax.input.number.min,
+    max: showcase.minMax.input.number.max,
+    action: () => { console.log(showcase.state); }
+  });
+
+  showcase.control.input.numberRange = new Control_sliderDouble({
+    object: showcase.state,
+    labelText: 'Number Range',
+    left: {
+      path: 'input.numberRange.start',
+      id: 'input-numberRange-start',
+      labelText: 'Start',
+      value: showcase.state.input.numberRange.start,
+      defaultValue: showcase.default.input.numberRange.start,
+      min: showcase.minMax.input.numberRange.start.min,
+      max: showcase.minMax.input.numberRange.start.max,
+      action: () => { console.log(showcase.state); }
+    },
+    right: {
+      path: 'input.numberRange.end',
+      id: 'input-numberRange-endend',
+      labelText: 'End',
+      value: showcase.state.input.numberRange.end,
+      defaultValue: showcase.default.input.numberRange.end,
+      min: showcase.minMax.input.numberRange.end.min,
+      max: showcase.minMax.input.numberRange.end.max,
+      action: () => { console.log(showcase.state); }
+    }
+  });
+
+  showcase.control.tab = new Tab({
+    group: [{
+      tabText: 'Tab 1',
+      area: node('div', [node('p:Tabbed content 1')]),
+      active: true
+    }, {
+      tabText: 'Tab 2',
+      area: node('div', [node('p:Tabbed content 2')]),
+      active: false
+    }, {
+      tabText: 'Tab 3',
+      area: node('div', [node('p:Tabbed content 3')]),
+      active: false
+    }, {
+      tabText: 'Tab 4',
+      area: node('div', [node('p:Tabbed content 4')]),
+      active: false
+    }, {
+      tabText: 'Tab 5',
+      area: node('div', [node('p:Tabbed content 5')]),
+      active: false
+    }, {
+      tabText: 'Tab 6',
+      area: node('div', [node('p:Tabbed content 6')]),
+      active: false
+    }]
+  });
+
   showcase.control.button = {
     a: new Button({ text: 'Button' }),
     b: new Button({ text: 'Button line', style: ['line'] }),
@@ -417,6 +486,16 @@ showcase.area.assemble = () => {
     d: new Button({ text: 'Button small', style: ['line'], size: 'small' }),
     e: new Button({ text: 'Button medium', style: ['line'] }),
     f: new Button({ text: 'Button large', style: ['line'], size: 'large' }),
+    dropdown: new Dropdown({
+      text: 'Dropdown',
+      buttonStyle: ['line'],
+      iconName: 'add',
+      persist: true,
+      menuItem: [
+        { text: 'One', iconName: 'addGroup' },
+        { text: 'Two', iconName: 'addBookmark' }
+      ]
+    }),
   };
 
   for (let key in icon.all) {
@@ -525,13 +604,16 @@ showcase.area.assemble = () => {
       }),
       form.wrap({
         children: [
-          showcase.control.input.dropdown.toggle
+          showcase.control.button.dropdown.toggle
         ]
       }),
       node('hr'),
+      showcase.control.tab.tab(),
       showcase.control.input.text.wrap(),
       showcase.control.input.textarea.wrap(),
       showcase.control.input.color.wrap(),
+      showcase.control.input.number.wrap(),
+      showcase.control.input.numberRange.wrap(),
       node('hr'),
       form.wrap({
         children: [

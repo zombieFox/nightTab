@@ -61,9 +61,19 @@
   transition: background-color var(--layout-duration-01), border-color var(--layout-transition-extra-fast), color var(--layout-transition-extra-fast);
 }
 
+.tab.disabled .tab-nav-button {
+  background-color: transparent;
+}
+
+.tab.disabled .tab-nav-button.active {
+  background-color: hsl(var(--button-background-disabled));
+  color: hsl(var(--button-text-disabled));
+}
+
 .tab-nav-indicator {
   background-color: rgb(var(--theme-accent));
   border-radius: calc(var(--theme-radius) * 0.01em);
+  opacity: 1;
   position: absolute;
   top: calc(var(--tab-indicator-top) * 1px);
   left: calc(var(--tab-indicator-left) * 1px);
@@ -76,7 +86,11 @@
 
 .tab-nav-indicator-active .tab-nav-indicator {
   animation: none;
-  transition: top var(--layout-transition-extra-fast), left var(--layout-transition-extra-fast), width var(--layout-transition-extra-fast), height var(--layout-transition-extra-fast);
+  transition: top var(--layout-transition-extra-fast), left var(--layout-transition-extra-fast), width var(--layout-transition-extra-fast), height var(--layout-transition-extra-fast), opacity var(--layout-transition-extra-fast);
+}
+
+.tab.disabled .tab-nav-indicator {
+  opacity: 0;
 }
 
 .tab-content {

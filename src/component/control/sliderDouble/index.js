@@ -244,11 +244,13 @@ export const Control_sliderDouble = function ({
   };
 
   this.disable = () => {
+    this.label.classList.add('disabled');
     this.range.left.disable();
     this.range.right.disable();
   };
 
   this.enable = () => {
+    this.label.classList.remove('disabled');
     this.range.left.enable();
     this.range.right.enable();
   };

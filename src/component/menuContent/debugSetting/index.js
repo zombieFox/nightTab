@@ -35,9 +35,15 @@ debugSetting.showcase = (parent) => {
     text: 'Showcase controls',
     style: ['line'],
     func: () => {
+
       menu.close();
+
       layout.area.remove();
+
       showcase.area.render();
+
+      showcase.control.tab.update();
+
     }
   });
 
