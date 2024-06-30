@@ -808,8 +808,7 @@ themeSetting.font = (parent) => {
       ],
       groupName: 'theme-font-display-style',
       path: 'theme.font.display.style',
-      inputButton: true,
-      inputHide: true,
+      buttonHideInput: true,
       inputButtonStyle: ['line'],
       action: () => {
         applyCSSVar('theme.font.display.style');
@@ -897,8 +896,7 @@ themeSetting.font = (parent) => {
       ],
       groupName: 'theme-font-ui-style',
       path: 'theme.font.ui.style',
-      inputButton: true,
-      inputHide: true,
+      buttonHideInput: true,
       inputButtonStyle: ['line'],
       action: () => {
         applyCSSVar('theme.font.ui.style');

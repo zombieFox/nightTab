@@ -3,15 +3,14 @@ import * as form from '../../form';
 import { get } from '../../../utility/get';
 import { set } from '../../../utility/set';
 
-export const Control_checkbox = function ({
+export const Control_checkbox = function({
   object = {},
   id = 'name',
   path = false,
   labelText = 'Label',
   description = false,
   action = false,
-  inputButton = false,
-  inputHide = false,
+  buttonHideInput = false,
   inputButtonStyle = false
 } = {}) {
 
@@ -52,6 +51,25 @@ export const Control_checkbox = function ({
         this.label
       ]
     });
+
+  };
+
+  this.inputButton = () => {
+
+    const wrap = form.wrap();
+
+    wrap.appendChild(
+      form.input.inputButton({
+        buttonHideInput: buttonHideInput,
+        style: inputButtonStyle,
+        children: [
+          this.checkbox,
+          this.label
+        ]
+      })
+    );
+
+    return wrap;
 
   };
 

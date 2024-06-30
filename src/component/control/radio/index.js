@@ -10,8 +10,7 @@ export const Control_radio = function ({
   groupName = 'Group',
   path = false,
   action = false,
-  inputButton = false,
-  inputHide = false,
+  buttonHideInput = false,
   inputButtonStyle = false
 } = {}) {
 
@@ -62,8 +61,7 @@ export const Control_radio = function ({
         },
         inputButton: () => {
           return form.input.inputButton({
-            inputButton: inputButton,
-            inputHide: inputHide,
+            buttonHideInput: buttonHideInput,
             style: inputButtonStyle,
             children: [
               radioAndLabel.radio,

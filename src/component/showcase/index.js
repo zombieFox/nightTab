@@ -47,7 +47,7 @@ showcase.state = {
   disable: false,
   input: {
     radio: { a: '1', b: '1', c: '1', grid3x3: '1', grid3x1: '1', grid1x3: '1' },
-    checkbox: { a: true, b: true, c: false },
+    checkbox: { a: true, b: true, c: false, d: false, e: false },
     color: { hsl: { h: 221, s: 100, l: 50 }, rgb: { r: 0, g: 80, b: 255 } },
     number: 50,
     numberRange: { start: 20, end: 80 },
@@ -90,6 +90,8 @@ showcase.disable = () => {
     showcase.control.input.checkbox.a.disable();
     showcase.control.input.checkbox.b.disable();
     showcase.control.input.checkbox.c.disable();
+    showcase.control.input.checkbox.d.disable();
+    showcase.control.input.checkbox.e.disable();
     showcase.control.button.a.disable();
     showcase.control.button.b.disable();
     showcase.control.button.c.disable();
@@ -118,6 +120,8 @@ showcase.disable = () => {
     showcase.control.input.checkbox.a.enable();
     showcase.control.input.checkbox.b.enable();
     showcase.control.input.checkbox.c.enable();
+    showcase.control.input.checkbox.d.enable();
+    showcase.control.input.checkbox.e.enable();
     showcase.control.button.a.enable();
     showcase.control.button.b.enable();
     showcase.control.button.c.enable();
@@ -164,8 +168,7 @@ showcase.area.assemble = () => {
     shade: new ShadeBar(),
     style: new Control_radio({
       object: state.get.current(),
-      inputButton: true,
-      inputHide: true,
+      buttonHideInput: true,
       inputButtonStyle: ['line'],
       radioGroup: [
         { id: 'theme-style-dark', labelText: 'Dark', value: 'dark' },
@@ -179,7 +182,7 @@ showcase.area.assemble = () => {
         applyCSSClass('theme.style');
       }
     }),
-    disable: new Button({ text: 'Disable', style: ['ring'], func: () => { showcase.disable(); } }),
+    disable: new Button({ text: 'Disable', style: ['line'], func: () => { showcase.disable(); } }),
     h: new Control_sliderSlim({
       object: state.get.current(),
       path: 'theme.color.range.primary.h',
@@ -210,7 +213,7 @@ showcase.area.assemble = () => {
     }),
     contrast: new Control_sliderDouble({
       object: state.get.current(),
-      labelText: 'Contrast range',
+      labelText: 'Contrast',
       style: 'contrast',
       left: {
         path: 'theme.color.contrast.start',
@@ -241,7 +244,7 @@ showcase.area.assemble = () => {
       object: state.get.current(),
       path: 'theme.accent',
       id: 'theme-accent',
-      labelText: 'Accent colour',
+      labelText: 'Accent',
       defaultValue: state.get.default().theme.accent.rgb,
       minMaxObject: state.get.minMax(),
       randomColor: true,
@@ -300,28 +303,26 @@ showcase.area.assemble = () => {
     b: new Control_radio({
       object: showcase.state,
       radioGroup: [
-        { id: 'input-radio-b-1', labelText: 'B 1', value: '1' },
-        { id: 'input-radio-b-2', labelText: 'B 2', value: '2' },
-        { id: 'input-radio-b-3', labelText: 'B 3', value: '3' }
+        { id: 'input-radio-b-1', labelText: 'Radio 1', value: '1' },
+        { id: 'input-radio-b-2', labelText: 'Radio 2', value: '2' },
+        { id: 'input-radio-b-3', labelText: 'Radio 3', value: '3' }
       ],
       groupName: 'input-radio-b',
       path: 'input.radio.b',
-      inputButton: true,
       inputButtonStyle: ['line'],
       action: () => { console.log(showcase.state); }
     }),
     c: new Control_radio({
       object: showcase.state,
       radioGroup: [
-        { id: 'input-radio-c-1', labelText: 'C 1', value: '1' },
-        { id: 'input-radio-c-2', labelText: 'C 2', value: '2' },
-        { id: 'input-radio-c-3', labelText: 'C 3', value: '3' }
+        { id: 'input-radio-c-1', labelText: 'Radio 1', value: '1' },
+        { id: 'input-radio-c-2', labelText: 'Radio 2', value: '2' },
+        { id: 'input-radio-c-3', labelText: 'Radio 3', value: '3' }
       ],
       label: 'Radio group',
       groupName: 'input-radio-c',
       path: 'input.radio.c',
-      inputButton: true,
-      inputHide: true,
+      buttonHideInput: true,
       inputButtonStyle: ['ring'],
       action: () => { console.log(showcase.state); }
     }),
@@ -338,7 +339,7 @@ showcase.area.assemble = () => {
         { id: 'input-radio-grid3x3-8', labelText: '8', value: '8', position: 8 },
         { id: 'input-radio-grid3x3-9', labelText: '9', value: '9', position: 9 }
       ],
-      label: 'Radio group grid 3x3',
+      label: 'Radio group grid',
       groupName: 'input-radio-grid3x3',
       path: 'input.radio.grid3x3',
       gridSize: '3x3',
@@ -351,7 +352,7 @@ showcase.area.assemble = () => {
         { id: 'input-radio-grid3x1-2', labelText: '2', value: '2', position: 2 },
         { id: 'input-radio-grid3x1-3', labelText: '3', value: '3', position: 3 }
       ],
-      label: 'Radio group grid 3x1',
+      label: 'Radio group grid horizontal',
       groupName: 'input-radio-grid3x1',
       path: 'input.radio.grid3x1',
       gridSize: '3x1',
@@ -364,7 +365,7 @@ showcase.area.assemble = () => {
         { id: 'input-radio-grid1x3-2', labelText: '2', value: '2', position: 2 },
         { id: 'input-radio-grid1x3-3', labelText: '3', value: '3', position: 3 }
       ],
-      label: 'Radio group grid 1x3',
+      label: 'Radio group grid vertical',
       groupName: 'input-radio-grid1x3',
       path: 'input.radio.grid1x3',
       gridSize: '1x3',
@@ -395,6 +396,23 @@ showcase.area.assemble = () => {
       path: 'input.checkbox.c',
       labelText: 'Checkbox C',
       description: 'Description for checkbox C',
+      action: () => { console.log(showcase.state); }
+    }),
+    d: new Control_checkbox({
+      object: showcase.state,
+      id: 'input-checkbox-d',
+      path: 'input.checkbox.d',
+      labelText: 'Checkbox D',
+      inputButtonStyle: ['line'],
+      action: () => { console.log(showcase.state); }
+    }),
+    e: new Control_checkbox({
+      object: showcase.state,
+      id: 'input-checkbox-e',
+      path: 'input.checkbox.e',
+      labelText: 'Checkbox E',
+      buttonHideInput: true,
+      inputButtonStyle: ['line'],
       action: () => { console.log(showcase.state); }
     }),
   };
@@ -562,6 +580,17 @@ showcase.area.assemble = () => {
               showcase.control.input.radio.c.inputButton(),
             ]
           })
+        ]
+      }),
+      form.wrap({
+        children: [
+          form.inline({
+            align: 'top',
+            children: [
+              showcase.control.input.checkbox.d.inputButton(),
+              showcase.control.input.checkbox.e.inputButton(),
+            ]
+          }),
         ]
       }),
       node('hr'),
