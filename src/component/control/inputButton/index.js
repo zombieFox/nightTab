@@ -4,7 +4,7 @@ import { get } from '../../../utility/get';
 import { set } from '../../../utility/set';
 import { convertColor } from '../../../utility/convertColor';
 
-export const Control_inputButton = function ({
+export const Control_inputButton = function({
   object = {},
   path = false,
   id = 'name',
@@ -21,6 +21,7 @@ export const Control_inputButton = function ({
   this.input;
 
   switch (type) {
+
     case 'file':
       this.input = form.input.file({
         id: id,

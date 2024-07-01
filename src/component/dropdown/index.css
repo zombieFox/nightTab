@@ -22,6 +22,7 @@
   min-width: 15em;
   box-shadow: var(--theme-shadow-bottom-large);
   overflow: hidden;
+  transition: background-color var(--layout-transition-extra-fast);
 }
 
 .dropdown-menu-button {

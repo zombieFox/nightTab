@@ -15,20 +15,12 @@
     "message": "Debug",
     "description": "Label for the settings menu navigation."
   },
-  "menuNavDebugSubNavInput": {
-    "message": "Input",
-    "description": "Label for the settings menu navigation."
-  },
-  "menuNavDebugSubNavButton": {
-    "message": "Button",
+  "menuNavDebugSubNavShowcase": {
+    "message": "Showcase",
     "description": "Label for the settings menu navigation."
   },
   "menuNavDebugSubNavBookmark": {
     "message": "Bookmark",
-    "description": "Label for the settings menu navigation."
-  },
-  "menuNavDebugSubNavIcon": {
-    "message": "Icon",
     "description": "Label for the settings menu navigation."
   },
   "menuNavThemeLabel": {

@@ -5,7 +5,7 @@ import { set } from '../../../utility/set';
 
 export const Control_radioGrid = function ({
   radioGroup = [],
-  label = 'Label',
+  label = false,
   object = {},
   groupName = 'group',
   path = false,
@@ -20,8 +20,6 @@ export const Control_radioGrid = function ({
   const radioGroupPath = path;
 
   const gridElement = form.grid();
-
-  this.label = false;
 
   if (label) {
     this.label = form.label({

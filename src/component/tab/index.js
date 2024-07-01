@@ -4,7 +4,7 @@ import { node } from '../../utility/node';
 
 import './index.css';
 
-export const Tab = function ({
+export const Tab = function({
   group = []
 } = {}) {
 
@@ -30,7 +30,7 @@ export const Tab = function ({
 
       item.toggle = new Button({
         text: item.tabText,
-        classList: ['tab-nav-button', 'form-group-item-equal'],
+        classList: ['tab-nav-button'],
         func: () => {
 
           this.deactive();
@@ -75,7 +75,6 @@ export const Tab = function ({
           this.element.tab.style.setProperty('--tab-indicator-left', Math.round(itemBox.left - navBox.left));
           this.element.tab.style.setProperty('--tab-indicator-width', Math.round(itemBox.width));
           this.element.tab.style.setProperty('--tab-indicator-height', Math.round(itemBox.height));
-
 
         }
 
@@ -132,6 +131,30 @@ export const Tab = function ({
     this.indicator.render();
 
     this.nav.render();
+
+  };
+
+  this.disable = () => {
+
+    this.element.tab.classList.add('disabled');
+
+    group.forEach((item) => {
+
+      item.toggle.disable()
+
+    });
+
+  };
+
+  this.enable = () => {
+
+    this.element.tab.classList.remove('disabled');
+
+    group.forEach((item) => {
+
+      item.toggle.enable()
+
+    });
 
   };
 

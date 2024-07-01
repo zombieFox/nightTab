@@ -4,7 +4,7 @@ import './index.css';
 
 export const inputButton = function ({
   children = false,
-  inputHide = false,
+  buttonHideInput = false,
   srOnly = false,
   style = []
 } = {}) {
@@ -34,7 +34,7 @@ export const inputButton = function ({
     });
   }
 
-  if (inputHide) {
+  if (buttonHideInput) {
     inputButtonElement.classList.add('form-input-hide');
   }
 

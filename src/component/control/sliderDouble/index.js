@@ -8,7 +8,7 @@ import { node } from '../../../utility/node';
 import { get } from '../../../utility/get';
 import { set } from '../../../utility/set';
 
-export const Control_sliderDouble = function ({
+export const Control_sliderDouble = function({
   object = {},
   labelText = 'Label',
   style = false,
@@ -90,12 +90,12 @@ export const Control_sliderDouble = function ({
       style: style,
       action: () => {
 
-        if (get({ object: state.get.current(), path: left.path }) > get({ object: state.get.minMax(), path: left.path }).max - 10) {
-          set({ object: state.get.current(), path: left.path, value: get({ object: state.get.minMax(), path: left.path }).max - 10 });
+        if (get({ object: object, path: left.path }) > left.max - 10) {
+          set({ object: object, path: left.path, value: left.max - 10 });
         }
 
-        if (get({ object: state.get.current(), path: left.path }) >= get({ object: state.get.current(), path: right.path }) - 10) {
-          set({ object: state.get.current(), path: right.path, value: get({ object: state.get.current(), path: left.path }) + 10 });
+        if (get({ object: object, path: left.path }) >= get({ object: object, path: right.path }) - 10) {
+          set({ object: object, path: right.path, value: get({ object: object, path: left.path }) + 10 });
         }
 
         this.range.left.updateRange();
@@ -131,12 +131,12 @@ export const Control_sliderDouble = function ({
       style: style,
       action: () => {
 
-        if (get({ object: state.get.current(), path: right.path }) < get({ object: state.get.minMax(), path: right.path }).min + 10) {
-          set({ object: state.get.current(), path: right.path, value: get({ object: state.get.minMax(), path: right.path }).min + 10 });
+        if (get({ object: object, path: right.path }) < right.min + 10) {
+          set({ object: object, path: right.path, value: right.min + 10 });
         }
 
-        if (get({ object: state.get.current(), path: right.path }) <= get({ object: state.get.current(), path: left.path }) + 10) {
-          set({ object: state.get.current(), path: left.path, value: get({ object: state.get.current(), path: right.path }) - 10 });
+        if (get({ object: object, path: right.path }) <= get({ object: object, path: left.path }) + 10) {
+          set({ object: object, path: left.path, value: get({ object: object, path: right.path }) - 10 });
         }
 
         this.range.left.update();
@@ -244,11 +244,13 @@ export const Control_sliderDouble = function ({
   };
 
   this.disable = () => {
+    this.label.classList.add('disabled');
     this.range.left.disable();
     this.range.right.disable();
   };
 
   this.enable = () => {
+    this.label.classList.remove('disabled');
     this.range.left.enable();
     this.range.right.enable();
   };

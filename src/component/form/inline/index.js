@@ -7,6 +7,7 @@ export const inline = function ({
   reverse = false,
   block = false,
   wrap = false,
+  align = 'top',
   justify = 'left',
   gap = 'medium',
   equalGap = false,
@@ -43,6 +44,22 @@ export const inline = function ({
 
   if (equalGap) {
     inline.classList.add('form-inline-gap-equal');
+  }
+
+  switch (align) {
+
+    case 'top':
+      inline.classList.add('form-inline-align-top');
+      break;
+
+    case 'center':
+      inline.classList.add('form-inline-align-center');
+      break;
+
+    case 'bottom':
+      inline.classList.add('form-inline-align-bottom');
+      break;
+
   }
 
   switch (justify) {

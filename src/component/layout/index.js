@@ -119,6 +119,11 @@ layout.area = {
   },
   clear: () => {
     clearChildNode(layout.element.layout);
+  },
+  remove: () => {
+    const body = document.querySelector('body');
+
+    body.removeChild(layout.element.layout);
   }
 };
 
