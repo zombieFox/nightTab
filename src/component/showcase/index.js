@@ -26,6 +26,7 @@ import { Control_textarea } from '../control/textarea';
 import { Control_textReset } from '../control/textReset';
 import { Control_inputButton } from '../control/inputButton';
 import { Control_radioGrid } from '../control/radioGrid';
+import { Control_select } from '../control/select';
 
 import { node } from '../../utility/node';
 import { clearChildNode } from '../../utility/clearChildNode';
@@ -55,7 +56,8 @@ showcase.state.default = {
     color: { hsl: { h: 221, s: 100, l: 50 }, rgb: { r: 0, g: 80, b: 255 } },
     number: 50,
     numberRange: { start: 20, end: 80 },
-  }
+  },
+  select: 'Alpha',
 };
 
 showcase.state.minMax = {
@@ -109,6 +111,7 @@ showcase.disable = () => {
     showcase.control.input.color.disable();
     showcase.control.input.number.disable();
     showcase.control.input.numberRange.disable();
+    showcase.control.select.disable();
 
   } else {
 
@@ -138,6 +141,7 @@ showcase.disable = () => {
     showcase.control.input.color.enable();
     showcase.control.input.number.enable();
     showcase.control.input.numberRange.enable();
+    showcase.control.select.enable();
 
   }
 
@@ -341,23 +345,10 @@ showcase.area.assemble = () => {
         { id: 'input-radio-grid3x3-8', labelText: '8', value: '8', position: 8 },
         { id: 'input-radio-grid3x3-9', labelText: '9', value: '9', position: 9 }
       ],
-      label: 'Radio grid',
+      // label: 'Radio grid',
       groupName: 'input-radio-grid3x3',
       path: 'input.radio.grid3x3',
       gridSize: '3x3',
-      action: () => { console.log(showcase.state.get.current()); }
-    }),
-    grid3x1: new Control_radioGrid({
-      object: showcase.state.get.current(),
-      radioGroup: [
-        { id: 'input-radio-grid3x1-1', labelText: '1', value: '1', position: 1 },
-        { id: 'input-radio-grid3x1-2', labelText: '2', value: '2', position: 2 },
-        { id: 'input-radio-grid3x1-3', labelText: '3', value: '3', position: 3 }
-      ],
-      label: 'Radio grid horizontal',
-      groupName: 'input-radio-grid3x1',
-      path: 'input.radio.grid3x1',
-      gridSize: '3x1',
       action: () => { console.log(showcase.state.get.current()); }
     }),
     grid1x3: new Control_radioGrid({
@@ -367,10 +358,23 @@ showcase.area.assemble = () => {
         { id: 'input-radio-grid1x3-2', labelText: '2', value: '2', position: 2 },
         { id: 'input-radio-grid1x3-3', labelText: '3', value: '3', position: 3 }
       ],
-      label: 'Radio grid vertical',
+      // label: 'Radio grid vertical',
       groupName: 'input-radio-grid1x3',
       path: 'input.radio.grid1x3',
       gridSize: '1x3',
+      action: () => { console.log(showcase.state.get.current()); }
+    }),
+    grid3x1: new Control_radioGrid({
+      object: showcase.state.get.current(),
+      radioGroup: [
+        { id: 'input-radio-grid3x1-1', labelText: '1', value: '1', position: 1 },
+        { id: 'input-radio-grid3x1-2', labelText: '2', value: '2', position: 2 },
+        { id: 'input-radio-grid3x1-3', labelText: '3', value: '3', position: 3 }
+      ],
+      // label: 'Radio grid horizontal',
+      groupName: 'input-radio-grid3x1',
+      path: 'input.radio.grid3x1',
+      gridSize: '3x1',
       action: () => { console.log(showcase.state.get.current()); }
     }),
   };
@@ -499,6 +503,16 @@ showcase.area.assemble = () => {
     }]
   });
 
+  showcase.control.select = new Control_select({
+    object: showcase.state.get.current(),
+    path: 'select',
+    id: 'select',
+    labelText: 'Select',
+    option: ['Alpha', 'Beta', 'Gamma'],
+    selected: showcase.state.get.current().select,
+    action: () => { console.log(showcase.state.get.current()); }
+  });
+
   showcase.control.button = {
     a: new Button({ text: 'Button' }),
     b: new Button({ text: 'Button line', style: ['line'] }),
@@ -545,11 +559,9 @@ showcase.area.assemble = () => {
           })
         ]
       }),
-      node('hr'),
       showcase.control.side.h.wrap(),
       showcase.control.side.s.wrap(),
       showcase.control.side.contrast.wrap(),
-      node('hr'),
       showcase.control.side.accent.wrap(),
       showcase.control.side.shadow.wrap(),
       showcase.control.side.radius.wrap(),
@@ -599,11 +611,11 @@ showcase.area.assemble = () => {
       form.wrap({
         children: [
           form.inline({
-            align: 'top',
+            align: 'center',
             children: [
               showcase.control.input.radio.grid3x3.wrap(),
-              showcase.control.input.radio.grid3x1.wrap(),
               showcase.control.input.radio.grid1x3.wrap(),
+              showcase.control.input.radio.grid3x1.wrap(),
             ]
           }),
         ]
@@ -645,6 +657,7 @@ showcase.area.assemble = () => {
       showcase.control.input.color.wrap(),
       showcase.control.input.number.wrap(),
       showcase.control.input.numberRange.wrap(),
+      showcase.control.select.wrap(),
       node('hr'),
       form.wrap({
         children: [
