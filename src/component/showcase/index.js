@@ -43,7 +43,11 @@ showcase.element = {
   showcase: node('div|class:showcase')
 };
 
-showcase.state = {
+showcase.state = {};
+
+showcase.state.current = {};
+
+showcase.state.default = {
   disable: false,
   input: {
     radio: { a: '1', b: '1', c: '1', grid3x3: '1', grid3x1: '1', grid1x3: '1' },
@@ -54,15 +58,7 @@ showcase.state = {
   }
 };
 
-showcase.default = {
-  input: {
-    color: { hsl: { h: 221, s: 100, l: 50 }, rgb: { r: 0, g: 80, b: 255 } },
-    number: 50,
-    numberRange: { start: 20, end: 80 },
-  }
-};
-
-showcase.minMax = {
+showcase.state.minMax = {
   input: {
     color: {
       hsl: { h: { min: 0, max: 359 }, s: { min: 0, max: 100 }, l: { min: 0, max: 100 } },
@@ -72,6 +68,14 @@ showcase.minMax = {
     numberRange: { start: { min: 0, max: 100 }, end: { min: 0, max: 100 } },
   }
 };
+
+showcase.state.get = {
+  current: () => { return showcase.state.current; },
+  default: () => { return JSON.parse(JSON.stringify(showcase.state.default)); },
+  minMax: () => { return JSON.parse(JSON.stringify(showcase.state.minMax)); },
+};
+
+showcase.state.current = showcase.state.get.default();
 
 showcase.disable = () => {
 
@@ -103,7 +107,6 @@ showcase.disable = () => {
     showcase.control.input.text.disable();
     showcase.control.input.textarea.disable();
     showcase.control.input.color.disable();
-    showcase.control.input.color.disable();
     showcase.control.input.number.disable();
     showcase.control.input.numberRange.disable();
 
@@ -132,7 +135,6 @@ showcase.disable = () => {
     showcase.control.tab.enable();
     showcase.control.input.text.enable();
     showcase.control.input.textarea.enable();
-    showcase.control.input.color.enable();
     showcase.control.input.color.enable();
     showcase.control.input.number.enable();
     showcase.control.input.numberRange.enable();
@@ -289,19 +291,19 @@ showcase.area.assemble = () => {
 
   showcase.control.input.radio = {
     a: new Control_radio({
-      object: showcase.state,
+      object: showcase.state.get.current(),
       radioGroup: [
-        { id: 'input-radio-a-1', labelText: 'Radio A 1', description: 'Description for radio A 1', value: '1' },
-        { id: 'input-radio-a-2', labelText: 'Radio A 2', description: 'Description for radio A 2', value: '2' },
-        { id: 'input-radio-a-3', labelText: 'Radio A 3', description: 'Description for radio A 3', value: '3' }
+        { id: 'input-radio-a-1', labelText: 'Radio 1', description: 'Description for radio A 1', value: '1' },
+        { id: 'input-radio-a-2', labelText: 'Radio 2', description: 'Description for radio A 2', value: '2' },
+        { id: 'input-radio-a-3', labelText: 'Radio 3', description: 'Description for radio A 3', value: '3' }
       ],
       label: 'Radio group A',
       groupName: 'input-radio-a',
       path: 'input.radio.a',
-      action: () => { console.log(showcase.state); }
+      action: () => { console.log(showcase.state.get.current()); }
     }),
     b: new Control_radio({
-      object: showcase.state,
+      object: showcase.state.get.current(),
       radioGroup: [
         { id: 'input-radio-b-1', labelText: 'Radio 1', value: '1' },
         { id: 'input-radio-b-2', labelText: 'Radio 2', value: '2' },
@@ -310,10 +312,10 @@ showcase.area.assemble = () => {
       groupName: 'input-radio-b',
       path: 'input.radio.b',
       inputButtonStyle: ['line'],
-      action: () => { console.log(showcase.state); }
+      action: () => { console.log(showcase.state.get.current()); }
     }),
     c: new Control_radio({
-      object: showcase.state,
+      object: showcase.state.get.current(),
       radioGroup: [
         { id: 'input-radio-c-1', labelText: 'Radio 1', value: '1' },
         { id: 'input-radio-c-2', labelText: 'Radio 2', value: '2' },
@@ -324,10 +326,10 @@ showcase.area.assemble = () => {
       path: 'input.radio.c',
       buttonHideInput: true,
       inputButtonStyle: ['ring'],
-      action: () => { console.log(showcase.state); }
+      action: () => { console.log(showcase.state.get.current()); }
     }),
     grid3x3: new Control_radioGrid({
-      object: showcase.state,
+      object: showcase.state.get.current(),
       radioGroup: [
         { id: 'input-radio-grid3x3-1', labelText: '1', value: '1', position: 1 },
         { id: 'input-radio-grid3x3-2', labelText: '2', value: '2', position: 2 },
@@ -339,81 +341,81 @@ showcase.area.assemble = () => {
         { id: 'input-radio-grid3x3-8', labelText: '8', value: '8', position: 8 },
         { id: 'input-radio-grid3x3-9', labelText: '9', value: '9', position: 9 }
       ],
-      label: 'Radio group grid',
+      label: 'Radio grid',
       groupName: 'input-radio-grid3x3',
       path: 'input.radio.grid3x3',
       gridSize: '3x3',
-      action: () => { console.log(showcase.state); }
+      action: () => { console.log(showcase.state.get.current()); }
     }),
     grid3x1: new Control_radioGrid({
-      object: showcase.state,
+      object: showcase.state.get.current(),
       radioGroup: [
         { id: 'input-radio-grid3x1-1', labelText: '1', value: '1', position: 1 },
         { id: 'input-radio-grid3x1-2', labelText: '2', value: '2', position: 2 },
         { id: 'input-radio-grid3x1-3', labelText: '3', value: '3', position: 3 }
       ],
-      label: 'Radio group grid horizontal',
+      label: 'Radio grid horizontal',
       groupName: 'input-radio-grid3x1',
       path: 'input.radio.grid3x1',
       gridSize: '3x1',
-      action: () => { console.log(showcase.state); }
+      action: () => { console.log(showcase.state.get.current()); }
     }),
     grid1x3: new Control_radioGrid({
-      object: showcase.state,
+      object: showcase.state.get.current(),
       radioGroup: [
         { id: 'input-radio-grid1x3-1', labelText: '1', value: '1', position: 1 },
         { id: 'input-radio-grid1x3-2', labelText: '2', value: '2', position: 2 },
         { id: 'input-radio-grid1x3-3', labelText: '3', value: '3', position: 3 }
       ],
-      label: 'Radio group grid vertical',
+      label: 'Radio grid vertical',
       groupName: 'input-radio-grid1x3',
       path: 'input.radio.grid1x3',
       gridSize: '1x3',
-      action: () => { console.log(showcase.state); }
+      action: () => { console.log(showcase.state.get.current()); }
     }),
   };
 
   showcase.control.input.checkbox = {
     a: new Control_checkbox({
-      object: showcase.state,
+      object: showcase.state.get.current(),
       id: 'input-checkbox-a',
       path: 'input.checkbox.a',
       labelText: 'Checkbox A',
       description: 'Description for checkbox A',
-      action: () => { console.log(showcase.state); }
+      action: () => { console.log(showcase.state.get.current()); }
     }),
     b: new Control_checkbox({
-      object: showcase.state,
+      object: showcase.state.get.current(),
       id: 'input-checkbox-b',
       path: 'input.checkbox.b',
       labelText: 'Checkbox B',
       description: 'Description for checkbox B',
-      action: () => { console.log(showcase.state); }
+      action: () => { console.log(showcase.state.get.current()); }
     }),
     c: new Control_checkbox({
-      object: showcase.state,
+      object: showcase.state.get.current(),
       id: 'input-checkbox-c',
       path: 'input.checkbox.c',
       labelText: 'Checkbox C',
       description: 'Description for checkbox C',
-      action: () => { console.log(showcase.state); }
+      action: () => { console.log(showcase.state.get.current()); }
     }),
     d: new Control_checkbox({
-      object: showcase.state,
+      object: showcase.state.get.current(),
       id: 'input-checkbox-d',
       path: 'input.checkbox.d',
       labelText: 'Checkbox D',
       inputButtonStyle: ['line'],
-      action: () => { console.log(showcase.state); }
+      action: () => { console.log(showcase.state.get.current()); }
     }),
     e: new Control_checkbox({
-      object: showcase.state,
+      object: showcase.state.get.current(),
       id: 'input-checkbox-e',
       path: 'input.checkbox.e',
       labelText: 'Checkbox E',
       buttonHideInput: true,
       inputButtonStyle: ['line'],
-      action: () => { console.log(showcase.state); }
+      action: () => { console.log(showcase.state.get.current()); }
     }),
   };
 
@@ -422,50 +424,50 @@ showcase.area.assemble = () => {
   showcase.control.input.textarea = new Control_textarea({ labelText: 'Textarea', placeholder: 'Placeholder' });
 
   showcase.control.input.color = new Control_colorMixer({
-    object: showcase.state,
+    object: showcase.state.get.current(),
     path: 'input.color',
     id: 'input-color',
     labelText: 'Colour',
-    defaultValue: showcase.default.input.color.rgb,
-    minMaxObject: showcase.minMax,
+    defaultValue: showcase.state.get.default().input.color.rgb,
+    minMaxObject: showcase.state.get.minMax(),
     randomColor: true,
-    action: () => { console.log(showcase.state); }
+    action: () => { console.log(showcase.state.get.current()); }
   });
 
   showcase.control.input.number = new Control_slider({
-    object: showcase.state,
+    object: showcase.state.get.current(),
     path: 'input.number',
     id: 'input-number',
     labelText: 'Number',
-    value: showcase.state.input.number,
-    defaultValue: showcase.default.input.number,
-    min: showcase.minMax.input.number.min,
-    max: showcase.minMax.input.number.max,
-    action: () => { console.log(showcase.state); }
+    value: showcase.state.get.current().input.number,
+    defaultValue: showcase.state.get.default().input.number,
+    min: showcase.state.get.minMax().input.number.min,
+    max: showcase.state.get.minMax().input.number.max,
+    action: () => { console.log(showcase.state.get.current()); }
   });
 
   showcase.control.input.numberRange = new Control_sliderDouble({
-    object: showcase.state,
-    labelText: 'Number Range',
+    object: showcase.state.get.current(),
+    labelText: 'Label',
     left: {
       path: 'input.numberRange.start',
       id: 'input-numberRange-start',
-      labelText: 'Start',
-      value: showcase.state.input.numberRange.start,
-      defaultValue: showcase.default.input.numberRange.start,
-      min: showcase.minMax.input.numberRange.start.min,
-      max: showcase.minMax.input.numberRange.start.max,
-      action: () => { console.log(showcase.state); }
+      labelText: 'Left',
+      value: showcase.state.get.current().input.numberRange.start,
+      defaultValue: showcase.state.get.default().input.numberRange.start,
+      min: showcase.state.get.minMax().input.numberRange.start.min,
+      max: showcase.state.get.minMax().input.numberRange.start.max,
+      action: () => { console.log(showcase.state.get.current()); }
     },
     right: {
       path: 'input.numberRange.end',
-      id: 'input-numberRange-endend',
-      labelText: 'End',
-      value: showcase.state.input.numberRange.end,
-      defaultValue: showcase.default.input.numberRange.end,
-      min: showcase.minMax.input.numberRange.end.min,
-      max: showcase.minMax.input.numberRange.end.max,
-      action: () => { console.log(showcase.state); }
+      id: 'input-numberRange-end',
+      labelText: 'Right',
+      value: showcase.state.get.current().input.numberRange.end,
+      defaultValue: showcase.state.get.default().input.numberRange.end,
+      min: showcase.state.get.minMax().input.numberRange.end.min,
+      max: showcase.state.get.minMax().input.numberRange.end.max,
+      action: () => { console.log(showcase.state.get.current()); }
     }
   });
 
