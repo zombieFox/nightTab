@@ -1,5 +1,9 @@
+:root {
+  --showcase-padding: 4em;
+}
+
 .showcase {
-  padding: 4em;
+  padding: var(--showcase-padding);
   width: 100vw;
   min-height: 100vh;
   z-index: var(--z-index-showcase);
@@ -7,16 +11,21 @@
 
 .showcase {
   display: grid;
-  gap: 4em;
-  grid-template-columns: 1fr 3fr;
+  gap: var(--showcase-padding);
+  grid-template-columns: 2fr 5fr;
   grid-template-areas:
-    "side content"
+    "side content";
+  justify-items: center;
 }
 
 .showcase-side {
   grid-area: side;
+  position: sticky;
+  top: var(--showcase-padding);
+  height: fit-content;
 }
 
 .showcase-content {
   grid-area: content;
+  max-width: 50em;
 }
