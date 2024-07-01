@@ -64,7 +64,7 @@ showcase.state.minMax = {
       hsl: { h: { min: 0, max: 359 }, s: { min: 0, max: 100 }, l: { min: 0, max: 100 } },
       rgb: { r: { min: 0, max: 255 }, g: { min: 0, max: 255 }, b: { min: 0, max: 255 } },
     },
-    number: { min: 0, max: 255 },
+    number: { min: 0, max: 100 },
     numberRange: { start: { min: 0, max: 100 }, end: { min: 0, max: 100 } },
   }
 };
@@ -448,11 +448,11 @@ showcase.area.assemble = () => {
 
   showcase.control.input.numberRange = new Control_sliderDouble({
     object: showcase.state.get.current(),
-    labelText: 'Label',
+    labelText: 'Number range',
     left: {
       path: 'input.numberRange.start',
       id: 'input-numberRange-start',
-      labelText: 'Left',
+      labelText: 'Start',
       value: showcase.state.get.current().input.numberRange.start,
       defaultValue: showcase.state.get.default().input.numberRange.start,
       min: showcase.state.get.minMax().input.numberRange.start.min,
@@ -462,7 +462,7 @@ showcase.area.assemble = () => {
     right: {
       path: 'input.numberRange.end',
       id: 'input-numberRange-end',
-      labelText: 'Right',
+      labelText: 'End',
       value: showcase.state.get.current().input.numberRange.end,
       defaultValue: showcase.state.get.default().input.numberRange.end,
       min: showcase.state.get.minMax().input.numberRange.end.min,

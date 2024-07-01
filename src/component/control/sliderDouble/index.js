@@ -90,8 +90,8 @@ export const Control_sliderDouble = function({
       style: style,
       action: () => {
 
-        if (get({ object: object, path: left.path }) > get({ object: state.get.minMax(), path: left.path }).max - 10) {
-          set({ object: object, path: left.path, value: get({ object: state.get.minMax(), path: left.path }).max - 10 });
+        if (get({ object: object, path: left.path }) > left.max - 10) {
+          set({ object: object, path: left.path, value: left.max - 10 });
         }
 
         if (get({ object: object, path: left.path }) >= get({ object: object, path: right.path }) - 10) {
@@ -131,8 +131,8 @@ export const Control_sliderDouble = function({
       style: style,
       action: () => {
 
-        if (get({ object: object, path: right.path }) < get({ object: state.get.minMax(), path: right.path }).min + 10) {
-          set({ object: object, path: right.path, value: get({ object: state.get.minMax(), path: right.path }).min + 10 });
+        if (get({ object: object, path: right.path }) < right.min + 10) {
+          set({ object: object, path: right.path, value: right.min + 10 });
         }
 
         if (get({ object: object, path: right.path }) <= get({ object: object, path: left.path }) + 10) {
