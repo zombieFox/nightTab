@@ -28,7 +28,7 @@ dataSetting.restore = (parent) => {
   dataSetting.control.restore.restoreElement = new Control_inputButton({
     id: 'restore-data',
     type: 'file',
-    inputHide: true,
+    buttonHideInput: true,
     labelText: message.get('menuContentDataRestoreFile'),
     inputButtonStyle: ['line'],
     action: () => {

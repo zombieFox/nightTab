@@ -11,7 +11,7 @@ export const Control_inputButton = function({
   classList = [],
   inputButtonClassList = [],
   type = false,
-  inputHide = false,
+  buttonHideInput = false,
   labelText = 'Label',
   srOnly = false,
   inputButtonStyle = [],
@@ -75,7 +75,7 @@ export const Control_inputButton = function({
 
   this.button = form.input.inputButton({
     style: inputButtonStyle,
-    inputHide: inputHide,
+    buttonHideInput: buttonHideInput,
     srOnly: srOnly
   });
 
