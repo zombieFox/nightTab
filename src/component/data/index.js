@@ -240,6 +240,26 @@ data.remove = (key) => {
   window.localStorage.removeItem(key);
 };
 
+data.clear_serviceWorker = () => {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then((registrations) => {
+      registrations.forEach((registration) => {
+        registration.unregister();
+      });
+    });
+  }
+};
+
+data.clear_cache = () => {
+  if ('caches' in window) {
+    caches.keys().then((cacheNames) => {
+      cacheNames.forEach((cacheName) => {
+        caches.delete(cacheName);
+      });
+    });
+  }
+};
+
 data.backup = (dataToBackup) => {
   if (dataToBackup) {
     data.set(APP_NAME + 'Backup', JSON.stringify(dataToBackup));
@@ -315,11 +335,16 @@ data.load = () => {
 
 data.wipe = {
   all: () => {
+    data.clear_serviceWorker();
+    data.clear_cache();
+  
     data.remove(APP_NAME);
 
     data.reload.render();
   },
   partial: () => {
+    data.clear_serviceWorker();
+    data.clear_cache();
     bookmark.reset();
 
     data.set(APP_NAME, JSON.stringify({
