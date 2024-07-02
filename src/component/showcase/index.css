@@ -12,7 +12,7 @@
 .showcase {
   display: grid;
   gap: var(--showcase-padding);
-  grid-template-columns: 2fr 5fr;
+  grid-template-columns: 1fr 2fr;
   grid-template-areas:
     "side content";
   justify-items: center;
@@ -22,12 +22,19 @@
   grid-area: side;
   position: sticky;
   top: var(--showcase-padding);
+  width: 100%;
   height: fit-content;
 }
 
 .showcase-content {
   grid-area: content;
-  max-width: 50em;
+}
+
+@media (min-width: 1400px) {
+  .showcase-content {
+    grid-area: content;
+    max-width: 80%;
+  }
 }
 
 .showcase-type h1,

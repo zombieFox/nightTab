@@ -6,7 +6,7 @@ import { node } from '../../utility/node';
 
 import './index.css';
 
-export const Button = function ({
+export const Button = function({
   text = 'Button',
   srOnly = false,
   iconName = false,
@@ -21,14 +21,16 @@ export const Button = function ({
 
   this.button = node('button|class:button,tabindex:1,type:button');
 
+  this.buttonText = node('span|class:button-text');
+
   if (text) {
-    const buttonText = node('span:' + text + '|class:button-text');
+    this.buttonText.textContent = text;
 
     if (srOnly) {
-      buttonText.classList.add('sr-only');
+      this.buttonText.classList.add('sr-only');
     }
 
-    this.button.appendChild(buttonText);
+    this.button.appendChild(this.buttonText);
   }
 
   if (iconName) {
@@ -141,6 +143,12 @@ export const Button = function ({
   this.active = () => {
     this.button.classList.add('active');
   };
+
+  this.text = (newText) => {
+
+    this.buttonText.textContent = newText;
+
+  }
 
   this.wrap = () => {
     return form.wrap({

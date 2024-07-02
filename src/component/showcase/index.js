@@ -85,6 +85,7 @@ showcase.disable = () => {
 
   if (showcase.state.disable) {
 
+    showcase.control.side.disable.text('Enable');
     showcase.control.side.disable.active();
 
     showcase.control.input.radio.a.disable();
@@ -115,6 +116,7 @@ showcase.disable = () => {
 
   } else {
 
+    showcase.control.side.disable.text('Disable');
     showcase.control.side.disable.deactive();
 
     showcase.control.input.radio.a.enable();
@@ -149,6 +151,7 @@ showcase.disable = () => {
 
 showcase.control = {
   side: {},
+  shade: {},
   input: {},
   dropdown: {},
   button: {},
@@ -171,7 +174,6 @@ showcase.area.render = () => {
 showcase.area.assemble = () => {
 
   showcase.control.side = {
-    shade: new ShadeBar(),
     style: new Control_radio({
       object: state.get.current(),
       buttonHideInput: true,
@@ -316,6 +318,9 @@ showcase.area.assemble = () => {
       }
     }),
   };
+
+
+  showcase.control.shade = new ShadeBar();
 
   showcase.control.input.radio = {
     a: new Control_radio({
@@ -570,7 +575,6 @@ showcase.area.assemble = () => {
 
   showcase.element.showcase.appendChild(
     node('div|class:showcase-side', [
-      showcase.control.side.shade.shadeBar(),
       form.wrap({
         children: [
           form.inline({
@@ -596,6 +600,12 @@ showcase.area.assemble = () => {
 
   showcase.element.showcase.appendChild(
     node('div|class:showcase-content', [
+      form.wrap({
+        children: [
+          showcase.control.shade.shadeBar(),
+        ]
+      }),
+      node('hr'),
       form.wrap({
         children: [
           form.inline({
