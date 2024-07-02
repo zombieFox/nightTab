@@ -29,3 +29,17 @@
   grid-area: content;
   max-width: 50em;
 }
+
+.showcase-type h1,
+.showcase-type h2,
+.showcase-type h3,
+.showcase-type h4,
+.showcase-type h5,
+.showcase-type h6 {
+  margin-bottom: 0.5em;
+  white-space: nowrap;
+}
+
+.showcase-type {
+  flex-basis: 100%;
+}

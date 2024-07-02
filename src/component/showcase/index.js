@@ -291,6 +291,30 @@ showcase.area.assemble = () => {
         applyCSSVar('theme.radius');
       }
     }),
+    displayFont: new Control_textReset({
+      object: state.get.current(),
+      path: 'theme.font.display.name',
+      id: 'theme-font-display-name',
+      value: state.get.current().theme.font.display.name,
+      defaultValue: state.get.default().theme.font.display.name,
+      placeholder: 'Google font name',
+      labelText: 'Display font',
+      action: () => {
+        theme.font.display.delay();
+      }
+    }),
+    uiFont: new Control_textReset({
+      object: state.get.current(),
+      path: 'theme.font.ui.name',
+      id: 'theme-font-ui-name',
+      value: state.get.current().theme.font.ui.name,
+      defaultValue: state.get.default().theme.font.ui.name,
+      placeholder: 'Google font name',
+      labelText: 'User interface font',
+      action: () => {
+        theme.font.ui.delay();
+      }
+    }),
   };
 
   showcase.control.input.radio = {
@@ -565,11 +589,45 @@ showcase.area.assemble = () => {
       showcase.control.side.accent.wrap(),
       showcase.control.side.shadow.wrap(),
       showcase.control.side.radius.wrap(),
+      showcase.control.side.displayFont.wrap(),
+      showcase.control.side.uiFont.wrap(),
     ])
   );
 
   showcase.element.showcase.appendChild(
     node('div|class:showcase-content', [
+      form.wrap({
+        children: [
+          form.inline({
+            gap: 'large',
+            children: [
+              node('div|class:showcase-type', [
+                node('h1:Heading 1'),
+                node('h2:Heading 2'),
+                node('h3:Heading 3'),
+                node('h4:Heading 4'),
+                node('h5:Heading 5'),
+                node('h6:Heading 6'),
+              ]),
+              node('div|class:showcase-type', [
+                node('p:Sed dolores doloremque id iure Quis est suscipit deleniti cum doloremque nihil.'),
+                node('ul', [
+                  node('li:List item 1'),
+                  node('li:List item 2'),
+                  node('li:List item 3'),
+                ]),
+                node('a:Lorem ipsum dolor sit amet|href:https://github.com/zombieFox/nightTab,target:_blank'),
+              ]),
+              node('div|class:showcase-type', [
+                new Control_helperText({
+                  text: ['Et iure voluptas non accusantium voluptatibus et necessitatibus.']
+                }).wrap()
+              ]),
+            ]
+          })
+        ]
+      }),
+      node('hr'),
       showcase.control.input.radio.a.inline(),
       node('hr'),
       form.wrap({
