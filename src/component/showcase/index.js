@@ -693,19 +693,11 @@ showcase.area.assemble = () => {
         children: [
           form.inline({
             gap: 'small',
+            align: 'center',
             children: [
               showcase.control.button.a.wrap(),
               showcase.control.button.b.wrap(),
               showcase.control.button.c.wrap(),
-            ]
-          })
-        ]
-      }),
-      form.wrap({
-        children: [
-          form.inline({
-            gap: 'small',
-            children: [
               showcase.control.button.d.wrap(),
               showcase.control.button.e.wrap(),
               showcase.control.button.f.wrap(),
