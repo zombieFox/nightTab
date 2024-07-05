@@ -177,6 +177,7 @@ export const Control_sliderSlim = function({
 
     const formInline = form.inline({
       block: true,
+      align: 'center',
       gap: 'small',
       children: [
         this.label,

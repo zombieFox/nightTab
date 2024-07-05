@@ -105,6 +105,7 @@ showcase.disable = () => {
     showcase.control.button.d.disable();
     showcase.control.button.e.disable();
     showcase.control.button.f.disable();
+    showcase.control.button.g.disable();
     showcase.control.button.dropdown.disable();
     showcase.control.tab.disable();
     showcase.control.input.text.disable();
@@ -136,6 +137,7 @@ showcase.disable = () => {
     showcase.control.button.d.enable();
     showcase.control.button.e.enable();
     showcase.control.button.f.enable();
+    showcase.control.button.g.enable();
     showcase.control.button.dropdown.enable();
     showcase.control.tab.enable();
     showcase.control.input.text.enable();
@@ -549,10 +551,11 @@ showcase.area.assemble = () => {
     d: new Button({ text: 'Button small', style: ['line'], size: 'small' }),
     e: new Button({ text: 'Button medium', style: ['line'] }),
     f: new Button({ text: 'Button large', style: ['line'], size: 'large' }),
+    g: new Button({ text: 'Add new stuff', style: ['line'], iconName: 'add', srOnly: true }),
     dropdown: new Dropdown({
       text: 'Dropdown',
       buttonStyle: ['line'],
-      iconName: 'add',
+      iconName: 'arrowKeyboardDown',
       persist: true,
       menuItem: [
         { text: 'One', iconName: 'addGroup' },
@@ -656,23 +659,16 @@ showcase.area.assemble = () => {
       form.wrap({
         children: [
           form.inline({
-            align: 'top',
+            wrap: true,
+            gap: 'small',
+            align: 'center',
             children: [
               showcase.control.input.radio.b.inputButton(),
               showcase.control.input.radio.c.inputButton(),
-            ]
-          })
-        ]
-      }),
-      form.wrap({
-        children: [
-          form.inline({
-            align: 'top',
-            children: [
               showcase.control.input.checkbox.d.inputButton(),
               showcase.control.input.checkbox.e.inputButton(),
             ]
-          }),
+          })
         ]
       }),
       node('hr'),
@@ -680,6 +676,7 @@ showcase.area.assemble = () => {
         children: [
           form.inline({
             align: 'center',
+            gap: 'small',
             children: [
               showcase.control.input.radio.grid3x3.wrap(),
               showcase.control.input.radio.grid1x3.wrap(),
@@ -692,22 +689,17 @@ showcase.area.assemble = () => {
       form.wrap({
         children: [
           form.inline({
+            wrap: true,
             gap: 'small',
             align: 'center',
             children: [
               showcase.control.button.a.wrap(),
               showcase.control.button.b.wrap(),
               showcase.control.button.c.wrap(),
-              showcase.control.button.d.wrap(),
-              showcase.control.button.e.wrap(),
-              showcase.control.button.f.wrap(),
+              showcase.control.button.g.wrap(),
+              showcase.control.button.dropdown.toggle,
             ]
           })
-        ]
-      }),
-      form.wrap({
-        children: [
-          showcase.control.button.dropdown.toggle
         ]
       }),
       node('hr'),

@@ -227,6 +227,7 @@ export const Control_slider = function({
 
     const formInline = form.inline({
       block: true,
+      align: 'center',
       gap: 'small',
       children: [
         this.range,
