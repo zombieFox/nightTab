@@ -41,7 +41,9 @@ import './index.css';
 const showcase = {};
 
 showcase.element = {
-  showcase: node('div|class:showcase')
+  showcase: node('div|class:showcase'),
+  side: node('div|class:showcase-side'),
+  content: node('div|class:showcase-content'),
 };
 
 showcase.state = {};
@@ -321,7 +323,6 @@ showcase.area.assemble = () => {
     }),
   };
 
-
   showcase.control.shade = new ShadeBar();
 
   showcase.control.input.radio = {
@@ -576,153 +577,153 @@ showcase.area.assemble = () => {
     );
   };
 
-  showcase.element.showcase.appendChild(
-    node('div|class:showcase-side', [
-      form.wrap({
-        children: [
-          form.inline({
-            align: 'top',
-            gap: 'small',
-            children: [
-              showcase.control.side.style.inputButton(),
-              showcase.control.side.disable.wrap(),
-            ]
-          })
-        ]
-      }),
-      showcase.control.side.h.wrap(),
-      showcase.control.side.s.wrap(),
-      showcase.control.side.contrast.wrap(),
-      showcase.control.side.accent.wrap(),
-      showcase.control.side.shadow.wrap(),
-      showcase.control.side.radius.wrap(),
-      showcase.control.side.displayFont.wrap(),
-      showcase.control.side.uiFont.wrap(),
-    ])
+  showcase.element.side.append(
+    form.wrap({
+      children: [
+        form.inline({
+          align: 'top',
+          gap: 'small',
+          children: [
+            showcase.control.side.style.inputButton(),
+            showcase.control.side.disable.wrap(),
+          ]
+        })
+      ]
+    }),
+    showcase.control.side.h.wrap(),
+    showcase.control.side.s.wrap(),
+    showcase.control.side.contrast.wrap(),
+    showcase.control.side.accent.wrap(),
+    showcase.control.side.shadow.wrap(),
+    showcase.control.side.radius.wrap(),
+    // showcase.control.side.displayFont.wrap(),
+    // showcase.control.side.uiFont.wrap(),
   );
 
-  showcase.element.showcase.appendChild(
-    node('div|class:showcase-content', [
-      form.wrap({
-        children: [
-          showcase.control.shade.shadeBar(),
-        ]
-      }),
-      node('hr'),
-      form.wrap({
-        children: [
-          form.inline({
-            gap: 'large',
-            children: [
-              node('div|class:showcase-type', [
-                node('h1:Heading 1'),
-                node('h2:Heading 2'),
-                node('h3:Heading 3'),
-                node('h4:Heading 4'),
-                node('h5:Heading 5'),
-                node('h6:Heading 6'),
+  showcase.element.content.append(
+    form.sticky({
+      children: [
+        showcase.control.shade.shadeBar()
+      ]
+    }),
+    node('hr'),
+    form.wrap({
+      children: [
+        form.inline({
+          gap: 'large',
+          children: [
+            node('div|class:showcase-type', [
+              node('h1:Heading 1'),
+              node('h2:Heading 2'),
+              node('h3:Heading 3'),
+              node('h4:Heading 4'),
+              node('h5:Heading 5'),
+              node('h6:Heading 6'),
+            ]),
+            node('div|class:showcase-type', [
+              node('p:Sed dolores doloremque id iure Quis est suscipit deleniti cum doloremque nihil.'),
+              node('ul', [
+                node('li:List item 1'),
+                node('li:List item 2'),
+                node('li:List item 3'),
               ]),
-              node('div|class:showcase-type', [
-                node('p:Sed dolores doloremque id iure Quis est suscipit deleniti cum doloremque nihil.'),
-                node('ul', [
-                  node('li:List item 1'),
-                  node('li:List item 2'),
-                  node('li:List item 3'),
-                ]),
-                node('a:Lorem ipsum dolor sit amet|href:https://github.com/zombieFox/nightTab,target:_blank'),
-              ]),
-              node('div|class:showcase-type', [
-                new Control_helperText({
-                  text: ['Et iure voluptas non accusantium voluptatibus et necessitatibus.']
-                }).wrap()
-              ]),
-            ]
-          })
-        ]
-      }),
-      node('hr'),
-      showcase.control.input.radio.a.inline(),
-      node('hr'),
-      form.wrap({
-        children: [
-          form.inline({
-            gap: 'large',
-            children: [
-              showcase.control.input.checkbox.a.wrap(),
-              showcase.control.input.checkbox.b.wrap(),
-              showcase.control.input.checkbox.c.wrap(),
-            ]
-          }),
-        ]
-      }),
-      node('hr'),
-      form.wrap({
-        children: [
-          form.inline({
-            wrap: true,
-            gap: 'small',
-            align: 'center',
-            children: [
-              showcase.control.input.radio.b.inputButton(),
-              showcase.control.input.radio.c.inputButton(),
-              showcase.control.input.checkbox.d.inputButton(),
-              showcase.control.input.checkbox.e.inputButton(),
-            ]
-          })
-        ]
-      }),
-      node('hr'),
-      form.wrap({
-        children: [
-          form.inline({
-            align: 'center',
-            gap: 'small',
-            children: [
-              showcase.control.input.radio.grid3x3.wrap(),
-              showcase.control.input.radio.grid1x3.wrap(),
-              showcase.control.input.radio.grid3x1.wrap(),
-            ]
-          }),
-        ]
-      }),
-      node('hr'),
-      form.wrap({
-        children: [
-          form.inline({
-            wrap: true,
-            gap: 'small',
-            align: 'center',
-            children: [
-              showcase.control.button.a.wrap(),
-              showcase.control.button.b.wrap(),
-              showcase.control.button.c.wrap(),
-              showcase.control.button.g.wrap(),
-              showcase.control.button.dropdown.toggle,
-            ]
-          })
-        ]
-      }),
-      node('hr'),
-      showcase.control.tab.tab(),
-      showcase.control.input.text.wrap(),
-      showcase.control.input.textarea.wrap(),
-      showcase.control.input.color.wrap(),
-      showcase.control.input.number.wrap(),
-      showcase.control.input.numberRange.wrap(),
-      showcase.control.select.wrap(),
-      node('hr'),
-      form.wrap({
-        children: [
-          form.inline({
-            gap: 'small',
-            wrap: true,
-            equalGap: true,
-            children: showcase.control.icon
-          })
-        ]
-      }),
-    ])
+              node('a:Lorem ipsum dolor sit amet|href:https://github.com/zombieFox/nightTab,target:_blank'),
+            ]),
+            node('div|class:showcase-type', [
+              new Control_helperText({
+                text: ['Et iure voluptas non accusantium voluptatibus et necessitatibus.']
+              }).wrap()
+            ]),
+          ]
+        })
+      ]
+    }),
+    node('hr'),
+    showcase.control.input.radio.a.inline(),
+    node('hr'),
+    form.wrap({
+      children: [
+        form.inline({
+          gap: 'large',
+          children: [
+            showcase.control.input.checkbox.a.wrap(),
+            showcase.control.input.checkbox.b.wrap(),
+            showcase.control.input.checkbox.c.wrap(),
+          ]
+        }),
+      ]
+    }),
+    node('hr'),
+    form.wrap({
+      children: [
+        form.inline({
+          wrap: true,
+          gap: 'small',
+          align: 'center',
+          children: [
+            showcase.control.input.radio.b.inputButton(),
+            showcase.control.input.radio.c.inputButton(),
+            showcase.control.input.checkbox.d.inputButton(),
+            showcase.control.input.checkbox.e.inputButton(),
+          ]
+        })
+      ]
+    }),
+    node('hr'),
+    form.wrap({
+      children: [
+        form.inline({
+          align: 'center',
+          gap: 'small',
+          children: [
+            showcase.control.input.radio.grid3x3.wrap(),
+            showcase.control.input.radio.grid1x3.wrap(),
+            showcase.control.input.radio.grid3x1.wrap(),
+          ]
+        }),
+      ]
+    }),
+    node('hr'),
+    form.wrap({
+      children: [
+        form.inline({
+          wrap: true,
+          gap: 'small',
+          align: 'center',
+          children: [
+            showcase.control.button.a.wrap(),
+            showcase.control.button.b.wrap(),
+            showcase.control.button.c.wrap(),
+            showcase.control.button.g.wrap(),
+            showcase.control.button.dropdown.toggle,
+          ]
+        })
+      ]
+    }),
+    node('hr'),
+    showcase.control.tab.tab(),
+    showcase.control.input.text.wrap(),
+    showcase.control.input.textarea.wrap(),
+    showcase.control.input.color.wrap(),
+    showcase.control.input.number.wrap(),
+    showcase.control.input.numberRange.wrap(),
+    showcase.control.select.wrap(),
+    node('hr'),
+    form.wrap({
+      children: [
+        form.inline({
+          gap: 'small',
+          wrap: true,
+          equalGap: true,
+          children: showcase.control.icon
+        })
+      ]
+    }),
   );
+
+  showcase.element.showcase.append(showcase.element.side);
+
+  showcase.element.showcase.append(showcase.element.content);
 
 };
 
