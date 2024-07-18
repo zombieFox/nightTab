@@ -590,9 +590,11 @@ showcase.area.assemble = () => {
         })
       ]
     }),
+    node('hr'),
     showcase.control.side.h.wrap(),
     showcase.control.side.s.wrap(),
     showcase.control.side.contrast.wrap(),
+    node('hr'),
     showcase.control.side.accent.wrap(),
     showcase.control.side.shadow.wrap(),
     showcase.control.side.radius.wrap(),
