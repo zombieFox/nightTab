@@ -65,17 +65,13 @@ input[type="color"]::-moz-focus-inner {
 }
 
 .input-color-dot input[type="color"] {
-  margin: 0;
-  border-radius: 50%;
+  border-radius: 0;
   position: absolute;
-  top: 50%;
-  right: 1em;
-  width: var(--form-thumb);
-  height: var(--form-thumb);
-  min-width: inherit;
+  top: 0;
+  left: 0;
   z-index: 4;
-  transform: translateY(-50%);
   transition: none;
+  clip-path: circle(calc(var(--form-thumb) / 2) at 50% 50%);
 }
 
 .input-color-dot input[type="color"]:hover {

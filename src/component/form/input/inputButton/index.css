@@ -279,15 +279,8 @@
 }
 
 .form-input-button-sr-only.input-color-dot input[type="color"]+label {
-  padding: 0.25em 1.75em;
+  padding: 0.25em 1.25em;
   min-width: 4em;
-}
-
-.form-input-button-sr-only.input-color-dot input[type="color"] {
-  top: 50%;
-  left: 50%;
-  right: initial;
-  transform: translate(-50%, -50%);
 }
 
 .form-input-hide input[type="checkbox"]+label .label-icon,
