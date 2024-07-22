@@ -12,7 +12,7 @@
     "description": "The description of the extension, displayed in the web store."
   },
   "menuNavDebugLabel": {
-    "message": "Отлаживать",
+    "message": "Отладка",
     "description": "Label for the settings menu navigation."
   },
   "menuNavDebugSubNavInput": {
@@ -36,7 +36,7 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavPreset": {
-    "message": "Предустановки",
+    "message": "Шаблоны",
     "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavSaved": {
