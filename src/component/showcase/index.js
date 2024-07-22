@@ -20,6 +20,7 @@ import { Control_checkbox } from '../control/checkbox';
 import { Control_slider } from '../control/slider';
 import { Control_sliderSlim } from '../control/sliderSlim';
 import { Control_sliderDouble } from '../control/sliderDouble';
+import { Control_color } from '../control/color';
 import { Control_colorMixer } from '../control/colorMixer';
 import { Control_text } from '../control/text';
 import { Control_textarea } from '../control/textarea';
@@ -37,6 +38,7 @@ import { trimString } from '../../utility/trimString';
 import { isValidString } from '../../utility/isValidString';
 
 import './index.css';
+import { inputButton } from '../form/input';
 
 const showcase = {};
 
@@ -55,7 +57,17 @@ showcase.state.default = {
   input: {
     radio: { a: '1', b: '1', c: '1', grid3x3: '1', grid3x1: '1', grid1x3: '1' },
     checkbox: { a: true, b: true, c: false, d: false, e: false },
-    color: { hsl: { h: 221, s: 100, l: 50 }, rgb: { r: 0, g: 80, b: 255 } },
+    color: {
+      basic: {
+        a: { hsl: { h: 221, s: 100, l: 50 }, rgb: { r: 0, g: 80, b: 255 } },
+        b: { hsl: { h: 221, s: 100, l: 50 }, rgb: { r: 0, g: 80, b: 255 } },
+      },
+      mixer: { hsl: { h: 221, s: 100, l: 50 }, rgb: { r: 0, g: 80, b: 255 } },
+      inputButton: {
+        a: { hsl: { h: 221, s: 100, l: 50 }, rgb: { r: 0, g: 80, b: 255 } },
+        b: { hsl: { h: 221, s: 100, l: 50 }, rgb: { r: 0, g: 80, b: 255 } },
+      }
+    },
     number: 50,
     numberRange: { start: 20, end: 80 },
   },
@@ -65,8 +77,18 @@ showcase.state.default = {
 showcase.state.minMax = {
   input: {
     color: {
-      hsl: { h: { min: 0, max: 359 }, s: { min: 0, max: 100 }, l: { min: 0, max: 100 } },
-      rgb: { r: { min: 0, max: 255 }, g: { min: 0, max: 255 }, b: { min: 0, max: 255 } },
+      color: {
+        a: { hsl: { h: { min: 0, max: 359 }, s: { min: 0, max: 100 }, l: { min: 0, max: 100 } } },
+        b: { hsl: { h: { min: 0, max: 359 }, s: { min: 0, max: 100 }, l: { min: 0, max: 100 } } },
+      },
+      mixer: {
+        hsl: { h: { min: 0, max: 359 }, s: { min: 0, max: 100 }, l: { min: 0, max: 100 } },
+        rgb: { r: { min: 0, max: 255 }, g: { min: 0, max: 255 }, b: { min: 0, max: 255 } },
+      },
+      inputButton: {
+        a: { hsl: { h: { min: 0, max: 359 }, s: { min: 0, max: 100 }, l: { min: 0, max: 100 } } },
+        b: { hsl: { h: { min: 0, max: 359 }, s: { min: 0, max: 100 }, l: { min: 0, max: 100 } } },
+      },
     },
     number: { min: 0, max: 100 },
     numberRange: { start: { min: 0, max: 100 }, end: { min: 0, max: 100 } },
@@ -112,7 +134,7 @@ showcase.disable = () => {
     showcase.control.tab.disable();
     showcase.control.input.text.disable();
     showcase.control.input.textarea.disable();
-    showcase.control.input.color.disable();
+    showcase.control.input.color.mixer.disable();
     showcase.control.input.number.disable();
     showcase.control.input.numberRange.disable();
     showcase.control.select.disable();
@@ -144,7 +166,7 @@ showcase.disable = () => {
     showcase.control.tab.enable();
     showcase.control.input.text.enable();
     showcase.control.input.textarea.enable();
-    showcase.control.input.color.enable();
+    showcase.control.input.color.mixer.enable();
     showcase.control.input.number.enable();
     showcase.control.input.numberRange.enable();
     showcase.control.select.enable();
@@ -321,9 +343,9 @@ showcase.area.assemble = () => {
         theme.font.ui.delay();
       }
     }),
-  };
+  }
 
-  showcase.control.shade = new ShadeBar();
+  showcase.control.shade = new ShadeBar()
 
   showcase.control.input.radio = {
     a: new Control_radio({
@@ -409,7 +431,7 @@ showcase.area.assemble = () => {
       gridSize: '3x1',
       action: () => { console.log(showcase.state.get.current()); }
     }),
-  };
+  }
 
   showcase.control.input.checkbox = {
     a: new Control_checkbox({
@@ -453,22 +475,63 @@ showcase.area.assemble = () => {
       inputButtonStyle: ['line'],
       action: () => { console.log(showcase.state.get.current()); }
     }),
-  };
+  }
 
-  showcase.control.input.text = new Control_text({ labelText: 'Text', placeholder: 'Placeholder' });
+  showcase.control.input.text = new Control_text({ labelText: 'Text', placeholder: 'Placeholder' })
 
-  showcase.control.input.textarea = new Control_textarea({ labelText: 'Textarea', placeholder: 'Placeholder' });
+  showcase.control.input.textarea = new Control_textarea({ labelText: 'Textarea', placeholder: 'Placeholder' })
 
-  showcase.control.input.color = new Control_colorMixer({
-    object: showcase.state.get.current(),
-    path: 'input.color',
-    id: 'input-color',
-    labelText: 'Colour',
-    defaultValue: showcase.state.get.default().input.color.rgb,
-    minMaxObject: showcase.state.get.minMax(),
-    randomColor: true,
-    action: () => { console.log(showcase.state.get.current()); }
-  });
+  showcase.control.input.color = {
+    basic: {
+      a: new Control_color({
+        object: showcase.state.get.current(),
+        path: 'input.color.basic.a',
+        id: 'input-color-basic.a',
+        labelText: 'Colour',
+        action: () => { console.log(showcase.state.get.current()); }
+      }),
+      b: new Control_color({
+        object: showcase.state.get.current(),
+        path: 'input.color.basic.a',
+        id: 'input-color-basic.a',
+        labelText: 'Colour',
+        text: false,
+        srOnly: true,
+        action: () => { console.log(showcase.state.get.current()); }
+      })
+    },
+    inputButton: {
+      a: new Control_inputButton({
+        object: showcase.state.get.current(),
+        path: 'input.color.inputButton.a',
+        id: 'input-color-inputbutton.a',
+        type: 'color',
+        labelText: "Colour",
+        inputButtonStyle: ['line'],
+        action: () => { console.log(showcase.state.get.current()); }
+      }),
+      b: new Control_inputButton({
+        object: showcase.state.get.current(),
+        path: 'input.color.inputButton.b',
+        id: 'input-color-inputbutton.b',
+        type: 'color',
+        labelText: "Colour",
+        srOnly: true,
+        inputButtonStyle: ['dot', 'line'],
+        action: () => { console.log(showcase.state.get.current()); }
+      })
+    },
+    mixer: new Control_colorMixer({
+      object: showcase.state.get.current(),
+      path: 'input.color.mixer',
+      id: 'input-color-mixer',
+      labelText: 'Colour',
+      defaultValue: showcase.state.get.default().input.color.mixer.rgb,
+      minMaxObject: showcase.state.get.minMax(),
+      randomColor: true,
+      action: () => { console.log(showcase.state.get.current()); }
+    }),
+  }
 
   showcase.control.input.number = new Control_slider({
     object: showcase.state.get.current(),
@@ -480,7 +543,7 @@ showcase.area.assemble = () => {
     min: showcase.state.get.minMax().input.number.min,
     max: showcase.state.get.minMax().input.number.max,
     action: () => { console.log(showcase.state.get.current()); }
-  });
+  })
 
   showcase.control.input.numberRange = new Control_sliderDouble({
     object: showcase.state.get.current(),
@@ -505,7 +568,7 @@ showcase.area.assemble = () => {
       max: showcase.state.get.minMax().input.numberRange.end.max,
       action: () => { console.log(showcase.state.get.current()); }
     }
-  });
+  })
 
   showcase.control.tab = new Tab({
     group: [{
@@ -533,7 +596,7 @@ showcase.area.assemble = () => {
       area: node('div', [node('p:Tabbed content 6')]),
       active: false
     }]
-  });
+  })
 
   showcase.control.select = new Control_select({
     object: showcase.state.get.current(),
@@ -543,7 +606,7 @@ showcase.area.assemble = () => {
     option: ['Alpha', 'Beta', 'Gamma'],
     selected: showcase.state.get.current().select,
     action: () => { console.log(showcase.state.get.current()); }
-  });
+  })
 
   showcase.control.button = {
     a: new Button({ text: 'Button' }),
@@ -563,7 +626,7 @@ showcase.area.assemble = () => {
         { text: 'Two', iconName: 'addBookmark' }
       ]
     }),
-  };
+  }
 
   for (let key in icon.all) {
     showcase.control.icon.push(
@@ -575,7 +638,7 @@ showcase.area.assemble = () => {
         ]
       })
     );
-  };
+  }
 
   showcase.element.side.append(
     form.wrap({
@@ -600,7 +663,7 @@ showcase.area.assemble = () => {
     showcase.control.side.radius.wrap(),
     // showcase.control.side.displayFont.wrap(),
     // showcase.control.side.uiFont.wrap(),
-  );
+  )
 
   showcase.element.content.append(
     form.sticky({
@@ -642,7 +705,6 @@ showcase.area.assemble = () => {
     }),
     node('hr'),
     showcase.control.input.radio.a.inline(),
-    node('hr'),
     form.wrap({
       children: [
         form.inline({
@@ -665,13 +727,54 @@ showcase.area.assemble = () => {
           children: [
             showcase.control.input.radio.b.inputButton(),
             showcase.control.input.radio.c.inputButton(),
+          ]
+        })
+      ]
+    }),
+    form.wrap({
+      children: [
+        form.inline({
+          wrap: true,
+          gap: 'small',
+          align: 'center',
+          children: [
             showcase.control.input.checkbox.d.inputButton(),
             showcase.control.input.checkbox.e.inputButton(),
           ]
         })
       ]
     }),
-    node('hr'),
+    form.wrap({
+      children: [
+        form.inline({
+          wrap: true,
+          gap: 'small',
+          align: 'center',
+          children: [
+            showcase.control.button.a.wrap(),
+            showcase.control.button.b.wrap(),
+            showcase.control.button.c.wrap(),
+            showcase.control.button.g.wrap(),
+            showcase.control.button.dropdown.toggle,
+            showcase.control.input.color.basic.b.wrap(),
+            showcase.control.input.color.inputButton.b.wrap(),
+          ]
+        })
+      ]
+    }),
+    form.wrap({
+      children: [
+        form.inline({
+          align: 'center',
+          gap: 'small',
+          children: [
+            showcase.control.input.radio.grid3x3.wrap(),
+            showcase.control.input.radio.grid1x3.wrap(),
+            showcase.control.input.radio.grid3x1.wrap(),
+          ]
+        }),
+      ]
+    }),
     form.wrap({
       children: [
         form.inline({
@@ -686,27 +789,10 @@ showcase.area.assemble = () => {
       ]
     }),
     node('hr'),
-    form.wrap({
-      children: [
-        form.inline({
-          wrap: true,
-          gap: 'small',
-          align: 'center',
-          children: [
-            showcase.control.button.a.wrap(),
-            showcase.control.button.b.wrap(),
-            showcase.control.button.c.wrap(),
-            showcase.control.button.g.wrap(),
-            showcase.control.button.dropdown.toggle,
-          ]
-        })
-      ]
-    }),
-    node('hr'),
     showcase.control.tab.tab(),
     showcase.control.input.text.wrap(),
     showcase.control.input.textarea.wrap(),
-    showcase.control.input.color.wrap(),
+    showcase.control.input.color.mixer.wrap(),
     showcase.control.input.number.wrap(),
     showcase.control.input.numberRange.wrap(),
     showcase.control.select.wrap(),
@@ -721,11 +807,11 @@ showcase.area.assemble = () => {
         })
       ]
     }),
-  );
+  )
 
-  showcase.element.showcase.append(showcase.element.side);
+  showcase.element.showcase.append(showcase.element.side)
 
-  showcase.element.showcase.append(showcase.element.content);
+  showcase.element.showcase.append(showcase.element.content)
 
 };
 
