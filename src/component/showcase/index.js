@@ -492,8 +492,8 @@ showcase.area.assemble = () => {
       }),
       b: new Control_color({
         object: showcase.state.get.current(),
-        path: 'input.color.basic.a',
-        id: 'input-color-basic.a',
+        path: 'input.color.basic.b',
+        id: 'input-color-basic.b',
         labelText: 'Colour',
         text: false,
         srOnly: true,
