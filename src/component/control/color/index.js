@@ -16,6 +16,7 @@ export const Control_color = function ({
   labelText = 'Label',
   srOnly = false,
   value = '#000000',
+  text = true,
   defaultValue = false,
   action = false,
   randomColor = false,
@@ -163,11 +164,12 @@ export const Control_color = function ({
 
     const formGroup = form.group({
       block: true,
-      children: [
-        this.color,
-        this.text
-      ]
+      children: [this.color]
     });
+
+    if (text) {
+      formGroup.appendChild(this.text);
+    }
 
     if (randomColor) {
       formGroup.appendChild(this.random.button);
