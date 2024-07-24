@@ -4,8 +4,9 @@ import { node } from '../../utility/node';
 
 import './index.css';
 
-export const Tab = function({
-  group = []
+export const Tab = function ({
+  hideContent = false,
+  group = [],
 } = {}) {
 
   this.element = {
@@ -92,6 +93,13 @@ export const Tab = function({
 
   this.content = {
     render: () => {
+
+      if (hideContent) {
+
+        this.element.tab.classList.add('tab-hide-content');
+
+      }
+
       group.forEach((item) => {
 
         if (item.active) {
@@ -101,6 +109,7 @@ export const Tab = function({
         }
 
       });
+
     }
   };
 

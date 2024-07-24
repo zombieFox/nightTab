@@ -18,6 +18,12 @@
   width: 100%;
 }
 
+.tab-hide-content {
+  grid-template-rows: auto;
+  grid-template-areas:
+    "nav";
+}
+
 .tab-nav {
   background-color: hsl(var(--theme-primary-020));
   border-radius: calc((var(--theme-radius) * 0.01em) + ((var(--tab-size) / 4) * 0.125em));
@@ -26,6 +32,10 @@
   display: flex;
   position: relative;
   transition: background-color var(--layout-transition-extra-fast);
+}
+
+.disabled .tab-nav {
+  background-color: transparent;
 }
 
 .tab-nav-group {
@@ -44,6 +54,7 @@
 
 .tab-nav-button {
   background-color: transparent;
+  border: 3px solid transparent;
   flex-grow: 1;
   flex-basis: 25%;
   z-index: 2;
@@ -58,7 +69,7 @@
 .tab-nav-button.active {
   background-color: transparent;
   color: hsl(var(--theme-accent-text));
-  transition: background-color var(--layout-duration-01), border-color var(--layout-transition-extra-fast), color var(--layout-transition-extra-fast);
+  transition: background-color var(--layout-duration-01), border-color var(--layout-duration-01), color var(--layout-transition-extra-fast);
 }
 
 .tab.disabled .tab-nav-button {
@@ -67,6 +78,7 @@
 
 .tab.disabled .tab-nav-button.active {
   background-color: hsl(var(--button-background-disabled));
+  border-color: hsl(var(--theme-primary-020));
   color: hsl(var(--button-text-disabled));
 }
 
@@ -95,4 +107,8 @@
 
 .tab-content {
   grid-area: content;
+}
+
+.tab-hide-content .tab-content {
+  display: none;
 }
