@@ -5,7 +5,7 @@ import { node } from '../../utility/node';
 
 import './index.css';
 
-export const Dropdown = function({
+export const Dropdown = function ({
   title = false,
   text = 'Dropdown',
   menuItem = [],
@@ -39,7 +39,8 @@ export const Dropdown = function({
         }
 
       }
-    })
+    }),
+    menuItem: []
   };
 
   this.toggle = this.element.toggle.button;
@@ -181,6 +182,8 @@ export const Dropdown = function({
           classList: ['dropdown-menu-button']
         });
 
+        this.element.menuItem.push(dropdownMenuButton);
+
         dropdownMenuButton.button.addEventListener('click', () => {
 
           if (item.action) { item.action(); }
@@ -200,11 +203,27 @@ export const Dropdown = function({
   };
 
   this.disable = () => {
+
     this.element.toggle.disable();
+
+    this.element.menuItem.forEach((item) => {
+
+      item.disable();
+
+    });
+
   };
 
   this.enable = () => {
+
     this.element.toggle.enable();
+
+    this.element.menuItem.forEach((item) => {
+
+      item.enable();
+
+    });
+
   };
 
   this.assemble();
