@@ -3,39 +3,48 @@
 }
 
 .showcase {
-  padding: var(--showcase-padding);
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   z-index: var(--z-index-showcase);
 }
 
 .showcase {
   display: grid;
-  gap: var(--showcase-padding);
-  grid-template-columns: 2fr 5fr;
+  grid-template-columns: 32em 1fr;
   grid-template-areas:
     "side content";
-  justify-items: center;
 }
 
 .showcase-side {
+  padding: var(--showcase-padding);
+  padding-right: calc(var(--showcase-padding) / 2);
   grid-area: side;
   position: sticky;
   top: var(--showcase-padding);
+  display: grid;
   width: 100%;
   height: 100%;
-  height: fit-content;
+  overflow: auto;
+  direction: rtl;
+}
+
+.showcase-side .showcase-control {
+  direction: ltr;
 }
 
 .showcase-content {
+  padding: var(--showcase-padding);
+  padding-left: calc(var(--showcase-padding) / 2);
   grid-area: content;
   width: 100%;
+  height: 100%;
+  overflow: auto;
 }
 
 .showcase-content {
   display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: var(--showcase-padding);
+  grid-template-columns: 2fr 3fr 3fr;
+  gap: calc(var(--showcase-padding) / 2);
 }
 
 .showcase-column {}

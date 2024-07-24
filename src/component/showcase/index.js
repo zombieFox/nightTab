@@ -45,9 +45,11 @@ const showcase = {};
 showcase.element = {
   showcase: node('div|class:showcase'),
   side: node('div|class:showcase-side'),
+  control: node('div|class:showcase-control'),
   content: node('div|class:showcase-content'),
   column1: node('div|class:showcase-column'),
   column2: node('div|class:showcase-column'),
+  column3: node('div|class:showcase-column'),
 };
 
 showcase.state = {};
@@ -58,7 +60,7 @@ showcase.state.default = {
   disable: false,
   input: {
     radio: { a: '1', b: '1', c: '1', grid3x3: '1', grid3x1: '1', grid1x3: '1' },
-    checkbox: { a: true, b: true, c: false, d: false, e: false },
+    checkbox: { a: true, b: false, c: true, d: false },
     color: {
       basic: {
         a: { hsl: { h: 221, s: 100, l: 50 }, rgb: { r: 0, g: 80, b: 255 } },
@@ -103,12 +105,7 @@ showcase.state.current = showcase.state.get.default();
 
 showcase.disable = () => {
 
-  showcase.state.disable = !showcase.state.disable;
-
-  if (showcase.state.disable) {
-
-    showcase.control.side.disable.text('Enable');
-    showcase.control.side.disable.active();
+  if (showcase.state.get.current().disable) {
 
     showcase.control.input.radio.a.disable();
     showcase.control.input.radio.b.disable();
@@ -120,7 +117,6 @@ showcase.disable = () => {
     showcase.control.input.checkbox.b.disable();
     showcase.control.input.checkbox.c.disable();
     showcase.control.input.checkbox.d.disable();
-    showcase.control.input.checkbox.e.disable();
     showcase.control.button.a.disable();
     showcase.control.button.b.disable();
     showcase.control.button.c.disable();
@@ -143,9 +139,6 @@ showcase.disable = () => {
 
   } else {
 
-    showcase.control.side.disable.text('Disable');
-    showcase.control.side.disable.deactive();
-
     showcase.control.input.radio.a.enable();
     showcase.control.input.radio.b.enable();
     showcase.control.input.radio.c.enable();
@@ -156,7 +149,6 @@ showcase.disable = () => {
     showcase.control.input.checkbox.b.enable();
     showcase.control.input.checkbox.c.enable();
     showcase.control.input.checkbox.d.enable();
-    showcase.control.input.checkbox.e.enable();
     showcase.control.button.a.enable();
     showcase.control.button.b.enable();
     showcase.control.button.c.enable();
@@ -222,7 +214,18 @@ showcase.area.assemble = () => {
         applyCSSClass('theme.style');
       }
     }),
-    disable: new Button({ text: 'Disable', style: ['line'], func: () => { showcase.disable(); } }),
+    disable: new Control_checkbox({
+      object: showcase.state.get.current(),
+      id: 'disable',
+      path: 'disable',
+      labelText: 'Disable',
+      buttonHideInput: true,
+      inputButtonStyle: ['line'],
+      action: () => {
+        showcase.disable();
+        console.log(showcase.state.get.current());
+      }
+    }),
     h: new Control_sliderSlim({
       object: state.get.current(),
       path: 'theme.color.range.primary.h',
@@ -289,6 +292,7 @@ showcase.area.assemble = () => {
       minMaxObject: state.get.minMax(),
       randomColor: true,
       action: () => {
+
         applyCSSVar([
           'theme.accent.rgb.r',
           'theme.accent.rgb.g',
@@ -297,6 +301,13 @@ showcase.area.assemble = () => {
           'theme.accent.hsl.s',
           'theme.accent.hsl.l'
         ]);
+
+        showcase.control.input.color.basic.a.update();
+        showcase.control.input.color.basic.b.update();
+        showcase.control.input.color.inputButton.a.update();
+        showcase.control.input.color.inputButton.b.update();
+        showcase.control.input.color.mixer.update();
+
       }
     }),
     shadow: new Control_sliderSlim({
@@ -349,9 +360,8 @@ showcase.area.assemble = () => {
         theme.font.ui.delay();
       }
     }),
+    shade: new ShadeBar(),
   }
-
-  showcase.control.shade = new ShadeBar()
 
   showcase.control.input.radio = {
     a: new Control_radio({
@@ -460,23 +470,15 @@ showcase.area.assemble = () => {
       object: showcase.state.get.current(),
       id: 'input-checkbox-c',
       path: 'input.checkbox.c',
-      labelText: 'Checkbox C',
-      description: 'Description C',
+      labelText: 'Checkbox A',
+      inputButtonStyle: ['line'],
       action: () => { console.log(showcase.state.get.current()); }
     }),
     d: new Control_checkbox({
       object: showcase.state.get.current(),
       id: 'input-checkbox-d',
       path: 'input.checkbox.d',
-      labelText: 'Checkbox D',
-      inputButtonStyle: ['line'],
-      action: () => { console.log(showcase.state.get.current()); }
-    }),
-    e: new Control_checkbox({
-      object: showcase.state.get.current(),
-      id: 'input-checkbox-e',
-      path: 'input.checkbox.e',
-      labelText: 'Checkbox E',
+      labelText: 'Checkbox B',
       buttonHideInput: true,
       inputButtonStyle: ['line'],
       action: () => { console.log(showcase.state.get.current()); }
@@ -496,16 +498,16 @@ showcase.area.assemble = () => {
   showcase.control.input.color = {
     basic: {
       a: new Control_color({
-        object: showcase.state.get.current(),
-        path: 'input.color.basic.a',
-        id: 'input-color-basic.a',
+        object: state.get.current(),
+        path: 'theme.accent',
+        id: 'theme-accent',
         labelText: 'Colour',
         action: () => { console.log(showcase.state.get.current()); }
       }),
       b: new Control_color({
-        object: showcase.state.get.current(),
-        path: 'input.color.basic.b',
-        id: 'input-color-basic.b',
+        object: state.get.current(),
+        path: 'theme.accent',
+        id: 'theme-accent',
         labelText: 'Colour',
         text: false,
         srOnly: true,
@@ -514,18 +516,18 @@ showcase.area.assemble = () => {
     },
     inputButton: {
       a: new Control_inputButton({
-        object: showcase.state.get.current(),
-        path: 'input.color.inputButton.a',
-        id: 'input-color-inputbutton.a',
+        object: state.get.current(),
+        path: 'theme.accent',
+        id: 'theme-accent',
         type: 'color',
         labelText: "Colour",
         inputButtonStyle: ['line'],
         action: () => { console.log(showcase.state.get.current()); }
       }),
       b: new Control_inputButton({
-        object: showcase.state.get.current(),
-        path: 'input.color.inputButton.b',
-        id: 'input-color-inputbutton.b',
+        object: state.get.current(),
+        path: 'theme.accent',
+        id: 'theme-accent',
         type: 'color',
         labelText: "Colour",
         srOnly: true,
@@ -534,12 +536,12 @@ showcase.area.assemble = () => {
       })
     },
     mixer: new Control_colorMixer({
-      object: showcase.state.get.current(),
-      path: 'input.color.mixer',
-      id: 'input-color-mixer',
+      object: state.get.current(),
+      path: 'theme.accent',
+      id: 'theme-accent',
       labelText: 'Colour',
-      defaultValue: showcase.state.get.default().input.color.mixer.rgb,
-      minMaxObject: showcase.state.get.minMax(),
+      defaultValue: state.get.default().theme.accent.rgb,
+      minMaxObject: state.get.minMax(),
       randomColor: true,
       action: () => { console.log(showcase.state.get.current()); }
     }),
@@ -645,7 +647,9 @@ showcase.area.assemble = () => {
     );
   }
 
-  showcase.element.side.append(
+  showcase.element.side.append(showcase.element.control)
+
+  showcase.element.control.append(
     form.wrap({
       children: [
         form.inline({
@@ -653,13 +657,13 @@ showcase.area.assemble = () => {
           gap: 'small',
           children: [
             showcase.control.side.style.inputButton(),
-            showcase.control.side.disable.wrap(),
+            showcase.control.side.disable.inputButton(),
           ]
         })
       ]
     }),
     node('hr'),
-    showcase.control.shade.shadeBar(),
+    showcase.control.side.shade.shadeBar(),
     showcase.control.side.h.wrap(),
     showcase.control.side.s.wrap(),
     showcase.control.side.contrast.wrap(),
@@ -675,44 +679,88 @@ showcase.area.assemble = () => {
     form.wrap({
       children: [
         form.inline({
-          gap: 'small',
           children: [
             node('div|class:showcase-type', [
               node('h1:Heading 1'),
               node('h2:Heading 2'),
               node('h3:Heading 3'),
+            ]),
+            node('div|class:showcase-type', [
               node('h4:Heading 4'),
               node('h5:Heading 5'),
               node('h6:Heading 6'),
             ]),
-            node('div|class:showcase-type', [
-              node('p:A neutral new tab page accented with a chosen colour. Customise the layout, style, background and bookmarks with nightTab.'),
-            ]),
-            node('div|class:showcase-type', [
-              node('a:nightTab|href:https://github.com/zombieFox/nightTab,target:_blank'),
-              new Control_helperText({
-                text: ['A neutral new tab page accented with a chosen colour. Customise the layout, style, background and bookmarks with nightTab.']
-              }).wrap(),
-            ]),
-            node('div|class:showcase-type', [
-              node('ul', [
-                node('li:List item 1'),
-                node('li:List item 2'),
-                node('li:List item 3'),
-              ]),
-            ]),
-            node('div|class:showcase-icon', [
-              form.inline({
-                gap: 'small',
-                wrap: true,
-                equalGap: true,
-                children: showcase.control.icon
-              }),
-            ]),
-          ],
+          ]
         }),
       ]
     }),
+    form.wrap({
+      children: [
+        node('a:nightTab|href:https://github.com/zombieFox/nightTab,target:_blank'),
+      ]
+    }),
+    form.wrap({
+      children: [
+        node('p:A neutral new tab page accented with a chosen colour. Customise the layout, style, background and bookmarks with nightTab.'),
+      ]
+    }),
+    new Control_helperText({
+      text: ['A neutral new tab page accented with a chosen colour. Customise the layout, style, background and bookmarks with nightTab.']
+    }).wrap(),
+    form.wrap({
+      children: [
+        node('ul', [
+          node('li:List item 1'),
+          node('li:List item 2'),
+          node('li:List item 3'),
+        ]),
+      ]
+    }),
+    form.wrap({
+      children: [
+        node('div|class:showcase-icon', [
+          form.inline({
+            gap: 'small',
+            wrap: true,
+            equalGap: true,
+            children: showcase.control.icon
+          }),
+        ]),
+      ]
+    }),
+  )
+
+  showcase.element.column2.append(
+    form.wrap({
+      children: [
+        form.inline({
+          wrap: true,
+          gap: 'small',
+          align: 'center',
+          children: [
+            showcase.control.button.a.wrap(),
+            showcase.control.button.b.wrap(),
+            showcase.control.button.c.wrap(),
+          ]
+        })
+      ]
+    }),
+    form.wrap({
+      children: [
+        form.inline({
+          wrap: true,
+          gap: 'small',
+          align: 'center',
+          children: [
+            showcase.control.input.color.basic.b.wrap(),
+            showcase.control.input.color.inputButton.b.wrap(),
+            showcase.control.button.g.wrap(),
+            showcase.control.button.dropdown.toggle,
+          ]
+        })
+      ]
+    }),
+    node('hr'),
     showcase.control.input.radio.a.inline(),
     form.wrap({
       children: [
@@ -721,12 +769,10 @@ showcase.area.assemble = () => {
           children: [
             showcase.control.input.checkbox.a.wrap(),
             showcase.control.input.checkbox.b.wrap(),
-            showcase.control.input.checkbox.c.wrap(),
           ]
         }),
       ]
     }),
-    node('hr'),
     form.wrap({
       children: [
         form.inline({
@@ -735,6 +781,17 @@ showcase.area.assemble = () => {
           align: 'center',
           children: [
             showcase.control.input.radio.b.inputButton(),
+          ]
+        })
+      ]
+    }),
+    form.wrap({
+      children: [
+        form.inline({
+          wrap: true,
+          gap: 'small',
+          align: 'center',
+          children: [
             showcase.control.input.radio.c.inputButton(),
           ]
         })
@@ -747,26 +804,8 @@ showcase.area.assemble = () => {
           gap: 'small',
           align: 'center',
           children: [
+            showcase.control.input.checkbox.c.inputButton(),
             showcase.control.input.checkbox.d.inputButton(),
-            showcase.control.input.checkbox.e.inputButton(),
-          ]
-        })
-      ]
-    }),
-    form.wrap({
-      children: [
-        form.inline({
-          wrap: true,
-          gap: 'small',
-          align: 'center',
-          children: [
-            showcase.control.button.a.wrap(),
-            showcase.control.button.b.wrap(),
-            showcase.control.button.c.wrap(),
-            showcase.control.button.g.wrap(),
-            showcase.control.button.dropdown.toggle,
-            showcase.control.input.color.basic.b.wrap(),
-            showcase.control.input.color.inputButton.b.wrap(),
           ]
         })
       ]
@@ -784,13 +823,19 @@ showcase.area.assemble = () => {
         }),
       ]
     }),
+    node('hr'),
+    form.wrap({
+      children: [
+        showcase.control.tab.tab(),
+      ]
+    }),
   )
 
-  showcase.element.column2.append(
-    showcase.control.tab.tab(),
+  showcase.element.column3.append(
     showcase.control.input.text.wrap(),
     showcase.control.input.textarea.wrap(),
-    showcase.control.input.color.mixer.wrap(),
+    node('hr'),
+    // showcase.control.input.color.mixer.wrap(),
     showcase.control.input.number.wrap(),
     showcase.control.input.numberRange.wrap(),
     showcase.control.select.wrap(),
@@ -799,6 +844,7 @@ showcase.area.assemble = () => {
   showcase.element.content.append(
     showcase.element.column1,
     showcase.element.column2,
+    showcase.element.column3,
   )
 
   showcase.element.showcase.append(showcase.element.side)
