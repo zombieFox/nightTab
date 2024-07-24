@@ -12,7 +12,7 @@
 .showcase {
   display: grid;
   gap: var(--showcase-padding);
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 2fr 5fr;
   grid-template-areas:
     "side content";
   justify-items: center;
@@ -30,15 +30,15 @@
 .showcase-content {
   grid-area: content;
   width: 100%;
-  height: fit-content;
 }
 
-@media (min-width: 1400px) {
-  .showcase-content {
-    grid-area: content;
-    max-width: 80%;
-  }
+.showcase-content {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: var(--showcase-padding);
 }
+
+.showcase-column {}
 
 .showcase-type h1,
 .showcase-type h2,
@@ -50,6 +50,11 @@
   white-space: nowrap;
 }
 
-.showcase-type {
+.showcase-type,
+.showcase-icon {
   flex-basis: 100%;
+}
+
+.showcase-icon .icon {
+  font-size: 1em;
 }

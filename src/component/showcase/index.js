@@ -46,6 +46,8 @@ showcase.element = {
   showcase: node('div|class:showcase'),
   side: node('div|class:showcase-side'),
   content: node('div|class:showcase-content'),
+  column1: node('div|class:showcase-column'),
+  column2: node('div|class:showcase-column'),
 };
 
 showcase.state = {};
@@ -133,6 +135,10 @@ showcase.disable = () => {
     showcase.control.input.color.mixer.disable();
     showcase.control.input.number.disable();
     showcase.control.input.numberRange.disable();
+    showcase.control.input.color.basic.a.disable();
+    showcase.control.input.color.basic.b.disable();
+    showcase.control.input.color.inputButton.a.disable();
+    showcase.control.input.color.inputButton.b.disable();
     showcase.control.select.disable();
 
   } else {
@@ -165,6 +171,10 @@ showcase.disable = () => {
     showcase.control.input.color.mixer.enable();
     showcase.control.input.number.enable();
     showcase.control.input.numberRange.enable();
+    showcase.control.input.color.basic.a.enable();
+    showcase.control.input.color.basic.b.enable();
+    showcase.control.input.color.inputButton.a.enable();
+    showcase.control.input.color.inputButton.b.enable();
     showcase.control.select.enable();
 
   }
@@ -347,11 +357,11 @@ showcase.area.assemble = () => {
     a: new Control_radio({
       object: showcase.state.get.current(),
       radioGroup: [
-        { id: 'input-radio-a-1', labelText: 'Radio 1', description: 'Description for radio A 1', value: '1' },
-        { id: 'input-radio-a-2', labelText: 'Radio 2', description: 'Description for radio A 2', value: '2' },
-        { id: 'input-radio-a-3', labelText: 'Radio 3', description: 'Description for radio A 3', value: '3' }
+        { id: 'input-radio-a-1', labelText: 'Radio 1', description: 'Description 1', value: '1' },
+        { id: 'input-radio-a-2', labelText: 'Radio 2', description: 'Description 2', value: '2' },
+        { id: 'input-radio-a-3', labelText: 'Radio 3', description: 'Description 3', value: '3' }
       ],
-      label: 'Radio group A',
+      // label: 'Radio group A',
       groupName: 'input-radio-a',
       path: 'input.radio.a',
       action: () => { console.log(showcase.state.get.current()); }
@@ -435,7 +445,7 @@ showcase.area.assemble = () => {
       id: 'input-checkbox-a',
       path: 'input.checkbox.a',
       labelText: 'Checkbox A',
-      description: 'Description for checkbox A',
+      description: 'Description A',
       action: () => { console.log(showcase.state.get.current()); }
     }),
     b: new Control_checkbox({
@@ -443,7 +453,7 @@ showcase.area.assemble = () => {
       id: 'input-checkbox-b',
       path: 'input.checkbox.b',
       labelText: 'Checkbox B',
-      description: 'Description for checkbox B',
+      description: 'Description B',
       action: () => { console.log(showcase.state.get.current()); }
     }),
     c: new Control_checkbox({
@@ -451,7 +461,7 @@ showcase.area.assemble = () => {
       id: 'input-checkbox-c',
       path: 'input.checkbox.c',
       labelText: 'Checkbox C',
-      description: 'Description for checkbox C',
+      description: 'Description C',
       action: () => { console.log(showcase.state.get.current()); }
     }),
     d: new Control_checkbox({
@@ -473,9 +483,15 @@ showcase.area.assemble = () => {
     }),
   }
 
-  showcase.control.input.text = new Control_text({ labelText: 'Text', placeholder: 'Placeholder' })
+  showcase.control.input.text = new Control_text({
+    labelText: 'Text',
+    placeholder: 'Placeholder'
+  })
 
-  showcase.control.input.textarea = new Control_textarea({ labelText: 'Textarea', placeholder: 'Placeholder' })
+  showcase.control.input.textarea = new Control_textarea({
+    labelText: 'Textarea',
+    placeholder: 'Placeholder'
+  })
 
   showcase.control.input.color = {
     basic: {
@@ -567,6 +583,7 @@ showcase.area.assemble = () => {
   })
 
   showcase.control.tab = new Tab({
+    hideContent: true,
     group: [{
       tabText: 'Tab 1',
       area: node('div', [node('p:Tabbed content 1')]),
@@ -582,14 +599,6 @@ showcase.area.assemble = () => {
     }, {
       tabText: 'Tab 4',
       area: node('div', [node('p:Tabbed content 4')]),
-      active: false
-    }, {
-      tabText: 'Tab 5',
-      area: node('div', [node('p:Tabbed content 5')]),
-      active: false
-    }, {
-      tabText: 'Tab 6',
-      area: node('div', [node('p:Tabbed content 6')]),
       active: false
     }]
   })
@@ -650,6 +659,7 @@ showcase.area.assemble = () => {
       ]
     }),
     node('hr'),
+    showcase.control.shade.shadeBar(),
     showcase.control.side.h.wrap(),
     showcase.control.side.s.wrap(),
     showcase.control.side.contrast.wrap(),
@@ -661,17 +671,11 @@ showcase.area.assemble = () => {
     // showcase.control.side.uiFont.wrap(),
   )
 
-  showcase.element.content.append(
-    form.sticky({
-      children: [
-        showcase.control.shade.shadeBar()
-      ]
-    }),
-    node('hr'),
+  showcase.element.column1.append(
     form.wrap({
       children: [
         form.inline({
-          gap: 'large',
+          gap: 'small',
           children: [
             node('div|class:showcase-type', [
               node('h1:Heading 1'),
@@ -682,24 +686,33 @@ showcase.area.assemble = () => {
               node('h6:Heading 6'),
             ]),
             node('div|class:showcase-type', [
-              node('p:Sed dolores doloremque id iure Quis est suscipit deleniti cum doloremque nihil.'),
+              node('p:A neutral new tab page accented with a chosen colour. Customise the layout, style, background and bookmarks with nightTab.'),
+            ]),
+            node('div|class:showcase-type', [
+              node('a:nightTab|href:https://github.com/zombieFox/nightTab,target:_blank'),
+              new Control_helperText({
+                text: ['A neutral new tab page accented with a chosen colour. Customise the layout, style, background and bookmarks with nightTab.']
+              }).wrap(),
+            ]),
+            node('div|class:showcase-type', [
               node('ul', [
                 node('li:List item 1'),
                 node('li:List item 2'),
                 node('li:List item 3'),
               ]),
-              node('a:Lorem ipsum dolor sit amet|href:https://github.com/zombieFox/nightTab,target:_blank'),
             ]),
-            node('div|class:showcase-type', [
-              new Control_helperText({
-                text: ['Et iure voluptas non accusantium voluptatibus et necessitatibus.']
-              }).wrap()
+            node('div|class:showcase-icon', [
+              form.inline({
+                gap: 'small',
+                wrap: true,
+                equalGap: true,
+                children: showcase.control.icon
+              }),
             ]),
-          ]
-        })
+          ],
+        }),
       ]
     }),
-    node('hr'),
     showcase.control.input.radio.a.inline(),
     form.wrap({
       children: [
@@ -771,20 +784,9 @@ showcase.area.assemble = () => {
         }),
       ]
     }),
-    form.wrap({
-      children: [
-        form.inline({
-          align: 'center',
-          gap: 'small',
-          children: [
-            showcase.control.input.radio.grid3x3.wrap(),
-            showcase.control.input.radio.grid1x3.wrap(),
-            showcase.control.input.radio.grid3x1.wrap(),
-          ]
-        }),
-      ]
-    }),
-    node('hr'),
+  )
+
+  showcase.element.column2.append(
     showcase.control.tab.tab(),
     showcase.control.input.text.wrap(),
     showcase.control.input.textarea.wrap(),
@@ -792,17 +794,11 @@ showcase.area.assemble = () => {
     showcase.control.input.number.wrap(),
     showcase.control.input.numberRange.wrap(),
     showcase.control.select.wrap(),
-    node('hr'),
-    form.wrap({
-      children: [
-        form.inline({
-          gap: 'small',
-          wrap: true,
-          equalGap: true,
-          children: showcase.control.icon
-        })
-      ]
-    }),
+  )
+
+  showcase.element.content.append(
+    showcase.element.column1,
+    showcase.element.column2,
   )
 
   showcase.element.showcase.append(showcase.element.side)
