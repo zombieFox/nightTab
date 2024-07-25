@@ -54,7 +54,7 @@
 
 .tab-nav-button {
   background-color: transparent;
-  border: 3px solid transparent;
+  border: 0;
   flex-grow: 1;
   flex-basis: 25%;
   z-index: 2;
@@ -66,10 +66,16 @@
   }
 }
 
+.tab-nav-button:active {
+  background-color: transparent;
+  color: hsl(var(--button-link-text));
+  transition: background-color 0s, color var(--layout-transition-extra-fast);
+}
+
 .tab-nav-button.active {
   background-color: transparent;
   color: hsl(var(--theme-accent-text));
-  transition: background-color var(--layout-duration-01), border-color var(--layout-duration-01), color var(--layout-transition-extra-fast);
+  transition: background-color var(--layout-transition-extra-fast), color var(--layout-transition-extra-fast);
 }
 
 .tab.disabled .tab-nav-button {
@@ -77,8 +83,7 @@
 }
 
 .tab.disabled .tab-nav-button.active {
-  background-color: hsl(var(--button-background-disabled));
-  border-color: hsl(var(--theme-primary-020));
+  background-color: hsl(var(--theme-primary-020));
   color: hsl(var(--button-text-disabled));
 }
 

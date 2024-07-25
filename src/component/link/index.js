@@ -1,5 +1,7 @@
 import { icon } from '../icon';
 
+import * as form from '../form';
+
 import { node } from '../../utility/node';
 import { complexNode } from '../../utility/complexNode';
 
@@ -109,6 +111,14 @@ export const Link = function ({
 
   this.link = () => {
     return this.element.link;
+  };
+
+  this.wrap = () => {
+    return form.wrap({
+      children: [
+        this.element.link
+      ]
+    });
   };
 
   this.assemble();

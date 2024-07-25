@@ -200,15 +200,21 @@ button .icon,
   width: 100%;
 }
 
-.button-link {
+.button-link,
+.button-link:link,
+.button-link:visited,
+.button-link:focus,
+.button-link:hover,
+.button-link:active {
   background-color: transparent;
   border: 0;
   color: hsl(var(--button-link-text));
+  text-decoration: none;
+  transition: background-color var(--layout-transition-extra-fast), color var(--layout-transition-extra-fast);
 }
 
 .button-link:hover,
 .button-link:focus {
-  background-color: transparent;
   color: hsl(var(--button-link-text-focus-hover));
 }
 
