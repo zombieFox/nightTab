@@ -5,9 +5,6 @@ import { icon } from '../icon';
 import * as form from '../form';
 
 import { Button } from '../button';
-import { Collapse } from '../collapse';
-import { PresetThemeTile } from '../presetThemeTile';
-import { AccentPresetButton } from '../accentPresetButton';
 import { Alert } from '../alert';
 import { Link } from '../link';
 import { Dropdown } from '../dropdown';
@@ -62,14 +59,6 @@ showcase.state.default = {
     radio: { a: '1', b: '1', c: '1', grid3x3: '1', grid3x1: '1', grid1x3: '1' },
     checkbox: { a: true, b: false, c: true, d: false },
     color: {
-      basic: {
-        a: { hsl: { h: 221, s: 100, l: 50 }, rgb: { r: 0, g: 80, b: 255 } },
-        b: { hsl: { h: 221, s: 100, l: 50 }, rgb: { r: 0, g: 80, b: 255 } },
-      },
-      inputButton: {
-        a: { hsl: { h: 221, s: 100, l: 50 }, rgb: { r: 0, g: 80, b: 255 } },
-        b: { hsl: { h: 221, s: 100, l: 50 }, rgb: { r: 0, g: 80, b: 255 } },
-      },
       mixer: { hsl: { h: 221, s: 100, l: 50 }, rgb: { r: 0, g: 80, b: 255 } },
     },
     number: 50,
@@ -81,10 +70,6 @@ showcase.state.default = {
 showcase.state.minMax = {
   input: {
     color: {
-      inputButton: {
-        a: { hsl: { h: { min: 0, max: 359 }, s: { min: 0, max: 100 }, l: { min: 0, max: 100 } } },
-        b: { hsl: { h: { min: 0, max: 359 }, s: { min: 0, max: 100 }, l: { min: 0, max: 100 } } },
-      },
       mixer: {
         hsl: { h: { min: 0, max: 359 }, s: { min: 0, max: 100 }, l: { min: 0, max: 100 } },
         rgb: { r: { min: 0, max: 255 }, g: { min: 0, max: 255 }, b: { min: 0, max: 255 } },
@@ -286,7 +271,7 @@ showcase.area.assemble = () => {
     accent: new Control_colorMixer({
       object: state.get.current(),
       path: 'theme.accent',
-      id: 'theme-accent',
+      id: 'theme-accent-a',
       labelText: 'Accent',
       defaultValue: state.get.default().theme.accent.rgb,
       minMaxObject: state.get.minMax(),
@@ -302,6 +287,7 @@ showcase.area.assemble = () => {
           'theme.accent.hsl.l'
         ]);
 
+        // showcase.control.side.accent.update();
         showcase.control.input.color.basic.a.update();
         showcase.control.input.color.basic.b.update();
         showcase.control.input.color.inputButton.a.update();
@@ -502,27 +488,87 @@ showcase.area.assemble = () => {
         path: 'theme.accent',
         id: 'theme-accent',
         labelText: 'Colour',
-        action: () => { console.log(showcase.state.get.current()); }
+        action: () => {
+
+          console.log(showcase.state.get.current());
+
+          applyCSSVar([
+            'theme.accent.rgb.r',
+            'theme.accent.rgb.g',
+            'theme.accent.rgb.b',
+            'theme.accent.hsl.h',
+            'theme.accent.hsl.s',
+            'theme.accent.hsl.l'
+          ]);
+
+          showcase.control.side.accent.update();
+          // showcase.control.input.color.basic.a.update();
+          showcase.control.input.color.basic.b.update();
+          showcase.control.input.color.inputButton.a.update();
+          showcase.control.input.color.inputButton.b.update();
+          showcase.control.input.color.mixer.update();
+
+        }
       }),
       b: new Control_color({
         object: state.get.current(),
         path: 'theme.accent',
-        id: 'theme-accent',
+        id: 'theme-accent-b',
         labelText: 'Colour',
         text: false,
         srOnly: true,
-        action: () => { console.log(showcase.state.get.current()); }
+        action: () => {
+
+          console.log(showcase.state.get.current());
+
+          applyCSSVar([
+            'theme.accent.rgb.r',
+            'theme.accent.rgb.g',
+            'theme.accent.rgb.b',
+            'theme.accent.hsl.h',
+            'theme.accent.hsl.s',
+            'theme.accent.hsl.l'
+          ]);
+
+          showcase.control.side.accent.update();
+          showcase.control.input.color.basic.a.update();
+          // showcase.control.input.color.basic.b.update();
+          showcase.control.input.color.inputButton.a.update();
+          showcase.control.input.color.inputButton.b.update();
+          showcase.control.input.color.mixer.update();
+
+        }
       })
     },
     inputButton: {
       a: new Control_inputButton({
         object: state.get.current(),
         path: 'theme.accent',
-        id: 'theme-accent',
+        id: 'theme-accent-c',
         type: 'color',
         labelText: "Colour",
         inputButtonStyle: ['line'],
-        action: () => { console.log(showcase.state.get.current()); }
+        action: () => {
+
+          console.log(showcase.state.get.current());
+
+          applyCSSVar([
+            'theme.accent.rgb.r',
+            'theme.accent.rgb.g',
+            'theme.accent.rgb.b',
+            'theme.accent.hsl.h',
+            'theme.accent.hsl.s',
+            'theme.accent.hsl.l'
+          ]);
+
+          showcase.control.side.accent.update();
+          showcase.control.input.color.basic.a.update();
+          showcase.control.input.color.basic.b.update();
+          // showcase.control.input.color.inputButton.a.update();
+          showcase.control.input.color.inputButton.b.update();
+          showcase.control.input.color.mixer.update();
+
+        }
       }),
       b: new Control_inputButton({
         object: state.get.current(),
@@ -532,7 +578,27 @@ showcase.area.assemble = () => {
         labelText: "Colour",
         srOnly: true,
         inputButtonStyle: ['dot', 'line'],
-        action: () => { console.log(showcase.state.get.current()); }
+        action: () => {
+
+          console.log(showcase.state.get.current());
+
+          applyCSSVar([
+            'theme.accent.rgb.r',
+            'theme.accent.rgb.g',
+            'theme.accent.rgb.b',
+            'theme.accent.hsl.h',
+            'theme.accent.hsl.s',
+            'theme.accent.hsl.l'
+          ]);
+
+          showcase.control.side.accent.update();
+          showcase.control.input.color.basic.a.update();
+          showcase.control.input.color.basic.b.update();
+          showcase.control.input.color.inputButton.a.update();
+          // showcase.control.input.color.inputButton.b.update();
+          showcase.control.input.color.mixer.update();
+
+        }
       })
     },
     mixer: new Control_colorMixer({
@@ -543,7 +609,27 @@ showcase.area.assemble = () => {
       defaultValue: state.get.default().theme.accent.rgb,
       minMaxObject: state.get.minMax(),
       randomColor: true,
-      action: () => { console.log(showcase.state.get.current()); }
+      action: () => {
+
+        console.log(showcase.state.get.current());
+
+        applyCSSVar([
+          'theme.accent.rgb.r',
+          'theme.accent.rgb.g',
+          'theme.accent.rgb.b',
+          'theme.accent.hsl.h',
+          'theme.accent.hsl.s',
+          'theme.accent.hsl.l'
+        ]);
+
+        showcase.control.side.accent.update();
+        showcase.control.input.color.basic.a.update();
+        showcase.control.input.color.basic.b.update();
+        showcase.control.input.color.inputButton.a.update();
+        showcase.control.input.color.inputButton.b.update();
+        // showcase.control.input.color.mixer.update();
+
+      }
     }),
   }
 
@@ -694,11 +780,7 @@ showcase.area.assemble = () => {
         }),
       ]
     }),
-    form.wrap({
-      children: [
-        node('a:nightTab|href:https://github.com/zombieFox/nightTab,target:_blank'),
-      ]
-    }),
+    new Link({ text: 'nightTab', href: 'https://github.com/zombieFox/nightTab', openNew: true }).wrap(),
     form.wrap({
       children: [
         node('p:A neutral new tab page accented with a chosen colour. Customise the layout, style, background and bookmarks with nightTab.'),
@@ -760,7 +842,6 @@ showcase.area.assemble = () => {
         })
       ]
     }),
-    node('hr'),
     showcase.control.input.radio.a.inline(),
     form.wrap({
       children: [
@@ -823,7 +904,6 @@ showcase.area.assemble = () => {
         }),
       ]
     }),
-    node('hr'),
     form.wrap({
       children: [
         showcase.control.tab.tab(),
@@ -834,7 +914,6 @@ showcase.area.assemble = () => {
   showcase.element.column3.append(
     showcase.control.input.text.wrap(),
     showcase.control.input.textarea.wrap(),
-    node('hr'),
     // showcase.control.input.color.mixer.wrap(),
     showcase.control.input.number.wrap(),
     showcase.control.input.numberRange.wrap(),
