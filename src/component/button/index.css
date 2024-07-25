@@ -200,7 +200,8 @@ button .icon,
   width: 100%;
 }
 
-.button-link {
+.button-link,
+.button-link:link {
   background-color: transparent;
   border: 0;
   color: hsl(var(--button-link-text));
