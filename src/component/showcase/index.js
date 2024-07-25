@@ -691,6 +691,11 @@ showcase.area.assemble = () => {
     }]
   })
 
+  showcase.control.alert = new Alert({
+    iconName: 'propagate',
+    children: [node('p:A neutral new tab page accented with a chosen colour.')]
+  })
+
   showcase.control.select = new Control_select({
     object: showcase.state.get.current(),
     path: 'select',
@@ -798,6 +803,7 @@ showcase.area.assemble = () => {
         ]),
       ]
     }),
+    showcase.control.alert.wrap(),
     form.wrap({
       children: [
         node('div|class:showcase-icon', [
