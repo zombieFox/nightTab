@@ -70,7 +70,6 @@ input[type="color"]::-moz-focus-inner {
   top: 0;
   left: 0;
   z-index: 4;
-  transition: none;
   clip-path: circle(calc(var(--form-thumb) / 2) at 50% 50%);
 }
 
