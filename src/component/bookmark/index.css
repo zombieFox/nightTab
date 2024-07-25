@@ -269,12 +269,7 @@
   box-shadow: var(--theme-shadow-top-medium);
 }
 
-.bookmark-link,
-.bookmark-link:link,
-.bookmark-link:visited,
-.bookmark-link:focus,
-.bookmark-link:hover,
-.bookmark-link:active {
+.bookmark-link {
   background-color: transparent;
   border: 0;
   position: relative;

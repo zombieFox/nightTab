@@ -85,14 +85,9 @@ i {
   font-style: italic;
 }
 
-a,
-a:link,
-a:visited,
-a:focus,
-a:hover,
-a:active {
+a {
   padding-bottom: 2px;
-  border: 0;
+  border-bottom: 1px solid hsl(var(--theme-primary-text-010));
   color: hsl(var(--theme-primary-text-010));
   text-decoration: none;
   outline: none;
@@ -101,12 +96,13 @@ a:active {
 a:link,
 a:visited {
   color: hsl(var(--theme-primary-text-010));
-  border-bottom: 1px solid hsl(var(--theme-primary-text-010));
-  transition: color var(--layout-transition-extra-fast), border var(--layout-transition-extra-fast), padding var(--layout-transition-extra-fast);
+  text-decoration: none;
+  transition: border var(--layout-transition-extra-fast);
 }
 
 a:hover,
 a:active {
+  color: hsl(var(--theme-primary-text-010));
   border-bottom-color: rgb(var(--theme-accent));
 }
 
