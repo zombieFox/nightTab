@@ -31,8 +31,6 @@ import { clearChildNode } from '../../utility/clearChildNode';
 import { applyCSSVar } from '../../utility/applyCSSVar';
 import { applyCSSClass } from '../../utility/applyCSSClass';
 import { applyCSSState } from '../../utility/applyCSSState';
-import { trimString } from '../../utility/trimString';
-import { isValidString } from '../../utility/isValidString';
 
 import './index.css';
 import { inputButton } from '../form/input';
@@ -473,12 +471,14 @@ showcase.area.assemble = () => {
 
   showcase.control.input.text = new Control_text({
     labelText: 'Text',
-    placeholder: 'Placeholder'
+    placeholder: 'Placeholder',
+    id: 'text',
   })
 
   showcase.control.input.textarea = new Control_textarea({
     labelText: 'Textarea',
-    placeholder: 'Placeholder'
+    placeholder: 'Placeholder',
+    id: 'textarea',
   })
 
   showcase.control.input.color = {
