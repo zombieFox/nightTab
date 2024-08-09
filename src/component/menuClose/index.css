@@ -31,6 +31,12 @@
   width: var(--menu-close-space);
 }
 
+.menu-close-button:focus,
+.menu-close-button:hover,
+.menu-close-button:active {
+  background-color: transparent;
+}
+
 @media (min-width: 700px) {
   .menu-close-button {
     border-radius: calc(var(--theme-radius) * 0.01em);
