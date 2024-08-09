@@ -1,6 +1,9 @@
 import { state } from '../state';
 
+import { Notification } from '../notification';
+
 import { node } from '../../utility/node';
+import { complexNode } from '../../utility/complexNode';
 import { clearChildNode } from '../../utility/clearChildNode';
 import { applyCSSVar } from '../../utility/applyCSSVar';
 import { applyCSSClass } from '../../utility/applyCSSClass';
@@ -26,7 +29,17 @@ layout.area = {
 
     const body = document.querySelector('body');
 
-    body.appendChild(layout.element.layout);
+    const notification = new Notification({
+      children: [
+
+        complexNode({ tag: 'p', text: 'Search in nightTab will be removed to comply with a <a href="https://developer.chrome.com/blog/cws-policy-updates-2024" target="_blank">Chrome policy change</a>. Filtering bookmarks will remain. Read more about this change on the <a href="https://github.com/zombieFox/nightTab/discussions/460" target="_blank">nightTab repo</a>.', complexText: true })
+
+      ]
+    });
+
+    body.append(notification.notification());
+
+    body.append(layout.element.layout);
 
     const resize = new ResizeObserver((entries) => {
 
@@ -34,7 +47,7 @@ layout.area = {
 
       let breakpoint;
 
-      entries.forEach(function(entry) {
+      entries.forEach(function (entry) {
 
         if (entry.contentRect.width <= size.sm) {
           breakpoint = 'xs';

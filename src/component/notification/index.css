@@ -1,0 +1,30 @@
+:root {
+  --notification-space: 4;
+}
+
+:root {
+  --notification-header-background: var(--theme-primary-030);
+  --notification-body-background: var(--theme-primary-020);
+}
+
+.notification {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  z-index: var(--z-index-notification);
+}
+
+.notification-body {
+  background-color: hsl(var(--notification-body-background));
+  padding: calc((var(--notification-space) / 8) * 1em) calc((var(--notification-space) / 4) * 1em);
+  gap: calc((var(--notification-space) / 4) * 1em);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color var(--layout-transition-extra-fast);
+}
