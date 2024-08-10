@@ -6,6 +6,7 @@ import './index.css';
 
 export const Notification = function ({
   children = [],
+  dismissAction = false,
 } = {}) {
 
   this.element = {
@@ -18,6 +19,13 @@ export const Notification = function ({
       size: 'small',
       style: ['ring'],
       func: () => {
+
+        if (dismissAction) {
+          dismissAction();
+        }
+
+        this.element.notification.remove();
+
       }
     }),
   };

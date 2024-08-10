@@ -32,7 +32,6 @@ groupAndBookmark.render = () => {
 
     }
 
-
   } else {
 
     group.sort.bind();

@@ -1,6 +1,6 @@
 export const version = {};
 
-version.number = '7.6.0';
+version.number = '7.7.0';
 
 version.name = 'Nebulous Lobster';
 

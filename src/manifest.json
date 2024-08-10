@@ -2,7 +2,7 @@
   "name": "__MSG_appName__",
   "short_name": "__MSG_appShortName__",
   "description": "__MSG_appDescription__",
-  "version": "7.6.0",
+  "version": "7.7.0",
   "manifest_version": 3,
   "default_locale": "en_GB",
   "chrome_url_overrides": {

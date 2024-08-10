@@ -1,4 +1,5 @@
 import { state } from '../state';
+import { data } from '../data';
 
 import { Notification } from '../notification';
 
@@ -29,15 +30,21 @@ layout.area = {
 
     const body = document.querySelector('body');
 
-    const notification = new Notification({
-      children: [
+    if (!state.get.current().header.search.removalNotice) {
 
-        complexNode({ tag: 'p', text: 'Search in nightTab will be removed to comply with a <a href="https://developer.chrome.com/blog/cws-policy-updates-2024" target="_blank">Chrome policy change</a>. Filtering bookmarks will remain. Read more about this change on the <a href="https://github.com/zombieFox/nightTab/discussions/460" target="_blank">nightTab repo</a>.', complexText: true })
+      const notification = new Notification({
+        children: [
+          complexNode({ tag: 'p', text: 'Search in nightTab will be removed to comply with a <a href="https://developer.chrome.com/blog/cws-policy-updates-2024" target="_blank">Chrome policy change</a>. Filtering bookmarks will remain. Read more about this change on the <a href="https://github.com/zombieFox/nightTab/discussions/460" target="_blank">nightTab repo</a>.', attr: [{ key: 'class', value: 'small' }], complexText: true })
+        ],
+        dismissAction: () => {
+          state.get.current().header.search.removalNotice = true;
+          data.save();
+        }
+      });
 
-      ]
-    });
+      body.append(notification.notification());
 
-    body.append(notification.notification());
+    };
 
     body.append(layout.element.layout);
 

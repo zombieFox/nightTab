@@ -6,7 +6,7 @@ const update = {};
 
 update.mod = updateLegacy.get();
 
-update.mod['7.0.0'] = function(data) {
+update.mod['7.0.0'] = function (data) {
 
   data.state.header.order.splice(data.state.header.order.indexOf('editAdd'), 1);
   data.state.header.order.splice(data.state.header.order.indexOf('colorAccent'), 1);
@@ -573,7 +573,7 @@ update.mod['7.0.0'] = function(data) {
 
 };
 
-update.mod['7.1.0'] = function(data) {
+update.mod['7.1.0'] = function (data) {
 
   data.state.layout.favicon = '';
 
@@ -608,7 +608,7 @@ update.mod['7.1.0'] = function(data) {
 
 };
 
-update.mod['7.4.0'] = function(data) {
+update.mod['7.4.0'] = function (data) {
 
   data.state.layout.overscroll = {
     active: data.state.layout.overscroll,
@@ -619,9 +619,17 @@ update.mod['7.4.0'] = function(data) {
 
 };
 
-update.mod['7.5.0'] = function(data) {
+update.mod['7.5.0'] = function (data) {
 
   data.state.language = 'system';
+
+  return data;
+
+};
+
+update.mod['7.7.0'] = function (data) {
+
+  data.state.header.search.removalNotice = false;
 
   return data;
 

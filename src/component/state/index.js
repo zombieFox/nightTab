@@ -53,7 +53,8 @@ state.default = {
       text: { justify: 'center' },
       size: 100,
       newLine: false,
-      newTab: false
+      newTab: false,
+      removalNotice: false
     },
     order: [],
     edit: false
