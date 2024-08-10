@@ -869,6 +869,7 @@
 }
 
 .bookmark-control-button {
+  background-color: transparent;
   padding: 0;
   border-radius: 0;
   min-height: initial;
@@ -888,7 +889,12 @@
   color: hsl(var(--theme-accent-text));
 }
 
-.bookmark-control-button:disabled {
+.bookmark-control-button:disabled,
+.bookmark-control-button:disabled:hover,
+.bookmark-control-button:disabled:focus,
+.bookmark-control-button:disabled:active,
+.bookmark-control-button.active:disabled:active {
+  background-color: transparent;
   color: hsl(var(--theme-accent-text));
   opacity: 0.25;
 }
