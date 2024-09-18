@@ -6,6 +6,10 @@ A neutral new tab page accented with a chosen colour. Customise the layout, styl
 |:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
 | [<img src="./src/icon/icon-48.png" width="48px" height="48px">](https://zombiefox.github.io/nightTab/) | [![Chrome](asset/logo/chrome-48.png)](https://chrome.google.com/webstore/detail/nighttab/hdpcadigjkbcpnlcpbcohpafiaefanki) | [![Firefox](asset/logo/firefox-48.png)](https://addons.mozilla.org/en-GB/firefox/addon/nighttab/) | [![coffee](asset/logo/bymeacoffee-48.png)](https://www.buymeacoffee.com/zombieFox/) | [![Reddit](asset/logo/reddit-48.png)](https://www.reddit.com/r/nighttab/) |
 
+| [Install nightTab Extension](https://github.com/samrth012/nightTab/releases/latest) |
+|:-------------:|
+| [![Safari](asset/logo/safari-48.png)](https://github.com/samrth012/nightTab/releases/latest)
+
 # Support
 
 - [Project goals](https://github.com/zombieFox/nightTab/wiki/Project-goals)
