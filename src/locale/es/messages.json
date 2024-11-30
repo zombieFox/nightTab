@@ -8,7 +8,7 @@
     "description": "The name of the extension, displayed in the web store."
   },
   "appDescription": {
-    "message": "Personalice el color de acento, el diseño, el estilo, el fondo y los marcadores en nightTab.",
+    "message": "Una nueva pestaña con un color acentuado. Personalice el diseño, el estilo, el fondo y los marcadores con nightTab.",
     "description": "The description of the extension, displayed in the web store."
   },
   "menuNavDebugLabel": {
@@ -40,7 +40,7 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavSaved": {
-    "message": "Salvado",
+    "message": "Guardado",
     "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavStyle": {
@@ -68,7 +68,7 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavShade": {
-    "message": "Sombra",
+    "message": "Sombreado",
     "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavOpacity": {
@@ -84,7 +84,7 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavHeader": {
-    "message": "Encabezamiento",
+    "message": "Encabezado",
     "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavBookmark": {
@@ -96,7 +96,7 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavLayoutSubNavScaling": {
-    "message": "Escalada",
+    "message": "Escalado",
     "description": "Label for the settings menu navigation."
   },
   "menuNavLayoutSubNavArea": {
@@ -104,7 +104,7 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavLayoutSubNavPadding": {
-    "message": "Relleno",
+    "message": "Rellenado",
     "description": "Label for the settings menu navigation."
   },
   "menuNavLayoutSubNavGutter": {
@@ -164,11 +164,11 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavBookmarkSubNavSort": {
-    "message": "Clasificar",
+    "message": "Ordenado",
     "description": "Label for the settings menu navigation."
   },
   "menuNavGroupLabel": {
-    "message": "Grupo",
+    "message": "Agrupamiento",
     "description": "Label for the settings menu navigation."
   },
   "menuNavGroupSubNavAlignment": {
@@ -180,7 +180,7 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavGroupSubNavCollapse": {
-    "message": "Colapso",
+    "message": "Colapsar",
     "description": "Label for the settings menu navigation."
   },
   "menuNavGroupSubNavToolbar": {
@@ -204,7 +204,7 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavToolbarSubNavControls": {
-    "message": "Control S",
+    "message": "Controles",
     "description": "Label for the settings menu navigation."
   },
   "menuNavDataLabel": {
@@ -220,7 +220,7 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavDataSubNavClear": {
-    "message": "Claro",
+    "message": "Borrar",
     "description": "Label for the settings menu navigation."
   },
   "menuNavLanguageLabel": {
@@ -240,11 +240,11 @@
     "description": "Label for the settings menu navigation."
   },
   "menuContentThemePresetHelperPara1": {
-    "message": "La aplicación de un ajuste preestablecido reemplazará el color, el acento, la fuente, el estilo, el radio, la sombra, la sombra y el fondo actuales.",
+    "message": "Seleccionando un ajuste preestablecido reemplazará el color, el acento, la fuente, el estilo, el radio, la sombra, el sombreado y el fondo actuales.",
     "description": "Helper text for preset theme."
   },
   "menuContentThemeSavedHelperPara1": {
-    "message": "Al guardar un tema, se registrarán el color, el acento, la fuente, el estilo, la opacidad, el radio, la sombra, la sombra y el fondo actuales.",
+    "message": "Guardar un tema, guardará el color, el acento, la fuente, el estilo, la opacidad, el radio, la sombra, el sombreado y el fondo actuales.",
     "description": "Helper text for saved themes."
   },
   "menuContentThemeSavedSave": {
@@ -260,7 +260,7 @@
     "description": "Radio for dark mode."
   },
   "menuContentThemeStyleLightLabel": {
-    "message": "Modo de luz",
+    "message": "Modo claro",
     "description": "Radio for light mode."
   },
   "menuContentThemeStyleAutomaticLabel": {
@@ -268,7 +268,7 @@
     "description": "Radio for automatic light or dark mode."
   },
   "menuContentThemeStyleAutomaticDescription": {
-    "message": "Siga el modo claro u oscuro del sistema.",
+    "message": "Sigue el modo del sistema (Oscuro o Claro)",
     "description": "Description for automatic light or dark mode."
   },
   "menuContentThemeColorShadeHelperPara1": {
@@ -280,7 +280,7 @@
     "description": "Helper text for primary colour."
   },
   "menuContentThemeColorShadeHelperPara3": {
-    "message": "Para un aspecto claro, cambie al Estilo de luz y luego seleccione un color primario. Y viceversa para un look oscuro.",
+    "message": "Para un aspecto claro, cambie al Modo claro y luego seleccione un color primario. Y viceversa para un aspecto oscuro.",
     "description": "Helper text for primary colour."
   },
   "menuContentThemeColorRangePrimaryH": {
@@ -304,11 +304,11 @@
     "description": "Range for primary colour contrast right side."
   },
   "menuContentThemeColorContrastHelperPara1": {
-    "message": "Mueva los controles de rango de Contraste juntos para una apariencia apagada.",
+    "message": "Mueva los controles de rango de Contraste juntos para un aspecto apagado.",
     "description": "Helper text for primary colour contrast."
   },
   "menuContentThemeColorContrastHelperPara2": {
-    "message": "Mueva los controles de rango de Contraste lejos uno del otro para una apariencia vívida y nítida.",
+    "message": "Mueva los controles de rango de Contraste separados uno del otro para un aspecto vívido y nítido.",
     "description": "Helper text for primary colour contrast."
   },
   "menuContentThemeAccentPresetColorGrey": {
@@ -316,11 +316,11 @@
     "description": "Label for grey preset accent colour."
   },
   "menuContentThemeAccentPresetColorRed": {
-    "message": "rojo",
+    "message": "Rojo",
     "description": "Label for red preset accent colour."
   },
   "menuContentThemeAccentPresetColorOrange": {
-    "message": "naranja",
+    "message": "Naranja",
     "description": "Label for orange preset accent colour."
   },
   "menuContentThemeAccentPresetColorYellow": {
@@ -364,15 +364,15 @@
     "description": "Label for fuchsia preset accent colour."
   },
   "menuContentThemeAccentPresetModifierLightLevel3": {
-    "message": "Super extra ligero",
+    "message": "Super extra claro",
     "description": "Label for preset accent colour light level 3."
   },
   "menuContentThemeAccentPresetModifierLightLevel2": {
-    "message": "Extra ligero",
+    "message": "Extra claro",
     "description": "Label for preset accent colour light level 2."
   },
   "menuContentThemeAccentPresetModifierLightLevel1": {
-    "message": "Ligero",
+    "message": "Claro",
     "description": "Label for preset accent colour light level 1."
   },
   "menuContentThemeAccentPresetModifierDarkLevel3": {
@@ -396,11 +396,11 @@
     "description": "Checkbox for random accent colour on load or refresh."
   },
   "menuContentThemeAccentRandomStyleAny": {
-    "message": "Ningún",
+    "message": "Cualquiera",
     "description": "Radio for any random accent colour on load or refresh."
   },
   "menuContentThemeAccentRandomStyleLight": {
-    "message": "Ligero",
+    "message": "Claro",
     "description": "Radio for light random accent colour on load or refresh."
   },
   "menuContentThemeAccentRandomStyleDark": {
@@ -416,7 +416,7 @@
     "description": "Radio for saturated random accent colour on load or refresh."
   },
   "menuContentThemeAccentRandomRandomise": {
-    "message": "Aleatorizar ahora",
+    "message": "Aplicar ahora",
     "description": "Button to randomise accent colour now."
   },
   "menuContentThemeAccentCycleActive": {
@@ -424,15 +424,15 @@
     "description": "Checkbox for cycled accent colour."
   },
   "menuContentThemeAccentCycleSpeed": {
-    "message": "Cambio de demora",
+    "message": "Velocidad de cambio",
     "description": "Range for cycled accent colour speed."
   },
   "menuContentThemeAccentCycleStep": {
-    "message": "Cambiar pasos",
+    "message": "Número de cambios",
     "description": "Range for cycled accent colour steps."
   },
   "menuContentThemeAccentCycleAlert": {
-    "message": "Tenga cuidado, ya que un tono Accent que cambia rápidamente puede causar problemas de rendimiento.",
+    "message": "Cuidado, Cambios de tono Accent rápidos podrían causar problemas de rendimiento.",
     "description": "Alert for cycled accent colour."
   },
   "menuContentThemeAccentCycleHelperPara1": {
@@ -452,11 +452,11 @@
     "description": "Helper text for display font name."
   },
   "menuContentThemeFontDisplayNameHelperLink": {
-    "message": "Encuentra una fuente de Google",
+    "message": "Encuentre una fuente de Google",
     "description": "Link to google fonts."
   },
   "menuContentThemeFontDisplayNameHelperPara2": {
-    "message": "Agregue un nombre de fuente tal como aparece en Google Fonts, incluidas letras mayúsculas y espacios, por ejemplo: ingrese \"Fredoka One\" o \"Kanit\".",
+    "message": "Añada un nombre de fuente tal como aparece en Google Fonts, incluyendo letras mayúsculas y espacios, por ejemplo: escriba \"Fredoka One\" o \"Kanit\".",
     "description": "Helper text for display font name."
   },
   "menuContentThemeFontDisplayNameHelperPara3": {
@@ -476,7 +476,7 @@
     "description": "Button for regular weight display font."
   },
   "menuContentThemeFontDisplayWeightBold": {
-    "message": "Audaz",
+    "message": "Negrita",
     "description": "Button for bold weight display font."
   },
   "menuContentThemeFontDisplayWeightHelperPara1": {
@@ -488,7 +488,7 @@
     "description": "Radio for normal display font style."
   },
   "menuContentThemeFontDisplayStyleItalic": {
-    "message": "Itálico",
+    "message": "Cursiva",
     "description": "Radio for italic display font style."
   },
   "menuContentThemeFontUiNameLabel": {
@@ -504,11 +504,11 @@
     "description": "Helper text for UI font name."
   },
   "menuContentThemeFontUiNameHelperLink": {
-    "message": "Encuentra una fuente de Google",
+    "message": "Encuentre una fuente de Google",
     "description": "Link to google fonts."
   },
   "menuContentThemeFontUiNameHelperPara2": {
-    "message": "Agregue un nombre de fuente tal como aparece en Google Fonts, incluidas letras mayúsculas y espacios, por ejemplo: ingrese \"Roboto\", \"Source Sans Pro\" o \"Noto Sans\".",
+    "message": "Añada un nombre de fuente tal como aparece en Google Fonts, incluidas letras mayúsculas y espacios, por ejemplo: escriba \"Roboto\", \"Source Sans Pro\" o \"Noto Sans\".",
     "description": "Helper text for UI font name."
   },
   "menuContentThemeFontUiNameHelperPara3": {
@@ -528,7 +528,7 @@
     "description": "Button for regular weight UI font."
   },
   "menuContentThemeFontUiWeightBold": {
-    "message": "Audaz",
+    "message": "Negrita",
     "description": "Button for bold weight UI font."
   },
   "menuContentThemeFontUiWeightHelperPara1": {
@@ -540,7 +540,7 @@
     "description": "Radio for normal UI font style."
   },
   "menuContentThemeFontUiStyleItalic": {
-    "message": "Itálico",
+    "message": "Cursiva",
     "description": "Radio for italic UI font style."
   },
   "menuContentThemeRadius": {
@@ -564,7 +564,7 @@
     "description": "Helper text for shade blur."
   },
   "menuContentThemeOpacityGeneralLabel": {
-    "message": "Toda opacidad",
+    "message": "Opacidad general",
     "description": "Range for all opacity."
   },
   "menuContentThemeOpacityGeneralHelperPara1": {
@@ -584,7 +584,7 @@
     "description": "Range for bookmark opacity."
   },
   "menuContentThemeOpacitySearch": {
-    "message": "Caja de búsqeda",
+    "message": "Caja de búsqueda",
     "description": "Range for search opacity."
   },
   "menuContentThemeOpacityGroupToolbar": {
@@ -640,7 +640,7 @@
     "description": "Range for background gradient angle right."
   },
   "menuContentThemeBackgroundImageAlertPara1": {
-    "message": "Ya no se pueden utilizar imágenes locales. Las imágenes deben estar alojadas en algún lugar en línea.",
+    "message": "Ya no se puede utilizar imágenes locales. Las imágenes deben estar alojadas en algún lugar en línea.",
     "description": "Alert for image background."
   },
   "menuContentThemeBackgroundImageAlertPara2": {
@@ -660,7 +660,7 @@
     "description": "Helper text for background image."
   },
   "menuContentThemeBackgroundImageUrlHelperPara2": {
-    "message": "Unsplash se puede utilizar para imágenes aleatorias, por ejemplo:",
+    "message": "Unsplash puede ser utilizado para imágenes aleatorias, por ejemplo:",
     "description": "Helper text for background image."
   },
   "menuContentThemeBackgroundImageUrlHelperPara3": {
@@ -696,15 +696,15 @@
     "description": "Range for image vignette opacity."
   },
   "menuContentThemeBackgroundImageVignetteRangeLabel": {
-    "message": "Inicio y finalización de la sombra",
+    "message": "Inicio y finalización del sombreado",
     "description": "Label for image vignette."
   },
   "menuContentThemeBackgroundImageVignetteRangeLeft": {
-    "message": "Final de la sombra",
+    "message": "Final del sombreado",
     "description": "Range for image vignette left."
   },
   "menuContentThemeBackgroundImageVignetteRangeRight": {
-    "message": "Inicio de sombra",
+    "message": "Inicio del sombreado",
     "description": "Range for image vignette right."
   },
   "menuContentThemeBackgroundVideoAlertPara1": {
@@ -724,7 +724,7 @@
     "description": "Placeholder for background video URL."
   },
   "menuContentThemeBackgroundVideoUrlHelperPara1": {
-    "message": "El video de fondo solo admite una URL directa a un archivo de video. Soporta formato MP4 y WebM.",
+    "message": "El video de fondo solo admite una URL directa a un archivo de video. Soporta formatos MP4 y WebM.",
     "description": "Helper text for background video."
   },
   "menuContentThemeBackgroundVideoUrlHelperPara2": {
@@ -756,15 +756,15 @@
     "description": "Range for video vignette opacity."
   },
   "menuContentThemeBackgroundVideoVignetteRangeLabel": {
-    "message": "Inicio y finalización de la sombra",
+    "message": "Inicio y finalización del sombreado",
     "description": "Label for video vignette."
   },
   "menuContentThemeBackgroundVideoVignetteRangeLeft": {
-    "message": "Final de la sombra",
+    "message": "Final del sombreado",
     "description": "Range for video vignette left."
   },
   "menuContentThemeBackgroundVideoVignetteRangeRight": {
-    "message": "Inicio de sombra",
+    "message": "Inicio del sombreado",
     "description": "Range for video vignette right."
   },
   "menuContentThemeLayoutColorLabel": {
@@ -804,7 +804,7 @@
     "description": "Description for layout background blur."
   },
   "menuContentThemeLayoutDivider": {
-    "message": "Divisor entre el área de encabezado y marcador",
+    "message": "Divisor entre el área del encabezado y del marcador",
     "description": "Label for layout divider."
   },
   "menuContentThemeHeaderColorLabel": {
@@ -876,11 +876,11 @@
     "description": "Helper text for bookmark border."
   },
   "menuContentThemeBookmarkItemRainbowAdd": {
-    "message": "Agregue un acento único a cada marcador",
+    "message": "Añadir acentos únicos a cada marcador",
     "description": "Button to add a unique accent colour to each bookmark."
   },
   "menuContentThemeBookmarkItemRainbowRemove": {
-    "message": "Quitar todas las anulaciones de acento",
+    "message": "Restaurar los acentos para los marcadores",
     "description": "Button to remove a unique accent colour to each bookmark."
   },
   "menuContentThemeBookmarkItemRainbowHelperPara1": {
@@ -908,11 +908,11 @@
     "description": "Radio to justify the header area left."
   },
   "menuContentLayoutAreaHeaderJustifyCenter": {
-    "message": "Centrar",
+    "message": "Centro",
     "description": "Radio to justify the header area centre."
   },
   "menuContentLayoutAreaHeaderJustifyRight": {
-    "message": "Correcto",
+    "message": "Derecha",
     "description": "Radio to justify the header area right."
   },
   "menuContentLayoutAreaHeaderJustifyHelper1Para1": {
@@ -936,11 +936,11 @@
     "description": "Radio to justify the bookmark area left."
   },
   "menuContentLayoutAreaBookmarkJustifyCenter": {
-    "message": "Centrar",
+    "message": "Centro",
     "description": "Radio to justify the bookmark area centre."
   },
   "menuContentLayoutAreaBookmarkJustifyRight": {
-    "message": "Correcto",
+    "message": "Derecha",
     "description": "Radio to justify the bookmark area right."
   },
   "menuContentLayoutAreaBookmarkJustifyHelper1Para1": {
@@ -968,11 +968,11 @@
     "description": "Radio for layout alignment top left."
   },
   "menuContentLayoutAlignmentTopCenter": {
-    "message": "Centro superior",
+    "message": "Parte superior central",
     "description": "Radio for layout alignment top centre."
   },
   "menuContentLayoutAlignmentTopRight": {
-    "message": "Parte superior derecha",
+    "message": "Arriba a la derecha",
     "description": "Radio for layout alignment top right."
   },
   "menuContentLayoutAlignmentCenterLeft": {
@@ -992,7 +992,7 @@
     "description": "Radio for layout alignment bottom left."
   },
   "menuContentLayoutAlignmentBottomCenter": {
-    "message": "Centro inferior",
+    "message": "Parte inferior central",
     "description": "Radio for layout alignment bottom centre."
   },
   "menuContentLayoutAlignmentBottomRight": {
@@ -1000,7 +1000,7 @@
     "description": "Radio for layout alignment bottom right."
   },
   "menuContentLayoutDirectionHorizontalLabel": {
-    "message": "Alinear horizontal",
+    "message": "Alinear horizontalmente",
     "description": "Radio for layout direction horizontal."
   },
   "menuContentLayoutDirectionHorizontalDescription": {
@@ -1076,11 +1076,11 @@
     "description": "Checkbox for layout page overscroll."
   },
   "menuContentLayoutPageOverscrollUnblurLabel": {
-    "message": "Desenfocar imagen de fondo o video",
+    "message": "Enfocar imagen de fondo o video",
     "description": "Label for background image or video unblur on overscroll."
   },
   "menuContentLayoutPageOverscrollUnblurDescriptionPara1": {
-    "message": "La imagen de fondo o el video se desenfocarán cuando se desplace hasta la parte inferior de la página.",
+    "message": "La imagen de fondo o el video se volverá a enfocar cuando se desplace hasta la parte inferior de la página.",
     "description": "Helper text for background image or video unblur on overscroll."
   },
   "menuContentLayoutPageOverscrollUnblurDescriptionPara2": {
@@ -1096,11 +1096,11 @@
     "description": "Label to justify header items left."
   },
   "menuContentHeaderAlignmentJustifyCenter": {
-    "message": "Centrar",
+    "message": "Centro",
     "description": "Label to justify header items centre."
   },
   "menuContentHeaderAlignmentJustifyRight": {
-    "message": "Correcto",
+    "message": "Derecha",
     "description": "Label to justify header items right."
   },
   "menuContentHeaderAlignmentHelperPara1": {
@@ -1128,15 +1128,15 @@
     "description": "Label for header greeting."
   },
   "menuContentHeaderGreetingTypeGood": {
-    "message": "\"Good morning...\"",
+    "message": "\"Buenos días...\"",
     "description": "Radio for \"Good morning\" header greeting."
   },
   "menuContentHeaderGreetingTypeHello": {
-    "message": "\"Hello...\"",
+    "message": "\"Hola...\"",
     "description": "Radio for \"Hello\" header greeting."
   },
   "menuContentHeaderGreetingTypeHi": {
-    "message": "\"Hi...\"",
+    "message": "\"Ey...\"",
     "description": "Radio for \"Hi\" header greeting."
   },
   "menuContentHeaderGreetingTypeNoneLabel": {
@@ -1156,7 +1156,7 @@
     "description": "Description for custom header greeting."
   },
   "menuContentHeaderGreetingTypeCustomDescriptionPara2": {
-    "message": "El valor predeterminado es \"Good morning...\" si se deja en blanco.",
+    "message": "Por defecto es \"Buenos días...\" si se deja en blanco.",
     "description": "Description for custom header greeting."
   },
   "menuContentHeaderGreetingCustomLabel": {
@@ -1188,11 +1188,11 @@
     "description": "Label for transitional text type."
   },
   "menuContentHeaderTransitionalTypeTimeAndDate": {
-    "message": "\"The time and date is\"",
+    "message": "\"La hora y el día es\"",
     "description": "Radio for \"The time and date is\" transitional text."
   },
   "menuContentHeaderTransitionalTypeIts": {
-    "message": "\"It's\"",
+    "message": "\"Es\"",
     "description": "Radio for \"It's \" transitional text."
   },
   "menuContentHeaderTransitionalSize": {
@@ -1212,11 +1212,11 @@
     "description": "Checkbox for clock hour."
   },
   "menuContentHeaderClockHourDisplayNumber": {
-    "message": "Como numero",
+    "message": "Como números",
     "description": "Radio for clock hour as numbers."
   },
   "menuContentHeaderClockHourDisplayWord": {
-    "message": "Una espada",
+    "message": "En palabras",
     "description": "Radio for clock hour as words."
   },
   "menuContentHeaderClockMinuteShow": {
@@ -1224,11 +1224,11 @@
     "description": "Checkbox for clock minutes."
   },
   "menuContentHeaderClockMinuteDisplayNumber": {
-    "message": "Como numero",
+    "message": "Como números",
     "description": "Radio for clock minutes as numbers."
   },
   "menuContentHeaderClockMinuteDisplayWord": {
-    "message": "Una espada",
+    "message": "En palabras",
     "description": "Radio for clock minutes as words."
   },
   "menuContentHeaderClockSecondShow": {
@@ -1236,11 +1236,11 @@
     "description": "Checkbox for clock seconds."
   },
   "menuContentHeaderClockSecondDisplayNumber": {
-    "message": "Como numero",
+    "message": "Como números",
     "description": "Radio for clock seconds as numbers."
   },
   "menuContentHeaderClockSecondDisplayWord": {
-    "message": "Una espada",
+    "message": "En palabras",
     "description": "Radio for clock seconds as words."
   },
   "menuContentHeaderClockSeparatorShow": {
@@ -1276,15 +1276,15 @@
     "description": "Description for forcing clock onto a new line."
   },
   "menuContentHeaderDateDayShow": {
-    "message": "Show Day",
+    "message": "Mostrar día",
     "description": "Checkbox for day."
   },
   "menuContentHeaderDateDayDisplayNumber": {
-    "message": "Como numero",
+    "message": "Como números",
     "description": "Radio for day as numbers."
   },
   "menuContentHeaderDateDayDisplayWord": {
-    "message": "Una espada",
+    "message": "En palabras",
     "description": "Radio for day as words."
   },
   "menuContentHeaderDateDayDisplayWeekStartLabel": {
@@ -1292,11 +1292,11 @@
     "description": "Label for the start of the week."
   },
   "menuContentHeaderDateDayDisplayWeekStartMonday": {
-    "message": "lunes",
+    "message": "Lunes",
     "description": "Radio for Monday as the start of the week."
   },
   "menuContentHeaderDateDayDisplayWeekStartSunday": {
-    "message": "domingo",
+    "message": "Domingo",
     "description": "Radio for Sunday as the start of the week."
   },
   "menuContentHeaderDateDayDisplayLengthLabel": {
@@ -1316,11 +1316,11 @@
     "description": "Checkbox for date."
   },
   "menuContentHeaderDateDateDisplayNumber": {
-    "message": "Como numero",
+    "message": "Como números",
     "description": "Radio for date as numbers."
   },
   "menuContentHeaderDateDateDisplayWord": {
-    "message": "Una espada",
+    "message": "En palabras",
     "description": "Radio for dates as words."
   },
   "menuContentHeaderDateDateDisplayOrdinal": {
@@ -1332,11 +1332,11 @@
     "description": "Checkbox for month."
   },
   "menuContentHeaderDateMonthDisplayNumber": {
-    "message": "Como numero",
+    "message": "Como números",
     "description": "Radio for month as numbers."
   },
   "menuContentHeaderDateMonthDisplayWord": {
-    "message": "Una espada",
+    "message": "En palabras",
     "description": "Radio for month as words."
   },
   "menuContentHeaderDateMonthDisplayOrdinal": {
@@ -1360,11 +1360,11 @@
     "description": "Checkbox for year."
   },
   "menuContentHeaderDateYearDisplayNumber": {
-    "message": "Como numero",
+    "message": "Como números",
     "description": "Radio for year as numbers."
   },
   "menuContentHeaderDateYearDisplayWord": {
-    "message": "Una espada",
+    "message": "En palabras",
     "description": "Radio for year as words."
   },
   "menuContentHeaderDateSeparatorShow": {
@@ -1384,11 +1384,11 @@
     "description": "Label for date format."
   },
   "menuContentHeaderDateFormatDateMonth": {
-    "message": "Fecha / mes",
+    "message": "Día / mes",
     "description": "Radio for date then month format."
   },
   "menuContentHeaderDateFormatMonthDate": {
-    "message": "Mes / fecha",
+    "message": "Mes / día",
     "description": "Radio for month then date format."
   },
   "menuContentHeaderDateSize": {
@@ -1500,11 +1500,11 @@
     "description": "Radio to justify the search text left."
   },
   "menuContentHeaderSearchEngineTextJustifyCenter": {
-    "message": "Centrar",
+    "message": "Centro",
     "description": "Radio to justify the search text centre."
   },
   "menuContentHeaderSearchEngineTextJustifyRight": {
-    "message": "Correcto",
+    "message": "Derecha",
     "description": "Radio to justify the search text right."
   },
   "menuContentHeaderSearchNewTab": {
@@ -1528,7 +1528,7 @@
     "description": "label for show bookmark shadow."
   },
   "menuContentBookmarkGeneralShadowShowDescription": {
-    "message": "Es posible que los efectos no sean visibles si Theme Shadow se establece en 0.",
+    "message": "Es posible que los efectos no sean visibles si el tema tiene la sombra en 0.",
     "description": "Description to show bookmark shadow."
   },
   "menuContentBookmarkGeneralHoverScaleShow": {
@@ -1544,11 +1544,11 @@
     "description": "Range for bookmark size."
   },
   "menuContentBookmarkStyleBlockLabel": {
-    "message": "Cuadra",
+    "message": "Bloques",
     "description": "Label for bookmark block style."
   },
   "menuContentBookmarkStyleBlockDescription": {
-    "message": "Azulejos de marcador de forma cuadrada.",
+    "message": "Marcadores organizados como bloques cuadrados.",
     "description": "Description for bookmark block style."
   },
   "menuContentBookmarkStyleListLabel": {
@@ -1556,23 +1556,23 @@
     "description": "Label for bookmark list style."
   },
   "menuContentBookmarkStyleListDescription": {
-    "message": "Azulejos de marcadores cortos y anchos.",
+    "message": "Marcadores organizados como lista.",
     "description": "Description for bookmark list style."
   },
   "menuContentBookmarkOrientationTop": {
-    "message": "Cima",
+    "message": "Encima",
     "description": "Radio for bookmark top orientation."
   },
   "menuContentBookmarkOrientationBottom": {
-    "message": "Fondo",
+    "message": "Debajo",
     "description": "Radio for bookmark bottom orientation."
   },
   "menuContentBookmarkOrientationHelperPara1": {
-    "message": "Muestre la URL y los controles en la parte superior o inferior de un mosaico de marcadores.",
+    "message": "Muestre la URL y los controles en la parte superior o inferior de los marcadores.",
     "description": "Helper text for bookmark orientation."
   },
   "menuContentBookmarkSortLetter": {
-    "message": "Por carta",
+    "message": "Por letra",
     "description": "Button to sort bookmarks by letter."
   },
   "menuContentBookmarkSortIcon": {
@@ -1592,11 +1592,11 @@
     "description": "Label to justify group items left."
   },
   "menuContentGroupAlignmentJustifyCenter": {
-    "message": "Centrar",
+    "message": "Centro",
     "description": "Label to justify group items centre."
   },
   "menuContentGroupAlignmentJustifyRight": {
-    "message": "Correcto",
+    "message": "Derecha",
     "description": "Label to justify group items right."
   },
   "menuContentGroupAlignmentOrderLabel": {
@@ -1716,7 +1716,7 @@
     "description": "Radio for bookmark group toolbar positioned in the top left corner."
   },
   "menuContentToolbarPositionTopRight": {
-    "message": "Parte superior derecha",
+    "message": "Arriba a la derecha",
     "description": "Radio for bookmark group toolbar positioned in the top right corner."
   },
   "menuContentToolbarPositionBottomLeft": {
@@ -1816,7 +1816,7 @@
     "description": "Alert for language select."
   },
   "menuContentLanguageAlertLink": {
-    "message": "Ayuda a traducir {appName}",
+    "message": "Ayude a traducir {appName}",
     "description": "Link to help translate the project."
   },
   "menuContentSupportPageApplyToAll": {
@@ -1964,7 +1964,7 @@
     "description": "Heading without a name for bookmark edit modal."
   },
   "bookmarkEditSuccessText": {
-    "message": "Ahorrar",
+    "message": "Guardar",
     "description": "Button to confirm editing a bookmark."
   },
   "bookmarkEditCancelText": {
@@ -1972,11 +1972,11 @@
     "description": "Button to cancel editing a bookmark."
   },
   "bookmarkFormTabVisual": {
-    "message": "Visual y nombre",
+    "message": "Estilo y nombre",
     "description": "Label for bookmark form visual tab."
   },
   "bookmarkFormTabAddress": {
-    "message": "Habla a",
+    "message": "Dirección",
     "description": "Label for bookmark form address tab."
   },
   "bookmarkFormTabPosition": {
@@ -1992,15 +1992,15 @@
     "description": "Label for bookmark form theme tab."
   },
   "bookmarkFormSectionVisualHeading": {
-    "message": "Visual y nombre",
+    "message": "Estilo y nombre",
     "description": "Heading for bookmark form visual page."
   },
   "bookmarkFormSectionVisualDescription": {
-    "message": "Muestra letras, icono, imagen y un nombre en este mosaico de marcador.",
+    "message": "Estilo de letras, icono, imagen y nombre de este marcador.",
     "description": "Description for bookmark form visual page."
   },
   "bookmarkFormSectionAddressHeading": {
-    "message": "Habla a",
+    "message": "Dirección",
     "description": "Heading for bookmark form address page."
   },
   "bookmarkFormSectionAddressDescription": {
@@ -2048,7 +2048,7 @@
     "description": "Radio to align bookmark tile display top left."
   },
   "bookmarkFormDisplayAlignmentTopCenter": {
-    "message": "Centro superior",
+    "message": "Parte superior central",
     "description": "Radio to align bookmark tile display top centre."
   },
   "bookmarkFormDisplayAlignmentTopRight": {
@@ -2072,7 +2072,7 @@
     "description": "Radio to align bookmark tile display bottom left."
   },
   "bookmarkFormDisplayAlignmentBottomCenter": {
-    "message": "Centro inferior",
+    "message": "Parte inferior central",
     "description": "Radio to align bookmark tile display bottom centre."
   },
   "bookmarkFormDisplayAlignmentBottomRight": {
@@ -2140,7 +2140,7 @@
     "description": "Description to show bookmark tile visual."
   },
   "bookmarkFormDisplayVisualTypeLetter": {
-    "message": "Carta",
+    "message": "Letra",
     "description": "Radio for bookmark tile visual letter."
   },
   "bookmarkFormDisplayVisualTypeIcon": {
@@ -2160,7 +2160,7 @@
     "description": "Label for bookmark tile visual text."
   },
   "bookmarkFormDisplayVisualLetterTextPlaceholder": {
-    "message": "mi",
+    "message": "E",
     "description": "Placeholder for bookmark tile visual text."
   },
   "bookmarkFormDisplayVisualIconTextLabel": {
@@ -2212,7 +2212,7 @@
     "description": "Label for bookmark tile to use the theme accent."
   },
   "bookmarkFormAccentByThemeDescription": {
-    "message": "Utilice el acento definido por el tema.",
+    "message": "Usar el acento definido por el tema.",
     "description": "Description for bookmark tile to use the theme accent."
   },
   "bookmarkFormAccentByCustomLabel": {
@@ -2232,7 +2232,7 @@
     "description": "Label for bookmark tile to use the theme colour."
   },
   "bookmarkFormColorByThemeDescription": {
-    "message": "Utilice el color definido por el tema.",
+    "message": "Usar el color definido por el tema.",
     "description": "Description for bookmark tile to use the theme colour."
   },
   "bookmarkFormColorByCustomLabel": {
@@ -2292,7 +2292,7 @@
     "description": "Placeholder for bookmark tile background video URL."
   },
   "bookmarkFormBackgroundVideoHelperPara1": {
-    "message": "El video de fondo solo admite una URL directa a un archivo de video. Soporta formato MP4 y WebM.",
+    "message": "El video de fondo solo admite una URL directa a un archivo de video. Soporta formatos MP4 y WebM.",
     "description": "Helper text for bookmark tile background video URL."
   },
   "bookmarkFormBackgroundVideoHelperPara2": {
@@ -2300,23 +2300,23 @@
     "description": "Helper text for bookmark tile background video URL."
   },
   "bookmarkFormBorder": {
-    "message": "Frontera",
+    "message": "Borde",
     "description": "Range for bookmark tile border."
   },
   "bookmarkFormShapeWideLabel": {
-    "message": "Baldosa ancha",
+    "message": "Marcador ancho",
     "description": "Label for bookmark tile wide shape."
   },
   "bookmarkFormShapeWideDescription": {
-    "message": "Marcador de mosaico para abarcar dos columnas.",
+    "message": "Marcador para abarcar dos columnas.",
     "description": "Description for bookmark tile wide shape."
   },
   "bookmarkFormShapeTallLabel": {
-    "message": "Azulejo alto",
+    "message": "Marcador alto",
     "description": "Label for bookmark tile tall shape."
   },
   "bookmarkFormShapeTallDescription": {
-    "message": "Marcador de baldosas para abarcar dos filas.",
+    "message": "Marcador para abarcar dos filas.",
     "description": "Description for bookmark tile tall shape."
   },
   "bookmarkFormGroupDestinationExisting": {
@@ -2384,23 +2384,23 @@
     "description": "Helper text to share current bookmark theme settings to all other bookmarks."
   },
   "bookmarkPreviewFull": {
-    "message": "Avance",
+    "message": "Vista previa",
     "description": "Paragraph for bookmark full size preview."
   },
   "bookmarkPreviewHalf": {
-    "message": "Vista previa (escala del 50%)",
+    "message": "Vista previa (50% de escala)",
     "description": "Paragraph for bookmark half size preview."
   },
   "groupAreaControlUp": {
-    "message": "Mueve este grupo hacia arriba",
+    "message": "Mover este grupo hacia arriba",
     "description": "Button for bookmark group move up control."
   },
   "groupAreaControlSort": {
-    "message": "Arrastra el grupo para reordenar",
+    "message": "Arrastrar el grupo para reordenar",
     "description": "Button for bookmark group drag to sort control."
   },
   "groupAreaControlDown": {
-    "message": "Mueve este grupo hacia abajo",
+    "message": "Mover este grupo hacia abajo",
     "description": "Button for bookmark group move down control."
   },
   "groupAreaControlEdit": {
@@ -2460,7 +2460,7 @@
     "description": "Heading without a name for bookmark group edit modal."
   },
   "groupEditSuccessText": {
-    "message": "Ahorrar",
+    "message": "Guardar",
     "description": "Button to confirm editing a bookmark group."
   },
   "groupEditCancelText": {
@@ -2508,7 +2508,7 @@
     "description": "Button for random bookmark group name."
   },
   "groupFormCollapseShowLabel": {
-    "message": "Mostrar Colapsar",
+    "message": "Mostrar Contraer",
     "description": "Label to show bookmark group toolbar collapse button."
   },
   "groupFormCollapseShowDescription": {
@@ -2552,7 +2552,7 @@
     "description": "Heading for saved custom theme add modal."
   },
   "themeCustomAddSuccessText": {
-    "message": "Ahorrar",
+    "message": "Guardar",
     "description": "Button to confirm adding a saved custom theme."
   },
   "themeCustomAddCancelText": {
@@ -2572,7 +2572,7 @@
     "description": "Paragraph for saved custom theme remove modal."
   },
   "themeCustomRemoveSuccessText": {
-    "message": "Ahorrar",
+    "message": "Guardar",
     "description": "Button to confirm removing a saved custom theme."
   },
   "themeCustomRemoveCancelText": {
@@ -2676,7 +2676,7 @@
     "description": "Heading for clear all data modal."
   },
   "dataClearAllContentPara1": {
-    "message": "¿Estás seguro de que deseas borrar todos los marcadores y la configuración de {appName} {appName} se restaurará al estado predeterminado.",
+    "message": "¿Estás seguro de que deseas borrar todos los marcadores y la configuración de {appName}? {appName} se restaurará al estado predeterminado.",
     "description": "Paragraph for clear all data modal."
   },
   "dataClearAllContentPara2": {
@@ -2692,11 +2692,11 @@
     "description": "Button to cancel clear all data."
   },
   "dataClearPartialHeading": {
-    "message": "¿ {appName} datos de {appName} excepto los marcadores?",
+    "message": "¿Borrar los datos de {appName} excepto los marcadores?",
     "description": "Heading for clear partial data modal."
   },
   "dataClearPartialContentPara1": {
-    "message": "¿Estás seguro de que deseas borrar todas las {appName} ? {appName} se restaurará al estado predeterminado, pero sus marcadores y grupos permanecerán.",
+    "message": "¿Estás seguro de que deseas borrar todas las configuraciones de {appName}? {appName} se restaurará al estado predeterminado, pero los marcadores y grupos permanecerán.",
     "description": "Paragraph for clear partial data modal."
   },
   "dataClearPartialContentPara2": {
@@ -2724,19 +2724,19 @@
     "description": "Paragraph for when backup data is valid."
   },
   "dataFeedbackFailNotJson": {
-    "message": "No es un archivo JSON. Asegúrese de que el archivo seleccionado provenga de {appName} .",
+    "message": "No es un archivo JSON. Asegúrese de que el archivo seleccionado provenga de {appName}.",
     "description": "Paragraph for when backup data is not valid JSON."
   },
   "dataFeedbackFailNotAppJson": {
-    "message": "No es el tipo correcto de archivo JSON. Asegúrese de que el archivo seleccionado provenga de {appName} .",
+    "message": "No es el tipo correcto de archivo JSON. Asegúrese de que el archivo seleccionado provenga de {appName}.",
     "description": "Paragraph for when backup data is not valid JSON from this project."
   },
   "dataFeedbackFailNotClipboardJson": {
-    "message": "No es el tipo correcto de datos. Asegúrese de que el portapapeles contenga datos de {appName} o un archivo JSON de respaldo de {appName}",
+    "message": "No es el tipo correcto de datos. Asegúrese de que el portapapeles contenga datos de {appName} o un archivo JSON de respaldo de {appName}.",
     "description": "Paragraph for when backup data in clipboard is not valid JSON."
   },
   "controlGeneralReset": {
-    "message": "Restablecen a los predeterminados",
+    "message": "Restablecer a valor por defecto",
     "description": "Button for reset button control."
   },
   "controlColorTextPlaceholder": {
@@ -2764,7 +2764,7 @@
     "description": "Label for colour control lightness."
   },
   "controlColorMixerSliderR": {
-    "message": "rojo",
+    "message": "Rojo",
     "description": "Label for colour control red."
   },
   "controlColorMixerSliderG": {
