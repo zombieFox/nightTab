@@ -1441,6 +1441,20 @@ themeSetting.background = (parent) => {
           data.save();
         }
       }),
+      inactiveOpacity: new Control_sliderSlim({
+        object: state.get.current(),
+        path: 'theme.background.image.inactiveOpacity',
+        id: 'theme-background-image-inactive-opacity',
+        labelText: message.get('menuContentThemeBackgroundImageInactiveOpacity'),
+        value: state.get.current().theme.background.image.inactiveOpacity,
+        defaultValue: state.get.default().theme.background.image.inactiveOpacity ?? 100,
+        min: state.get.minMax().theme.background.image.inactiveOpacity.min,
+        max: state.get.minMax().theme.background.image.inactiveOpacity.max,
+        action: () => {
+          applyCSSVar('theme.background.image.inactiveOpacity');
+          data.save();
+        }
+      }),
       vignette: {
         opacity: new Control_sliderSlim({
           object: state.get.current(),
@@ -1657,6 +1671,7 @@ themeSetting.background = (parent) => {
     themeSetting.control.background.image.scale.wrap(),
     themeSetting.control.background.image.accent.wrap(),
     themeSetting.control.background.image.opacity.wrap(),
+    themeSetting.control.background.image.inactiveOpacity.wrap(),
     themeSetting.control.background.image.vignette.opacity.wrap(),
     form.wrap({
       children: [

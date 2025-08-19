@@ -683,6 +683,10 @@
     "message": "Opacity",
     "description": "Range background image opacity."
   },
+  "menuContentThemeBackgroundImageInactiveOpacity": {
+    "message": "Inactive Opa.",
+    "description": "Background image opacity when window is inactive."
+  },
   "menuContentThemeBackgroundImageVignetteOpacity": {
     "message": "Vignette",
     "description": "Range for image vignette opacity."

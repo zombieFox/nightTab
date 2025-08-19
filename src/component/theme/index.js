@@ -399,6 +399,37 @@ theme.background.image = {
 
     }
 
+  },
+  visibilityChangeAdded: false, // flag
+
+  visibilityChange: function () {
+    if (this.visibilityChangeAdded) return; // prevent duplicates
+    this.visibilityChangeAdded = true;
+
+    const html = document.querySelector('html');
+
+    // set initial state
+    html.style.setProperty(
+      '--theme-background-image-opacity',
+      document.hasFocus()
+        ? state.get.current().theme.background.image.opacity
+        : state.get.current().theme.background.image.inactiveOpacity
+    );
+
+    // add listeners
+    window.addEventListener("blur", () => {
+      html.style.setProperty(
+        '--theme-background-image-opacity',
+        state.get.current().theme.background.image.inactiveOpacity
+      );
+    });
+
+    window.addEventListener("focus", () => {
+      html.style.setProperty(
+        '--theme-background-image-opacity',
+        state.get.current().theme.background.image.opacity
+      );
+    });
   }
 };
 
@@ -450,6 +481,7 @@ theme.init = () => {
   theme.background.area.render();
   theme.background.image.render();
   theme.background.video.render();
+  theme.background.image.visibilityChange();
   applyCSSVar([
     'theme.accent.rgb.r',
     'theme.accent.rgb.g',
