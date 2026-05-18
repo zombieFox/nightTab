@@ -36,7 +36,7 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavPreset": {
-    "message": "Đặt trước",
+    "message": "Mẫu có sẵn",
     "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavSaved": {
@@ -44,7 +44,7 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavStyle": {
-    "message": "Phong cách",
+    "message": "Giao diện",
     "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavColor": {
@@ -52,23 +52,23 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavAccent": {
-    "message": "Giọng",
+    "message": "Màu nhấn",
     "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavFont": {
-    "message": "Nét chữ",
+    "message": "Phông chữ",
     "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavRadius": {
-    "message": "Bán kính",
+    "message": "Bo góc",
     "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavShadow": {
-    "message": "Bong tôi",
+    "message": "Bóng đổ",
     "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavShade": {
-    "message": "Bóng râm",
+    "message": "Bóng nền",
     "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavOpacity": {
@@ -76,7 +76,7 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavBackground": {
-    "message": "Lý lịch",
+    "message": "Hình nền",
     "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavLayout": {
@@ -104,11 +104,11 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavLayoutSubNavPadding": {
-    "message": "Đệm lót",
+    "message": "Khoảng đệm",
     "description": "Label for the settings menu navigation."
   },
   "menuNavLayoutSubNavGutter": {
-    "message": "Mương nước",
+    "message": "Khoảng cách giữa cột",
     "description": "Label for the settings menu navigation."
   },
   "menuNavLayoutSubNavAlignment": {
@@ -132,11 +132,11 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavHeaderSubNavTransitional": {
-    "message": "Nói cách chuyển tiếp",
+    "message": "Từ ngữ chuyển tiếp",
     "description": "Label for the settings menu navigation."
   },
   "menuNavHeaderSubNavClock": {
-    "message": "Cái đồng hồ",
+    "message": "Đồng hồ",
     "description": "Label for the settings menu navigation."
   },
   "menuNavHeaderSubNavDate": {
@@ -152,23 +152,23 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavBookmarkSubNavGeneral": {
-    "message": "Tổng quan",
+    "message": "Cài đặt chung",
     "description": "Label for the settings menu navigation."
   },
   "menuNavBookmarkSubNavStyle": {
-    "message": "Phong cách",
+    "message": "Kiểu hiển thị",
     "description": "Label for the settings menu navigation."
   },
   "menuNavBookmarkSubNavOrientation": {
-    "message": "Sự định hướng",
+    "message": "Vị trí đường dẫn",
     "description": "Label for the settings menu navigation."
   },
   "menuNavBookmarkSubNavSort": {
-    "message": "Loại",
+    "message": "Sắp xếp",
     "description": "Label for the settings menu navigation."
   },
   "menuNavGroupLabel": {
-    "message": "Tập đoàn",
+    "message": "Nhóm",
     "description": "Label for the settings menu navigation."
   },
   "menuNavGroupSubNavAlignment": {
@@ -180,7 +180,7 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavGroupSubNavCollapse": {
-    "message": "Sự sụp đổ",
+    "message": "Thu gọn",
     "description": "Label for the settings menu navigation."
   },
   "menuNavGroupSubNavToolbar": {
@@ -192,15 +192,15 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavToolbarSubNavSize": {
-    "message": "Kích cỡ",
+    "message": "Kích thước",
     "description": "Label for the settings menu navigation."
   },
   "menuNavToolbarSubNavLocation": {
-    "message": "Địa điểm",
+    "message": "Địa chỉ",
     "description": "Label for the settings menu navigation."
   },
   "menuNavToolbarSubNavPosition": {
-    "message": "Chức vụ",
+    "message": "Vị trí",
     "description": "Label for the settings menu navigation."
   },
   "menuNavToolbarSubNavControls": {
@@ -220,7 +220,7 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavDataSubNavClear": {
-    "message": "Thông thoáng",
+    "message": "Xoá dữ liệu",
     "description": "Label for the settings menu navigation."
   },
   "menuNavLanguageLabel": {
@@ -240,11 +240,11 @@
     "description": "Label for the settings menu navigation."
   },
   "menuContentThemePresetHelperPara1": {
-    "message": "Việc áp dụng Giá trị đặt trước sẽ thay thế Màu sắc, Điểm nhấn, Phông chữ, Kiểu, Bán kính, Bóng, Bóng và Nền hiện tại.",
+    "message": "Áp dụng các mẫu có sẵn này sẽ thay đổi các tuỳ chỉnh hiện tại.",
     "description": "Helper text for preset theme."
   },
   "menuContentThemeSavedHelperPara1": {
-    "message": "Lưu một Chủ đề sẽ ghi lại Màu sắc, Điểm nhấn, Phông chữ, Kiểu, Độ mờ, Bán kính, Bóng, Bóng và Nền hiện tại.",
+    "message": "Lưu chủ đề mới sẽ tạo lối tắt cho các tuỳ chỉnh hiện tại.",
     "description": "Helper text for saved themes."
   },
   "menuContentThemeSavedSave": {
@@ -256,11 +256,11 @@
     "description": "Button to enter edit mode for saved themes."
   },
   "menuContentThemeStyleDarkLabel": {
-    "message": "Chế độ tối",
+    "message": "Giao diện tối",
     "description": "Radio for dark mode."
   },
   "menuContentThemeStyleLightLabel": {
-    "message": "Chế độ sáng",
+    "message": "Giao diện sáng",
     "description": "Radio for light mode."
   },
   "menuContentThemeStyleAutomaticLabel": {
@@ -268,11 +268,11 @@
     "description": "Radio for automatic light or dark mode."
   },
   "menuContentThemeStyleAutomaticDescription": {
-    "message": "Thực hiện theo hệ thống Chế độ sáng hoặc tối.",
+    "message": "Phụ thuộc vào hệ thống (giao diện sáng hoặc tối).",
     "description": "Description for automatic light or dark mode."
   },
   "menuContentThemeColorShadeHelperPara1": {
-    "message": "Hình nền, Dấu trang và Chế độ sử dụng các sắc thái từ bên trái.",
+    "message": "Hình nền, dấu trang và giao diện sử dụng các sắc thái từ bên trái.",
     "description": "Helper text for primary colour."
   },
   "menuContentThemeColorShadeHelperPara2": {
@@ -280,19 +280,19 @@
     "description": "Helper text for primary colour."
   },
   "menuContentThemeColorShadeHelperPara3": {
-    "message": "Để có giao diện ánh sáng, hãy chuyển sang Kiểu ánh sáng và sau đó chọn Màu chính. Và ngược lại để có một cái nhìn tối.",
+    "message": "Nếu muốn cảm giác giao diện sáng, hãy chuyển sang giao diện sáng và sau đó chọn màu chủ đạo. Và ngược lại nếu muốn cảm giác giao diện tối.",
     "description": "Helper text for primary colour."
   },
   "menuContentThemeColorRangePrimaryH": {
-    "message": "Màu cơ bản",
+    "message": "Màu chủ đạo",
     "description": "Range for primary colour hue."
   },
   "menuContentThemeColorRangePrimaryS": {
-    "message": "Bão hòa",
+    "message": "Độ đậm nhạt màu",
     "description": "Range for primary colour saturation."
   },
   "menuContentThemeColorContrastLabel": {
-    "message": "Phạm vi tương phản",
+    "message": "Phạm vi độ tương phản",
     "description": "Label for primary colour contrast."
   },
   "menuContentThemeColorContrastLeft": {
@@ -304,23 +304,23 @@
     "description": "Range for primary colour contrast right side."
   },
   "menuContentThemeColorContrastHelperPara1": {
-    "message": "Di chuyển các điều khiển Dải tương phản lại gần nhau để có giao diện tắt tiếng.",
+    "message": "Tuỳ chỉnh phạm vi độ tương phản gần nhau để tạo cảm giác giao diện êm dịu, trầm ấm.",
     "description": "Helper text for primary colour contrast."
   },
   "menuContentThemeColorContrastHelperPara2": {
-    "message": "Di chuyển các nút điều khiển Dải tương phản ra xa nhau để có giao diện sống động sắc nét.",
+    "message": "Tuỳ chỉnh phạm vi độ tương phản xa nhau để tạo cảm giác giao diện sắc nét, nổi bật.",
     "description": "Helper text for primary colour contrast."
   },
   "menuContentThemeAccentPresetColorGrey": {
-    "message": "Xám",
+    "message": "Màu xám",
     "description": "Label for grey preset accent colour."
   },
   "menuContentThemeAccentPresetColorRed": {
-    "message": "màu đỏ",
+    "message": "Màu đỏ",
     "description": "Label for red preset accent colour."
   },
   "menuContentThemeAccentPresetColorOrange": {
-    "message": "trái cam",
+    "message": "Màu cam",
     "description": "Label for orange preset accent colour."
   },
   "menuContentThemeAccentPresetColorYellow": {
@@ -328,7 +328,7 @@
     "description": "Label for yellow preset accent colour."
   },
   "menuContentThemeAccentPresetColorLime": {
-    "message": "Chanh xanh",
+    "message": "Màu xanh chanh (Lime green)",
     "description": "Label for lime preset accent colour."
   },
   "menuContentThemeAccentPresetColorGreen": {
@@ -336,55 +336,55 @@
     "description": "Label for green preset accent colour."
   },
   "menuContentThemeAccentPresetColorAqua": {
-    "message": "Aqua",
+    "message": "Màu xanh lục lam (Aqua)",
     "description": "Label for aqua preset accent colour."
   },
   "menuContentThemeAccentPresetColorCyan": {
-    "message": "Lục lam",
+    "message": "Màu xanh lơ (Cyan)",
     "description": "Label for cyan preset accent colour."
   },
   "menuContentThemeAccentPresetColorTeal": {
-    "message": "Màu mòng két",
+    "message": "Màu xanh mòng két (Teal)",
     "description": "Label for teal preset accent colour."
   },
   "menuContentThemeAccentPresetColorBlue": {
-    "message": "Màu xanh lam",
+    "message": "Màu xanh dương",
     "description": "Label for blue preset accent colour."
   },
   "menuContentThemeAccentPresetColorPurple": {
-    "message": "Màu tía",
+    "message": "Màu tím",
     "description": "Label for purple preset accent colour."
   },
   "menuContentThemeAccentPresetColorMagenta": {
-    "message": "Đỏ tươi",
+    "message": "Màu hồng cánh sen (Magenta)",
     "description": "Label for magenta preset accent colour."
   },
   "menuContentThemeAccentPresetColorFuchsia": {
-    "message": "Fuchsia",
+    "message": "Màu hồng vân anh (Fuchsia)",
     "description": "Label for fuchsia preset accent colour."
   },
   "menuContentThemeAccentPresetModifierLightLevel3": {
-    "message": "Siêu ánh sáng",
+    "message": "Sáng mạnh",
     "description": "Label for preset accent colour light level 3."
   },
   "menuContentThemeAccentPresetModifierLightLevel2": {
-    "message": "Đèn dự phòng",
+    "message": "Sáng vừa",
     "description": "Label for preset accent colour light level 2."
   },
   "menuContentThemeAccentPresetModifierLightLevel1": {
-    "message": "Nhẹ",
+    "message": "Sáng nhẹ",
     "description": "Label for preset accent colour light level 1."
   },
   "menuContentThemeAccentPresetModifierDarkLevel3": {
-    "message": "Siêu tối",
+    "message": "Tối mạnh",
     "description": "Label for preset accent colour dark level 3."
   },
   "menuContentThemeAccentPresetModifierDarkLevel2": {
-    "message": "Cực tối",
+    "message": "Tối vừa",
     "description": "Label for preset accent colour dark level 2."
   },
   "menuContentThemeAccentPresetModifierDarkLevel1": {
-    "message": "Tối tăm",
+    "message": "Tối nhẹ",
     "description": "Label for preset accent colour dark level 1."
   },
   "menuContentThemeAccentColor": {
@@ -392,7 +392,7 @@
     "description": "Label for accent colour."
   },
   "menuContentThemeAccentRandomActive": {
-    "message": "Màu dấu nhấn ngẫu nhiên khi tải / làm mới",
+    "message": "Dùng màu nhấn ngẫu nhiên khi tải / làm mới",
     "description": "Checkbox for random accent colour on load or refresh."
   },
   "menuContentThemeAccentRandomStyleAny": {
@@ -400,11 +400,11 @@
     "description": "Radio for any random accent colour on load or refresh."
   },
   "menuContentThemeAccentRandomStyleLight": {
-    "message": "Nhẹ",
+    "message": "Sáng",
     "description": "Radio for light random accent colour on load or refresh."
   },
   "menuContentThemeAccentRandomStyleDark": {
-    "message": "Tối tăm",
+    "message": "Tối",
     "description": "Radio for dark random accent colour on load or refresh."
   },
   "menuContentThemeAccentRandomStylePastel": {
@@ -412,15 +412,15 @@
     "description": "Radio for pastel random accent colour on load or refresh."
   },
   "menuContentThemeAccentRandomStyleSaturated": {
-    "message": "Bão hòa",
+    "message": "Độ bão hoà màu (Saturation)",
     "description": "Radio for saturated random accent colour on load or refresh."
   },
   "menuContentThemeAccentRandomRandomise": {
-    "message": "Ngẫu nhiên ngay bây giờ",
+    "message": "Thay đổi màu nhấn ngẫu nhiên",
     "description": "Button to randomise accent colour now."
   },
   "menuContentThemeAccentCycleActive": {
-    "message": "Tự động thay đổi màu sắc trọng âm",
+    "message": "Tự động thay đổi màu nhấn",
     "description": "Checkbox for cycled accent colour."
   },
   "menuContentThemeAccentCycleSpeed": {
@@ -432,11 +432,11 @@
     "description": "Range for cycled accent colour steps."
   },
   "menuContentThemeAccentCycleAlert": {
-    "message": "Hãy cẩn thận vì màu sắc của Accent thay đổi nhanh có thể gây ra các vấn đề về hiệu suất.",
+    "message": "Hãy cẩn thận khi thay đổi màu nhấn, thay đổi quá nhanh có thể gây ra các vấn đề về hiệu suất.",
     "description": "Alert for cycled accent colour."
   },
   "menuContentThemeAccentCycleHelperPara1": {
-    "message": "Tự động thay đổi Màu sắc của Accent sẽ không hoạt động khi màu Accent là xám hoặc đen.",
+    "message": "Tính năng tự động thay đổi màu nhấn sẽ không hoạt động khi màu nhấn là xám hoặc đen.",
     "description": "Helper text for cycled accent colour."
   },
   "menuContentThemeFontDisplayNameLabel": {
@@ -448,11 +448,11 @@
     "description": "Placeholder for display font name."
   },
   "menuContentThemeFontDisplayNameHelperPara1": {
-    "message": "Sử dụng Phông chữ của Google để tùy chỉnh Đồng hồ, Ngày tháng, Tên nhóm và Chữ cái Đánh dấu.",
+    "message": "Sử dụng phông chữ của Google để tùy chỉnh đồng hồ, ngày tháng, tên nhóm và ký tự dấu trang.",
     "description": "Helper text for display font name."
   },
   "menuContentThemeFontDisplayNameHelperLink": {
-    "message": "Tìm một Phông chữ của Google",
+    "message": "Tìm một phông chữ của Google",
     "description": "Link to google fonts."
   },
   "menuContentThemeFontDisplayNameHelperPara2": {
@@ -460,35 +460,35 @@
     "description": "Helper text for display font name."
   },
   "menuContentThemeFontDisplayNameHelperPara3": {
-    "message": "Xóa trường để sử dụng phông chữ mặc định \"Fjalla One\".",
+    "message": "Xóa ô trống để sử dụng phông chữ mặc định \"Fjalla One\".",
     "description": "Helper text for display font name."
   },
   "menuContentThemeFontDisplayWeightLabel": {
-    "message": "Độ đậm của phông chữ",
+    "message": "Độ dày của phông chữ",
     "description": "Label for display font weight."
   },
   "menuContentThemeFontDisplayWeightLight": {
-    "message": "Nhẹ",
+    "message": "Mảnh",
     "description": "Button for light weight display font."
   },
   "menuContentThemeFontDisplayWeightRegular": {
-    "message": "Thường xuyên",
+    "message": "Thường",
     "description": "Button for regular weight display font."
   },
   "menuContentThemeFontDisplayWeightBold": {
-    "message": "Dũng cảm",
+    "message": "Dày",
     "description": "Button for bold weight display font."
   },
   "menuContentThemeFontDisplayWeightHelperPara1": {
-    "message": "Không phải tất cả các phông chữ đều hỗ trợ tất cả các trọng số. Tham khảo trang Phông chữ của Google để xem những cái nào có sẵn.",
+    "message": "Không phải tất cả các phông chữ đều hỗ trợ tất cả các kiểu chữ. Tham khảo trang phông chữ của Google để xem những cái nào có sẵn.",
     "description": "Helper text for display font weight."
   },
   "menuContentThemeFontDisplayStyleNormal": {
-    "message": "Bình thường",
+    "message": "Chữ thường",
     "description": "Radio for normal display font style."
   },
   "menuContentThemeFontDisplayStyleItalic": {
-    "message": "In nghiêng",
+    "message": "Chữ nghiêng",
     "description": "Radio for italic display font style."
   },
   "menuContentThemeFontUiNameLabel": {
@@ -500,11 +500,11 @@
     "description": "Placeholder for UI font name."
   },
   "menuContentThemeFontUiNameHelperPara1": {
-    "message": "Sử dụng Phông chữ của Google để tùy chỉnh tên Dấu trang, URL và các thành phần biểu mẫu.",
+    "message": "Sử dụng phông chữ của Google để tùy chỉnh tên dấu trang, URL và các thành phần biểu mẫu.",
     "description": "Helper text for UI font name."
   },
   "menuContentThemeFontUiNameHelperLink": {
-    "message": "Tìm một Phông chữ của Google",
+    "message": "Tìm một phông chữ của Google",
     "description": "Link to google fonts."
   },
   "menuContentThemeFontUiNameHelperPara2": {
@@ -512,27 +512,27 @@
     "description": "Helper text for UI font name."
   },
   "menuContentThemeFontUiNameHelperPara3": {
-    "message": "Xóa trường để sử dụng phông chữ mặc định \"Open Sans\".",
+    "message": "Xóa ô trống để sử dụng phông chữ mặc định \"Open Sans\".",
     "description": "Helper text for UI font name."
   },
   "menuContentThemeFontUiWeightLabel": {
-    "message": "Độ đậm của phông chữ",
+    "message": "Độ dày của phông chữ",
     "description": "Label for UI font weight."
   },
   "menuContentThemeFontUiWeightLight": {
-    "message": "Nhẹ",
+    "message": "Mảnh",
     "description": "Button for light weight UI font."
   },
   "menuContentThemeFontUiWeightRegular": {
-    "message": "Thường xuyên",
+    "message": "Thường",
     "description": "Button for regular weight UI font."
   },
   "menuContentThemeFontUiWeightBold": {
-    "message": "Dũng cảm",
+    "message": "Dày",
     "description": "Button for bold weight UI font."
   },
   "menuContentThemeFontUiWeightHelperPara1": {
-    "message": "Không phải tất cả các phông chữ đều hỗ trợ tất cả các trọng số. Tham khảo trang Phông chữ của Google để xem những cái nào có sẵn.",
+    "message": "Không phải tất cả các phông chữ đều hỗ trợ tất cả các kiểu chữ. Tham khảo trang Phông chữ của Google để xem những cái nào có sẵn.",
     "description": "Helper text for UI font weight."
   },
   "menuContentThemeFontUiStyleNormal": {
@@ -568,11 +568,11 @@
     "description": "Range for all opacity."
   },
   "menuContentThemeOpacityGeneralHelperPara1": {
-    "message": "Thay đổi độ mờ của thanh Tìm kiếm, Dấu trang, Điều khiển nhóm và Thanh công cụ.",
+    "message": "Thay đổi độ mờ của thanh tìm kiếm, dấu trang, group controls và thanh công cụ.",
     "description": "Helper text for all opacity."
   },
   "menuContentThemeOpacityGeneralHelperPara2": {
-    "message": "Độ mờ cũng có thể được thay đổi khi chỉnh sửa các Dấu trang riêng lẻ.",
+    "message": "Độ mờ cũng có thể thay đổi khi chỉnh sửa các dấu trang một cách riêng lẻ.",
     "description": "Helper text for all opacity."
   },
   "menuContentThemeOpacityToolbar": {
@@ -584,27 +584,27 @@
     "description": "Range for bookmark opacity."
   },
   "menuContentThemeOpacitySearch": {
-    "message": "Hộp tìm kiếm",
+    "message": "Thanh tìm kiếm",
     "description": "Range for search opacity."
   },
   "menuContentThemeOpacityGroupToolbar": {
-    "message": "Thanh công cụ nhóm",
+    "message": "Thanh công cụ",
     "description": "Range for group toolbar opacity."
   },
   "menuContentThemeBackgroundTypeThemeLabel": {
-    "message": "Nền theo chủ đề",
+    "message": "Hình nền theo chủ đề",
     "description": "Radio for background type theme."
   },
   "menuContentThemeBackgroundTypeThemeDescription": {
-    "message": "Sử dụng màu Nền được xác định bởi Chủ đề.",
+    "message": "Sử dụng màu nền được xác định bởi chủ đề.",
     "description": "Description for background type theme."
   },
   "menuContentThemeBackgroundTypeAccentLabel": {
-    "message": "Nền bằng dấu",
+    "message": "Hình nền theo màu nhấn",
     "description": "Radio for background type accent."
   },
   "menuContentThemeBackgroundTypeAccentDescription": {
-    "message": "Sử dụng màu Nhấn cho Nền.",
+    "message": "Sử dụng màu nhấn cho nền.",
     "description": "Description for background type accent."
   },
   "menuContentThemeBackgroundTypeColor": {
@@ -612,7 +612,7 @@
     "description": "Radio for background type colour."
   },
   "menuContentThemeBackgroundTypeGradient": {
-    "message": "Dốc",
+    "message": "Dải chuyển màu (Gradient)",
     "description": "Radio for background type gradient."
   },
   "menuContentThemeBackgroundTypeImage": {
@@ -620,7 +620,7 @@
     "description": "Radio for background type image."
   },
   "menuContentThemeBackgroundTypeVideo": {
-    "message": "Băng hình",
+    "message": "Video",
     "description": "Radio for background type video."
   },
   "menuContentThemeBackgroundColor": {
@@ -628,7 +628,7 @@
     "description": "Label for background colour."
   },
   "menuContentThemeBackgroundGradientAngle": {
-    "message": "Góc độ dốc nền",
+    "message": "Góc gradient nền",
     "description": "Label for background gradient angle."
   },
   "menuContentThemeBackgroundGradientLeft": {
@@ -672,43 +672,43 @@
     "description": "Helper text for background image."
   },
   "menuContentThemeBackgroundImageBlur": {
-    "message": "Mơ hồ",
+    "message": "Độ nhoè (Blur)",
     "description": "Range background image blur."
   },
   "menuContentThemeBackgroundImageGrayscale": {
-    "message": "Greyscale",
+    "message": "Thang xám (Grayscale)",
     "description": "Range background image grayscale."
   },
   "menuContentThemeBackgroundImageScale": {
-    "message": "Tỉ lệ",
+    "message": "Tỉ lệ (Scale)",
     "description": "Range background image scale."
   },
   "menuContentThemeBackgroundImageAccent": {
-    "message": "Giọng",
+    "message": "Màu nhấn",
     "description": "Range background image accent."
   },
   "menuContentThemeBackgroundImageOpacity": {
-    "message": "Độ mờ",
+    "message": "Độ mờ nền (Opacity)",
     "description": "Range background image opacity."
   },
   "menuContentThemeBackgroundImageVignetteOpacity": {
-    "message": "Làm mờ nét ảnh",
+    "message": "Tối viền nền (Vignette)",
     "description": "Range for image vignette opacity."
   },
   "menuContentThemeBackgroundImageVignetteRangeLabel": {
-    "message": "Bóng râm bắt đầu và kết thúc",
+    "message": "Màu bắt đầu và màu kết thúc",
     "description": "Label for image vignette."
   },
   "menuContentThemeBackgroundImageVignetteRangeLeft": {
-    "message": "Kết thúc bóng râm",
+    "message": "Kết thúc tối viền trái",
     "description": "Range for image vignette left."
   },
   "menuContentThemeBackgroundImageVignetteRangeRight": {
-    "message": "Bắt đầu bóng râm",
+    "message": "Bắt đầu tối viền phải",
     "description": "Range for image vignette right."
   },
   "menuContentThemeBackgroundVideoAlertPara1": {
-    "message": "Không thể sử dụng URL trang YouTube.",
+    "message": "Không thể sử dụng URL của YouTube.",
     "description": "Alert for video background."
   },
   "menuContentThemeBackgroundVideoAlertPara2": {
@@ -732,51 +732,51 @@
     "description": "Helper text for background video."
   },
   "menuContentThemeBackgroundVideoBlur": {
-    "message": "Mơ hồ",
+    "message": "Độ nhoè (Blur)",
     "description": "Range background video blur."
   },
   "menuContentThemeBackgroundVideoGrayscale": {
-    "message": "Greyscale",
+    "message": "Thang xám (Grayscale)",
     "description": "Range background video grayscale."
   },
   "menuContentThemeBackgroundVideoScale": {
-    "message": "Tỉ lệ",
+    "message": "Tỉ lệ (Scale)",
     "description": "Range background video scale."
   },
   "menuContentThemeBackgroundVideoAccent": {
-    "message": "Giọng",
+    "message": "Màu nhấn video nền",
     "description": "Range background video accent."
   },
   "menuContentThemeBackgroundVideoOpacity": {
-    "message": "Độ mờ",
+    "message": "Độ mờ video nền (Opacity)",
     "description": "Range background video opacity."
   },
   "menuContentThemeBackgroundVideoVignetteOpacity": {
-    "message": "Làm mờ nét ảnh",
+    "message": "Độ mờ viền video",
     "description": "Range for video vignette opacity."
   },
   "menuContentThemeBackgroundVideoVignetteRangeLabel": {
-    "message": "Bóng râm bắt đầu và kết thúc",
+    "message": "Tối viền video bắt đầu và kết thúc",
     "description": "Label for video vignette."
   },
   "menuContentThemeBackgroundVideoVignetteRangeLeft": {
-    "message": "Kết thúc bóng râm",
+    "message": "Kết thúc tối viền trái",
     "description": "Range for video vignette left."
   },
   "menuContentThemeBackgroundVideoVignetteRangeRight": {
-    "message": "Bắt đầu bóng râm",
+    "message": "Bắt đầu tối viền phải",
     "description": "Range for video vignette right."
   },
   "menuContentThemeLayoutColorLabel": {
-    "message": "Màu nền của bố cục",
+    "message": "Màu nền bố cục",
     "description": "Label for layout area colour."
   },
   "menuContentThemeLayoutColorByTransparentLabel": {
-    "message": "Trong suốt",
+    "message": "Độ trong suốt (Transparent)",
     "description": "Radio for transparent layout area background."
   },
   "menuContentThemeLayoutColorByTransparentDescription": {
-    "message": "Không có màu nền đằng sau Bố cục.",
+    "message": "Không có màu nền đằng sau bố cục.",
     "description": "Description for transparent layout area background."
   },
   "menuContentThemeLayoutColorByCustomLabel": {
@@ -784,19 +784,19 @@
     "description": "Radio for colour layout area background."
   },
   "menuContentThemeLayoutColorByCustomDescription": {
-    "message": "Sử dụng màu tùy chỉnh phía sau Bố cục.",
+    "message": "Sử dụng màu tùy chỉnh phía sau bố cục.",
     "description": "Description for colour layout area background."
   },
   "menuContentThemeLayoutColorColor": {
-    "message": "Màu nền của bố cục",
+    "message": "Màu nền bố cục",
     "description": "Label for layout area background colour."
   },
   "menuContentThemeLayoutColorOpacity": {
-    "message": "Độ mờ của nền",
+    "message": "Độ mờ nền bố cục (Opacity)",
     "description": "Range for layout area background opacity."
   },
   "menuContentThemeLayoutColorBlurLabel": {
-    "message": "Mờ nền",
+    "message": "Độ nhoè nền (Blur)",
     "description": "Range for layout background blur."
   },
   "menuContentThemeLayoutColorBlurHelperPara1": {
@@ -808,15 +808,15 @@
     "description": "Label for layout divider."
   },
   "menuContentThemeHeaderColorLabel": {
-    "message": "Màu nền của tiêu đề",
+    "message": "Màu nền vùng tiêu đề",
     "description": "Label for header area colour."
   },
   "menuContentThemeHeaderColorByTransparentLabel": {
-    "message": "Trong suốt",
+    "message": "Trong suốt (Transparent)",
     "description": "Radio for transparent header area background."
   },
   "menuContentThemeHeaderColorByTransparentDescription": {
-    "message": "Không có màu nền phía sau vùng Tiêu đề.",
+    "message": "Không có màu nền phía sau vùng tiêu đề.",
     "description": "Description for transparent header area background."
   },
   "menuContentThemeHeaderColorByCustomLabel": {
@@ -824,27 +824,27 @@
     "description": "Radio for colour header area background."
   },
   "menuContentThemeHeaderColorByCustomDescription": {
-    "message": "Sử dụng màu tùy chỉnh phía sau vùng Tiêu đề.",
+    "message": "Sử dụng màu tùy chỉnh phía sau vùng tiêu đề.",
     "description": "Description for colour header area background."
   },
   "menuContentThemeHeaderColorColor": {
-    "message": "Màu nền của tiêu đề",
+    "message": "Màu nền vùng tiêu đề",
     "description": "Label for header area background colour."
   },
   "menuContentThemeHeaderColorOpacity": {
-    "message": "Độ mờ của nền",
+    "message": "Độ mờ nền vùng header (Opacity)",
     "description": "Range for header area background opacity."
   },
   "menuContentThemeBookmarkColorLabel": {
-    "message": "Màu nền của dấu trang",
+    "message": "Màu nền dấu trang",
     "description": "Label for bookmark area colour."
   },
   "menuContentThemeBookmarkColorByTransparentLabel": {
-    "message": "Trong suốt",
+    "message": "Trong suốt (Transparent)",
     "description": "Radio for transparent bookmark area background."
   },
   "menuContentThemeBookmarkColorByTransparentDescription": {
-    "message": "Không có màu nền phía sau khu vực Dấu trang.",
+    "message": "Không có màu nền phía sau vùng dấu trang.",
     "description": "Description for transparent bookmark area background."
   },
   "menuContentThemeBookmarkColorByCustomLabel": {
@@ -856,11 +856,11 @@
     "description": "Description for colour bookmark area background."
   },
   "menuContentThemeBookmarkColorColor": {
-    "message": "Màu nền của dấu trang",
+    "message": "Màu nền dấu trang",
     "description": "Label for bookmark area background colour."
   },
   "menuContentThemeBookmarkColorOpacity": {
-    "message": "Độ mờ của nền",
+    "message": "Độ mờ nền vùng dấu trang (Opacity)",
     "description": "Range for bookmark area background opacity."
   },
   "menuContentThemeBookmarkItemBorderLabel": {
@@ -868,27 +868,27 @@
     "description": "Label for bookmark item border."
   },
   "menuContentThemeBookmarkItemBorderHelperPara1": {
-    "message": "Đường viền của Dấu trang cũng có thể được thay đổi khi chỉnh sửa Dấu trang riêng lẻ.",
+    "message": "Đường viền của dấu trang cũng có thể được thay đổi khi chỉnh sửa dấu trang một cách riêng lẻ.",
     "description": "Helper text for bookmark border."
   },
   "menuContentThemeBookmarkItemBorderHelperPara2": {
-    "message": "Màu của Viền được xác định bởi Dấu, cũng có thể được thay đổi khi chỉnh sửa Dấu trang riêng lẻ.",
+    "message": "Màu của viền được xác định bởi màu nhấn, cũng có thể được thay đổi khi chỉnh sửa Dấu trang riêng lẻ.",
     "description": "Helper text for bookmark border."
   },
   "menuContentThemeBookmarkItemRainbowAdd": {
-    "message": "Thêm điểm nhấn độc đáo cho mỗi Dấu trang",
+    "message": "Thêm điểm nhấn chính cho mỗi dấu trang",
     "description": "Button to add a unique accent colour to each bookmark."
   },
   "menuContentThemeBookmarkItemRainbowRemove": {
-    "message": "Xóa tất cả các ghi đè trọng âm",
+    "message": "Xóa tất cả các ghi đè chính",
     "description": "Button to remove a unique accent colour to each bookmark."
   },
   "menuContentThemeBookmarkItemRainbowHelperPara1": {
-    "message": "Dấu trang tùy chỉnh Accent cũng có thể được thay đổi khi chỉnh sửa các Dấu trang riêng lẻ.",
+    "message": "Màu nhấn của dấu trang tùy chỉnh cũng có thể được thay đổi khi chỉnh sửa dấu trang một cách riêng lẻ.",
     "description": "Helper text for unique accent colours for each bookmark."
   },
   "menuContentLayoutScalingSize": {
-    "message": "Quy mô toàn cầu",
+    "message": "Bố cục tổng quát",
     "description": "Label for layout scaling."
   },
   "menuContentLayoutAreaWidth": {
@@ -904,59 +904,59 @@
     "description": "Label for header area justify."
   },
   "menuContentLayoutAreaHeaderJustifyLeft": {
-    "message": "Bên trái",
+    "message": "Trái",
     "description": "Radio to justify the header area left."
   },
   "menuContentLayoutAreaHeaderJustifyCenter": {
-    "message": "Trung tâm",
+    "message": "Giữa",
     "description": "Radio to justify the header area centre."
   },
   "menuContentLayoutAreaHeaderJustifyRight": {
-    "message": "Đúng",
+    "message": "Phải",
     "description": "Radio to justify the header area right."
   },
   "menuContentLayoutAreaHeaderJustifyHelper1Para1": {
-    "message": "Các hiệu ứng có thể không hiển thị nếu Vùng tiêu đề có chiều rộng đầy đủ.",
+    "message": "Các hiệu ứng có thể không hiển thị nếu vùng tiêu đề có chiều rộng đầy đủ.",
     "description": "Helper text for header area justify."
   },
   "menuContentLayoutAreaHeaderJustifyHelper2Para1": {
-    "message": "Chỉ khả dụng khi Hướng bố trí là Dọc và các mục Tiêu đề được hiển thị.",
+    "message": "Chỉ khả dụng khi hướng bố trí là dọc và các mục tiêu đề được hiển thị.",
     "description": "Helper text for header area justify."
   },
   "menuContentLayoutAreaBookmarkWidth": {
-    "message": "Chiều rộng vùng đánh dấu",
+    "message": "Chiều rộng vùng dấu tráng",
     "description": "Label for width of the bookmark area."
   },
   "menuContentLayoutAreaBookmarkJustifyLabel": {
-    "message": "Căn chỉnh khu vực dấu trang",
+    "message": "Căn chỉnh vùng dấu trang",
     "description": "Label for justify bookmark area."
   },
   "menuContentLayoutAreaBookmarkJustifyLeft": {
-    "message": "Bên trái",
+    "message": "Trái",
     "description": "Radio to justify the bookmark area left."
   },
   "menuContentLayoutAreaBookmarkJustifyCenter": {
-    "message": "Trung tâm",
+    "message": "Giữa",
     "description": "Radio to justify the bookmark area centre."
   },
   "menuContentLayoutAreaBookmarkJustifyRight": {
-    "message": "Đúng",
+    "message": "Phải",
     "description": "Radio to justify the bookmark area right."
   },
   "menuContentLayoutAreaBookmarkJustifyHelper1Para1": {
-    "message": "Các hiệu ứng có thể không hiển thị nếu Vùng đánh dấu có chiều rộng đầy đủ.",
+    "message": "Các hiệu ứng có thể không hiển thị nếu vùng dấu trang có chiều rộng đầy đủ.",
     "description": "Helper text for bookmark area justify."
   },
   "menuContentLayoutAreaBookmarkJustifyHelper2Para1": {
-    "message": "Chỉ khả dụng khi Hướng bố trí là Dọc và các mục Tiêu đề được hiển thị.",
+    "message": "Chỉ khả dụng khi Hướng bố trí là dọc và các mục tiêu đề được hiển thị.",
     "description": "Helper text for bookmark area justify."
   },
   "menuContentLayoutPadding": {
-    "message": "Khoảng trống xung quanh Vùng đầu trang và Dấu trang",
+    "message": "Khoảng trống xung quanh vùng đầu trang và dấu trang",
     "description": "Range for layout padding."
   },
   "menuContentLayoutGutter": {
-    "message": "Khoảng cách giữa các mục Tiêu đề và Dấu trang",
+    "message": "Khoảng cách giữa các mục tiêu đề và dấu trang",
     "description": "Range for layout gutter."
   },
   "menuContentLayoutAlignmentLabel": {
@@ -968,7 +968,7 @@
     "description": "Radio for layout alignment top left."
   },
   "menuContentLayoutAlignmentTopCenter": {
-    "message": "Trung tâm hàng đầu",
+    "message": "Trên cùng ở giữa",
     "description": "Radio for layout alignment top centre."
   },
   "menuContentLayoutAlignmentTopRight": {
@@ -976,15 +976,15 @@
     "description": "Radio for layout alignment top right."
   },
   "menuContentLayoutAlignmentCenterLeft": {
-    "message": "Trung tâm bên trái",
+    "message": "Hàng giữa bên trái",
     "description": "Radio for layout alignment centre left."
   },
   "menuContentLayoutAlignmentCenterCenter": {
-    "message": "Trung tâm Trung tâm",
+    "message": "Hàng giữa trung tâm",
     "description": "Radio for layout alignment centre centre."
   },
   "menuContentLayoutAlignmentCenterRight": {
-    "message": "Căn giữa bên phải",
+    "message": "Hàng giữa bên phải",
     "description": "Radio for layout alignment centre right."
   },
   "menuContentLayoutAlignmentBottomLeft": {
@@ -992,11 +992,11 @@
     "description": "Radio for layout alignment bottom left."
   },
   "menuContentLayoutAlignmentBottomCenter": {
-    "message": "Trung tâm dưới cùng",
+    "message": "Dưới cùng ở giữa",
     "description": "Radio for layout alignment bottom centre."
   },
   "menuContentLayoutAlignmentBottomRight": {
-    "message": "Góc phải ở phía dưới",
+    "message": "Dưới cùng bên phải",
     "description": "Radio for layout alignment bottom right."
   },
   "menuContentLayoutDirectionHorizontalLabel": {
@@ -1004,7 +1004,7 @@
     "description": "Radio for layout direction horizontal."
   },
   "menuContentLayoutDirectionHorizontalDescription": {
-    "message": "Xếp Tiêu đề và Dấu trang thành một hàng cạnh nhau.",
+    "message": "Xếp tiêu đề và dấu trang thành một hàng cạnh nhau.",
     "description": "Helper text for layout direction horizontal."
   },
   "menuContentLayoutDirectionVerticalLabel": {
@@ -1012,27 +1012,27 @@
     "description": "Radio for layout direction vertical."
   },
   "menuContentLayoutDirectionVerticalDescription": {
-    "message": "Xếp chồng Tiêu đề và Dấu trang vào một cột bên trên cột kia.",
+    "message": "Xếp chồng tiêu đề và dấu trang vào một cột bên trên cột kia.",
     "description": "Helper text for layout direction vertical."
   },
   "menuContentLayoutOrderHeaderBookmarkLabel": {
-    "message": "Tiêu đề rồi đến Dấu trang",
+    "message": "Tiêu đề rồi đến dấu trang",
     "description": "Radio for layout order header then bookmarks."
   },
   "menuContentLayoutOrderHeaderBookmarkDescription": {
-    "message": "Ra lệnh cho vùng Tiêu đề xuất hiện trước vùng Dấu trang.",
+    "message": "Ra lệnh cho vùng tiêu đề xuất hiện trước vùng dấu trang.",
     "description": "Helper text for layout order header then bookmarks."
   },
   "menuContentLayoutOrderBookmarkHeaderLabel": {
-    "message": "Dấu trang rồi đến Tiêu đề",
+    "message": "Dấu trang rồi đến tiêu đề",
     "description": "Radio for layout order bookmarks then header."
   },
   "menuContentLayoutOrderBookmarkHeaderDescription": {
-    "message": "Thứ tự khu vực Dấu trang xuất hiện trước khu vực Tiêu đề.",
+    "message": "Thứ tự khu vực dấu trang xuất hiện trước vùng tiêu đề.",
     "description": "Helper text for layout order bookmarks then header."
   },
   "menuContentLayoutPageTitleLabel": {
-    "message": "Chức vụ",
+    "message": "Tiêu đề",
     "description": "Label for page title."
   },
   "menuContentLayoutPageTitlePlaceholder": {
@@ -1060,11 +1060,11 @@
     "description": "Radio for page scrollbar auto."
   },
   "menuContentLayoutPageScrollbarThin": {
-    "message": "Gầy",
+    "message": "Mảnh",
     "description": "Radio for page scrollbar thin."
   },
   "menuContentLayoutPageScrollbarNone": {
-    "message": "Ẩn giấu",
+    "message": "Ẩn",
     "description": "Radio for page scrollbar none."
   },
   "menuContentLayoutPageScrollbarHelperPara1": {
@@ -1072,7 +1072,7 @@
     "description": "Helper text for page scrollbar."
   },
   "menuContentLayoutPageOverscrollActive": {
-    "message": "Cuộn qua cuối",
+    "message": "Cuộn xuống dưới cùng",
     "description": "Checkbox for layout page overscroll."
   },
   "menuContentLayoutPageOverscrollUnblurLabel": {
@@ -1092,27 +1092,27 @@
     "description": "Label to justify header items."
   },
   "menuContentHeaderAlignmentJustifyLeft": {
-    "message": "Bên trái",
+    "message": "Trái",
     "description": "Label to justify header items left."
   },
   "menuContentHeaderAlignmentJustifyCenter": {
-    "message": "Trung tâm",
+    "message": "Giữa",
     "description": "Label to justify header items centre."
   },
   "menuContentHeaderAlignmentJustifyRight": {
-    "message": "Đúng",
+    "message": "Phải",
     "description": "Label to justify header items right."
   },
   "menuContentHeaderAlignmentHelperPara1": {
-    "message": "Các hiệu ứng có thể không hiển thị nếu kích thước hộp Tìm kiếm được đặt thành Tự động và lớn dần để lấp đầy không gian có sẵn.",
+    "message": "Các hiệu ứng có thể không hiển thị nếu kích thước thanh tìm kiếm được đặt thành tự động và lớn dần để lấp đầy không gian có sẵn.",
     "description": "Helper text to justify header items."
   },
   "menuContentHeaderGreetingShow": {
-    "message": "Hiển thị lời chào",
+    "message": "Hiển thị lời giới thiệu",
     "description": "Checkbox to show header greeting."
   },
   "menuContentHeaderGreetingSize": {
-    "message": "Kích cỡ",
+    "message": "Kích thước",
     "description": "Range for header greeting size."
   },
   "menuContentHeaderGreetingNewLineLabel": {
@@ -1140,19 +1140,19 @@
     "description": "Radio for \"Hi\" header greeting."
   },
   "menuContentHeaderGreetingTypeNoneLabel": {
-    "message": "Không có",
+    "message": "Để trống",
     "description": "Radio for no header greeting."
   },
   "menuContentHeaderGreetingTypeNoneDescription": {
-    "message": "Hữu ích khi chỉ hiển thị tên.",
+    "message": "Hữu dụng khi chỉ cần hiển thị mỗi tên.",
     "description": "Description for no header greeting."
   },
   "menuContentHeaderGreetingTypeCustomLabel": {
-    "message": "Tập quán",
+    "message": "Tuỳ chỉnh",
     "description": "Radio for custom header greeting."
   },
   "menuContentHeaderGreetingTypeCustomDescriptionPara1": {
-    "message": "Sử dụng lời chào của riêng bạn.",
+    "message": "Sử dụng lời giới thiệu của riêng bạn.",
     "description": "Description for custom header greeting."
   },
   "menuContentHeaderGreetingTypeCustomDescriptionPara2": {
@@ -1160,7 +1160,7 @@
     "description": "Description for custom header greeting."
   },
   "menuContentHeaderGreetingCustomLabel": {
-    "message": "Văn bản lời chào tùy chỉnh",
+    "message": "Văn bản lời giới thiệu tùy chỉnh",
     "description": "Label for custom header greeting."
   },
   "menuContentHeaderGreetingCustomPlaceholder": {
@@ -1172,15 +1172,15 @@
     "description": "Input for header greeting name."
   },
   "menuContentHeaderGreetingNamePlaceholder": {
-    "message": "Biệt hiệu, bí danh hoặc tên siêu anh hùng",
+    "message": "Biệt danh, bí danh hoặc tên siêu anh hùng",
     "description": "Placeholder for header greeting name."
   },
   "menuContentHeaderTransitionalShowLabel": {
-    "message": "Hiển thị các từ chuyển tiếp",
+    "message": "Hiển thị các từ ngữ chuyển tiếp",
     "description": "Checkbox to show header transitional text."
   },
   "menuContentHeaderTransitionalShowHelperPara1": {
-    "message": "Chỉ khả dụng khi Ngày hoặc Giờ được hiển thị.",
+    "message": "Chỉ khả dụng khi ngày hoặc giờ được hiển thị.",
     "description": "Helper text for header transitional text."
   },
   "menuContentHeaderTransitionalTypeLabel": {
@@ -1196,7 +1196,7 @@
     "description": "Radio for \"It's \" transitional text."
   },
   "menuContentHeaderTransitionalSize": {
-    "message": "Kích cỡ",
+    "message": "Kích thước",
     "description": "Range for transitional text size."
   },
   "menuContentHeaderTransitionalNewLineLabel": {
@@ -1204,7 +1204,7 @@
     "description": "Checkbox to force transitional text onto a new line."
   },
   "menuContentHeaderTransitionalNewLineDescription": {
-    "message": "Bắt buộc chuyển sang một dòng mới và tách biệt khỏi các mục Tiêu đề khác.",
+    "message": "Bắt buộc chuyển sang một dòng mới và tách biệt khỏi các mục tiêu đề khác.",
     "description": "Description for forcing transitional text onto a new line."
   },
   "menuContentHeaderClockHourShow": {
@@ -1308,7 +1308,7 @@
     "description": "Radio for a long length day of the week."
   },
   "menuContentHeaderDateDayDisplayLengthShort": {
-    "message": "Ngắn ngủi",
+    "message": "Ngắn",
     "description": "Radio for short length day of the week."
   },
   "menuContentHeaderDateDateShow": {
@@ -1352,7 +1352,7 @@
     "description": "Radio for a long length month of the year."
   },
   "menuContentHeaderDateMonthDisplayLengthShort": {
-    "message": "Ngắn ngủi",
+    "message": "Ngắn",
     "description": "Radio for a short length month of the year."
   },
   "menuContentHeaderDateYearShow": {
@@ -1388,11 +1388,11 @@
     "description": "Radio for date then month format."
   },
   "menuContentHeaderDateFormatMonthDate": {
-    "message": "Ngày tháng",
+    "message": "Tháng / ngày",
     "description": "Radio for month then date format."
   },
   "menuContentHeaderDateSize": {
-    "message": "Kích cỡ",
+    "message": "Kích thước",
     "description": "Range for date size."
   },
   "menuContentHeaderDateNewLineLabel": {
@@ -1404,11 +1404,11 @@
     "description": "Description for forcing date onto a new line."
   },
   "menuContentHeaderSearchShow": {
-    "message": "Hiển thị Tìm kiếm",
+    "message": "Hiển thị thanh tìm kiếm",
     "description": "Checkbox for search."
   },
   "menuContentHeaderSearchWidthLabel": {
-    "message": "Chiều rộng hộp tìm kiếm",
+    "message": "Chiều rộng thanh tìm kiếm",
     "description": "Label for search width."
   },
   "menuContentHeaderSearchWidthAutoLabel": {
@@ -1424,7 +1424,7 @@
     "description": "Radio for custom search width."
   },
   "menuContentHeaderSearchWidthCustomDescription": {
-    "message": "Xác định độ rộng của hộp Tìm kiếm bên trong Vùng tiêu đề.",
+    "message": "Xác định độ rộng của thanh tìm kiếm bên trong vùng tiêu đề.",
     "description": "Description for custom search width."
   },
   "menuContentHeaderSearchWidthSize": {
@@ -1432,7 +1432,7 @@
     "description": "Range for search width."
   },
   "menuContentHeaderSearchSize": {
-    "message": "Kích cỡ",
+    "message": "Kích thước",
     "description": "Range for search size."
   },
   "menuContentHeaderSearchNewLineLabel": {
@@ -1440,15 +1440,15 @@
     "description": "Checkbox to force search onto a new line."
   },
   "menuContentHeaderSearchNewLineDescription": {
-    "message": "Bắt buộc chuyển sang một dòng mới và tách biệt khỏi các mục Tiêu đề khác.",
+    "message": "Bắt buộc chuyển sang một dòng mới và tách biệt khỏi các mục tiêu đề khác.",
     "description": "Description for forcing search onto a new line."
   },
   "menuContentHeaderSearchEngineSelectedLabel": {
-    "message": "Máy tìm kiếm",
+    "message": "Công cụ tìm kiếm",
     "description": "Label for custom search."
   },
   "menuContentHeaderSearchEngineSelectedCustom": {
-    "message": "Tập quán",
+    "message": "Tuỳ chỉnh",
     "description": "Select option for custom search."
   },
   "menuContentHeaderSearchEngineCustomNameLabel": {
@@ -1484,7 +1484,7 @@
     "description": "Placeholder for custom search name."
   },
   "menuContentHeaderSearchEngineCustomQueryNameHelperPara1": {
-    "message": "Đặt thuộc tính tên trên trường nhập Tìm kiếm.",
+    "message": "Đặt thuộc tính tên trên ô nhập tìm kiếm.",
     "description": "Helper text for custom search name."
   },
   "menuContentHeaderSearchEngineCustomQueryNameHelperPara2": {
@@ -1496,47 +1496,47 @@
     "description": "Label to justify search text."
   },
   "menuContentHeaderSearchEngineTextJustifyLeft": {
-    "message": "Bên trái",
+    "message": "Trái",
     "description": "Radio to justify the search text left."
   },
   "menuContentHeaderSearchEngineTextJustifyCenter": {
-    "message": "Trung tâm",
+    "message": "Giữa",
     "description": "Radio to justify the search text centre."
   },
   "menuContentHeaderSearchEngineTextJustifyRight": {
-    "message": "Đúng",
+    "message": "Phải",
     "description": "Radio to justify the search text right."
   },
   "menuContentHeaderSearchNewTab": {
-    "message": "Mở kết quả Tìm kiếm trong một tab mới",
+    "message": "Mở kết quả tìm kiếm trong một tab mới",
     "description": "Checkbox for opening search results in a new tab."
   },
   "menuContentBookmarkGeneralShow": {
-    "message": "Hiển thị Dấu trang",
+    "message": "Hiển thị dấu trang",
     "description": "Checkbox for show bookmark."
   },
   "menuContentBookmarkGeneralUrlShow": {
-    "message": "Hiển thị URL khi di chuột qua Dấu trang",
+    "message": "Hiển thị URL khi di chuột qua dấu trang",
     "description": "Checkbox for show bookmark url on hover."
   },
   "menuContentBookmarkGeneralLineShow": {
-    "message": "Hiển thị dòng Dấu trang",
+    "message": "Hiển thị dòng dấu trang",
     "description": "Checkbox for show bookmark line."
   },
   "menuContentBookmarkGeneralShadowShowLabel": {
-    "message": "Hiển thị bóng khi di chuột qua Dấu trang",
+    "message": "Hiển thị bóng đổ khi di chuột qua dấu trang",
     "description": "label for show bookmark shadow."
   },
   "menuContentBookmarkGeneralShadowShowDescription": {
-    "message": "Các hiệu ứng có thể không hiển thị nếu Theme Shadow được đặt thành 0.",
+    "message": "Các hiệu ứng có thể không hiển thị nếu theme Shadow được đặt thành 0.",
     "description": "Description to show bookmark shadow."
   },
   "menuContentBookmarkGeneralHoverScaleShow": {
-    "message": "Phát triển khi di chuột qua Dấu trang",
+    "message": "Phát triển khi di chuột qua dấu trang",
     "description": "Checkbox for scale bookmark on hover."
   },
   "menuContentBookmarkGeneralNewTab": {
-    "message": "Mở Dấu trang trong tab mới",
+    "message": "Mở dấu trang trong tab mới",
     "description": "Checkbox for open bookmark in a new tab."
   },
   "menuContentBookmarkGeneralSize": {
@@ -1548,7 +1548,7 @@
     "description": "Label for bookmark block style."
   },
   "menuContentBookmarkStyleBlockDescription": {
-    "message": "Gạch Bookmark hình vuông.",
+    "message": "Gạch dấu trang hình vuông.",
     "description": "Description for bookmark block style."
   },
   "menuContentBookmarkStyleListLabel": {
@@ -1556,15 +1556,15 @@
     "description": "Label for bookmark list style."
   },
   "menuContentBookmarkStyleListDescription": {
-    "message": "Các ô Bookmark ngắn và rộng.",
+    "message": "Các ô dấu trang ngắn và rộng.",
     "description": "Description for bookmark list style."
   },
   "menuContentBookmarkOrientationTop": {
-    "message": "Đứng đầu",
+    "message": "Trên",
     "description": "Radio for bookmark top orientation."
   },
   "menuContentBookmarkOrientationBottom": {
-    "message": "Đáy",
+    "message": "Dưới",
     "description": "Radio for bookmark bottom orientation."
   },
   "menuContentBookmarkOrientationHelperPara1": {
@@ -1572,7 +1572,7 @@
     "description": "Helper text for bookmark orientation."
   },
   "menuContentBookmarkSortLetter": {
-    "message": "Bằng thư",
+    "message": "Bằng ký tự",
     "description": "Button to sort bookmarks by letter."
   },
   "menuContentBookmarkSortIcon": {
@@ -1584,19 +1584,19 @@
     "description": "Button to sort bookmarks by name."
   },
   "menuContentGroupAlignmentJustifyLabel": {
-    "message": "Căn chỉnh khu vực chi tiết nhóm",
+    "message": "Căn chỉnh vùng chi tiết nhóm",
     "description": "Label to justify group items."
   },
   "menuContentGroupAlignmentJustifyLeft": {
-    "message": "Bên trái",
+    "message": "Trái",
     "description": "Label to justify group items left."
   },
   "menuContentGroupAlignmentJustifyCenter": {
-    "message": "Trung tâm",
+    "message": "Giữa",
     "description": "Label to justify group items centre."
   },
   "menuContentGroupAlignmentJustifyRight": {
-    "message": "Đúng",
+    "message": "Phải",
     "description": "Label to justify group items right."
   },
   "menuContentGroupAlignmentOrderLabel": {
@@ -1604,19 +1604,19 @@
     "description": "Label for group order."
   },
   "menuContentGroupAlignmentOrderHeaderBodyLabel": {
-    "message": "Chi tiết nhóm rồi đến Dấu trang",
+    "message": "Chi tiết nhóm rồi đến dấu trang",
     "description": "Radio for group details then bookmarks order."
   },
   "menuContentGroupAlignmentOrderHeaderBodyDescription": {
-    "message": "Ra lệnh cho vùng Chi tiết nhóm xuất hiện trước vùng Dấu trang.",
+    "message": "Ra lệnh cho vùng chi tiết nhóm xuất hiện trước vùng dấu trang.",
     "description": "Helper text for group details then bookmarks order."
   },
   "menuContentGroupAlignmentOrderBodyHeaderLabel": {
-    "message": "Dấu trang rồi đến Chi tiết nhóm",
+    "message": "Dấu trang rồi đến chi tiết nhóm",
     "description": "Radio for bookmarks then group details order."
   },
   "menuContentGroupAlignmentOrderBodyHeaderDescription": {
-    "message": "Đặt vùng Dấu trang xuất hiện trước vùng Chi tiết nhóm.",
+    "message": "Đặt vùng dấu trang xuất hiện trước vùng chi tiết nhóm.",
     "description": "Helper text for bookmarks then group details order."
   },
   "menuContentGroupNameSize": {
@@ -1632,7 +1632,7 @@
     "description": "Button to hide all group names."
   },
   "menuContentGroupNameHelperPara1": {
-    "message": "Tên Nhóm cũng có thể được thay đổi bằng cách chỉnh sửa các Nhóm riêng lẻ.",
+    "message": "Tên nhóm cũng có thể được thay đổi bằng cách chỉnh sửa các nhóm một cách riêng lẻ.",
     "description": "Helper text for show and hide all group names."
   },
   "menuContentGroupCollapseShow": {
@@ -1648,7 +1648,7 @@
     "description": "Range for group toolbar size."
   },
   "menuContentGroupToolbarCollapseLabel": {
-    "message": "Kiểm soát thu gọn nhóm",
+    "message": "Thu gọn thanh công cụ nhóm",
     "description": "Label for group toolbar collapse control."
   },
   "menuContentGroupToolbarCollapseShow": {
@@ -1660,11 +1660,11 @@
     "description": "Button to hide all group toolbar collapse control."
   },
   "menuContentGroupToolbarCollapseHelperPara1": {
-    "message": "Nút thu gọn của thanh công cụ Nhóm cũng có thể được thay đổi bằng cách chỉnh sửa các Nhóm riêng lẻ.",
+    "message": "Nút thu gọn của thanh công cụ nhóm cũng có thể được thay đổi bằng cách chỉnh sửa các nhóm một cách riêng lẻ.",
     "description": "Helper text for group toolbar collapse control."
   },
   "menuContentGroupToolbarOpenAllLabel": {
-    "message": "Nhóm Mở tất cả điều khiển",
+    "message": "Nhóm mở tất cả các tuỳ chỉnh",
     "description": "Label for the bookmark group toolbar open all control."
   },
   "menuContentGroupToolbarOpenAllShow": {
@@ -1676,7 +1676,7 @@
     "description": "Button to hide all bookmark group toolbar open all control."
   },
   "menuContentGroupToolbarOpenAllHelperPara1": {
-    "message": "Nút mở tất cả thanh công cụ Nhóm cũng có thể được thay đổi bằng cách chỉnh sửa các Nhóm riêng lẻ.",
+    "message": "Nút mở tất cả thanh công cụ nhóm cũng có thể được thay đổi bằng cách chỉnh sửa các Nhóm riêng lẻ.",
     "description": "Helper text for the bookmark group toolbar open all control."
   },
   "menuContentToolbarSize": {
@@ -1684,7 +1684,7 @@
     "description": "Range for bookmark group toolbar size."
   },
   "menuContentToolbarLocationCorner": {
-    "message": "Ở một góc",
+    "message": "Ở vùng góc",
     "description": "Radio for bookmark group toolbar in a corner."
   },
   "menuContentToolbarLocationHeader": {
@@ -1724,27 +1724,27 @@
     "description": "Radio for bookmark group toolbar positioned in the bottom left corner."
   },
   "menuContentToolbarPositionBottomRight": {
-    "message": "Góc phải ở phía dưới",
+    "message": "Dưới cùng bên phải",
     "description": "Radio for bookmark group toolbar positioned in the bottom right corner."
   },
   "menuContentToolbarPositionHelper1Para1": {
-    "message": "Định vị Thanh công cụ ở một trong bốn góc của cửa sổ.",
+    "message": "Định vị thanh công cụ ở một trong bốn góc của cửa sổ.",
     "description": "Helper text for bookmark group toolbar corner location."
   },
   "menuContentToolbarPositionHelper2Para1": {
-    "message": "Chỉ khả dụng khi Thanh công cụ được đặt ở một góc.",
+    "message": "Chỉ khả dụng khi thanh công cụ được đặt ở một góc.",
     "description": "Helper text for bookmark group toolbar corner location."
   },
   "menuContentToolbarControlsAccent": {
-    "message": "Hiển thị điều khiển Accent",
+    "message": "Hiển thị điều khiển màu nhấn",
     "description": "Checkbox to show bookmark group toolbar accent control."
   },
   "menuContentToolbarControlsAdd": {
-    "message": "Hiển thị Thêm điều khiển",
+    "message": "Hiển thị thêm các tuỳ chỉnh",
     "description": "Checkbox to show bookmark group toolbar add control."
   },
   "menuContentToolbarControlsEdit": {
-    "message": "Hiển thị kiểm soát Chỉnh sửa",
+    "message": "Hiển thị kiểm soát chỉnh sửa",
     "description": "Checkbox to show bookmark group toolbar edit control."
   },
   "menuContentDataRestoreFile": {
@@ -1772,7 +1772,7 @@
     "description": "Button to copy backup data to clipboard."
   },
   "menuContentDataBackupHelperPara1": {
-    "message": "Tải xuống bản sao lưu Dấu trang và Cài đặt {appName}",
+    "message": "Tải xuống bản sao lưu dấu trang và cài đặt {appName}",
     "description": "Helper text for data backup."
   },
   "menuContentDataBackupHelperPara2": {
@@ -1788,7 +1788,7 @@
     "description": "Button to clear partial data."
   },
   "menuContentDataClearAlertPara": {
-    "message": "Bạn sẽ mất Dấu trang khi xóa tất cả dữ liệu.",
+    "message": "Bạn sẽ mất dấu trang khi xóa tất cả dữ liệu.",
     "description": "Alert for clear all data."
   },
   "menuContentDataClearAlertLink": {
@@ -2000,7 +2000,7 @@
     "description": "Description for bookmark form visual page."
   },
   "bookmarkFormSectionAddressHeading": {
-    "message": "Địa chỉ nhà",
+    "message": "Địa chỉ",
     "description": "Heading for bookmark form address page."
   },
   "bookmarkFormSectionAddressDescription": {
@@ -2008,7 +2008,7 @@
     "description": "Description for bookmark form address page."
   },
   "bookmarkFormSectionPositionHeading": {
-    "message": "Chức vụ",
+    "message": "Vị trí",
     "description": "Heading for bookmark form position page."
   },
   "bookmarkFormSectionPositionDescription": {
@@ -2048,7 +2048,7 @@
     "description": "Radio to align bookmark tile display top left."
   },
   "bookmarkFormDisplayAlignmentTopCenter": {
-    "message": "Trung tâm hàng đầu",
+    "message": "Trên cùng ở giữa",
     "description": "Radio to align bookmark tile display top centre."
   },
   "bookmarkFormDisplayAlignmentTopRight": {
@@ -2056,15 +2056,15 @@
     "description": "Radio to align bookmark tile display top right."
   },
   "bookmarkFormDisplayAlignmentCenterLeft": {
-    "message": "Trung tâm bên trái",
+    "message": "Hàng giữa bên trái",
     "description": "Radio to align bookmark tile display centre left."
   },
   "bookmarkFormDisplayAlignmentCenterCenter": {
-    "message": "Trung tâm Trung tâm",
+    "message": "Hàng giữa ở giữa",
     "description": "Radio to align bookmark tile display centre centre."
   },
   "bookmarkFormDisplayAlignmentCenterRight": {
-    "message": "Căn giữa bên phải",
+    "message": "Hàng giữa bên phải",
     "description": "Radio to align bookmark tile display centre right."
   },
   "bookmarkFormDisplayAlignmentBottomLeft": {
@@ -2072,27 +2072,27 @@
     "description": "Radio to align bookmark tile display bottom left."
   },
   "bookmarkFormDisplayAlignmentBottomCenter": {
-    "message": "Trung tâm dưới cùng",
+    "message": "Dưới cùng ở giữa",
     "description": "Radio to align bookmark tile display bottom centre."
   },
   "bookmarkFormDisplayAlignmentBottomRight": {
-    "message": "Góc phải ở phía dưới",
+    "message": "Dưới cùng bên phải",
     "description": "Radio to align bookmark tile display bottom right."
   },
   "bookmarkFormDisplayDirectionVerticalLabel": {
-    "message": "Thẳng đứng",
+    "message": "Chiều dọc",
     "description": "Label for bookmark tile display vertical direction."
   },
   "bookmarkFormDisplayDirectionVerticalDescription": {
-    "message": "Xếp chồng Phần tử trực quan và Đặt tên một phần tử này lên phần tử kia.",
+    "message": "Xếp chồng phần tử trực quan và Đặt tên một phần tử này lên phần tử kia.",
     "description": "Description for bookmark tile display vertical direction."
   },
   "bookmarkFormDisplayDirectionHorizontalLabel": {
-    "message": "Nằm ngang",
+    "message": "Chiều ngang",
     "description": "Label for bookmark tile display horizontal direction."
   },
   "bookmarkFormDisplayDirectionHorizontalDescription": {
-    "message": "Sắp xếp Thành phần Hình ảnh và Tên cạnh nhau.",
+    "message": "Sắp xếp Thành phần Hình ảnh và tên cạnh nhau.",
     "description": "Description for bookmark tile display horizontal direction."
   },
   "bookmarkFormDisplayOrderVisualNameLabel": {
@@ -2100,7 +2100,7 @@
     "description": "Label for bookmark tile display visual then name order."
   },
   "bookmarkFormDisplayOrderVisualNameDescription": {
-    "message": "Đặt Phần tử Hình ảnh trước Tên.",
+    "message": "Đặt phần tử hình ảnh trước tên.",
     "description": "Description for bookmark tile display visual then name order."
   },
   "bookmarkFormDisplayOrderNameVisualLabel": {
@@ -2108,27 +2108,27 @@
     "description": "Label for bookmark tile display name then visual order."
   },
   "bookmarkFormDisplayOrderNameVisualDescription": {
-    "message": "Đặt Tên trước Phần tử Trực quan.",
+    "message": "Đặt tên trước Phần tử trực quan.",
     "description": "Description for bookmark tile display name then visual order."
   },
   "bookmarkFormDisplayRotate": {
-    "message": "Quay",
+    "message": "Xoay",
     "description": "Range for bookmark tile visual rotation."
   },
   "bookmarkFormDisplayTranslateLabel": {
-    "message": "Điều chỉnh vị trí Phần tử trực quan",
+    "message": "Điều chỉnh vị trí phần tử trực quan",
     "description": "Label for bookmark tile visual translation."
   },
   "bookmarkFormDisplayTranslateX": {
-    "message": "Nằm ngang",
+    "message": "Chiều ngang",
     "description": "Range for bookmark tile visual translation along the x axis."
   },
   "bookmarkFormDisplayTranslateY": {
-    "message": "Thẳng đứng",
+    "message": "Chiều dọc",
     "description": "Range for bookmark tile visual translation along the y axis."
   },
   "bookmarkFormDisplayGutter": {
-    "message": "Mương nước",
+    "message": "Khoảng cách giữa cột",
     "description": "Range for bookmark tile gutter space between visual and name."
   },
   "bookmarkFormDisplayVisualShowLabel": {
@@ -2140,7 +2140,7 @@
     "description": "Description to show bookmark tile visual."
   },
   "bookmarkFormDisplayVisualTypeLetter": {
-    "message": "Lá thư",
+    "message": "Ký tự",
     "description": "Radio for bookmark tile visual letter."
   },
   "bookmarkFormDisplayVisualTypeIcon": {
@@ -2156,7 +2156,7 @@
     "description": "Range for bookmark tile visual size."
   },
   "bookmarkFormDisplayVisualLetterTextLabel": {
-    "message": "Đánh dấu thư",
+    "message": "Đánh dấu ký tự",
     "description": "Label for bookmark tile visual text."
   },
   "bookmarkFormDisplayVisualLetterTextPlaceholder": {
@@ -2200,7 +2200,7 @@
     "description": "Label for bookmark tile name."
   },
   "bookmarkFormDisplayNameTextPlaceholder": {
-    "message": "Thí dụ",
+    "message": "Ví dụ",
     "description": "Placeholder for bookmark tile name."
   },
   "bookmarkFormDisplayNameSize": {
@@ -2224,7 +2224,7 @@
     "description": "Description for bookmark tile to use a custom accent."
   },
   "bookmarkFormAccentColor": {
-    "message": "Giọng",
+    "message": "Tiêu đề dấu trang chính",
     "description": "Label for bookmark tile accent."
   },
   "bookmarkFormColorByThemeLabel": {
@@ -2248,7 +2248,7 @@
     "description": "Label for bookmark tile colour."
   },
   "bookmarkFormColorOpacity": {
-    "message": "Độ mờ",
+    "message": "Độ mờ (Opacity)",
     "description": "Range for bookmark tile opacity."
   },
   "bookmarkFormBackgroundShowLabel": {
@@ -2260,15 +2260,15 @@
     "description": "Description for bookmark tile background."
   },
   "bookmarkFormBackgroundTypeImage": {
-    "message": "Hình ảnh",
+    "message": "Hình nền",
     "description": "Radio for bookmark tile image background."
   },
   "bookmarkFormBackgroundTypeVideo": {
-    "message": "Băng hình",
+    "message": "Video nền",
     "description": "Radio for bookmark tile video background."
   },
   "bookmarkFormBackgroundOpacity": {
-    "message": "Độ mờ",
+    "message": "Độ mờ (Opacity)",
     "description": "Range for bookmark tile background opacity."
   },
   "bookmarkFormBackgroundImageLabel": {
@@ -2304,7 +2304,7 @@
     "description": "Range for bookmark tile border."
   },
   "bookmarkFormShapeWideLabel": {
-    "message": "Gạch rộng",
+    "message": "Gạch ngang",
     "description": "Label for bookmark tile wide shape."
   },
   "bookmarkFormShapeWideDescription": {
@@ -2312,7 +2312,7 @@
     "description": "Description for bookmark tile wide shape."
   },
   "bookmarkFormShapeTallLabel": {
-    "message": "Gạch cao",
+    "message": "Gạch dọc",
     "description": "Label for bookmark tile tall shape."
   },
   "bookmarkFormShapeTallDescription": {
@@ -2340,11 +2340,11 @@
     "description": "Button for random group name."
   },
   "bookmarkFormGroupPositionGroup": {
-    "message": "Tập đoàn",
+    "message": "Nhóm",
     "description": "Select for bookmark group position."
   },
   "bookmarkFormGroupPositionItem": {
-    "message": "Chức vụ",
+    "message": "Vị trí",
     "description": "Select for bookmark position in a group."
   },
   "bookmarkFormPropagateVisualLabel": {
@@ -2352,11 +2352,11 @@
     "description": "Checkbox to share current bookmark visual settings to all other bookmarks."
   },
   "bookmarkFormPropagateVisualDescriptionPara1": {
-    "message": "Văn bản Chữ cái, Biểu tượng, Hình ảnh và Tên sẽ không được chia sẻ.",
+    "message": "Văn bản chữ cái, biểu tượng, hình ảnh và tên sẽ không được chia sẻ.",
     "description": "Helper text to share current bookmark visual settings to all other bookmarks."
   },
   "bookmarkFormPropagateVisualDescriptionPara2": {
-    "message": "Hữu ích để ẩn các Phần tử Trực quan hoặc Tên trên tất cả các Dấu trang.",
+    "message": "Hữu ích để ẩn các phần tử trực quan hoặc tên trên tất cả các dấu trang.",
     "description": "Helper text to share current bookmark visual settings to all other bookmarks."
   },
   "bookmarkFormPropagateLayoutLabel": {
@@ -2364,23 +2364,23 @@
     "description": "Checkbox to share current bookmark layout settings to all other bookmarks."
   },
   "bookmarkFormPropagateLayoutDescriptionPara1": {
-    "message": "Khi đã lưu, hãy áp dụng Bố cục trên cho tất cả các Dấu trang khác.",
+    "message": "Khi đã lưu, hãy áp dụng bố cục trên cho tất cả các dấu trang khác.",
     "description": "Helper text to share current bookmark layout settings to all other bookmarks."
   },
   "bookmarkFormPropagateLayoutDescriptionPara2": {
-    "message": "Chỉ kích thước Hình ảnh và Tên, Căn chỉnh, Thứ tự, Vị trí và Máng xối sẽ được áp dụng cho tất cả.",
+    "message": "Chỉ kích thước hình ảnh và tên, căn chỉnh, thứ tự, vị trí và khoảng cách giữa cột sẽ được áp dụng cho tất cả.",
     "description": "Helper text to share current bookmark layout settings to all other bookmarks."
   },
   "bookmarkFormPropagateThemeLabel": {
-    "message": "Áp dụng Chủ đề cho các Dấu trang khác",
+    "message": "Áp dụng chủ đề cho các dấu trang khác",
     "description": "Checkbox to share current bookmark theme settings to all other bookmarks."
   },
   "bookmarkFormPropagateThemeDescriptionPara1": {
-    "message": "Khi đã lưu, hãy áp dụng Chủ đề trên cho tất cả các Dấu trang khác.",
+    "message": "Khi đã lưu, hãy áp dụng chủ đề trên cho tất cả các dấu trang khác.",
     "description": "Helper text to share current bookmark theme settings to all other bookmarks."
   },
   "bookmarkFormPropagateThemeDescriptionPara2": {
-    "message": "Chỉ có Màu sắc, Điểm nhấn, Độ mờ, Đường viền và Bóng trực quan sẽ được áp dụng cho tất cả.",
+    "message": "Chỉ có màu sắc, màu nhấn, dộ mờ, đường viền và bóng trực quan sẽ được áp dụng cho tất cả.",
     "description": "Helper text to share current bookmark theme settings to all other bookmarks."
   },
   "bookmarkPreviewFull": {
@@ -2424,7 +2424,7 @@
     "description": "Heading for bookmark group add modal."
   },
   "groupAddSuccessText": {
-    "message": "cộng",
+    "message": "Thêm",
     "description": "Button to confirm adding a bookmark group."
   },
   "groupAddCancelText": {
@@ -2432,7 +2432,7 @@
     "description": "Button to cancel adding a bookmark group."
   },
   "groupRemoveHeadingName": {
-    "message": "Tẩy",
+    "message": "Xoá",
     "description": "Heading with a name for bookmark group remove modal."
   },
   "groupRemoveHeadingUnnamed": {
@@ -2440,11 +2440,11 @@
     "description": "Heading without a name for bookmark group remove modal."
   },
   "groupRemoveContent": {
-    "message": "Bạn có chắc chắn muốn xóa Nhóm này và tất cả các Dấu trang bên trong không? Điều này không thể được hoàn tác.",
+    "message": "Bạn có chắc chắn muốn xóa nhóm này và tất cả các dấu trang bên trong không? Điều này không thể được hoàn tác.",
     "description": "Paragraph for bookmark group remove modal."
   },
   "groupRemoveSuccessText": {
-    "message": "Tẩy",
+    "message": "Xoá",
     "description": "Button to confirm removing a bookmark group."
   },
   "groupRemoveCancelText": {
@@ -2460,7 +2460,7 @@
     "description": "Heading without a name for bookmark group edit modal."
   },
   "groupEditSuccessText": {
-    "message": "Cứu",
+    "message": "Lưu",
     "description": "Button to confirm editing a bookmark group."
   },
   "groupEditCancelText": {
@@ -2472,7 +2472,7 @@
     "description": "Heading for bookmark group form name."
   },
   "groupFormSectionNameDescription": {
-    "message": "Hiển thị Tên phía trên Nhóm này.",
+    "message": "Hiển thị tên phía trên nhóm này.",
     "description": "Description for bookmark group form name."
   },
   "groupFormSectionToolbarHeading": {
@@ -2508,23 +2508,23 @@
     "description": "Button for random bookmark group name."
   },
   "groupFormCollapseShowLabel": {
-    "message": "Hiển thị Thu gọn",
+    "message": "Hiển thị thu gọn",
     "description": "Label to show bookmark group toolbar collapse button."
   },
   "groupFormCollapseShowDescription": {
-    "message": "Nút Thu gọn sẽ hiển thị hoặc ẩn Dấu trang trong Nhóm này.",
+    "message": "Nút thu gọn sẽ hiển thị hoặc ẩn dấu trang trong nhóm này.",
     "description": "Description to show bookmark group toolbar collapse button."
   },
   "groupFormOpenAllShowLabel": {
-    "message": "Hiển thị Mở tất cả",
+    "message": "Hiển thị mở tất cả",
     "description": "Label to show bookmark group toolbar open all button."
   },
   "groupFormOpenAllShowDescription": {
-    "message": "Nút mở tất cả sẽ xuất hiện nếu có ít nhất một Dấu trang trong Nhóm này.",
+    "message": "Nút mở tất cả sẽ xuất hiện nếu có ít nhất một dấu trang trong nhóm này.",
     "description": "Description to show bookmark group toolbar open all button."
   },
   "groupFormDestination": {
-    "message": "Chức vụ",
+    "message": "Vị trí",
     "description": "Select for bookmark group position."
   },
   "themeCustomTileControlEdit": {
@@ -2552,7 +2552,7 @@
     "description": "Heading for saved custom theme add modal."
   },
   "themeCustomAddSuccessText": {
-    "message": "Cứu",
+    "message": "Lưu",
     "description": "Button to confirm adding a saved custom theme."
   },
   "themeCustomAddCancelText": {
@@ -2560,7 +2560,7 @@
     "description": "Button to cancel adding a saved custom theme."
   },
   "themeCustomRemoveHeadingName": {
-    "message": "Tẩy",
+    "message": "Xoá",
     "description": "Heading with a name for saved custom theme remove modal."
   },
   "themeCustomRemoveHeadingUnnamed": {
@@ -2664,7 +2664,7 @@
     "description": "Heading for restore backup data modal."
   },
   "dataRestoreSuccessText": {
-    "message": "Nhập khẩu",
+    "message": "Khôi phục",
     "description": "Button to confirm restoring from backup data."
   },
   "dataRestoreCancelText": {
@@ -2712,7 +2712,7 @@
     "description": "Button to cancel clear partial data."
   },
   "dataExportBackup": {
-    "message": "sao lưu",
+    "message": "Sao lưu",
     "description": "String for backup data file name."
   },
   "dataFeedbackEmpty": {
@@ -2752,11 +2752,11 @@
     "description": "Button to show more colour controls."
   },
   "controlColorMixerSliderH": {
-    "message": "Huế",
+    "message": "Sắc độ (Hue)",
     "description": "Label for colour control hue."
   },
   "controlColorMixerSliderS": {
-    "message": "Bão hòa",
+    "message": "Độ bão hoà màu (Saturation)",
     "description": "Label for colour control saturation."
   },
   "controlColorMixerSliderL": {
@@ -2764,7 +2764,7 @@
     "description": "Label for colour control lightness."
   },
   "controlColorMixerSliderR": {
-    "message": "màu đỏ",
+    "message": "Màu đỏ",
     "description": "Label for colour control red."
   },
   "controlColorMixerSliderG": {
@@ -2772,7 +2772,7 @@
     "description": "Label for colour control green."
   },
   "controlColorMixerSliderB": {
-    "message": "Màu xanh lam",
+    "message": "Màu xanh dương",
     "description": "Label for colour control blue."
   }
 }
