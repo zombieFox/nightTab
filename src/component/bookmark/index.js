@@ -344,6 +344,9 @@ bookmark.add = {
 
     const newBookmarkData = new StagedBookmark();
 
+    newBookmarkData.link.color.opacity = state.get.current().theme.bookmark.item.opacity;
+    newBookmarkData.link.border = state.get.current().theme.bookmark.item.border;
+
     newBookmarkData.type.new = true;
 
     newBookmarkData.position.destination.item = (bookmark.all.length > 0) ? bookmark.all[0].items.length : 0;
