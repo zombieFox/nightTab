@@ -57,11 +57,15 @@ theme.font.display = {
 
     if (isValidString(trimString(state.get.current().theme.font.display.name))) {
 
-      html.style.setProperty('--theme-font-display-name', '"' + trimString(state.get.current().theme.font.display.name) + '", "Fjalla One", sans-serif');
+      html.style.setProperty('--theme-font-display-name', '"' + trimString(state.get.current().theme.font.display.name) + '", "Fjalla One", "Oswald", sans-serif');
 
     } else {
 
       html.style.removeProperty('--theme-font-display-name');
+
+      WebFont.load({
+        google: { families: ['Oswald:400,600,700'] }
+      });
 
     }
 

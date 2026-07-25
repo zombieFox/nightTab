@@ -12,7 +12,7 @@
 }
 
 :root {
-  --theme-font-display-name: "Fjalla One", sans-serif;
+  --theme-font-display-name: "Fjalla One", "Oswald", sans-serif;
   --theme-font-display-weight: 400;
   --theme-font-display-style: "normal";
   --theme-font-ui-name: "Open Sans", sans-serif;
