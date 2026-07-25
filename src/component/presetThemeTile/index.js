@@ -1,3 +1,4 @@
+import { message } from '../message';
 import { state } from '../state';
 import { data } from '../data';
 import { theme } from '../theme';
@@ -389,7 +390,10 @@ export const PresetThemeTile = function ({
 
     if (isValidString(presetThemeData.name)) {
 
-      this.element.name.innerHTML = presetThemeData.name;
+      const cleanKey = 'themePresetName_' + presetThemeData.name.replace(/[\s()]/g, '');
+      const translatedName = message.get(cleanKey);
+
+      this.element.name.innerHTML = translatedName || presetThemeData.name;
 
       this.element.preset.button.appendChild(this.element.name);
 
