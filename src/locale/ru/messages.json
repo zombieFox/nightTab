@@ -12,7 +12,7 @@
     "description": "The description of the extension, displayed in the web store."
   },
   "menuNavDebugLabel": {
-    "message": "Отлаживать",
+    "message": "Отладка",
     "description": "Label for the settings menu navigation."
   },
   "menuNavDebugSubNavInput": {
@@ -100,15 +100,15 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavLayoutSubNavArea": {
-    "message": "Площадь",
+    "message": "Область",
     "description": "Label for the settings menu navigation."
   },
   "menuNavLayoutSubNavPadding": {
-    "message": "Обивка",
+    "message": "Внутренние отступы",
     "description": "Label for the settings menu navigation."
   },
   "menuNavLayoutSubNavGutter": {
-    "message": "Желоб",
+    "message": "Внешние отступы",
     "description": "Label for the settings menu navigation."
   },
   "menuNavLayoutSubNavAlignment": {
@@ -152,7 +152,7 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavBookmarkSubNavGeneral": {
-    "message": "Общий",
+    "message": "Общие",
     "description": "Label for the settings menu navigation."
   },
   "menuNavBookmarkSubNavStyle": {
@@ -180,7 +180,7 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavGroupSubNavCollapse": {
-    "message": "Крах",
+    "message": "Сворачивание",
     "description": "Label for the settings menu navigation."
   },
   "menuNavGroupSubNavToolbar": {
@@ -364,11 +364,11 @@
     "description": "Label for fuchsia preset accent colour."
   },
   "menuContentThemeAccentPresetModifierLightLevel3": {
-    "message": "Супер сверхлегкий",
+    "message": "Сверхсветлый",
     "description": "Label for preset accent colour light level 3."
   },
   "menuContentThemeAccentPresetModifierLightLevel2": {
-    "message": "Дополнительный свет",
+    "message": "Очень светлый",
     "description": "Label for preset accent colour light level 2."
   },
   "menuContentThemeAccentPresetModifierLightLevel1": {
@@ -376,7 +376,7 @@
     "description": "Label for preset accent colour light level 1."
   },
   "menuContentThemeAccentPresetModifierDarkLevel3": {
-    "message": "Супер экстра темный",
+    "message": "Сверхтёмный",
     "description": "Label for preset accent colour dark level 3."
   },
   "menuContentThemeAccentPresetModifierDarkLevel2": {
@@ -384,7 +384,7 @@
     "description": "Label for preset accent colour dark level 2."
   },
   "menuContentThemeAccentPresetModifierDarkLevel1": {
-    "message": "Темно",
+    "message": "Тёмный",
     "description": "Label for preset accent colour dark level 1."
   },
   "menuContentThemeAccentColor": {
@@ -2774,5 +2774,193 @@
   "controlColorMixerSliderB": {
     "message": "Синий",
     "description": "Label for colour control blue."
+  },
+  "bookmarkPresetGroupCoolStuff": {
+    "message": "Избранное",
+    "description": "Default initial group name."
+  },
+  "bookmarkPresetGroupDevSites": {
+    "message": "Веб-разработка",
+    "description": "Default initial group name."
+  },
+  "themePresetName_nightTabdefault": {
+    "message": "nightTab (по умолчанию)",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Black": {
+    "message": "Чёрная",
+    "description": "Theme preset name."
+  },
+  "themePresetName_White": {
+    "message": "Белая",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Acrid": {
+    "message": "Едкая",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Aerial": {
+    "message": "Воздушная",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Azure": {
+    "message": "Лазурная",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Bean": {
+    "message": "Бобовая",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Comet": {
+    "message": "Комета",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Corsair": {
+    "message": "Корсар",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Dash": {
+    "message": "Штрих",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Deco": {
+    "message": "Деко",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Earthquake": {
+    "message": "Землетрясение",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Funkadelic": {
+    "message": "Фанк",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Grimm": {
+    "message": "Гримм",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Hive": {
+    "message": "Улей",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Hypnos": {
+    "message": "Гипнос",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Infrared": {
+    "message": "Инфракрасная",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Kapow": {
+    "message": "Капоу",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Koto": {
+    "message": "Кото",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Lex": {
+    "message": "Лекс",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Macaroon": {
+    "message": "Макарун",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Marker": {
+    "message": "Маркер",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Midnight": {
+    "message": "Полночь",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Mint": {
+    "message": "Мятная",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Neon": {
+    "message": "Неон",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Nord": {
+    "message": "Норд",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Obsidian": {
+    "message": "Обсидиан",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Origin": {
+    "message": "Ориджин",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Outrun": {
+    "message": "Аутран",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Pepper": {
+    "message": "Перец",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Point": {
+    "message": "Точка",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Pumpkin": {
+    "message": "Тыква",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Replica": {
+    "message": "Реплика",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Rumble": {
+    "message": "Грохот",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Savage": {
+    "message": "Дикая",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Scoria": {
+    "message": "Шлак",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Snow": {
+    "message": "Снежная",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Sol": {
+    "message": "Солнце",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Steel": {
+    "message": "Стальная",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Stria": {
+    "message": "Полоса",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Terra": {
+    "message": "Земля",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Trine": {
+    "message": "Трайн",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Umbra": {
+    "message": "Тень",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Vanadium": {
+    "message": "Ванадий",
+    "description": "Theme preset name."
+  },
+  "themePresetName_Viper": {
+    "message": "Вайпер",
+    "description": "Theme preset name."
   }
 }

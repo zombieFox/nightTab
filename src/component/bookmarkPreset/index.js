@@ -1,8 +1,10 @@
+import { message } from '../message';
+
 const bookmarkPreset = {};
 
 bookmarkPreset.get = () => {
   return [{
-    name: { text: 'Cool stuff', show: true },
+    name: { text: message.get('bookmarkPresetGroupCoolStuff') || 'Cool stuff', show: true },
     collapse: false,
     toolbar: { openAll: { show: true }, collapse: { show: true } },
     items: [{
@@ -115,7 +117,7 @@ bookmarkPreset.get = () => {
       timestamp: 1626298028996
     }]
   }, {
-    name: { text: 'Dev sites', show: true },
+    name: { text: message.get('bookmarkPresetGroupDevSites') || 'Dev sites', show: true },
     collapse: false,
     toolbar: { openAll: { show: true }, collapse: { show: true } },
     items: [{

@@ -254,7 +254,21 @@ export const Date = function () {
 
     this.assemble();
 
-    this.now = moment();
+    const currentLang = (typeof state !== 'undefined' && state.get && state.get.current() && state.get.current().language) ? state.get.current().language : 'system';
+    let momentLang = 'en';
+
+    if (currentLang === 'system') {
+      const sysLang = navigator.language || 'en';
+      momentLang = sysLang.split('-')[0].toLowerCase();
+    } else {
+      if (currentLang === 'en_GB' || currentLang === 'en_US') {
+        momentLang = 'en';
+      } else {
+        momentLang = currentLang;
+      }
+    }
+
+    this.now = moment().locale(momentLang);
 
     if (state.get.current().header.date.day.show) {
       this.element.day.innerHTML = this.string.day();

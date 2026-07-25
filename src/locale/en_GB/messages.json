@@ -2766,5 +2766,13 @@
   "controlColorMixerSliderB": {
     "message": "Blue",
     "description": "Label for colour control blue."
+  },
+  "bookmarkPresetGroupCoolStuff": {
+    "message": "Cool stuff",
+    "description": "Default initial group name."
+  },
+  "bookmarkPresetGroupDevSites": {
+    "message": "Dev sites",
+    "description": "Default initial group name."
   }
 }
