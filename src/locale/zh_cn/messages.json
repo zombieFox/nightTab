@@ -1,0 +1,2084 @@
+{
+  "appName": {
+    "message": "nightTab"
+  },
+  "appShortName": {
+    "message": "nightTab"
+  },
+  "appDescription": {
+    "message": "一款中性风格的新标签页，以自选强调色点缀。可在 nightTab 中自定义布局、样式、背景和书签。"
+  },
+  "menuNavDebugLabel": {
+    "message": "调试"
+  },
+  "menuNavDebugSubNavInput": {
+    "message": "输入框"
+  },
+  "menuNavDebugSubNavButton": {
+    "message": "按钮"
+  },
+  "menuNavDebugSubNavBookmark": {
+    "message": "书签"
+  },
+  "menuNavDebugSubNavIcon": {
+    "message": "图标"
+  },
+  "menuNavThemeLabel": {
+    "message": "主题"
+  },
+  "menuNavThemeSubNavPreset": {
+    "message": "预设"
+  },
+  "menuNavThemeSubNavSaved": {
+    "message": "已保存"
+  },
+  "menuNavThemeSubNavStyle": {
+    "message": "样式"
+  },
+  "menuNavThemeSubNavColor": {
+    "message": "颜色"
+  },
+  "menuNavThemeSubNavAccent": {
+    "message": "强调色"
+  },
+  "menuNavThemeSubNavFont": {
+    "message": "字体"
+  },
+  "menuNavThemeSubNavRadius": {
+    "message": "圆角"
+  },
+  "menuNavThemeSubNavShadow": {
+    "message": "阴影"
+  },
+  "menuNavThemeSubNavShade": {
+    "message": "遮罩"
+  },
+  "menuNavThemeSubNavOpacity": {
+    "message": "不透明度"
+  },
+  "menuNavThemeSubNavBackground": {
+    "message": "背景"
+  },
+  "menuNavThemeSubNavLayout": {
+    "message": "布局"
+  },
+  "menuNavThemeSubNavHeader": {
+    "message": "头部"
+  },
+  "menuNavThemeSubNavBookmark": {
+    "message": "书签"
+  },
+  "menuNavLayoutLabel": {
+    "message": "布局"
+  },
+  "menuNavLayoutSubNavScaling": {
+    "message": "缩放"
+  },
+  "menuNavLayoutSubNavArea": {
+    "message": "区域"
+  },
+  "menuNavLayoutSubNavPadding": {
+    "message": "内边距"
+  },
+  "menuNavLayoutSubNavGutter": {
+    "message": "间距"
+  },
+  "menuNavLayoutSubNavAlignment": {
+    "message": "对齐"
+  },
+  "menuNavLayoutSubNavPage": {
+    "message": "页面"
+  },
+  "menuNavHeaderLabel": {
+    "message": "头部"
+  },
+  "menuNavHeaderSubNavAlignment": {
+    "message": "对齐"
+  },
+  "menuNavHeaderSubNavGreeting": {
+    "message": "问候语"
+  },
+  "menuNavHeaderSubNavTransitional": {
+    "message": "过渡文字"
+  },
+  "menuNavHeaderSubNavClock": {
+    "message": "时钟"
+  },
+  "menuNavHeaderSubNavDate": {
+    "message": "日期"
+  },
+  "menuNavHeaderSubNavSearch": {
+    "message": "搜索"
+  },
+  "menuNavBookmarkLabel": {
+    "message": "书签"
+  },
+  "menuNavBookmarkSubNavGeneral": {
+    "message": "常规"
+  },
+  "menuNavBookmarkSubNavStyle": {
+    "message": "样式"
+  },
+  "menuNavBookmarkSubNavOrientation": {
+    "message": "方向"
+  },
+  "menuNavBookmarkSubNavSort": {
+    "message": "排序"
+  },
+  "menuNavGroupLabel": {
+    "message": "分组"
+  },
+  "menuNavGroupSubNavAlignment": {
+    "message": "对齐"
+  },
+  "menuNavGroupSubNavName": {
+    "message": "名称"
+  },
+  "menuNavGroupSubNavCollapse": {
+    "message": "折叠"
+  },
+  "menuNavGroupSubNavToolbar": {
+    "message": "工具栏"
+  },
+  "menuNavToolbarLabel": {
+    "message": "工具栏"
+  },
+  "menuNavToolbarSubNavSize": {
+    "message": "大小"
+  },
+  "menuNavToolbarSubNavLocation": {
+    "message": "位置"
+  },
+  "menuNavToolbarSubNavPosition": {
+    "message": "方位"
+  },
+  "menuNavToolbarSubNavControls": {
+    "message": "控件"
+  },
+  "menuNavDataLabel": {
+    "message": "数据"
+  },
+  "menuNavDataSubNavRestore": {
+    "message": "恢复"
+  },
+  "menuNavDataSubNavBackup": {
+    "message": "备份"
+  },
+  "menuNavDataSubNavClear": {
+    "message": "清除"
+  },
+  "menuNavLanguageLabel": {
+    "message": "语言"
+  },
+  "menuNavSupportLabel": {
+    "message": "支持"
+  },
+  "menuNavCoffeeLabel": {
+    "message": "咖啡"
+  },
+  "menuNavAppLabel": {
+    "message": "{appName}"
+  },
+  "menuContentThemePresetHelperPara1": {
+    "message": "应用预设将替换当前的颜色、强调色、字体、样式、圆角、阴影、遮罩和背景。"
+  },
+  "menuContentThemeSavedHelperPara1": {
+    "message": "保存主题会记录当前的颜色、强调色、字体、样式、不透明度、圆角、阴影、遮罩和背景。"
+  },
+  "menuContentThemeSavedSave": {
+    "message": "保存当前主题"
+  },
+  "menuContentThemeSavedEdit": {
+    "message": "编辑已保存主题"
+  },
+  "menuContentThemeStyleDarkLabel": {
+    "message": "深色模式"
+  },
+  "menuContentThemeStyleLightLabel": {
+    "message": "浅色模式"
+  },
+  "menuContentThemeStyleAutomaticLabel": {
+    "message": "自动"
+  },
+  "menuContentThemeStyleAutomaticDescription": {
+    "message": "跟随系统的浅色或深色模式。"
+  },
+  "menuContentThemeColorShadeHelperPara1": {
+    "message": "背景、书签和弹窗使用左侧的遮罩。"
+  },
+  "menuContentThemeColorShadeHelperPara2": {
+    "message": "文本和表单元素使用右侧的遮罩。"
+  },
+  "menuContentThemeColorShadeHelperPara3": {
+    "message": "想要浅色外观，请切换到浅色样式并选择主色；反之则可获得深色外观。"
+  },
+  "menuContentThemeColorRangePrimaryH": {
+    "message": "主色"
+  },
+  "menuContentThemeColorRangePrimaryS": {
+    "message": "饱和度"
+  },
+  "menuContentThemeColorContrastLabel": {
+    "message": "对比度范围"
+  },
+  "menuContentThemeColorContrastLeft": {
+    "message": "对比度起点"
+  },
+  "menuContentThemeColorContrastRight": {
+    "message": "对比度终点"
+  },
+  "menuContentThemeColorContrastHelperPara1": {
+    "message": "将对比度范围控件调近，可获得柔和外观。"
+  },
+  "menuContentThemeColorContrastHelperPara2": {
+    "message": "将对比度范围控件调远，可获得鲜明锐利的外观。"
+  },
+  "menuContentThemeAccentPresetColorGrey": {
+    "message": "灰色"
+  },
+  "menuContentThemeAccentPresetColorRed": {
+    "message": "红色"
+  },
+  "menuContentThemeAccentPresetColorOrange": {
+    "message": "橙色"
+  },
+  "menuContentThemeAccentPresetColorYellow": {
+    "message": "黄色"
+  },
+  "menuContentThemeAccentPresetColorLime": {
+    "message": "青柠色"
+  },
+  "menuContentThemeAccentPresetColorGreen": {
+    "message": "绿色"
+  },
+  "menuContentThemeAccentPresetColorAqua": {
+    "message": "水绿色"
+  },
+  "menuContentThemeAccentPresetColorCyan": {
+    "message": "青色"
+  },
+  "menuContentThemeAccentPresetColorTeal": {
+    "message": "蓝绿色"
+  },
+  "menuContentThemeAccentPresetColorBlue": {
+    "message": "蓝色"
+  },
+  "menuContentThemeAccentPresetColorPurple": {
+    "message": "紫色"
+  },
+  "menuContentThemeAccentPresetColorMagenta": {
+    "message": "品红色"
+  },
+  "menuContentThemeAccentPresetColorFuchsia": {
+    "message": "紫红色"
+  },
+  "menuContentThemeAccentPresetModifierLightLevel3": {
+    "message": "极浅"
+  },
+  "menuContentThemeAccentPresetModifierLightLevel2": {
+    "message": "超浅"
+  },
+  "menuContentThemeAccentPresetModifierLightLevel1": {
+    "message": "浅色"
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel3": {
+    "message": "极深"
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel2": {
+    "message": "超深"
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel1": {
+    "message": "深色"
+  },
+  "menuContentThemeAccentColor": {
+    "message": "强调色"
+  },
+  "menuContentThemeAccentRandomActive": {
+    "message": "加载/刷新时随机强调色"
+  },
+  "menuContentThemeAccentRandomStyleAny": {
+    "message": "任意"
+  },
+  "menuContentThemeAccentRandomStyleLight": {
+    "message": "浅色"
+  },
+  "menuContentThemeAccentRandomStyleDark": {
+    "message": "深色"
+  },
+  "menuContentThemeAccentRandomStylePastel": {
+    "message": "柔和"
+  },
+  "menuContentThemeAccentRandomStyleSaturated": {
+    "message": "高饱和"
+  },
+  "menuContentThemeAccentRandomRandomise": {
+    "message": "立即随机"
+  },
+  "menuContentThemeAccentCycleActive": {
+    "message": "自动更改强调色色相"
+  },
+  "menuContentThemeAccentCycleSpeed": {
+    "message": "更改延迟"
+  },
+  "menuContentThemeAccentCycleStep": {
+    "message": "更改步长"
+  },
+  "menuContentThemeAccentCycleAlert": {
+    "message": "注意，快速变化的强调色色相可能导致性能问题。"
+  },
+  "menuContentThemeAccentCycleHelperPara1": {
+    "message": "当强调色为灰色或黑色时，自动更改强调色色相将不起作用。"
+  },
+  "menuContentThemeFontDisplayNameLabel": {
+    "message": "显示字体"
+  },
+  "menuContentThemeFontDisplayNamePlaceholder": {
+    "message": "Google 字体名称"
+  },
+  "menuContentThemeFontDisplayNameHelperPara1": {
+    "message": "使用 Google 字体自定义时钟、日期、分组名称和书签字母。"
+  },
+  "menuContentThemeFontDisplayNameHelperLink": {
+    "message": "查找 Google 字体"
+  },
+  "menuContentThemeFontDisplayNameHelperPara2": {
+    "message": "按 Google Fonts 上的显示名称输入字体，包括大写字母和空格，例如输入“Fredoka One”或“Kanit”。"
+  },
+  "menuContentThemeFontDisplayNameHelperPara3": {
+    "message": "清空该字段以使用默认字体“Fjalla One”。"
+  },
+  "menuContentThemeFontDisplayWeightLabel": {
+    "message": "字重"
+  },
+  "menuContentThemeFontDisplayWeightLight": {
+    "message": "细体"
+  },
+  "menuContentThemeFontDisplayWeightRegular": {
+    "message": "常规"
+  },
+  "menuContentThemeFontDisplayWeightBold": {
+    "message": "粗体"
+  },
+  "menuContentThemeFontDisplayWeightHelperPara1": {
+    "message": "并非所有字体都支持所有字重。请查看 Google 字体页面了解可用字重。"
+  },
+  "menuContentThemeFontDisplayStyleNormal": {
+    "message": "正常"
+  },
+  "menuContentThemeFontDisplayStyleItalic": {
+    "message": "斜体"
+  },
+  "menuContentThemeFontUiNameLabel": {
+    "message": "界面字体"
+  },
+  "menuContentThemeFontUiNamePlaceholder": {
+    "message": "Google 字体名称"
+  },
+  "menuContentThemeFontUiNameHelperPara1": {
+    "message": "使用 Google 字体自定义书签名称、URL 和表单元素。"
+  },
+  "menuContentThemeFontUiNameHelperLink": {
+    "message": "查找 Google 字体"
+  },
+  "menuContentThemeFontUiNameHelperPara2": {
+    "message": "按 Google Fonts 上的显示名称输入字体，包括大写字母和空格，例如输入“Roboto”、“Source Sans Pro”或“Noto Sans”。"
+  },
+  "menuContentThemeFontUiNameHelperPara3": {
+    "message": "清空该字段以使用默认字体“Open Sans”。"
+  },
+  "menuContentThemeFontUiWeightLabel": {
+    "message": "字重"
+  },
+  "menuContentThemeFontUiWeightLight": {
+    "message": "细体"
+  },
+  "menuContentThemeFontUiWeightRegular": {
+    "message": "常规"
+  },
+  "menuContentThemeFontUiWeightBold": {
+    "message": "粗体"
+  },
+  "menuContentThemeFontUiWeightHelperPara1": {
+    "message": "并非所有字体都支持所有字重。请查看 Google 字体页面了解可用字重。"
+  },
+  "menuContentThemeFontUiStyleNormal": {
+    "message": "正常"
+  },
+  "menuContentThemeFontUiStyleItalic": {
+    "message": "斜体"
+  },
+  "menuContentThemeRadius": {
+    "message": "圆角半径"
+  },
+  "menuContentThemeShadow": {
+    "message": "阴影大小"
+  },
+  "menuContentThemeShadeOpacity": {
+    "message": "遮罩不透明度"
+  },
+  "menuContentThemeShadeBlurLabel": {
+    "message": "遮罩模糊"
+  },
+  "menuContentThemeShadeBlurHelperPara1": {
+    "message": "并非所有浏览器都支持。"
+  },
+  "menuContentThemeOpacityGeneralLabel": {
+    "message": "全部不透明度"
+  },
+  "menuContentThemeOpacityGeneralHelperPara1": {
+    "message": "更改搜索栏、书签、分组控件和工具栏的不透明度。"
+  },
+  "menuContentThemeOpacityGeneralHelperPara2": {
+    "message": "也可在编辑单个书签时更改不透明度。"
+  },
+  "menuContentThemeOpacityToolbar": {
+    "message": "工具栏"
+  },
+  "menuContentThemeOpacityBookmark": {
+    "message": "书签"
+  },
+  "menuContentThemeOpacitySearch": {
+    "message": "搜索框"
+  },
+  "menuContentThemeOpacityGroupToolbar": {
+    "message": "分组工具栏"
+  },
+  "menuContentThemeBackgroundTypeThemeLabel": {
+    "message": "主题背景"
+  },
+  "menuContentThemeBackgroundTypeThemeDescription": {
+    "message": "使用主题定义的背景色。"
+  },
+  "menuContentThemeBackgroundTypeAccentLabel": {
+    "message": "强调色背景"
+  },
+  "menuContentThemeBackgroundTypeAccentDescription": {
+    "message": "使用强调色作为背景。"
+  },
+  "menuContentThemeBackgroundTypeColor": {
+    "message": "自定义颜色"
+  },
+  "menuContentThemeBackgroundTypeGradient": {
+    "message": "渐变"
+  },
+  "menuContentThemeBackgroundTypeImage": {
+    "message": "图片"
+  },
+  "menuContentThemeBackgroundTypeVideo": {
+    "message": "视频"
+  },
+  "menuContentThemeBackgroundColor": {
+    "message": "背景颜色"
+  },
+  "menuContentThemeBackgroundGradientAngle": {
+    "message": "背景渐变角度"
+  },
+  "menuContentThemeBackgroundGradientLeft": {
+    "message": "背景渐变起点"
+  },
+  "menuContentThemeBackgroundGradientRight": {
+    "message": "背景渐变终点"
+  },
+  "menuContentThemeBackgroundImageAlertPara1": {
+    "message": "不再支持本地图片。图片必须托管在网上。"
+  },
+  "menuContentThemeBackgroundImageAlertPara2": {
+    "message": "为什么改变了？"
+  },
+  "menuContentThemeBackgroundImageUrlLabel": {
+    "message": "URL"
+  },
+  "menuContentThemeBackgroundImageUrlPlaceholder": {
+    "message": "https://www.example.com/image.jpg"
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara1": {
+    "message": "添加多个 URL（用空格或换行分隔），加载时随机显示背景图片。"
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara2": {
+    "message": "可使用 Unsplash 获取随机图片，例如："
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara3": {
+    "message": "https://source.unsplash.com/random/1920x1080/?night,day,sky"
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara4": {
+    "message": "更改 .../random/ 后的参数以获得更多选项。加载时间可能有所不同。"
+  },
+  "menuContentThemeBackgroundImageBlur": {
+    "message": "模糊"
+  },
+  "menuContentThemeBackgroundImageGrayscale": {
+    "message": "灰度"
+  },
+  "menuContentThemeBackgroundImageScale": {
+    "message": "缩放"
+  },
+  "menuContentThemeBackgroundImageAccent": {
+    "message": "强调色"
+  },
+  "menuContentThemeBackgroundImageOpacity": {
+    "message": "不透明度"
+  },
+  "menuContentThemeBackgroundImageVignetteOpacity": {
+    "message": "暗角"
+  },
+  "menuContentThemeBackgroundImageVignetteRangeLabel": {
+    "message": "遮罩起点和终点"
+  },
+  "menuContentThemeBackgroundImageVignetteRangeLeft": {
+    "message": "遮罩终点"
+  },
+  "menuContentThemeBackgroundImageVignetteRangeRight": {
+    "message": "遮罩起点"
+  },
+  "menuContentThemeBackgroundVideoAlertPara1": {
+    "message": "无法使用 YouTube 页面 URL。"
+  },
+  "menuContentThemeBackgroundVideoAlertPara2": {
+    "message": "如何链接到视频文件。"
+  },
+  "menuContentThemeBackgroundVideoUrlLabel": {
+    "message": "URL"
+  },
+  "menuContentThemeBackgroundVideoUrlPlaceholder": {
+    "message": "https://www.example.com/video.mp4"
+  },
+  "menuContentThemeBackgroundVideoUrlHelperPara1": {
+    "message": "背景视频仅支持视频文件的直接 URL，支持 MP4 和 WebM 格式。"
+  },
+  "menuContentThemeBackgroundVideoUrlHelperPara2": {
+    "message": "添加多个 URL（用空格或换行分隔），加载时随机显示背景视频。"
+  },
+  "menuContentThemeBackgroundVideoBlur": {
+    "message": "模糊"
+  },
+  "menuContentThemeBackgroundVideoGrayscale": {
+    "message": "灰度"
+  },
+  "menuContentThemeBackgroundVideoScale": {
+    "message": "缩放"
+  },
+  "menuContentThemeBackgroundVideoAccent": {
+    "message": "强调色"
+  },
+  "menuContentThemeBackgroundVideoOpacity": {
+    "message": "不透明度"
+  },
+  "menuContentThemeBackgroundVideoVignetteOpacity": {
+    "message": "暗角"
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeLabel": {
+    "message": "遮罩起点和终点"
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeLeft": {
+    "message": "遮罩终点"
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeRight": {
+    "message": "遮罩起点"
+  },
+  "menuContentThemeLayoutColorLabel": {
+    "message": "布局背景颜色"
+  },
+  "menuContentThemeLayoutColorByTransparentLabel": {
+    "message": "透明"
+  },
+  "menuContentThemeLayoutColorByTransparentDescription": {
+    "message": "布局后方无背景色。"
+  },
+  "menuContentThemeLayoutColorByCustomLabel": {
+    "message": "自定义颜色"
+  },
+  "menuContentThemeLayoutColorByCustomDescription": {
+    "message": "在布局后方使用自定义颜色。"
+  },
+  "menuContentThemeLayoutColorColor": {
+    "message": "布局背景颜色"
+  },
+  "menuContentThemeLayoutColorOpacity": {
+    "message": "背景不透明度"
+  },
+  "menuContentThemeLayoutColorBlurLabel": {
+    "message": "背景模糊"
+  },
+  "menuContentThemeLayoutColorBlurHelperPara1": {
+    "message": "并非所有浏览器都支持。"
+  },
+  "menuContentThemeLayoutDivider": {
+    "message": "头部与书签区域之间的分隔线"
+  },
+  "menuContentThemeHeaderColorLabel": {
+    "message": "头部背景颜色"
+  },
+  "menuContentThemeHeaderColorByTransparentLabel": {
+    "message": "透明"
+  },
+  "menuContentThemeHeaderColorByTransparentDescription": {
+    "message": "头部区域后方无背景色。"
+  },
+  "menuContentThemeHeaderColorByCustomLabel": {
+    "message": "自定义颜色"
+  },
+  "menuContentThemeHeaderColorByCustomDescription": {
+    "message": "在头部区域后方使用自定义颜色。"
+  },
+  "menuContentThemeHeaderColorColor": {
+    "message": "头部背景颜色"
+  },
+  "menuContentThemeHeaderColorOpacity": {
+    "message": "背景不透明度"
+  },
+  "menuContentThemeBookmarkColorLabel": {
+    "message": "书签背景颜色"
+  },
+  "menuContentThemeBookmarkColorByTransparentLabel": {
+    "message": "透明"
+  },
+  "menuContentThemeBookmarkColorByTransparentDescription": {
+    "message": "书签区域后方无背景色。"
+  },
+  "menuContentThemeBookmarkColorByCustomLabel": {
+    "message": "自定义颜色"
+  },
+  "menuContentThemeBookmarkColorByCustomDescription": {
+    "message": "在书签区域后方使用自定义颜色。"
+  },
+  "menuContentThemeBookmarkColorColor": {
+    "message": "书签背景颜色"
+  },
+  "menuContentThemeBookmarkColorOpacity": {
+    "message": "背景不透明度"
+  },
+  "menuContentThemeBookmarkItemBorderLabel": {
+    "message": "书签边框"
+  },
+  "menuContentThemeBookmarkItemBorderHelperPara1": {
+    "message": "也可在编辑单个书签时更改书签边框。"
+  },
+  "menuContentThemeBookmarkItemBorderHelperPara2": {
+    "message": "边框颜色由强调色定义，也可在编辑单个书签时更改。"
+  },
+  "menuContentThemeBookmarkItemRainbowAdd": {
+    "message": "为每个书签添加独特强调色"
+  },
+  "menuContentThemeBookmarkItemRainbowRemove": {
+    "message": "移除所有强调色覆盖"
+  },
+  "menuContentThemeBookmarkItemRainbowHelperPara1": {
+    "message": "也可在编辑单个书签时更改书签自定义强调色。"
+  },
+  "menuContentLayoutScalingSize": {
+    "message": "全局大小"
+  },
+  "menuContentLayoutAreaWidth": {
+    "message": "布局区域宽度"
+  },
+  "menuContentLayoutAreaHeaderWidth": {
+    "message": "头部区域宽度"
+  },
+  "menuContentLayoutAreaHeaderJustifyLabel": {
+    "message": "头部区域对齐"
+  },
+  "menuContentLayoutAreaHeaderJustifyLeft": {
+    "message": "左"
+  },
+  "menuContentLayoutAreaHeaderJustifyCenter": {
+    "message": "居中"
+  },
+  "menuContentLayoutAreaHeaderJustifyRight": {
+    "message": "右"
+  },
+  "menuContentLayoutAreaHeaderJustifyHelper1Para1": {
+    "message": "如果头部区域为全宽，效果可能不可见。"
+  },
+  "menuContentLayoutAreaHeaderJustifyHelper2Para1": {
+    "message": "仅在布局方向为垂直且显示头部项目时可用。"
+  },
+  "menuContentLayoutAreaBookmarkWidth": {
+    "message": "书签区域宽度"
+  },
+  "menuContentLayoutAreaBookmarkJustifyLabel": {
+    "message": "书签区域对齐"
+  },
+  "menuContentLayoutAreaBookmarkJustifyLeft": {
+    "message": "左"
+  },
+  "menuContentLayoutAreaBookmarkJustifyCenter": {
+    "message": "居中"
+  },
+  "menuContentLayoutAreaBookmarkJustifyRight": {
+    "message": "右"
+  },
+  "menuContentLayoutAreaBookmarkJustifyHelper1Para1": {
+    "message": "如果书签区域为全宽，效果可能不可见。"
+  },
+  "menuContentLayoutAreaBookmarkJustifyHelper2Para1": {
+    "message": "仅在布局方向为垂直且显示头部项目时可用。"
+  },
+  "menuContentLayoutPadding": {
+    "message": "头部和书签区域周围间距"
+  },
+  "menuContentLayoutGutter": {
+    "message": "头部和书签项目之间的间距"
+  },
+  "menuContentLayoutAlignmentLabel": {
+    "message": "区域对齐"
+  },
+  "menuContentLayoutAlignmentTopLeft": {
+    "message": "左上"
+  },
+  "menuContentLayoutAlignmentTopCenter": {
+    "message": "顶部居中"
+  },
+  "menuContentLayoutAlignmentTopRight": {
+    "message": "右上"
+  },
+  "menuContentLayoutAlignmentCenterLeft": {
+    "message": "左中"
+  },
+  "menuContentLayoutAlignmentCenterCenter": {
+    "message": "正中"
+  },
+  "menuContentLayoutAlignmentCenterRight": {
+    "message": "右中"
+  },
+  "menuContentLayoutAlignmentBottomLeft": {
+    "message": "左下"
+  },
+  "menuContentLayoutAlignmentBottomCenter": {
+    "message": "底部居中"
+  },
+  "menuContentLayoutAlignmentBottomRight": {
+    "message": "右下"
+  },
+  "menuContentLayoutDirectionHorizontalLabel": {
+    "message": "水平排列"
+  },
+  "menuContentLayoutDirectionHorizontalDescription": {
+    "message": "将头部和书签并排排列成一行。"
+  },
+  "menuContentLayoutDirectionVerticalLabel": {
+    "message": "垂直排列"
+  },
+  "menuContentLayoutDirectionVerticalDescription": {
+    "message": "将头部和书签上下排列成一列。"
+  },
+  "menuContentLayoutOrderHeaderBookmarkLabel": {
+    "message": "头部在前，书签在后"
+  },
+  "menuContentLayoutOrderHeaderBookmarkDescription": {
+    "message": "让头部区域显示在书签区域之前。"
+  },
+  "menuContentLayoutOrderBookmarkHeaderLabel": {
+    "message": "书签在前，头部在后"
+  },
+  "menuContentLayoutOrderBookmarkHeaderDescription": {
+    "message": "让书签区域显示在头部区域之前。"
+  },
+  "menuContentLayoutPageTitleLabel": {
+    "message": "标题"
+  },
+  "menuContentLayoutPageTitlePlaceholder": {
+    "message": "新标签页"
+  },
+  "menuContentLayoutPageFaviconLabel": {
+    "message": "网站图标 URL"
+  },
+  "menuContentLayoutPageFaviconPlaceholder": {
+    "message": "https://www.example.com/favicon.svg"
+  },
+  "menuContentLayoutPageFaviconHelperPara1": {
+    "message": "并非所有浏览器都支持。"
+  },
+  "menuContentLayoutPageScrollbarLabel": {
+    "message": "滚动条"
+  },
+  "menuContentLayoutPageScrollbarAuto": {
+    "message": "自动"
+  },
+  "menuContentLayoutPageScrollbarThin": {
+    "message": "细"
+  },
+  "menuContentLayoutPageScrollbarNone": {
+    "message": "隐藏"
+  },
+  "menuContentLayoutPageScrollbarHelperPara1": {
+    "message": "并非所有浏览器都支持。"
+  },
+  "menuContentLayoutPageOverscrollActive": {
+    "message": "滚动超过末尾"
+  },
+  "menuContentLayoutPageOverscrollUnblurLabel": {
+    "message": "取消背景图片或视频模糊"
+  },
+  "menuContentLayoutPageOverscrollUnblurDescriptionPara1": {
+    "message": "滚动到页面底部时，背景图片或视频将取消模糊。"
+  },
+  "menuContentLayoutPageOverscrollUnblurDescriptionPara2": {
+    "message": "图片或视频模糊可在“主题 > 背景”中找到。"
+  },
+  "menuContentHeaderAlignmentJustifyLabel": {
+    "message": "头部项目对齐"
+  },
+  "menuContentHeaderAlignmentJustifyLeft": {
+    "message": "左"
+  },
+  "menuContentHeaderAlignmentJustifyCenter": {
+    "message": "居中"
+  },
+  "menuContentHeaderAlignmentJustifyRight": {
+    "message": "右"
+  },
+  "menuContentHeaderAlignmentHelperPara1": {
+    "message": "如果搜索框大小设为自动并扩展填满可用空间，效果可能不可见。"
+  },
+  "menuContentHeaderGreetingShow": {
+    "message": "显示问候语"
+  },
+  "menuContentHeaderGreetingSize": {
+    "message": "大小"
+  },
+  "menuContentHeaderGreetingNewLineLabel": {
+    "message": "换行"
+  },
+  "menuContentHeaderGreetingNewLineDescription": {
+    "message": "强制换行，并与其他头部项目分开。"
+  },
+  "menuContentHeaderGreetingTypeLabel": {
+    "message": "措辞"
+  },
+  "menuContentHeaderGreetingTypeGood": {
+    "message": "“早上好……”"
+  },
+  "menuContentHeaderGreetingTypeHello": {
+    "message": "“你好……”"
+  },
+  "menuContentHeaderGreetingTypeHi": {
+    "message": "“嗨……”"
+  },
+  "menuContentHeaderGreetingTypeNoneLabel": {
+    "message": "无"
+  },
+  "menuContentHeaderGreetingTypeNoneDescription": {
+    "message": "适合仅显示名称。"
+  },
+  "menuContentHeaderGreetingTypeCustomLabel": {
+    "message": "自定义"
+  },
+  "menuContentHeaderGreetingTypeCustomDescriptionPara1": {
+    "message": "使用自定义问候语。"
+  },
+  "menuContentHeaderGreetingTypeCustomDescriptionPara2": {
+    "message": "留空时默认为“早上好……”。"
+  },
+  "menuContentHeaderGreetingCustomLabel": {
+    "message": "自定义问候语文本"
+  },
+  "menuContentHeaderGreetingCustomPlaceholder": {
+    "message": "你好"
+  },
+  "menuContentHeaderGreetingNameLabel": {
+    "message": "名称"
+  },
+  "menuContentHeaderGreetingNamePlaceholder": {
+    "message": "昵称、别名或超级英雄名"
+  },
+  "menuContentHeaderTransitionalShowLabel": {
+    "message": "显示过渡文字"
+  },
+  "menuContentHeaderTransitionalShowHelperPara1": {
+    "message": "仅在显示日期或时间时可用。"
+  },
+  "menuContentHeaderTransitionalTypeLabel": {
+    "message": "措辞"
+  },
+  "menuContentHeaderTransitionalTypeTimeAndDate": {
+    "message": "“时间和日期是”"
+  },
+  "menuContentHeaderTransitionalTypeIts": {
+    "message": "“现在是”"
+  },
+  "menuContentHeaderTransitionalSize": {
+    "message": "大小"
+  },
+  "menuContentHeaderTransitionalNewLineLabel": {
+    "message": "换行"
+  },
+  "menuContentHeaderTransitionalNewLineDescription": {
+    "message": "强制换行，并与其他头部项目分开。"
+  },
+  "menuContentHeaderClockHourShow": {
+    "message": "显示小时"
+  },
+  "menuContentHeaderClockHourDisplayNumber": {
+    "message": "以数字"
+  },
+  "menuContentHeaderClockHourDisplayWord": {
+    "message": "以文字"
+  },
+  "menuContentHeaderClockMinuteShow": {
+    "message": "显示分钟"
+  },
+  "menuContentHeaderClockMinuteDisplayNumber": {
+    "message": "以数字"
+  },
+  "menuContentHeaderClockMinuteDisplayWord": {
+    "message": "以文字"
+  },
+  "menuContentHeaderClockSecondShow": {
+    "message": "显示秒"
+  },
+  "menuContentHeaderClockSecondDisplayNumber": {
+    "message": "以数字"
+  },
+  "menuContentHeaderClockSecondDisplayWord": {
+    "message": "以文字"
+  },
+  "menuContentHeaderClockSeparatorShow": {
+    "message": "显示分隔符"
+  },
+  "menuContentHeaderClockSeparatorLabel": {
+    "message": "分隔符字符"
+  },
+  "menuContentHeaderClockSeparatorPlaceholder": {
+    "message": ":"
+  },
+  "menuContentHeaderClockHour24": {
+    "message": "24 小时制"
+  },
+  "menuContentHeaderClockMeridiem": {
+    "message": "上午/下午"
+  },
+  "menuContentHeaderClockSize": {
+    "message": "大小"
+  },
+  "menuContentHeaderClockNewLineLabel": {
+    "message": "换行"
+  },
+  "menuContentHeaderClockNewLineDescription": {
+    "message": "强制换行，并与其他头部项目分开。"
+  },
+  "menuContentHeaderDateDayShow": {
+    "message": "显示星期"
+  },
+  "menuContentHeaderDateDayDisplayNumber": {
+    "message": "以数字"
+  },
+  "menuContentHeaderDateDayDisplayWord": {
+    "message": "以文字"
+  },
+  "menuContentHeaderDateDayDisplayWeekStartLabel": {
+    "message": "一周起始日"
+  },
+  "menuContentHeaderDateDayDisplayWeekStartMonday": {
+    "message": "星期一"
+  },
+  "menuContentHeaderDateDayDisplayWeekStartSunday": {
+    "message": "星期日"
+  },
+  "menuContentHeaderDateDayDisplayLengthLabel": {
+    "message": "文字长度"
+  },
+  "menuContentHeaderDateDayDisplayLengthLong": {
+    "message": "长"
+  },
+  "menuContentHeaderDateDayDisplayLengthShort": {
+    "message": "短"
+  },
+  "menuContentHeaderDateDateShow": {
+    "message": "显示日期"
+  },
+  "menuContentHeaderDateDateDisplayNumber": {
+    "message": "以数字"
+  },
+  "menuContentHeaderDateDateDisplayWord": {
+    "message": "以文字"
+  },
+  "menuContentHeaderDateDateDisplayOrdinal": {
+    "message": "序数"
+  },
+  "menuContentHeaderDateMonthShow": {
+    "message": "显示月份"
+  },
+  "menuContentHeaderDateMonthDisplayNumber": {
+    "message": "以数字"
+  },
+  "menuContentHeaderDateMonthDisplayWord": {
+    "message": "以文字"
+  },
+  "menuContentHeaderDateMonthDisplayOrdinal": {
+    "message": "序数"
+  },
+  "menuContentHeaderDateMonthDisplayLengthLabel": {
+    "message": "文字长度"
+  },
+  "menuContentHeaderDateMonthDisplayLengthLong": {
+    "message": "长"
+  },
+  "menuContentHeaderDateMonthDisplayLengthShort": {
+    "message": "短"
+  },
+  "menuContentHeaderDateYearShow": {
+    "message": "显示年份"
+  },
+  "menuContentHeaderDateYearDisplayNumber": {
+    "message": "以数字"
+  },
+  "menuContentHeaderDateYearDisplayWord": {
+    "message": "以文字"
+  },
+  "menuContentHeaderDateSeparatorShow": {
+    "message": "显示分隔符"
+  },
+  "menuContentHeaderDateSeparatorLabel": {
+    "message": "分隔符字符"
+  },
+  "menuContentHeaderDateSeparatorPlaceholder": {
+    "message": "/"
+  },
+  "menuContentHeaderDateFormatLabel": {
+    "message": "格式"
+  },
+  "menuContentHeaderDateFormatDateMonth": {
+    "message": "日期/月份"
+  },
+  "menuContentHeaderDateFormatMonthDate": {
+    "message": "月份/日期"
+  },
+  "menuContentHeaderDateSize": {
+    "message": "大小"
+  },
+  "menuContentHeaderDateNewLineLabel": {
+    "message": "换行"
+  },
+  "menuContentHeaderDateNewLineDescription": {
+    "message": "强制换行，并与其他头部项目分开。"
+  },
+  "menuContentHeaderSearchShow": {
+    "message": "显示搜索"
+  },
+  "menuContentHeaderSearchWidthLabel": {
+    "message": "搜索框宽度"
+  },
+  "menuContentHeaderSearchWidthAutoLabel": {
+    "message": "自动宽度"
+  },
+  "menuContentHeaderSearchWidthAutoDescription": {
+    "message": "搜索框将扩展以最佳适应可用空间。"
+  },
+  "menuContentHeaderSearchWidthCustomLabel": {
+    "message": "自定义宽度"
+  },
+  "menuContentHeaderSearchWidthCustomDescription": {
+    "message": "定义搜索框在头部区域内应有多宽。"
+  },
+  "menuContentHeaderSearchWidthSize": {
+    "message": "宽度"
+  },
+  "menuContentHeaderSearchSize": {
+    "message": "大小"
+  },
+  "menuContentHeaderSearchNewLineLabel": {
+    "message": "换行"
+  },
+  "menuContentHeaderSearchNewLineDescription": {
+    "message": "强制换行，并与其他头部项目分开。"
+  },
+  "menuContentHeaderSearchEngineSelectedLabel": {
+    "message": "搜索引擎"
+  },
+  "menuContentHeaderSearchEngineSelectedCustom": {
+    "message": "自定义"
+  },
+  "menuContentHeaderSearchEngineCustomNameLabel": {
+    "message": "名称"
+  },
+  "menuContentHeaderSearchEngineCustomNamePlaceholder": {
+    "message": "搜索引擎名称"
+  },
+  "menuContentHeaderSearchEngineCustomUrlLabel": {
+    "message": "URL"
+  },
+  "menuContentHeaderSearchEngineCustomUrlPlaceholder": {
+    "message": "https://"
+  },
+  "menuContentHeaderSearchEngineCustomUrlHelperPara1": {
+    "message": "输入带有搜索参数的网址，例如：“https://vimeo.com/search?q=”"
+  },
+  "menuContentHeaderSearchEngineCustomUrlHelperPara2": {
+    "message": "{appName} 会将搜索框中输入的搜索词添加到上述 URL 末尾。"
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameLabel": {
+    "message": "name 属性"
+  },
+  "menuContentHeaderSearchEngineCustomQueryNamePlaceholder": {
+    "message": "q"
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameHelperPara1": {
+    "message": "设置搜索输入字段的 name 属性。"
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameHelperPara2": {
+    "message": "这定义了提交时传递给搜索引擎的名称。如果不确定，请留空。"
+  },
+  "menuContentHeaderSearchEngineTextJustifyLabel": {
+    "message": "搜索文本对齐"
+  },
+  "menuContentHeaderSearchEngineTextJustifyLeft": {
+    "message": "左"
+  },
+  "menuContentHeaderSearchEngineTextJustifyCenter": {
+    "message": "居中"
+  },
+  "menuContentHeaderSearchEngineTextJustifyRight": {
+    "message": "右"
+  },
+  "menuContentHeaderSearchNewTab": {
+    "message": "在新标签页中打开搜索结果"
+  },
+  "menuContentBookmarkGeneralShow": {
+    "message": "显示书签"
+  },
+  "menuContentBookmarkGeneralUrlShow": {
+    "message": "悬停书签时显示 URL"
+  },
+  "menuContentBookmarkGeneralLineShow": {
+    "message": "显示书签分隔线"
+  },
+  "menuContentBookmarkGeneralShadowShowLabel": {
+    "message": "悬停书签时显示阴影"
+  },
+  "menuContentBookmarkGeneralShadowShowDescription": {
+    "message": "如果主题阴影设为 0，效果可能不可见。"
+  },
+  "menuContentBookmarkGeneralHoverScaleShow": {
+    "message": "悬停书签时放大"
+  },
+  "menuContentBookmarkGeneralNewTab": {
+    "message": "在新标签页中打开书签"
+  },
+  "menuContentBookmarkGeneralSize": {
+    "message": "书签大小"
+  },
+  "menuContentBookmarkStyleBlockLabel": {
+    "message": "方块"
+  },
+  "menuContentBookmarkStyleBlockDescription": {
+    "message": "方形书签磁贴。"
+  },
+  "menuContentBookmarkStyleListLabel": {
+    "message": "列表"
+  },
+  "menuContentBookmarkStyleListDescription": {
+    "message": "短而宽的书签磁贴。"
+  },
+  "menuContentBookmarkOrientationTop": {
+    "message": "顶部"
+  },
+  "menuContentBookmarkOrientationBottom": {
+    "message": "底部"
+  },
+  "menuContentBookmarkOrientationHelperPara1": {
+    "message": "在书签磁贴的顶部或底部显示 URL 和控件。"
+  },
+  "menuContentBookmarkSortLetter": {
+    "message": "按字母"
+  },
+  "menuContentBookmarkSortIcon": {
+    "message": "按图标"
+  },
+  "menuContentBookmarkSortName": {
+    "message": "按名称"
+  },
+  "menuContentGroupAlignmentJustifyLabel": {
+    "message": "分组详情区域对齐"
+  },
+  "menuContentGroupAlignmentJustifyLeft": {
+    "message": "左"
+  },
+  "menuContentGroupAlignmentJustifyCenter": {
+    "message": "居中"
+  },
+  "menuContentGroupAlignmentJustifyRight": {
+    "message": "右"
+  },
+  "menuContentGroupAlignmentOrderLabel": {
+    "message": "分组详情顺序"
+  },
+  "menuContentGroupAlignmentOrderHeaderBodyLabel": {
+    "message": "分组详情在前，书签在后"
+  },
+  "menuContentGroupAlignmentOrderHeaderBodyDescription": {
+    "message": "让分组详情区域显示在书签区域之前。"
+  },
+  "menuContentGroupAlignmentOrderBodyHeaderLabel": {
+    "message": "书签在前，分组详情在后"
+  },
+  "menuContentGroupAlignmentOrderBodyHeaderDescription": {
+    "message": "让书签区域显示在分组详情区域之前。"
+  },
+  "menuContentGroupNameSize": {
+    "message": "名称大小"
+  },
+  "menuContentGroupNameShow": {
+    "message": "全部显示"
+  },
+  "menuContentGroupNameHide": {
+    "message": "全部隐藏"
+  },
+  "menuContentGroupNameHelperPara1": {
+    "message": "也可通过编辑单个分组来更改分组名称。"
+  },
+  "menuContentGroupCollapseShow": {
+    "message": "展开所有分组"
+  },
+  "menuContentGroupCollapseHide": {
+    "message": "折叠所有分组"
+  },
+  "menuContentGroupToolbarSize": {
+    "message": "分组工具栏大小"
+  },
+  "menuContentGroupToolbarCollapseLabel": {
+    "message": "分组折叠控件"
+  },
+  "menuContentGroupToolbarCollapseShow": {
+    "message": "全部显示"
+  },
+  "menuContentGroupToolbarCollapseHide": {
+    "message": "全部隐藏"
+  },
+  "menuContentGroupToolbarCollapseHelperPara1": {
+    "message": "也可通过编辑单个分组来更改分组工具栏折叠按钮。"
+  },
+  "menuContentGroupToolbarOpenAllLabel": {
+    "message": "分组全部打开控件"
+  },
+  "menuContentGroupToolbarOpenAllShow": {
+    "message": "全部显示"
+  },
+  "menuContentGroupToolbarOpenAllHide": {
+    "message": "全部隐藏"
+  },
+  "menuContentGroupToolbarOpenAllHelperPara1": {
+    "message": "也可通过编辑单个分组来更改分组工具栏全部打开按钮。"
+  },
+  "menuContentToolbarSize": {
+    "message": "工具栏大小"
+  },
+  "menuContentToolbarLocationCorner": {
+    "message": "在角落"
+  },
+  "menuContentToolbarLocationHeader": {
+    "message": "在头部"
+  },
+  "menuContentToolbarLocationHelperPara1": {
+    "message": "将工具栏放在头部内或窗口角落。"
+  },
+  "menuContentToolbarLocationNewLineLabel": {
+    "message": "换行"
+  },
+  "menuContentToolbarLocationNewLineDescription": {
+    "message": "强制换行，并与其他头部项目分开。"
+  },
+  "menuContentToolbarLocationNewLineHelperPara1": {
+    "message": "仅在工具栏位于头部内时可用。"
+  },
+  "menuContentToolbarPositionLabel": {
+    "message": "工具栏位置"
+  },
+  "menuContentToolbarPositionTopLeft": {
+    "message": "左上"
+  },
+  "menuContentToolbarPositionTopRight": {
+    "message": "右上"
+  },
+  "menuContentToolbarPositionBottomLeft": {
+    "message": "左下"
+  },
+  "menuContentToolbarPositionBottomRight": {
+    "message": "右下"
+  },
+  "menuContentToolbarPositionHelper1Para1": {
+    "message": "将工具栏放在窗口四个角落之一。"
+  },
+  "menuContentToolbarPositionHelper2Para1": {
+    "message": "仅在工具栏位于角落时可用。"
+  },
+  "menuContentToolbarControlsAccent": {
+    "message": "显示强调色控件"
+  },
+  "menuContentToolbarControlsAdd": {
+    "message": "显示添加控件"
+  },
+  "menuContentToolbarControlsEdit": {
+    "message": "显示编辑控件"
+  },
+  "menuContentDataRestoreFile": {
+    "message": "从文件导入"
+  },
+  "menuContentDataRestoreClipboard": {
+    "message": "从剪贴板导入"
+  },
+  "menuContentDataRestoreHelperPara1": {
+    "message": "恢复之前导出的 {appName} 备份。"
+  },
+  "menuContentDataRestoreDrop": {
+    "message": "或将 {appName} 备份文件拖放到此处。"
+  },
+  "menuContentDataBackupFile": {
+    "message": "导出数据"
+  },
+  "menuContentDataBackupClipboard": {
+    "message": "复制到剪贴板"
+  },
+  "menuContentDataBackupHelperPara1": {
+    "message": "下载 {appName} 书签和设置的备份。"
+  },
+  "menuContentDataBackupHelperPara2": {
+    "message": "此文件之后可在此设备或其他设备上导入。"
+  },
+  "menuContentDataClearAll": {
+    "message": "清除所有数据"
+  },
+  "menuContentDataClearPartial": {
+    "message": "清除除书签外的所有数据"
+  },
+  "menuContentDataClearAlertPara": {
+    "message": "清除所有数据将丢失书签。"
+  },
+  "menuContentDataClearAlertLink": {
+    "message": "备份数据"
+  },
+  "menuContentDataClearHelperPara1": {
+    "message": "清除所有数据，将 {appName} 重置为默认状态。"
+  },
+  "menuContentDataClearHelperPara2": {
+    "message": "或者，可以清除所有设置但保留当前书签和分组。"
+  },
+  "menuContentLanguageSelect": {
+    "message": "语言"
+  },
+  "menuContentLanguageSystem": {
+    "message": "使用系统语言"
+  },
+  "menuContentLanguageAlertPara": {
+    "message": "发现翻译不准确？"
+  },
+  "menuContentLanguageAlertLink": {
+    "message": "帮助翻译 {appName}"
+  },
+  "menuContentSupportPageApplyToAll": {
+    "message": "将书签设置应用到全部"
+  },
+  "menuContentSupportPageBrowser": {
+    "message": "浏览器支持"
+  },
+  "menuContentSupportPageCookies": {
+    "message": "Cookie 和缓存"
+  },
+  "menuContentSupportPageData": {
+    "message": "数据备份和恢复"
+  },
+  "menuContentSupportPageLocalBackgroundImage": {
+    "message": "本地背景图片"
+  },
+  "menuContentSupportPageProtectedUrl": {
+    "message": "受保护的 URL"
+  },
+  "menuContentSupportPageRecovering": {
+    "message": "恢复设置和书签"
+  },
+  "menuContentSupportPageResetting": {
+    "message": "打开浏览器时重置"
+  },
+  "menuContentSupportPagePrivacy": {
+    "message": "尊重你的隐私"
+  },
+  "menuContentSupportPageBackgroundImageVideo": {
+    "message": "设置背景视频或图片"
+  },
+  "menuContentSupportPageFirefox": {
+    "message": "将 {appName} 设为 Firefox 主页"
+  },
+  "menuContentSupportPara": {
+    "message": "如需更多支持或反馈："
+  },
+  "menuContentSupportLink1": {
+    "message": "提交问题。"
+  },
+  "menuContentSupportLink2": {
+    "message": "查看 Wiki。"
+  },
+  "menuContentCoffeePara": {
+    "message": "{appName} 是免费的，欢迎用咖啡表达支持！"
+  },
+  "menuContentCoffeeButton": {
+    "message": "请我喝杯咖啡"
+  },
+  "menuContentAppPara1": {
+    "message": "与社区分享你的设置。"
+  },
+  "menuContentAppLink1": {
+    "message": "在 Reddit/r/{appName} 上可以找到。"
+  },
+  "menuContentAppPara2": {
+    "message": "本项目是开源的。"
+  },
+  "menuContentAppLink2": {
+    "message": "在 GitHub 上可以找到。"
+  },
+  "menuContentAppLink3": {
+    "message": "GNU 通用公共许可证 v3.0。"
+  },
+  "bookmarkTileControlLeft": {
+    "message": "将此书签左移"
+  },
+  "bookmarkTileControlSort": {
+    "message": "拖动书签重新排序"
+  },
+  "bookmarkTileControlRight": {
+    "message": "将此书签右移"
+  },
+  "bookmarkTileControlEdit": {
+    "message": "编辑此书签"
+  },
+  "bookmarkTileControlRemove": {
+    "message": "移除此书签"
+  },
+  "bookmarkAddHeading": {
+    "message": "添加新书签"
+  },
+  "bookmarkAddSuccessText": {
+    "message": "添加"
+  },
+  "bookmarkAddCancelText": {
+    "message": "取消"
+  },
+  "bookmarkRemoveHeadingName": {
+    "message": "移除"
+  },
+  "bookmarkRemoveHeadingUnnamed": {
+    "message": "移除未命名书签"
+  },
+  "bookmarkRemoveContent": {
+    "message": "确定要移除此书签吗？此操作无法撤销。"
+  },
+  "bookmarkRemoveSuccessText": {
+    "message": "移除"
+  },
+  "bookmarkRemoveCancelText": {
+    "message": "取消"
+  },
+  "bookmarkEditHeadingName": {
+    "message": "编辑"
+  },
+  "bookmarkEditHeadingUnnamed": {
+    "message": "编辑未命名书签"
+  },
+  "bookmarkEditSuccessText": {
+    "message": "保存"
+  },
+  "bookmarkEditCancelText": {
+    "message": "取消"
+  },
+  "bookmarkFormTabVisual": {
+    "message": "视觉与名称"
+  },
+  "bookmarkFormTabAddress": {
+    "message": "地址"
+  },
+  "bookmarkFormTabPosition": {
+    "message": "位置"
+  },
+  "bookmarkFormTabLayout": {
+    "message": "布局"
+  },
+  "bookmarkFormTabTheme": {
+    "message": "主题"
+  },
+  "bookmarkFormSectionVisualHeading": {
+    "message": "视觉与名称"
+  },
+  "bookmarkFormSectionVisualDescription": {
+    "message": "在此书签磁贴上显示字母、图标、图片和名称。"
+  },
+  "bookmarkFormSectionAddressHeading": {
+    "message": "地址"
+  },
+  "bookmarkFormSectionAddressDescription": {
+    "message": "请确保使用完整 URL，并包含“https://...”"
+  },
+  "bookmarkFormSectionPositionHeading": {
+    "message": "位置"
+  },
+  "bookmarkFormSectionPositionDescription": {
+    "message": "放置此书签的分组。"
+  },
+  "bookmarkFormSectionLayoutHeading": {
+    "message": "布局"
+  },
+  "bookmarkFormSectionLayoutDescription": {
+    "message": "更改视觉元素和名称的位置、缩放和方向。"
+  },
+  "bookmarkFormSectionThemeHeading": {
+    "message": "主题"
+  },
+  "bookmarkFormSectionThemeDescription": {
+    "message": "覆盖主题和强调色。"
+  },
+  "bookmarkFormUrlLabel": {
+    "message": "URL"
+  },
+  "bookmarkFormUrlPlaceholder": {
+    "message": "https://www.example.com/"
+  },
+  "bookmarkFormDisplayAlignmentLabel": {
+    "message": "视觉元素和名称对齐"
+  },
+  "bookmarkFormDisplayAlignmentTopLeft": {
+    "message": "左上"
+  },
+  "bookmarkFormDisplayAlignmentTopCenter": {
+    "message": "顶部居中"
+  },
+  "bookmarkFormDisplayAlignmentTopRight": {
+    "message": "右上"
+  },
+  "bookmarkFormDisplayAlignmentCenterLeft": {
+    "message": "左中"
+  },
+  "bookmarkFormDisplayAlignmentCenterCenter": {
+    "message": "正中"
+  },
+  "bookmarkFormDisplayAlignmentCenterRight": {
+    "message": "右中"
+  },
+  "bookmarkFormDisplayAlignmentBottomLeft": {
+    "message": "左下"
+  },
+  "bookmarkFormDisplayAlignmentBottomCenter": {
+    "message": "底部居中"
+  },
+  "bookmarkFormDisplayAlignmentBottomRight": {
+    "message": "右下"
+  },
+  "bookmarkFormDisplayDirectionVerticalLabel": {
+    "message": "垂直"
+  },
+  "bookmarkFormDisplayDirectionVerticalDescription": {
+    "message": "将视觉元素和名称上下堆叠。"
+  },
+  "bookmarkFormDisplayDirectionHorizontalLabel": {
+    "message": "水平"
+  },
+  "bookmarkFormDisplayDirectionHorizontalDescription": {
+    "message": "将视觉元素和名称并排排列。"
+  },
+  "bookmarkFormDisplayOrderVisualNameLabel": {
+    "message": "视觉元素在前，名称在后"
+  },
+  "bookmarkFormDisplayOrderVisualNameDescription": {
+    "message": "将视觉元素放在名称之前。"
+  },
+  "bookmarkFormDisplayOrderNameVisualLabel": {
+    "message": "名称在前，视觉元素在后"
+  },
+  "bookmarkFormDisplayOrderNameVisualDescription": {
+    "message": "将名称放在视觉元素之前。"
+  },
+  "bookmarkFormDisplayRotate": {
+    "message": "旋转"
+  },
+  "bookmarkFormDisplayTranslateLabel": {
+    "message": "调整视觉元素位置"
+  },
+  "bookmarkFormDisplayTranslateX": {
+    "message": "水平"
+  },
+  "bookmarkFormDisplayTranslateY": {
+    "message": "垂直"
+  },
+  "bookmarkFormDisplayGutter": {
+    "message": "间距"
+  },
+  "bookmarkFormDisplayVisualShowLabel": {
+    "message": "显示视觉元素"
+  },
+  "bookmarkFormDisplayVisualShowDescription": {
+    "message": "在此书签六边形上显示字母、图标或图片。"
+  },
+  "bookmarkFormDisplayVisualTypeLetter": {
+    "message": "字母"
+  },
+  "bookmarkFormDisplayVisualTypeIcon": {
+    "message": "图标"
+  },
+  "bookmarkFormDisplayVisualTypeImage": {
+    "message": "图片"
+  },
+  "bookmarkFormDisplayVisualSize": {
+    "message": "视觉大小"
+  },
+  "bookmarkFormDisplayVisualLetterTextLabel": {
+    "message": "书签字母"
+  },
+  "bookmarkFormDisplayVisualLetterTextPlaceholder": {
+    "message": "E"
+  },
+  "bookmarkFormDisplayVisualIconTextLabel": {
+    "message": "书签图标"
+  },
+  "bookmarkFormDisplayVisualIconTextPlaceholder": {
+    "message": "FontAwesome 品牌或图标"
+  },
+  "bookmarkFormDisplayVisualIconRemove": {
+    "message": "移除图标"
+  },
+  "bookmarkFormDisplayVisualImageUrlLabel": {
+    "message": "书签图片"
+  },
+  "bookmarkFormDisplayVisualImageUrlPlaceholder": {
+    "message": "https://www.example.com/image.jpg"
+  },
+  "bookmarkFormDisplayVisualShadowSize": {
+    "message": "视觉阴影"
+  },
+  "bookmarkFormDisplayVisualShadowHelperPara1": {
+    "message": "视觉阴影仅适用于字母或图标。"
+  },
+  "bookmarkFormDisplayNameShow": {
+    "message": "显示名称"
+  },
+  "bookmarkFormDisplayNameTextLabel": {
+    "message": "书签名称"
+  },
+  "bookmarkFormDisplayNameTextPlaceholder": {
+    "message": "示例"
+  },
+  "bookmarkFormDisplayNameSize": {
+    "message": "名称大小"
+  },
+  "bookmarkFormAccentByThemeLabel": {
+    "message": "主题强调色"
+  },
+  "bookmarkFormAccentByThemeDescription": {
+    "message": "使用主题定义的强调色。"
+  },
+  "bookmarkFormAccentByCustomLabel": {
+    "message": "自定义强调色"
+  },
+  "bookmarkFormAccentByCustomDescription": {
+    "message": "覆盖主题强调色。"
+  },
+  "bookmarkFormAccentColor": {
+    "message": "强调色"
+  },
+  "bookmarkFormColorByThemeLabel": {
+    "message": "主题颜色"
+  },
+  "bookmarkFormColorByThemeDescription": {
+    "message": "使用主题定义的颜色。"
+  },
+  "bookmarkFormColorByCustomLabel": {
+    "message": "自定义颜色"
+  },
+  "bookmarkFormColorByCustomDescription": {
+    "message": "覆盖主题颜色。"
+  },
+  "bookmarkFormColorColor": {
+    "message": "颜色"
+  },
+  "bookmarkFormColorOpacity": {
+    "message": "不透明度"
+  },
+  "bookmarkFormBackgroundShowLabel": {
+    "message": "显示背景"
+  },
+  "bookmarkFormBackgroundShowDescription": {
+    "message": "在此书签磁贴上显示图片或视频背景。"
+  },
+  "bookmarkFormBackgroundTypeImage": {
+    "message": "图片"
+  },
+  "bookmarkFormBackgroundTypeVideo": {
+    "message": "视频"
+  },
+  "bookmarkFormBackgroundOpacity": {
+    "message": "不透明度"
+  },
+  "bookmarkFormBackgroundImageLabel": {
+    "message": "背景图片 URL"
+  },
+  "bookmarkFormBackgroundImagePlaceholder": {
+    "message": "https://www.example.com/image.jpg"
+  },
+  "bookmarkFormBackgroundImageHelperPara1": {
+    "message": "背景图片仅支持图片文件的直接 URL。"
+  },
+  "bookmarkFormBackgroundVideoLabel": {
+    "message": "背景视频 URL"
+  },
+  "bookmarkFormBackgroundVideoPlaceholder": {
+    "message": "https://www.example.com/video.mp4"
+  },
+  "bookmarkFormBackgroundVideoHelperPara1": {
+    "message": "背景视频仅支持视频文件的直接 URL，支持 MP4 和 WebM 格式。"
+  },
+  "bookmarkFormBackgroundVideoHelperPara2": {
+    "message": "无法使用 YouTube 页面 URL。"
+  },
+  "bookmarkFormBorder": {
+    "message": "边框"
+  },
+  "bookmarkFormShapeWideLabel": {
+    "message": "宽磁贴"
+  },
+  "bookmarkFormShapeWideDescription": {
+    "message": "书签磁贴横跨两列。"
+  },
+  "bookmarkFormShapeTallLabel": {
+    "message": "高磁贴"
+  },
+  "bookmarkFormShapeTallDescription": {
+    "message": "书签磁贴纵跨两行。"
+  },
+  "bookmarkFormGroupDestinationExisting": {
+    "message": "现有分组"
+  },
+  "bookmarkFormGroupDestinationNew": {
+    "message": "新分组"
+  },
+  "bookmarkFormGroupNameLabel": {
+    "message": "URL"
+  },
+  "bookmarkFormGroupNamePlaceholder": {
+    "message": "示例分组"
+  },
+  "bookmarkFormGroupRandom": {
+    "message": "随机分组名称"
+  },
+  "bookmarkFormGroupPositionGroup": {
+    "message": "分组"
+  },
+  "bookmarkFormGroupPositionItem": {
+    "message": "位置"
+  },
+  "bookmarkFormPropagateVisualLabel": {
+    "message": "将“显示视觉元素”和“显示名称”应用到其他书签"
+  },
+  "bookmarkFormPropagateVisualDescriptionPara1": {
+    "message": "字母、图标、图片和名称文本不会被共享。"
+  },
+  "bookmarkFormPropagateVisualDescriptionPara2": {
+    "message": "适合在所有书签上隐藏视觉元素或名称。"
+  },
+  "bookmarkFormPropagateLayoutLabel": {
+    "message": "将布局应用到其他书签"
+  },
+  "bookmarkFormPropagateLayoutDescriptionPara1": {
+    "message": "保存后，将上述布局应用到所有其他书签。"
+  },
+  "bookmarkFormPropagateLayoutDescriptionPara2": {
+    "message": "仅视觉和名称的大小、对齐、顺序、位置和间距会应用到全部。"
+  },
+  "bookmarkFormPropagateThemeLabel": {
+    "message": "将主题应用到其他书签"
+  },
+  "bookmarkFormPropagateThemeDescriptionPara1": {
+    "message": "保存后，将上述主题应用到所有其他书签。"
+  },
+  "bookmarkFormPropagateThemeDescriptionPara2": {
+    "message": "仅颜色、强调色、不透明度、边框和视觉阴影会应用到全部。"
+  },
+  "bookmarkPreviewFull": {
+    "message": "预览"
+  },
+  "bookmarkPreviewHalf": {
+    "message": "预览（50% 缩放）"
+  },
+  "groupAreaControlUp": {
+    "message": "将此分组上移"
+  },
+  "groupAreaControlSort": {
+    "message": "拖动分组重新排序"
+  },
+  "groupAreaControlDown": {
+    "message": "将此分组下移"
+  },
+  "groupAreaControlEdit": {
+    "message": "编辑此分组"
+  },
+  "groupAreaControlRemove": {
+    "message": "移除此分组"
+  },
+  "groupAreaControlOpenAll": {
+    "message": "打开此分组中的所有书签"
+  },
+  "groupAreaControlCollapse": {
+    "message": "折叠此分组"
+  },
+  "groupAddHeading": {
+    "message": "添加新分组"
+  },
+  "groupAddSuccessText": {
+    "message": "添加"
+  },
+  "groupAddCancelText": {
+    "message": "取消"
+  },
+  "groupRemoveHeadingName": {
+    "message": "移除"
+  },
+  "groupRemoveHeadingUnnamed": {
+    "message": "移除未命名分组"
+  },
+  "groupRemoveContent": {
+    "message": "确定要移除此分组及其中的所有书签吗？此操作无法撤销。"
+  },
+  "groupRemoveSuccessText": {
+    "message": "移除"
+  },
+  "groupRemoveCancelText": {
+    "message": "取消"
+  },
+  "groupEditHeadingName": {
+    "message": "编辑"
+  },
+  "groupEditHeadingUnnamed": {
+    "message": "编辑未命名分组"
+  },
+  "groupEditSuccessText": {
+    "message": "保存"
+  },
+  "groupEditCancelText": {
+    "message": "取消"
+  },
+  "groupFormSectionNameHeading": {
+    "message": "名称"
+  },
+  "groupFormSectionNameDescription": {
+    "message": "在此分组上方显示名称。"
+  },
+  "groupFormSectionToolbarHeading": {
+    "message": "工具栏"
+  },
+  "groupFormSectionToolbarDescription": {
+    "message": "显示用于打开全部或显示/隐藏此分组中书签的控件。"
+  },
+  "groupFormSectionOrderingHeading": {
+    "message": "排序"
+  },
+  "groupFormSectionOrderingDescription": {
+    "message": "此分组的位置。"
+  },
+  "groupFormNameShow": {
+    "message": "显示分组名称"
+  },
+  "groupFormNameTextLabel": {
+    "message": "分组名称"
+  },
+  "groupFormNameTextPlaceholder": {
+    "message": "示例分组"
+  },
+  "groupFormNameRandom": {
+    "message": "随机分组名称"
+  },
+  "groupFormCollapseShowLabel": {
+    "message": "显示折叠"
+  },
+  "groupFormCollapseShowDescription": {
+    "message": "折叠按钮将显示或隐藏此分组中的书签。"
+  },
+  "groupFormOpenAllShowLabel": {
+    "message": "显示全部打开"
+  },
+  "groupFormOpenAllShowDescription": {
+    "message": "如果此分组中至少有一个书签，将显示全部打开按钮。"
+  },
+  "groupFormDestination": {
+    "message": "位置"
+  },
+  "themeCustomTileControlEdit": {
+    "message": "编辑此已保存自定义主题"
+  },
+  "themeCustomTileControlRemove": {
+    "message": "移除此已保存自定义主题"
+  },
+  "themeCustomFormNameLabel": {
+    "message": "名称"
+  },
+  "themeCustomFormNamePlaceholder": {
+    "message": "示例主题"
+  },
+  "themeCustomFormRandom": {
+    "message": "随机主题名称"
+  },
+  "themeCustomAddHeading": {
+    "message": "保存当前主题"
+  },
+  "themeCustomAddSuccessText": {
+    "message": "保存"
+  },
+  "themeCustomAddCancelText": {
+    "message": "取消"
+  },
+  "themeCustomRemoveHeadingName": {
+    "message": "移除"
+  },
+  "themeCustomRemoveHeadingUnnamed": {
+    "message": "移除未命名自定义主题"
+  },
+  "themeCustomRemoveContent": {
+    "message": "确定要移除此已保存自定义主题吗？此操作无法撤销。"
+  },
+  "themeCustomRemoveSuccessText": {
+    "message": "保存"
+  },
+  "themeCustomRemoveCancelText": {
+    "message": "取消"
+  },
+  "themeCustomEditHeadingName": {
+    "message": "编辑"
+  },
+  "themeCustomEditHeadingUnnamed": {
+    "message": "编辑未命名自定义主题"
+  },
+  "themeCustomEditSuccessText": {
+    "message": "移除"
+  },
+  "themeCustomEditCancelText": {
+    "message": "取消"
+  },
+  "toolbarAccent": {
+    "message": "强调色"
+  },
+  "toolbarAddLabel": {
+    "message": "添加"
+  },
+  "toolbarAddGroup": {
+    "message": "新建分组"
+  },
+  "toolbarAddBookmark": {
+    "message": "新建书签"
+  },
+  "toolbarEdit": {
+    "message": "编辑分组和书签"
+  },
+  "toolbarSetting": {
+    "message": "打开设置菜单"
+  },
+  "dataFormDescription": {
+    "message": "你可以恢复备份文件的全部或部分内容。以下数据将被恢复："
+  },
+  "dataFormBookmarkIncludeLabel": {
+    "message": "书签"
+  },
+  "dataFormBookmarkIncludeDescriptionPara1": {
+    "message": "包括所有分组和书签"
+  },
+  "dataFormBookmarkIncludeDescriptionPara2": {
+    "message": "导入时，书签将保留任何自定义颜色、强调色和边框。"
+  },
+  "dataFormBookmarkTypeRestore": {
+    "message": "替换现有书签"
+  },
+  "dataFormBookmarkTypeAppend": {
+    "message": "添加到现有书签"
+  },
+  "dataFormThemeIncludeLabel": {
+    "message": "主题"
+  },
+  "dataFormThemeIncludeDescription": {
+    "message": "包括颜色、强调色、字体、背景以及任何已保存的自定义主题。"
+  },
+  "dataFormSetupIncludeLabel": {
+    "message": "设置"
+  },
+  "dataFormSetupIncludeDescription": {
+    "message": "包括布局大小和位置、头部区域大小、书签区域大小及其他用户设置。"
+  },
+  "dataRestoreHeading": {
+    "message": "从 {appName} 备份恢复"
+  },
+  "dataRestoreSuccessText": {
+    "message": "导入"
+  },
+  "dataRestoreCancelText": {
+    "message": "取消"
+  },
+  "dataClearAllHeading": {
+    "message": "清除所有 {appName} 数据？"
+  },
+  "dataClearAllContentPara1": {
+    "message": "确定要清除所有 {appName} 书签和设置吗？{appName} 将恢复为默认状态。"
+  },
+  "dataClearAllContentPara2": {
+    "message": "此操作无法撤销。"
+  },
+  "dataClearAllSuccessText": {
+    "message": "清除所有数据"
+  },
+  "dataClearAllCancelText": {
+    "message": "取消"
+  },
+  "dataClearPartialHeading": {
+    "message": "清除 {appName} 数据但保留书签？"
+  },
+  "dataClearPartialContentPara1": {
+    "message": "确定要清除所有 {appName} 设置吗？{appName} 将恢复为默认状态，但你的书签和分组将保留。"
+  },
+  "dataClearPartialContentPara2": {
+    "message": "此操作无法撤销。"
+  },
+  "dataClearPartialSuccessText": {
+    "message": "清除除书签外的所有数据"
+  },
+  "dataClearPartialCancelText": {
+    "message": "取消"
+  },
+  "dataExportBackup": {
+    "message": "备份"
+  },
+  "dataFeedbackEmpty": {
+    "message": "未选择要导入的内容。"
+  },
+  "dataFeedbackSuccess": {
+    "message": "成功！正在恢复 {appName} 书签和设置。"
+  },
+  "dataFeedbackFailNotJson": {
+    "message": "不是 JSON 文件。请确保所选文件来自 {appName}。"
+  },
+  "dataFeedbackFailNotAppJson": {
+    "message": "JSON 文件类型不正确。请确保所选文件来自 {appName}。"
+  },
+  "dataFeedbackFailNotClipboardJson": {
+    "message": "数据类型不正确。请确保剪贴板中包含来自 {appName} 的数据或 {appName} 备份 JSON 文件。"
+  },
+  "controlGeneralReset": {
+    "message": "重置为默认"
+  },
+  "controlColorTextPlaceholder": {
+    "message": "十六进制代码"
+  },
+  "controlColorRandom": {
+    "message": "随机颜色"
+  },
+  "controlColorMixerMoreControls": {
+    "message": "更多控件"
+  },
+  "controlColorMixerSliderH": {
+    "message": "色相"
+  },
+  "controlColorMixerSliderS": {
+    "message": "饱和度"
+  },
+  "controlColorMixerSliderL": {
+    "message": "亮度"
+  },
+  "controlColorMixerSliderR": {
+    "message": "红"
+  },
+  "controlColorMixerSliderG": {
+    "message": "绿"
+  },
+  "controlColorMixerSliderB": {
+    "message": "蓝"
+  }
+}
