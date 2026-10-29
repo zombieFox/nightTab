@@ -1,0 +1,2770 @@
+{
+  "appName": {
+    "message": "nightTab",
+    "description": "The name of the extension, displayed in the web store."
+  },
+  "appShortName": {
+    "message": "nightTab",
+    "description": "The name of the extension, displayed in the web store."
+  },
+  "appDescription": {
+    "message": "Nevtralna stran novega zavihka, poudarjena z izbrano barvo. Prilagodite postavitev, slog, ozadje in zaznamke v nightTab.",
+    "description": "The description of the extension, displayed in the web store."
+  },
+  "menuNavDebugLabel": {
+    "message": "Razhroščevanje",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavDebugSubNavShowcase": {
+    "message": "Predstavitev",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavDebugSubNavBookmark": {
+    "message": "Zaznamek",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavThemeLabel": {
+    "message": "Tema",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavThemeSubNavPreset": {
+    "message": "Prednastavitev",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavThemeSubNavSaved": {
+    "message": "Shranjeno",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavThemeSubNavStyle": {
+    "message": "Slog",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavThemeSubNavColor": {
+    "message": "Barva",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavThemeSubNavAccent": {
+    "message": "Poudarek",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavThemeSubNavFont": {
+    "message": "Pisava",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavThemeSubNavRadius": {
+    "message": "Zaobljenost",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavThemeSubNavShadow": {
+    "message": "Senca",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavThemeSubNavShade": {
+    "message": "Zatemnitev",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavThemeSubNavOpacity": {
+    "message": "Prosojnost",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavThemeSubNavBackground": {
+    "message": "Ozadje",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavThemeSubNavLayout": {
+    "message": "Postavitev",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavThemeSubNavHeader": {
+    "message": "Glava",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavThemeSubNavBookmark": {
+    "message": "Zaznamek",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavLayoutLabel": {
+    "message": "Postavitev",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavLayoutSubNavScaling": {
+    "message": "Merilo",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavLayoutSubNavArea": {
+    "message": "Območje",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavLayoutSubNavPadding": {
+    "message": "Odmik",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavLayoutSubNavGutter": {
+    "message": "Razmik",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavLayoutSubNavAlignment": {
+    "message": "Poravnava",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavLayoutSubNavPage": {
+    "message": "Stran",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavHeaderLabel": {
+    "message": "Glava",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavHeaderSubNavAlignment": {
+    "message": "Poravnava",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavHeaderSubNavGreeting": {
+    "message": "Pozdrav",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavHeaderSubNavTransitional": {
+    "message": "Prehodni napis",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavHeaderSubNavClock": {
+    "message": "Ura",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavHeaderSubNavDate": {
+    "message": "Datum",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavHeaderSubNavSearch": {
+    "message": "Iskanje",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavBookmarkLabel": {
+    "message": "Zaznamek",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavBookmarkSubNavGeneral": {
+    "message": "Splošno",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavBookmarkSubNavStyle": {
+    "message": "Slog",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavBookmarkSubNavOrientation": {
+    "message": "Usmerjenost",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavBookmarkSubNavSort": {
+    "message": "Razvrščanje",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavGroupLabel": {
+    "message": "Skupina",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavGroupSubNavAlignment": {
+    "message": "Poravnava",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavGroupSubNavName": {
+    "message": "Ime",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavGroupSubNavCollapse": {
+    "message": "Strni",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavGroupSubNavToolbar": {
+    "message": "Orodna vrstica",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavToolbarLabel": {
+    "message": "Orodna vrstica",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavToolbarSubNavSize": {
+    "message": "Velikost",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavToolbarSubNavLocation": {
+    "message": "Lokacija",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavToolbarSubNavPosition": {
+    "message": "Položaj",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavToolbarSubNavControls": {
+    "message": "Kontrolniki",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavDataLabel": {
+    "message": "Podatki",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavDataSubNavRestore": {
+    "message": "Obnovi",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavDataSubNavBackup": {
+    "message": "Varnostna kopija",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavDataSubNavClear": {
+    "message": "Počisti",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavLanguageLabel": {
+    "message": "Jezik",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavSupportLabel": {
+    "message": "Podpora",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavCoffeeLabel": {
+    "message": "Kava",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavAppLabel": {
+    "message": "{appName}",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuContentThemePresetHelperPara1": {
+    "message": "Uporaba prednastavitve bo zamenjala trenutno barvo, poudarek, pisavo, slog, zaobljenost, senco, zatemnitev in ozadje.",
+    "description": "Helper text for preset theme."
+  },
+  "menuContentThemeSavedHelperPara1": {
+    "message": "Shranjevanje teme bo zabeležilo trenutno barvo, poudarek, pisavo, slog, prosojnost, zaobljenost, senco, zatemnitev in ozadje.",
+    "description": "Helper text for saved themes."
+  },
+  "menuContentThemeSavedSave": {
+    "message": "Shrani trenutno temo",
+    "description": "Button to save the current theme setup."
+  },
+  "menuContentThemeSavedEdit": {
+    "message": "Uredi shranjene teme",
+    "description": "Button to enter edit mode for saved themes."
+  },
+  "menuContentThemeStyleDarkLabel": {
+    "message": "Temni način",
+    "description": "Radio for dark mode."
+  },
+  "menuContentThemeStyleLightLabel": {
+    "message": "Svetli način",
+    "description": "Radio for light mode."
+  },
+  "menuContentThemeStyleAutomaticLabel": {
+    "message": "Samodejno",
+    "description": "Radio for automatic light or dark mode."
+  },
+  "menuContentThemeStyleAutomaticDescription": {
+    "message": "Sledi svetlemu ali temnemu načinu sistema.",
+    "description": "Description for automatic light or dark mode."
+  },
+  "menuContentThemeColorShadeHelperPara1": {
+    "message": "Ozadja, zaznamki in pogovorna okna uporabljajo odtenke z leve strani.",
+    "description": "Helper text for primary colour."
+  },
+  "menuContentThemeColorShadeHelperPara2": {
+    "message": "Besedilo in elementi obrazcev uporabljajo odtenke z desne strani.",
+    "description": "Helper text for primary colour."
+  },
+  "menuContentThemeColorShadeHelperPara3": {
+    "message": "Za svetel videz preklopite na svetli slog in nato izberite osnovno barvo. In obratno za temen videz.",
+    "description": "Helper text for primary colour."
+  },
+  "menuContentThemeColorRangePrimaryH": {
+    "message": "Osnovna barva",
+    "description": "Range for primary colour hue."
+  },
+  "menuContentThemeColorRangePrimaryS": {
+    "message": "Nasičenost",
+    "description": "Range for primary colour saturation."
+  },
+  "menuContentThemeColorContrastLabel": {
+    "message": "Razpon kontrasta",
+    "description": "Label for primary colour contrast."
+  },
+  "menuContentThemeColorContrastLeft": {
+    "message": "Začetek kontrasta",
+    "description": "Range for primary colour contrast left side."
+  },
+  "menuContentThemeColorContrastRight": {
+    "message": "Konec kontrasta",
+    "description": "Range for primary colour contrast right side."
+  },
+  "menuContentThemeColorContrastHelperPara1": {
+    "message": "Za pridušen videz približajte kontrolnika razpona kontrasta drug drugemu.",
+    "description": "Helper text for primary colour contrast."
+  },
+  "menuContentThemeColorContrastHelperPara2": {
+    "message": "Za oster in živahen videz kontrolnika razpona kontrasta čim bolj oddaljite drug od drugega.",
+    "description": "Helper text for primary colour contrast."
+  },
+  "menuContentThemeAccentPresetColorGrey": {
+    "message": "Siva",
+    "description": "Label for grey preset accent colour."
+  },
+  "menuContentThemeAccentPresetColorRed": {
+    "message": "Rdeča",
+    "description": "Label for red preset accent colour."
+  },
+  "menuContentThemeAccentPresetColorOrange": {
+    "message": "Oranžna",
+    "description": "Label for orange preset accent colour."
+  },
+  "menuContentThemeAccentPresetColorYellow": {
+    "message": "Rumena",
+    "description": "Label for yellow preset accent colour."
+  },
+  "menuContentThemeAccentPresetColorLime": {
+    "message": "Limeta",
+    "description": "Label for lime preset accent colour."
+  },
+  "menuContentThemeAccentPresetColorGreen": {
+    "message": "Zelena",
+    "description": "Label for green preset accent colour."
+  },
+  "menuContentThemeAccentPresetColorAqua": {
+    "message": "Akvamarin",
+    "description": "Label for aqua preset accent colour."
+  },
+  "menuContentThemeAccentPresetColorCyan": {
+    "message": "Cian",
+    "description": "Label for cyan preset accent colour."
+  },
+  "menuContentThemeAccentPresetColorTeal": {
+    "message": "Modrozelena",
+    "description": "Label for teal preset accent colour."
+  },
+  "menuContentThemeAccentPresetColorBlue": {
+    "message": "Modra",
+    "description": "Label for blue preset accent colour."
+  },
+  "menuContentThemeAccentPresetColorPurple": {
+    "message": "Vijolična",
+    "description": "Label for purple preset accent colour."
+  },
+  "menuContentThemeAccentPresetColorMagenta": {
+    "message": "Magenta",
+    "description": "Label for magenta preset accent colour."
+  },
+  "menuContentThemeAccentPresetColorFuchsia": {
+    "message": "Fuksija",
+    "description": "Label for fuchsia preset accent colour."
+  },
+  "menuContentThemeAccentPresetModifierLightLevel3": {
+    "message": "Super ekstra svetla",
+    "description": "Label for preset accent colour light level 3."
+  },
+  "menuContentThemeAccentPresetModifierLightLevel2": {
+    "message": "Ekstra svetla",
+    "description": "Label for preset accent colour light level 2."
+  },
+  "menuContentThemeAccentPresetModifierLightLevel1": {
+    "message": "Svetla",
+    "description": "Label for preset accent colour light level 1."
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel3": {
+    "message": "Super ekstra temna",
+    "description": "Label for preset accent colour dark level 3."
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel2": {
+    "message": "Ekstra temna",
+    "description": "Label for preset accent colour dark level 2."
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel1": {
+    "message": "Temna",
+    "description": "Label for preset accent colour dark level 1."
+  },
+  "menuContentThemeAccentColor": {
+    "message": "Poudarna barva",
+    "description": "Label for accent colour."
+  },
+  "menuContentThemeAccentRandomActive": {
+    "message": "Naključna poudarna barva ob nalaganju/osvežitvi",
+    "description": "Checkbox for random accent colour on load or refresh."
+  },
+  "menuContentThemeAccentRandomStyleAny": {
+    "message": "Katera koli",
+    "description": "Radio for any random accent colour on load or refresh."
+  },
+  "menuContentThemeAccentRandomStyleLight": {
+    "message": "Svetla",
+    "description": "Radio for light random accent colour on load or refresh."
+  },
+  "menuContentThemeAccentRandomStyleDark": {
+    "message": "Temna",
+    "description": "Radio for dark random accent colour on load or refresh."
+  },
+  "menuContentThemeAccentRandomStylePastel": {
+    "message": "Pastelna",
+    "description": "Radio for pastel random accent colour on load or refresh."
+  },
+  "menuContentThemeAccentRandomStyleSaturated": {
+    "message": "Nasičena",
+    "description": "Radio for saturated random accent colour on load or refresh."
+  },
+  "menuContentThemeAccentRandomRandomise": {
+    "message": "Naključno izberi zdaj",
+    "description": "Button to randomise accent colour now."
+  },
+  "menuContentThemeAccentCycleActive": {
+    "message": "Samodejno spreminjaj odtenek poudarka",
+    "description": "Checkbox for cycled accent colour."
+  },
+  "menuContentThemeAccentCycleSpeed": {
+    "message": "Zakasnitev spremembe",
+    "description": "Range for cycled accent colour speed."
+  },
+  "menuContentThemeAccentCycleStep": {
+    "message": "Koraki spremembe",
+    "description": "Range for cycled accent colour steps."
+  },
+  "menuContentThemeAccentCycleAlert": {
+    "message": "Pazite, saj lahko hitro spreminjanje odtenka poudarka povzroči težave z zmogljivostjo.",
+    "description": "Alert for cycled accent colour."
+  },
+  "menuContentThemeAccentCycleHelperPara1": {
+    "message": "Samodejno spreminjanje odtenka poudarka ne deluje, kadar je poudarna barva siva ali črna.",
+    "description": "Helper text for cycled accent colour."
+  },
+  "menuContentThemeFontDisplayNameLabel": {
+    "message": "Pisava za prikaz",
+    "description": "Input for display font name."
+  },
+  "menuContentThemeFontDisplayNamePlaceholder": {
+    "message": "Ime pisave Google",
+    "description": "Placeholder for display font name."
+  },
+  "menuContentThemeFontDisplayNameHelperPara1": {
+    "message": "Uporabite pisavo Google za prilagoditev ure, datuma, imen skupin in črk zaznamkov.",
+    "description": "Helper text for display font name."
+  },
+  "menuContentThemeFontDisplayNameHelperLink": {
+    "message": "Poiščite pisavo Google",
+    "description": "Link to google fonts."
+  },
+  "menuContentThemeFontDisplayNameHelperPara2": {
+    "message": "Dodajte ime pisave, kot je prikazano na Google Fonts, vključno z velikimi črkami in presledki, npr.: vnesite »Fredoka One« ali »Kanit«.",
+    "description": "Helper text for display font name."
+  },
+  "menuContentThemeFontDisplayNameHelperPara3": {
+    "message": "Počistite polje, če želite uporabiti privzeto pisavo »Fjalla One«.",
+    "description": "Helper text for display font name."
+  },
+  "menuContentThemeFontDisplayWeightLabel": {
+    "message": "Debelina pisave",
+    "description": "Label for display font weight."
+  },
+  "menuContentThemeFontDisplayWeightLight": {
+    "message": "Tanka",
+    "description": "Button for light weight display font."
+  },
+  "menuContentThemeFontDisplayWeightRegular": {
+    "message": "Navadna",
+    "description": "Button for regular weight display font."
+  },
+  "menuContentThemeFontDisplayWeightBold": {
+    "message": "Krepka",
+    "description": "Button for bold weight display font."
+  },
+  "menuContentThemeFontDisplayWeightHelperPara1": {
+    "message": "Vse pisave ne podpirajo vseh debelin. Na strani Google Fonts preverite, katere so na voljo.",
+    "description": "Helper text for display font weight."
+  },
+  "menuContentThemeFontDisplayStyleNormal": {
+    "message": "Navadno",
+    "description": "Radio for normal display font style."
+  },
+  "menuContentThemeFontDisplayStyleItalic": {
+    "message": "Ležeče",
+    "description": "Radio for italic display font style."
+  },
+  "menuContentThemeFontUiNameLabel": {
+    "message": "Pisava uporabniškega vmesnika",
+    "description": "Input for UI font name."
+  },
+  "menuContentThemeFontUiNamePlaceholder": {
+    "message": "Ime pisave Google",
+    "description": "Placeholder for UI font name."
+  },
+  "menuContentThemeFontUiNameHelperPara1": {
+    "message": "Uporabite pisavo Google za prilagoditev imena zaznamka, URL-ja in elementov obrazcev.",
+    "description": "Helper text for UI font name."
+  },
+  "menuContentThemeFontUiNameHelperLink": {
+    "message": "Poiščite pisavo Google",
+    "description": "Link to google fonts."
+  },
+  "menuContentThemeFontUiNameHelperPara2": {
+    "message": "Dodajte ime pisave, kot je prikazano na Google Fonts, vključno z velikimi črkami in presledki, npr.: vnesite »Roboto«, »Source Sans Pro« ali »Noto Sans«.",
+    "description": "Helper text for UI font name."
+  },
+  "menuContentThemeFontUiNameHelperPara3": {
+    "message": "Počistite polje, če želite uporabiti privzeto pisavo »Open Sans«.",
+    "description": "Helper text for UI font name."
+  },
+  "menuContentThemeFontUiWeightLabel": {
+    "message": "Debelina pisave",
+    "description": "Label for UI font weight."
+  },
+  "menuContentThemeFontUiWeightLight": {
+    "message": "Tanka",
+    "description": "Button for light weight UI font."
+  },
+  "menuContentThemeFontUiWeightRegular": {
+    "message": "Navadna",
+    "description": "Button for regular weight UI font."
+  },
+  "menuContentThemeFontUiWeightBold": {
+    "message": "Krepka",
+    "description": "Button for bold weight UI font."
+  },
+  "menuContentThemeFontUiWeightHelperPara1": {
+    "message": "Vse pisave ne podpirajo vseh debelin. Na strani Google Fonts preverite, katere so na voljo.",
+    "description": "Helper text for UI font weight."
+  },
+  "menuContentThemeFontUiStyleNormal": {
+    "message": "Navadno",
+    "description": "Radio for normal UI font style."
+  },
+  "menuContentThemeFontUiStyleItalic": {
+    "message": "Ležeče",
+    "description": "Radio for italic UI font style."
+  },
+  "menuContentThemeRadius": {
+    "message": "Zaobljenost vogalov",
+    "description": "Range for radius."
+  },
+  "menuContentThemeShadow": {
+    "message": "Velikost sence",
+    "description": "Range for shadow."
+  },
+  "menuContentThemeShadeOpacity": {
+    "message": "Prosojnost zatemnitve",
+    "description": "Range for shade opacity."
+  },
+  "menuContentThemeShadeBlurLabel": {
+    "message": "Zameglitev zatemnitve",
+    "description": "Range for shade blur."
+  },
+  "menuContentThemeShadeBlurHelperPara1": {
+    "message": "Ni podprto v vseh brskalnikih.",
+    "description": "Helper text for shade blur."
+  },
+  "menuContentThemeOpacityGeneralLabel": {
+    "message": "Celotna prosojnost",
+    "description": "Range for all opacity."
+  },
+  "menuContentThemeOpacityGeneralHelperPara1": {
+    "message": "Spremenite prosojnost iskalne vrstice, zaznamkov, kontrolnikov skupin in orodne vrstice.",
+    "description": "Helper text for all opacity."
+  },
+  "menuContentThemeOpacityGeneralHelperPara2": {
+    "message": "Prosojnost lahko spremenite tudi pri urejanju posameznih zaznamkov.",
+    "description": "Helper text for all opacity."
+  },
+  "menuContentThemeOpacityToolbar": {
+    "message": "Orodna vrstica",
+    "description": "Range for toolbar opacity."
+  },
+  "menuContentThemeOpacityBookmark": {
+    "message": "Zaznamek",
+    "description": "Range for bookmark opacity."
+  },
+  "menuContentThemeOpacitySearch": {
+    "message": "Iskalno polje",
+    "description": "Range for search opacity."
+  },
+  "menuContentThemeOpacityGroupToolbar": {
+    "message": "Orodna vrstica skupine",
+    "description": "Range for group toolbar opacity."
+  },
+  "menuContentThemeBackgroundTypeThemeLabel": {
+    "message": "Ozadje po temi",
+    "description": "Radio for background type theme."
+  },
+  "menuContentThemeBackgroundTypeThemeDescription": {
+    "message": "Uporabi barvo ozadja, ki jo določa tema.",
+    "description": "Description for background type theme."
+  },
+  "menuContentThemeBackgroundTypeAccentLabel": {
+    "message": "Ozadje po poudarku",
+    "description": "Radio for background type accent."
+  },
+  "menuContentThemeBackgroundTypeAccentDescription": {
+    "message": "Uporabi poudarno barvo za ozadje.",
+    "description": "Description for background type accent."
+  },
+  "menuContentThemeBackgroundTypeColor": {
+    "message": "Barva po meri",
+    "description": "Radio for background type colour."
+  },
+  "menuContentThemeBackgroundTypeGradient": {
+    "message": "Preliv",
+    "description": "Radio for background type gradient."
+  },
+  "menuContentThemeBackgroundTypeImage": {
+    "message": "Slika",
+    "description": "Radio for background type image."
+  },
+  "menuContentThemeBackgroundTypeVideo": {
+    "message": "Videoposnetek",
+    "description": "Radio for background type video."
+  },
+  "menuContentThemeBackgroundColor": {
+    "message": "Barva ozadja",
+    "description": "Label for background colour."
+  },
+  "menuContentThemeBackgroundGradientAngle": {
+    "message": "Kot preliva ozadja",
+    "description": "Label for background gradient angle."
+  },
+  "menuContentThemeBackgroundGradientLeft": {
+    "message": "Začetek preliva ozadja",
+    "description": "Range for background gradient angle left."
+  },
+  "menuContentThemeBackgroundGradientRight": {
+    "message": "Konec preliva ozadja",
+    "description": "Range for background gradient angle right."
+  },
+  "menuContentThemeBackgroundImageAlertPara1": {
+    "message": "Lokalnih slik ni več mogoče uporabljati. Slike morajo biti gostovane nekje na spletu.",
+    "description": "Alert for image background."
+  },
+  "menuContentThemeBackgroundImageAlertPara2": {
+    "message": "Zakaj se je to spremenilo?",
+    "description": "Alert for image background."
+  },
+  "menuContentThemeBackgroundImageUrlLabel": {
+    "message": "URL",
+    "description": "Input for background image URL."
+  },
+  "menuContentThemeBackgroundImageUrlPlaceholder": {
+    "message": "https://www.example.com/image.jpg",
+    "description": "Placeholder for background image URL."
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara1": {
+    "message": "Za naključno sliko ozadja ob nalaganju dodajte več URL-jev, ločenih s presledki ali v novih vrsticah.",
+    "description": "Helper text for background image."
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara2": {
+    "message": "Za naključne slike lahko uporabite Unsplash, npr.:",
+    "description": "Helper text for background image."
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara3": {
+    "message": "https://source.unsplash.com/random/1920x1080/?night,day,sky",
+    "description": "Helper text for background image."
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara4": {
+    "message": "Za več možnosti spremenite parametre za .../random/. Časi nalaganja se lahko razlikujejo.",
+    "description": "Helper text for background image."
+  },
+  "menuContentThemeBackgroundImageBlur": {
+    "message": "Zameglitev",
+    "description": "Range background image blur."
+  },
+  "menuContentThemeBackgroundImageGrayscale": {
+    "message": "Sivine",
+    "description": "Range background image grayscale."
+  },
+  "menuContentThemeBackgroundImageScale": {
+    "message": "Merilo",
+    "description": "Range background image scale."
+  },
+  "menuContentThemeBackgroundImageAccent": {
+    "message": "Poudarek",
+    "description": "Range background image accent."
+  },
+  "menuContentThemeBackgroundImageOpacity": {
+    "message": "Prosojnost",
+    "description": "Range background image opacity."
+  },
+  "menuContentThemeBackgroundImageVignetteOpacity": {
+    "message": "Vinjeta",
+    "description": "Range for image vignette opacity."
+  },
+  "menuContentThemeBackgroundImageVignetteRangeLabel": {
+    "message": "Začetek in konec zatemnitve",
+    "description": "Label for image vignette."
+  },
+  "menuContentThemeBackgroundImageVignetteRangeLeft": {
+    "message": "Konec zatemnitve",
+    "description": "Range for image vignette left."
+  },
+  "menuContentThemeBackgroundImageVignetteRangeRight": {
+    "message": "Začetek zatemnitve",
+    "description": "Range for image vignette right."
+  },
+  "menuContentThemeBackgroundVideoAlertPara1": {
+    "message": "URL-jev strani YouTube ni mogoče uporabiti.",
+    "description": "Alert for video background."
+  },
+  "menuContentThemeBackgroundVideoAlertPara2": {
+    "message": "Kako povezati videodatoteko.",
+    "description": "Alert for video background."
+  },
+  "menuContentThemeBackgroundVideoUrlLabel": {
+    "message": "URL",
+    "description": "Input for background video URL."
+  },
+  "menuContentThemeBackgroundVideoUrlPlaceholder": {
+    "message": "https://www.example.com/video.mp4",
+    "description": "Placeholder for background video URL."
+  },
+  "menuContentThemeBackgroundVideoUrlHelperPara1": {
+    "message": "Videoposnetek ozadja podpira samo neposreden URL do videodatoteke. Podprta sta formata MP4 in WebM.",
+    "description": "Helper text for background video."
+  },
+  "menuContentThemeBackgroundVideoUrlHelperPara2": {
+    "message": "Dodajte več URL-jev, ločenih s presledki ali v novih vrsticah, za naključen videoposnetek ozadja ob nalaganju.",
+    "description": "Helper text for background video."
+  },
+  "menuContentThemeBackgroundVideoBlur": {
+    "message": "Zameglitev",
+    "description": "Range background video blur."
+  },
+  "menuContentThemeBackgroundVideoGrayscale": {
+    "message": "Sivine",
+    "description": "Range background video grayscale."
+  },
+  "menuContentThemeBackgroundVideoScale": {
+    "message": "Merilo",
+    "description": "Range background video scale."
+  },
+  "menuContentThemeBackgroundVideoAccent": {
+    "message": "Poudarek",
+    "description": "Range background video accent."
+  },
+  "menuContentThemeBackgroundVideoOpacity": {
+    "message": "Prosojnost",
+    "description": "Range background video opacity."
+  },
+  "menuContentThemeBackgroundVideoVignetteOpacity": {
+    "message": "Vinjeta",
+    "description": "Range for video vignette opacity."
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeLabel": {
+    "message": "Začetek in konec zatemnitve",
+    "description": "Label for video vignette."
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeLeft": {
+    "message": "Konec zatemnitve",
+    "description": "Range for video vignette left."
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeRight": {
+    "message": "Začetek zatemnitve",
+    "description": "Range for video vignette right."
+  },
+  "menuContentThemeLayoutColorLabel": {
+    "message": "Barva ozadja postavitve",
+    "description": "Label for layout area colour."
+  },
+  "menuContentThemeLayoutColorByTransparentLabel": {
+    "message": "Prozorno",
+    "description": "Radio for transparent layout area background."
+  },
+  "menuContentThemeLayoutColorByTransparentDescription": {
+    "message": "Brez barve ozadja za postavitvijo.",
+    "description": "Description for transparent layout area background."
+  },
+  "menuContentThemeLayoutColorByCustomLabel": {
+    "message": "Barva po meri",
+    "description": "Radio for colour layout area background."
+  },
+  "menuContentThemeLayoutColorByCustomDescription": {
+    "message": "Uporabi barvo po meri za postavitvijo.",
+    "description": "Description for colour layout area background."
+  },
+  "menuContentThemeLayoutColorColor": {
+    "message": "Barva ozadja postavitve",
+    "description": "Label for layout area background colour."
+  },
+  "menuContentThemeLayoutColorOpacity": {
+    "message": "Prosojnost ozadja",
+    "description": "Range for layout area background opacity."
+  },
+  "menuContentThemeLayoutColorBlurLabel": {
+    "message": "Zameglitev ozadja",
+    "description": "Range for layout background blur."
+  },
+  "menuContentThemeLayoutColorBlurHelperPara1": {
+    "message": "Ni podprto v vseh brskalnikih.",
+    "description": "Description for layout background blur."
+  },
+  "menuContentThemeLayoutDivider": {
+    "message": "Ločilo med glavo in območjem zaznamkov",
+    "description": "Label for layout divider."
+  },
+  "menuContentThemeHeaderColorLabel": {
+    "message": "Barva ozadja glave",
+    "description": "Label for header area colour."
+  },
+  "menuContentThemeHeaderColorByTransparentLabel": {
+    "message": "Prozorno",
+    "description": "Radio for transparent header area background."
+  },
+  "menuContentThemeHeaderColorByTransparentDescription": {
+    "message": "Brez barve ozadja za območjem glave.",
+    "description": "Description for transparent header area background."
+  },
+  "menuContentThemeHeaderColorByCustomLabel": {
+    "message": "Barva po meri",
+    "description": "Radio for colour header area background."
+  },
+  "menuContentThemeHeaderColorByCustomDescription": {
+    "message": "Uporabi barvo po meri za območjem glave.",
+    "description": "Description for colour header area background."
+  },
+  "menuContentThemeHeaderColorColor": {
+    "message": "Barva ozadja glave",
+    "description": "Label for header area background colour."
+  },
+  "menuContentThemeHeaderColorOpacity": {
+    "message": "Prosojnost ozadja",
+    "description": "Range for header area background opacity."
+  },
+  "menuContentThemeBookmarkColorLabel": {
+    "message": "Barva ozadja zaznamkov",
+    "description": "Label for bookmark area colour."
+  },
+  "menuContentThemeBookmarkColorByTransparentLabel": {
+    "message": "Prozorno",
+    "description": "Radio for transparent bookmark area background."
+  },
+  "menuContentThemeBookmarkColorByTransparentDescription": {
+    "message": "Brez barve ozadja za območjem zaznamkov.",
+    "description": "Description for transparent bookmark area background."
+  },
+  "menuContentThemeBookmarkColorByCustomLabel": {
+    "message": "Barva po meri",
+    "description": "Radio for colour bookmark area background."
+  },
+  "menuContentThemeBookmarkColorByCustomDescription": {
+    "message": "Uporabi barvo po meri za območjem zaznamkov.",
+    "description": "Description for colour bookmark area background."
+  },
+  "menuContentThemeBookmarkColorColor": {
+    "message": "Barva ozadja zaznamkov",
+    "description": "Label for bookmark area background colour."
+  },
+  "menuContentThemeBookmarkColorOpacity": {
+    "message": "Prosojnost ozadja",
+    "description": "Range for bookmark area background opacity."
+  },
+  "menuContentThemeBookmarkItemBorderLabel": {
+    "message": "Obroba zaznamka",
+    "description": "Label for bookmark item border."
+  },
+  "menuContentThemeBookmarkItemBorderHelperPara1": {
+    "message": "Obrobo zaznamka lahko spremenite tudi pri urejanju posameznih zaznamkov.",
+    "description": "Helper text for bookmark border."
+  },
+  "menuContentThemeBookmarkItemBorderHelperPara2": {
+    "message": "Barvo obrobe določa poudarna barva, ki jo lahko spremenite tudi pri urejanju posameznih zaznamkov.",
+    "description": "Helper text for bookmark border."
+  },
+  "menuContentThemeBookmarkItemRainbowAdd": {
+    "message": "Dodaj vsakemu zaznamku edinstven poudarek",
+    "description": "Button to add a unique accent colour to each bookmark."
+  },
+  "menuContentThemeBookmarkItemRainbowRemove": {
+    "message": "Odstrani vse prilagoditve poudarka",
+    "description": "Button to remove a unique accent colour to each bookmark."
+  },
+  "menuContentThemeBookmarkItemRainbowHelperPara1": {
+    "message": "Poudarek zaznamka po meri lahko spremenite tudi pri urejanju posameznih zaznamkov.",
+    "description": "Helper text for unique accent colours for each bookmark."
+  },
+  "menuContentLayoutScalingSize": {
+    "message": "Splošna velikost",
+    "description": "Label for layout scaling."
+  },
+  "menuContentLayoutAreaWidth": {
+    "message": "Širina območja postavitve",
+    "description": "Range for layout area width."
+  },
+  "menuContentLayoutAreaHeaderWidth": {
+    "message": "Širina območja glave",
+    "description": "Label for header area width."
+  },
+  "menuContentLayoutAreaHeaderJustifyLabel": {
+    "message": "Poravnava območja glave",
+    "description": "Label for header area justify."
+  },
+  "menuContentLayoutAreaHeaderJustifyLeft": {
+    "message": "Levo",
+    "description": "Radio to justify the header area left."
+  },
+  "menuContentLayoutAreaHeaderJustifyCenter": {
+    "message": "Sredina",
+    "description": "Radio to justify the header area centre."
+  },
+  "menuContentLayoutAreaHeaderJustifyRight": {
+    "message": "Desno",
+    "description": "Radio to justify the header area right."
+  },
+  "menuContentLayoutAreaHeaderJustifyHelper1Para1": {
+    "message": "Učinki morda ne bodo vidni, če je območje glave čez celotno širino.",
+    "description": "Helper text for header area justify."
+  },
+  "menuContentLayoutAreaHeaderJustifyHelper2Para1": {
+    "message": "Na voljo samo, kadar je usmerjenost postavitve navpična in so prikazani elementi glave.",
+    "description": "Helper text for header area justify."
+  },
+  "menuContentLayoutAreaBookmarkWidth": {
+    "message": "Širina območja zaznamkov",
+    "description": "Label for width of the bookmark area."
+  },
+  "menuContentLayoutAreaBookmarkJustifyLabel": {
+    "message": "Poravnava območja zaznamkov",
+    "description": "Label for justify bookmark area."
+  },
+  "menuContentLayoutAreaBookmarkJustifyLeft": {
+    "message": "Levo",
+    "description": "Radio to justify the bookmark area left."
+  },
+  "menuContentLayoutAreaBookmarkJustifyCenter": {
+    "message": "Sredina",
+    "description": "Radio to justify the bookmark area centre."
+  },
+  "menuContentLayoutAreaBookmarkJustifyRight": {
+    "message": "Desno",
+    "description": "Radio to justify the bookmark area right."
+  },
+  "menuContentLayoutAreaBookmarkJustifyHelper1Para1": {
+    "message": "Učinki morda ne bodo vidni, če je območje zaznamkov čez celotno širino.",
+    "description": "Helper text for bookmark area justify."
+  },
+  "menuContentLayoutAreaBookmarkJustifyHelper2Para1": {
+    "message": "Na voljo samo, kadar je usmerjenost postavitve navpična in so prikazani elementi glave.",
+    "description": "Helper text for bookmark area justify."
+  },
+  "menuContentLayoutPadding": {
+    "message": "Prostor okoli glave in območja zaznamkov",
+    "description": "Range for layout padding."
+  },
+  "menuContentLayoutGutter": {
+    "message": "Prostor med elementi glave in zaznamki",
+    "description": "Range for layout gutter."
+  },
+  "menuContentLayoutAlignmentLabel": {
+    "message": "Poravnava območja",
+    "description": "Label for layout alignment."
+  },
+  "menuContentLayoutAlignmentTopLeft": {
+    "message": "Zgoraj levo",
+    "description": "Radio for layout alignment top left."
+  },
+  "menuContentLayoutAlignmentTopCenter": {
+    "message": "Zgoraj na sredini",
+    "description": "Radio for layout alignment top centre."
+  },
+  "menuContentLayoutAlignmentTopRight": {
+    "message": "Zgoraj desno",
+    "description": "Radio for layout alignment top right."
+  },
+  "menuContentLayoutAlignmentCenterLeft": {
+    "message": "Na sredini levo",
+    "description": "Radio for layout alignment centre left."
+  },
+  "menuContentLayoutAlignmentCenterCenter": {
+    "message": "Na sredini",
+    "description": "Radio for layout alignment centre centre."
+  },
+  "menuContentLayoutAlignmentCenterRight": {
+    "message": "Na sredini desno",
+    "description": "Radio for layout alignment centre right."
+  },
+  "menuContentLayoutAlignmentBottomLeft": {
+    "message": "Spodaj levo",
+    "description": "Radio for layout alignment bottom left."
+  },
+  "menuContentLayoutAlignmentBottomCenter": {
+    "message": "Spodaj na sredini",
+    "description": "Radio for layout alignment bottom centre."
+  },
+  "menuContentLayoutAlignmentBottomRight": {
+    "message": "Spodaj desno",
+    "description": "Radio for layout alignment bottom right."
+  },
+  "menuContentLayoutDirectionHorizontalLabel": {
+    "message": "Poravnaj vodoravno",
+    "description": "Radio for layout direction horizontal."
+  },
+  "menuContentLayoutDirectionHorizontalDescription": {
+    "message": "Glavo in zaznamke postavi v vrsto enega ob drugem.",
+    "description": "Helper text for layout direction horizontal."
+  },
+  "menuContentLayoutDirectionVerticalLabel": {
+    "message": "Poravnaj navpično",
+    "description": "Radio for layout direction vertical."
+  },
+  "menuContentLayoutDirectionVerticalDescription": {
+    "message": "Glavo in zaznamke postavi v stolpec enega nad drugim.",
+    "description": "Helper text for layout direction vertical."
+  },
+  "menuContentLayoutOrderHeaderBookmarkLabel": {
+    "message": "Najprej glava, nato zaznamki",
+    "description": "Radio for layout order header then bookmarks."
+  },
+  "menuContentLayoutOrderHeaderBookmarkDescription": {
+    "message": "Območje glave se prikaže pred območjem zaznamkov.",
+    "description": "Helper text for layout order header then bookmarks."
+  },
+  "menuContentLayoutOrderBookmarkHeaderLabel": {
+    "message": "Najprej zaznamki, nato glava",
+    "description": "Radio for layout order bookmarks then header."
+  },
+  "menuContentLayoutOrderBookmarkHeaderDescription": {
+    "message": "Območje zaznamkov se prikaže pred območjem glave.",
+    "description": "Helper text for layout order bookmarks then header."
+  },
+  "menuContentLayoutPageTitleLabel": {
+    "message": "Naslov",
+    "description": "Label for page title."
+  },
+  "menuContentLayoutPageTitlePlaceholder": {
+    "message": "Nov zavihek",
+    "description": "Input for page title."
+  },
+  "menuContentLayoutPageFaviconLabel": {
+    "message": "URL ikone favicon",
+    "description": "Label for favicon URL."
+  },
+  "menuContentLayoutPageFaviconPlaceholder": {
+    "message": "https://www.example.com/favicon.svg",
+    "description": "Placeholder for favicon URL."
+  },
+  "menuContentLayoutPageFaviconHelperPara1": {
+    "message": "Ni podprto v vseh brskalnikih.",
+    "description": "Input for favicon URL."
+  },
+  "menuContentLayoutPageScrollbarLabel": {
+    "message": "Drsni trak",
+    "description": "Label for page scrollbar."
+  },
+  "menuContentLayoutPageScrollbarAuto": {
+    "message": "Samodejno",
+    "description": "Radio for page scrollbar auto."
+  },
+  "menuContentLayoutPageScrollbarThin": {
+    "message": "Tanek",
+    "description": "Radio for page scrollbar thin."
+  },
+  "menuContentLayoutPageScrollbarNone": {
+    "message": "Skrit",
+    "description": "Radio for page scrollbar none."
+  },
+  "menuContentLayoutPageScrollbarHelperPara1": {
+    "message": "Ni podprto v vseh brskalnikih.",
+    "description": "Helper text for page scrollbar."
+  },
+  "menuContentLayoutPageOverscrollActive": {
+    "message": "Drsenje čez rob",
+    "description": "Checkbox for layout page overscroll."
+  },
+  "menuContentLayoutPageOverscrollUnblurLabel": {
+    "message": "Odstrani zameglitev slike ali videoposnetka ozadja",
+    "description": "Label for background image or video unblur on overscroll."
+  },
+  "menuContentLayoutPageOverscrollUnblurDescriptionPara1": {
+    "message": "Zameglitev slike ali videoposnetka ozadja se odstrani, ko podrsate do dna strani.",
+    "description": "Helper text for background image or video unblur on overscroll."
+  },
+  "menuContentLayoutPageOverscrollUnblurDescriptionPara2": {
+    "message": "Zameglitev slike ali videoposnetka najdete pod Tema > Ozadje.",
+    "description": "Helper text for background image or video unblur on overscroll."
+  },
+  "menuContentHeaderAlignmentJustifyLabel": {
+    "message": "Poravnava elementov glave",
+    "description": "Label to justify header items."
+  },
+  "menuContentHeaderAlignmentJustifyLeft": {
+    "message": "Levo",
+    "description": "Label to justify header items left."
+  },
+  "menuContentHeaderAlignmentJustifyCenter": {
+    "message": "Sredina",
+    "description": "Label to justify header items centre."
+  },
+  "menuContentHeaderAlignmentJustifyRight": {
+    "message": "Desno",
+    "description": "Label to justify header items right."
+  },
+  "menuContentHeaderAlignmentHelperPara1": {
+    "message": "Učinki morda ne bodo vidni, če je velikost iskalnega polja nastavljena na Samodejno in se razširi čez ves razpoložljivi prostor.",
+    "description": "Helper text to justify header items."
+  },
+  "menuContentHeaderGreetingShow": {
+    "message": "Pokaži pozdrav",
+    "description": "Checkbox to show header greeting."
+  },
+  "menuContentHeaderGreetingSize": {
+    "message": "Velikost",
+    "description": "Range for header greeting size."
+  },
+  "menuContentHeaderGreetingNewLineLabel": {
+    "message": "Nova vrstica",
+    "description": "Checkbox to force header greeting onto a new line."
+  },
+  "menuContentHeaderGreetingNewLineDescription": {
+    "message": "Vsili v novo vrstico in loči od drugih elementov glave.",
+    "description": "Description for forcing header greeting onto a new line."
+  },
+  "menuContentHeaderGreetingTypeLabel": {
+    "message": "Besedilo",
+    "description": "Label for header greeting."
+  },
+  "menuContentHeaderGreetingTypeGood": {
+    "message": "\"Good morning...\"",
+    "description": "Radio for \"Good morning\" header greeting."
+  },
+  "menuContentHeaderGreetingTypeHello": {
+    "message": "\"Hello...\"",
+    "description": "Radio for \"Hello\" header greeting."
+  },
+  "menuContentHeaderGreetingTypeHi": {
+    "message": "\"Hi...\"",
+    "description": "Radio for \"Hi\" header greeting."
+  },
+  "menuContentHeaderGreetingTypeNoneLabel": {
+    "message": "Brez",
+    "description": "Radio for no header greeting."
+  },
+  "menuContentHeaderGreetingTypeNoneDescription": {
+    "message": "Uporabno za prikaz samo imena.",
+    "description": "Description for no header greeting."
+  },
+  "menuContentHeaderGreetingTypeCustomLabel": {
+    "message": "Po meri",
+    "description": "Radio for custom header greeting."
+  },
+  "menuContentHeaderGreetingTypeCustomDescriptionPara1": {
+    "message": "Uporabite svoj pozdrav.",
+    "description": "Description for custom header greeting."
+  },
+  "menuContentHeaderGreetingTypeCustomDescriptionPara2": {
+    "message": "Če pustite prazno, se privzeto uporabi »Dobro jutro...«.",
+    "description": "Description for custom header greeting."
+  },
+  "menuContentHeaderGreetingCustomLabel": {
+    "message": "Besedilo pozdrava po meri",
+    "description": "Label for custom header greeting."
+  },
+  "menuContentHeaderGreetingCustomPlaceholder": {
+    "message": "Zdravo",
+    "description": "Placeholder for custom header greeting."
+  },
+  "menuContentHeaderGreetingNameLabel": {
+    "message": "Ime",
+    "description": "Input for header greeting name."
+  },
+  "menuContentHeaderGreetingNamePlaceholder": {
+    "message": "Vzdevek, psevdonim ali ime superjunaka",
+    "description": "Placeholder for header greeting name."
+  },
+  "menuContentHeaderTransitionalShowLabel": {
+    "message": "Pokaži prehodni napis",
+    "description": "Checkbox to show header transitional text."
+  },
+  "menuContentHeaderTransitionalShowHelperPara1": {
+    "message": "Na voljo samo, kadar je prikazan datum ali ura.",
+    "description": "Helper text for header transitional text."
+  },
+  "menuContentHeaderTransitionalTypeLabel": {
+    "message": "Besedilo",
+    "description": "Label for transitional text type."
+  },
+  "menuContentHeaderTransitionalTypeTimeAndDate": {
+    "message": "\"The time and date is\"",
+    "description": "Radio for \"The time and date is\" transitional text."
+  },
+  "menuContentHeaderTransitionalTypeIts": {
+    "message": "\"It's\"",
+    "description": "Radio for \"It's \" transitional text."
+  },
+  "menuContentHeaderTransitionalSize": {
+    "message": "Velikost",
+    "description": "Range for transitional text size."
+  },
+  "menuContentHeaderTransitionalNewLineLabel": {
+    "message": "Nova vrstica",
+    "description": "Checkbox to force transitional text onto a new line."
+  },
+  "menuContentHeaderTransitionalNewLineDescription": {
+    "message": "Vsili v novo vrstico in loči od drugih elementov glave.",
+    "description": "Description for forcing transitional text onto a new line."
+  },
+  "menuContentHeaderClockHourShow": {
+    "message": "Pokaži ure",
+    "description": "Checkbox for clock hour."
+  },
+  "menuContentHeaderClockHourDisplayNumber": {
+    "message": "Kot številka",
+    "description": "Radio for clock hour as numbers."
+  },
+  "menuContentHeaderClockHourDisplayWord": {
+    "message": "Kot beseda",
+    "description": "Radio for clock hour as words."
+  },
+  "menuContentHeaderClockMinuteShow": {
+    "message": "Pokaži minute",
+    "description": "Checkbox for clock minutes."
+  },
+  "menuContentHeaderClockMinuteDisplayNumber": {
+    "message": "Kot številka",
+    "description": "Radio for clock minutes as numbers."
+  },
+  "menuContentHeaderClockMinuteDisplayWord": {
+    "message": "Kot beseda",
+    "description": "Radio for clock minutes as words."
+  },
+  "menuContentHeaderClockSecondShow": {
+    "message": "Pokaži sekunde",
+    "description": "Checkbox for clock seconds."
+  },
+  "menuContentHeaderClockSecondDisplayNumber": {
+    "message": "Kot številka",
+    "description": "Radio for clock seconds as numbers."
+  },
+  "menuContentHeaderClockSecondDisplayWord": {
+    "message": "Kot beseda",
+    "description": "Radio for clock seconds as words."
+  },
+  "menuContentHeaderClockSeparatorShow": {
+    "message": "Pokaži ločilo",
+    "description": "Checkbox for clock separator."
+  },
+  "menuContentHeaderClockSeparatorLabel": {
+    "message": "Znak ločila",
+    "description": "Label for clock separator."
+  },
+  "menuContentHeaderClockSeparatorPlaceholder": {
+    "message": ":",
+    "description": "Placeholder for clock separator."
+  },
+  "menuContentHeaderClockHour24": {
+    "message": "24 ur",
+    "description": "Checkbox for 24 hour clock."
+  },
+  "menuContentHeaderClockMeridiem": {
+    "message": "AM / PM",
+    "description": "Checkbox for meridiem clock."
+  },
+  "menuContentHeaderClockSize": {
+    "message": "Velikost",
+    "description": "Range for clock size."
+  },
+  "menuContentHeaderClockNewLineLabel": {
+    "message": "Nova vrstica",
+    "description": "Checkbox to force clock onto a new line."
+  },
+  "menuContentHeaderClockNewLineDescription": {
+    "message": "Vsili v novo vrstico in loči od drugih elementov glave.",
+    "description": "Description for forcing clock onto a new line."
+  },
+  "menuContentHeaderDateDayShow": {
+    "message": "Pokaži dan",
+    "description": "Checkbox for day."
+  },
+  "menuContentHeaderDateDayDisplayNumber": {
+    "message": "Kot številka",
+    "description": "Radio for day as numbers."
+  },
+  "menuContentHeaderDateDayDisplayWord": {
+    "message": "Kot beseda",
+    "description": "Radio for day as words."
+  },
+  "menuContentHeaderDateDayDisplayWeekStartLabel": {
+    "message": "Začetek tedna",
+    "description": "Label for the start of the week."
+  },
+  "menuContentHeaderDateDayDisplayWeekStartMonday": {
+    "message": "Ponedeljek",
+    "description": "Radio for Monday as the start of the week."
+  },
+  "menuContentHeaderDateDayDisplayWeekStartSunday": {
+    "message": "Nedelja",
+    "description": "Radio for Sunday as the start of the week."
+  },
+  "menuContentHeaderDateDayDisplayLengthLabel": {
+    "message": "Dolžina besede",
+    "description": "Label for length of day of the week."
+  },
+  "menuContentHeaderDateDayDisplayLengthLong": {
+    "message": "Dolga",
+    "description": "Radio for a long length day of the week."
+  },
+  "menuContentHeaderDateDayDisplayLengthShort": {
+    "message": "Kratka",
+    "description": "Radio for short length day of the week."
+  },
+  "menuContentHeaderDateDateShow": {
+    "message": "Pokaži datum",
+    "description": "Checkbox for date."
+  },
+  "menuContentHeaderDateDateDisplayNumber": {
+    "message": "Kot številka",
+    "description": "Radio for date as numbers."
+  },
+  "menuContentHeaderDateDateDisplayWord": {
+    "message": "Kot beseda",
+    "description": "Radio for dates as words."
+  },
+  "menuContentHeaderDateDateDisplayOrdinal": {
+    "message": "Vrstilni števniki",
+    "description": "Checkbox for ordinal date number."
+  },
+  "menuContentHeaderDateMonthShow": {
+    "message": "Pokaži mesec",
+    "description": "Checkbox for month."
+  },
+  "menuContentHeaderDateMonthDisplayNumber": {
+    "message": "Kot številka",
+    "description": "Radio for month as numbers."
+  },
+  "menuContentHeaderDateMonthDisplayWord": {
+    "message": "Kot beseda",
+    "description": "Radio for month as words."
+  },
+  "menuContentHeaderDateMonthDisplayOrdinal": {
+    "message": "Vrstilni števniki",
+    "description": "Checkbox for ordinal month number."
+  },
+  "menuContentHeaderDateMonthDisplayLengthLabel": {
+    "message": "Dolžina besede",
+    "description": "Label for length of month of the year."
+  },
+  "menuContentHeaderDateMonthDisplayLengthLong": {
+    "message": "Dolga",
+    "description": "Radio for a long length month of the year."
+  },
+  "menuContentHeaderDateMonthDisplayLengthShort": {
+    "message": "Kratka",
+    "description": "Radio for a short length month of the year."
+  },
+  "menuContentHeaderDateYearShow": {
+    "message": "Pokaži leto",
+    "description": "Checkbox for year."
+  },
+  "menuContentHeaderDateYearDisplayNumber": {
+    "message": "Kot številka",
+    "description": "Radio for year as numbers."
+  },
+  "menuContentHeaderDateYearDisplayWord": {
+    "message": "Kot beseda",
+    "description": "Radio for year as words."
+  },
+  "menuContentHeaderDateSeparatorShow": {
+    "message": "Pokaži ločilo",
+    "description": "Checkbox for date separator."
+  },
+  "menuContentHeaderDateSeparatorLabel": {
+    "message": "Znak ločila",
+    "description": "Checkbox for date separator."
+  },
+  "menuContentHeaderDateSeparatorPlaceholder": {
+    "message": "/",
+    "description": "Placeholder for date separator."
+  },
+  "menuContentHeaderDateFormatLabel": {
+    "message": "Oblika",
+    "description": "Label for date format."
+  },
+  "menuContentHeaderDateFormatDateMonth": {
+    "message": "Datum / Mesec",
+    "description": "Radio for date then month format."
+  },
+  "menuContentHeaderDateFormatMonthDate": {
+    "message": "Mesec / Datum",
+    "description": "Radio for month then date format."
+  },
+  "menuContentHeaderDateSize": {
+    "message": "Velikost",
+    "description": "Range for date size."
+  },
+  "menuContentHeaderDateNewLineLabel": {
+    "message": "Nova vrstica",
+    "description": "Checkbox to force date onto a new line."
+  },
+  "menuContentHeaderDateNewLineDescription": {
+    "message": "Prisilno prikaži v novi vrstici in loči od drugih elementov glave.",
+    "description": "Description for forcing date onto a new line."
+  },
+  "menuContentHeaderSearchShow": {
+    "message": "Pokaži iskanje",
+    "description": "Checkbox for search."
+  },
+  "menuContentHeaderSearchWidthLabel": {
+    "message": "Širina iskalnega polja",
+    "description": "Label for search width."
+  },
+  "menuContentHeaderSearchWidthAutoLabel": {
+    "message": "Samodejna širina",
+    "description": "Radio for auto search width."
+  },
+  "menuContentHeaderSearchWidthAutoDescription": {
+    "message": "Iskalno polje se bo razširilo, da čim bolje zapolni razpoložljivi prostor.",
+    "description": "Description for auto search width."
+  },
+  "menuContentHeaderSearchWidthCustomLabel": {
+    "message": "Širina po meri",
+    "description": "Radio for custom search width."
+  },
+  "menuContentHeaderSearchWidthCustomDescription": {
+    "message": "Določite, kako široko naj bo iskalno polje znotraj območja glave.",
+    "description": "Description for custom search width."
+  },
+  "menuContentHeaderSearchWidthSize": {
+    "message": "Širina",
+    "description": "Range for search width."
+  },
+  "menuContentHeaderSearchSize": {
+    "message": "Velikost",
+    "description": "Range for search size."
+  },
+  "menuContentHeaderSearchNewLineLabel": {
+    "message": "Nova vrstica",
+    "description": "Checkbox to force search onto a new line."
+  },
+  "menuContentHeaderSearchNewLineDescription": {
+    "message": "Prisilno prikaži v novi vrstici in loči od drugih elementov glave.",
+    "description": "Description for forcing search onto a new line."
+  },
+  "menuContentHeaderSearchEngineSelectedLabel": {
+    "message": "Iskalnik",
+    "description": "Label for custom search."
+  },
+  "menuContentHeaderSearchEngineSelectedCustom": {
+    "message": "Po meri",
+    "description": "Select option for custom search."
+  },
+  "menuContentHeaderSearchEngineCustomNameLabel": {
+    "message": "Ime",
+    "description": "Label for custom search name."
+  },
+  "menuContentHeaderSearchEngineCustomNamePlaceholder": {
+    "message": "Ime iskalnika",
+    "description": "Placeholder for custom search name."
+  },
+  "menuContentHeaderSearchEngineCustomUrlLabel": {
+    "message": "URL",
+    "description": "Label for custom search URL."
+  },
+  "menuContentHeaderSearchEngineCustomUrlPlaceholder": {
+    "message": "https://",
+    "description": "Placeholder for custom search URL."
+  },
+  "menuContentHeaderSearchEngineCustomUrlHelperPara1": {
+    "message": "Vnesite spletni naslov s parametri iskanja, npr.: »https://vimeo.com/search?q=«",
+    "description": "Helper text for custom search URL."
+  },
+  "menuContentHeaderSearchEngineCustomUrlHelperPara2": {
+    "message": "{appName} bo iskalni niz, vnesen v iskalno polje, dodal na konec zgornjega naslova URL.",
+    "description": "Helper text for custom search URL."
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameLabel": {
+    "message": "Atribut name",
+    "description": "Label for custom search name."
+  },
+  "menuContentHeaderSearchEngineCustomQueryNamePlaceholder": {
+    "message": "q",
+    "description": "Placeholder for custom search name."
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameHelperPara1": {
+    "message": "Nastavi atribut name na vnosnem polju za iskanje.",
+    "description": "Helper text for custom search name."
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameHelperPara2": {
+    "message": "To določa ime, ki se ob pošiljanju posreduje iskalniku. Če niste prepričani, pustite prazno.",
+    "description": "Helper text for custom search name."
+  },
+  "menuContentHeaderSearchEngineTextJustifyLabel": {
+    "message": "Poravnava besedila iskanja",
+    "description": "Label to justify search text."
+  },
+  "menuContentHeaderSearchEngineTextJustifyLeft": {
+    "message": "Levo",
+    "description": "Radio to justify the search text left."
+  },
+  "menuContentHeaderSearchEngineTextJustifyCenter": {
+    "message": "Sredina",
+    "description": "Radio to justify the search text centre."
+  },
+  "menuContentHeaderSearchEngineTextJustifyRight": {
+    "message": "Desno",
+    "description": "Radio to justify the search text right."
+  },
+  "menuContentHeaderSearchNewTab": {
+    "message": "Odpri rezultate iskanja v novem zavihku",
+    "description": "Checkbox for opening search results in a new tab."
+  },
+  "menuContentBookmarkGeneralShow": {
+    "message": "Pokaži zaznamke",
+    "description": "Checkbox for show bookmark."
+  },
+  "menuContentBookmarkGeneralUrlShow": {
+    "message": "Pokaži URL ob lebdenju nad zaznamkom",
+    "description": "Checkbox for show bookmark url on hover."
+  },
+  "menuContentBookmarkGeneralLineShow": {
+    "message": "Pokaži črto zaznamka",
+    "description": "Checkbox for show bookmark line."
+  },
+  "menuContentBookmarkGeneralShadowShowLabel": {
+    "message": "Pokaži senco ob lebdenju nad zaznamkom",
+    "description": "label for show bookmark shadow."
+  },
+  "menuContentBookmarkGeneralShadowShowDescription": {
+    "message": "Učinki morda ne bodo vidni, če je senca teme nastavljena na 0.",
+    "description": "Description to show bookmark shadow."
+  },
+  "menuContentBookmarkGeneralHoverScaleShow": {
+    "message": "Povečaj ob lebdenju nad zaznamkom",
+    "description": "Checkbox for scale bookmark on hover."
+  },
+  "menuContentBookmarkGeneralNewTab": {
+    "message": "Odpri zaznamke v novem zavihku",
+    "description": "Checkbox for open bookmark in a new tab."
+  },
+  "menuContentBookmarkGeneralSize": {
+    "message": "Velikost zaznamka",
+    "description": "Range for bookmark size."
+  },
+  "menuContentBookmarkStyleBlockLabel": {
+    "message": "Blok",
+    "description": "Label for bookmark block style."
+  },
+  "menuContentBookmarkStyleBlockDescription": {
+    "message": "Kvadratne ploščice zaznamkov.",
+    "description": "Description for bookmark block style."
+  },
+  "menuContentBookmarkStyleListLabel": {
+    "message": "Seznam",
+    "description": "Label for bookmark list style."
+  },
+  "menuContentBookmarkStyleListDescription": {
+    "message": "Nizke in široke ploščice zaznamkov.",
+    "description": "Description for bookmark list style."
+  },
+  "menuContentBookmarkOrientationTop": {
+    "message": "Zgoraj",
+    "description": "Radio for bookmark top orientation."
+  },
+  "menuContentBookmarkOrientationBottom": {
+    "message": "Spodaj",
+    "description": "Radio for bookmark bottom orientation."
+  },
+  "menuContentBookmarkOrientationHelperPara1": {
+    "message": "Prikaži URL in kontrolnike na vrhu ali na dnu ploščice zaznamka.",
+    "description": "Helper text for bookmark orientation."
+  },
+  "menuContentBookmarkSortLetter": {
+    "message": "Po črki",
+    "description": "Button to sort bookmarks by letter."
+  },
+  "menuContentBookmarkSortIcon": {
+    "message": "Po ikoni",
+    "description": "Button to sort bookmarks by Icon."
+  },
+  "menuContentBookmarkSortName": {
+    "message": "Po imenu",
+    "description": "Button to sort bookmarks by name."
+  },
+  "menuContentGroupAlignmentJustifyLabel": {
+    "message": "Poravnava območja podrobnosti skupine",
+    "description": "Label to justify group items."
+  },
+  "menuContentGroupAlignmentJustifyLeft": {
+    "message": "Levo",
+    "description": "Label to justify group items left."
+  },
+  "menuContentGroupAlignmentJustifyCenter": {
+    "message": "Sredina",
+    "description": "Label to justify group items centre."
+  },
+  "menuContentGroupAlignmentJustifyRight": {
+    "message": "Desno",
+    "description": "Label to justify group items right."
+  },
+  "menuContentGroupAlignmentOrderLabel": {
+    "message": "Vrstni red podrobnosti skupine",
+    "description": "Label for group order."
+  },
+  "menuContentGroupAlignmentOrderHeaderBodyLabel": {
+    "message": "Podrobnosti skupine, nato zaznamki",
+    "description": "Radio for group details then bookmarks order."
+  },
+  "menuContentGroupAlignmentOrderHeaderBodyDescription": {
+    "message": "Območje podrobnosti skupine naj bo prikazano pred območjem zaznamkov.",
+    "description": "Helper text for group details then bookmarks order."
+  },
+  "menuContentGroupAlignmentOrderBodyHeaderLabel": {
+    "message": "Zaznamki, nato podrobnosti skupine",
+    "description": "Radio for bookmarks then group details order."
+  },
+  "menuContentGroupAlignmentOrderBodyHeaderDescription": {
+    "message": "Območje zaznamkov naj bo prikazano pred območjem podrobnosti skupine.",
+    "description": "Helper text for bookmarks then group details order."
+  },
+  "menuContentGroupNameSize": {
+    "message": "Velikost imena",
+    "description": "Range for group name size."
+  },
+  "menuContentGroupNameShow": {
+    "message": "Pokaži vse",
+    "description": "Button to show all group names."
+  },
+  "menuContentGroupNameHide": {
+    "message": "Skrij vse",
+    "description": "Button to hide all group names."
+  },
+  "menuContentGroupNameHelperPara1": {
+    "message": "Imena skupin lahko spremenite tudi z urejanjem posameznih skupin.",
+    "description": "Helper text for show and hide all group names."
+  },
+  "menuContentGroupCollapseShow": {
+    "message": "Razširi vse skupine",
+    "description": "Button to open all groups."
+  },
+  "menuContentGroupCollapseHide": {
+    "message": "Strni vse skupine",
+    "description": "Button to collapse all groups."
+  },
+  "menuContentGroupToolbarSize": {
+    "message": "Velikost orodne vrstice skupine",
+    "description": "Range for group toolbar size."
+  },
+  "menuContentGroupToolbarCollapseLabel": {
+    "message": "Kontrolnik za strnitev skupine",
+    "description": "Label for group toolbar collapse control."
+  },
+  "menuContentGroupToolbarCollapseShow": {
+    "message": "Pokaži vse",
+    "description": "Button to show all group toolbar collapse control."
+  },
+  "menuContentGroupToolbarCollapseHide": {
+    "message": "Skrij vse",
+    "description": "Button to hide all group toolbar collapse control."
+  },
+  "menuContentGroupToolbarCollapseHelperPara1": {
+    "message": "Gumb za strnitev v orodni vrstici skupine lahko spremenite tudi z urejanjem posameznih skupin.",
+    "description": "Helper text for group toolbar collapse control."
+  },
+  "menuContentGroupToolbarOpenAllLabel": {
+    "message": "Kontrolnik »Odpri vse« skupine",
+    "description": "Label for the bookmark group toolbar open all control."
+  },
+  "menuContentGroupToolbarOpenAllShow": {
+    "message": "Pokaži vse",
+    "description": "Button to show all group toolbar open all control."
+  },
+  "menuContentGroupToolbarOpenAllHide": {
+    "message": "Skrij vse",
+    "description": "Button to hide all bookmark group toolbar open all control."
+  },
+  "menuContentGroupToolbarOpenAllHelperPara1": {
+    "message": "Gumb »Odpri vse« v orodni vrstici skupine lahko spremenite tudi z urejanjem posameznih skupin.",
+    "description": "Helper text for the bookmark group toolbar open all control."
+  },
+  "menuContentToolbarSize": {
+    "message": "Velikost orodne vrstice",
+    "description": "Range for bookmark group toolbar size."
+  },
+  "menuContentToolbarLocationCorner": {
+    "message": "V kotu",
+    "description": "Radio for bookmark group toolbar in a corner."
+  },
+  "menuContentToolbarLocationHeader": {
+    "message": "V glavi",
+    "description": "Radio for bookmark group toolbar in header."
+  },
+  "menuContentToolbarLocationHelperPara1": {
+    "message": "Postavite orodno vrstico v glavo ali v kot okna.",
+    "description": "Helper text for toolbar location."
+  },
+  "menuContentToolbarLocationNewLineLabel": {
+    "message": "Nova vrstica",
+    "description": "Checkbox to force the bookmark group toolbar onto a new line."
+  },
+  "menuContentToolbarLocationNewLineDescription": {
+    "message": "Prisilno prikaži v novi vrstici in loči od drugih elementov glave.",
+    "description": "Description to force the bookmark group toolbar onto a new line."
+  },
+  "menuContentToolbarLocationNewLineHelperPara1": {
+    "message": "Na voljo samo, kadar je orodna vrstica postavljena v glavo.",
+    "description": "Helper text for the bookmark group toolbar on a new line."
+  },
+  "menuContentToolbarPositionLabel": {
+    "message": "Položaj orodne vrstice",
+    "description": "Label for toolbar corner location."
+  },
+  "menuContentToolbarPositionTopLeft": {
+    "message": "Zgoraj levo",
+    "description": "Radio for bookmark group toolbar positioned in the top left corner."
+  },
+  "menuContentToolbarPositionTopRight": {
+    "message": "Zgoraj desno",
+    "description": "Radio for bookmark group toolbar positioned in the top right corner."
+  },
+  "menuContentToolbarPositionBottomLeft": {
+    "message": "Spodaj levo",
+    "description": "Radio for bookmark group toolbar positioned in the bottom left corner."
+  },
+  "menuContentToolbarPositionBottomRight": {
+    "message": "Spodaj desno",
+    "description": "Radio for bookmark group toolbar positioned in the bottom right corner."
+  },
+  "menuContentToolbarPositionHelper1Para1": {
+    "message": "Postavite orodno vrstico v enega od štirih kotov okna.",
+    "description": "Helper text for bookmark group toolbar corner location."
+  },
+  "menuContentToolbarPositionHelper2Para1": {
+    "message": "Na voljo samo, kadar je orodna vrstica postavljena v kot.",
+    "description": "Helper text for bookmark group toolbar corner location."
+  },
+  "menuContentToolbarControlsAccent": {
+    "message": "Pokaži kontrolnik za poudarno barvo",
+    "description": "Checkbox to show bookmark group toolbar accent control."
+  },
+  "menuContentToolbarControlsAdd": {
+    "message": "Pokaži kontrolnik za dodajanje",
+    "description": "Checkbox to show bookmark group toolbar add control."
+  },
+  "menuContentToolbarControlsEdit": {
+    "message": "Pokaži kontrolnik za urejanje",
+    "description": "Checkbox to show bookmark group toolbar edit control."
+  },
+  "menuContentDataRestoreFile": {
+    "message": "Uvozi iz datoteke",
+    "description": "Input for backup data file import."
+  },
+  "menuContentDataRestoreClipboard": {
+    "message": "Uvozi iz odložišča",
+    "description": "Button for clipboard backup data import."
+  },
+  "menuContentDataRestoreHelperPara1": {
+    "message": "Obnovite predhodno izvoženo varnostno kopijo {appName}.",
+    "description": "Helper text for backup data import."
+  },
+  "menuContentDataRestoreDrop": {
+    "message": "Ali pa sem povlecite datoteko varnostne kopije {appName}.",
+    "description": "Label for backup data file drop area."
+  },
+  "menuContentDataBackupFile": {
+    "message": "Izvozi podatke",
+    "description": "Button to export backup data file."
+  },
+  "menuContentDataBackupClipboard": {
+    "message": "Kopiraj v odložišče",
+    "description": "Button to copy backup data to clipboard."
+  },
+  "menuContentDataBackupHelperPara1": {
+    "message": "Prenesite varnostno kopijo svojih zaznamkov in nastavitev {appName}.",
+    "description": "Helper text for data backup."
+  },
+  "menuContentDataBackupHelperPara2": {
+    "message": "To datoteko lahko pozneje uvozite na tej ali drugi napravi.",
+    "description": "Helper text for data backup."
+  },
+  "menuContentDataClearAll": {
+    "message": "Počisti vse podatke",
+    "description": "Button to clear all data."
+  },
+  "menuContentDataClearPartial": {
+    "message": "Počisti vse razen zaznamkov",
+    "description": "Button to clear partial data."
+  },
+  "menuContentDataClearAlertPara": {
+    "message": "S čiščenjem vseh podatkov boste izgubili zaznamke.",
+    "description": "Alert for clear all data."
+  },
+  "menuContentDataClearAlertLink": {
+    "message": "Varnostno kopirajte svoje podatke",
+    "description": "Link for backup data."
+  },
+  "menuContentDataClearHelperPara1": {
+    "message": "Počistite vse podatke, da {appName} ponastavite na privzeto stanje.",
+    "description": "Helper text for clear all data."
+  },
+  "menuContentDataClearHelperPara2": {
+    "message": "Lahko pa izbrišete vse nastavitve in obdržite trenutne zaznamke in skupine.",
+    "description": "Helper text for clear all data."
+  },
+  "menuContentLanguageSelect": {
+    "message": "Jezik",
+    "description": "Select for language."
+  },
+  "menuContentLanguageSystem": {
+    "message": "Uporabi sistemski jezik",
+    "description": "Option to use the system defined language."
+  },
+  "menuContentLanguageAlertPara": {
+    "message": "Ste našli prevod, ki ni pravilen?",
+    "description": "Alert for language select."
+  },
+  "menuContentLanguageAlertLink": {
+    "message": "Pomagajte prevajati {appName}",
+    "description": "Link to help translate the project."
+  },
+  "menuContentSupportPageApplyToAll": {
+    "message": "Uporaba nastavitev zaznamka za vse",
+    "description": "Support link to project wiki."
+  },
+  "menuContentSupportPageBrowser": {
+    "message": "Podpora brskalnikov",
+    "description": "Support link to project wiki."
+  },
+  "menuContentSupportPageCookies": {
+    "message": "Piškotki in predpomnilnik",
+    "description": "Support link to project wiki."
+  },
+  "menuContentSupportPageData": {
+    "message": "Varnostno kopiranje in obnovitev podatkov",
+    "description": "Support link to project wiki."
+  },
+  "menuContentSupportPageLocalBackgroundImage": {
+    "message": "Lokalna slika ozadja",
+    "description": "Support link to project wiki."
+  },
+  "menuContentSupportPageProtectedUrl": {
+    "message": "Zaščiteni naslovi URL",
+    "description": "Support link to project wiki."
+  },
+  "menuContentSupportPageRecovering": {
+    "message": "Obnovitev nastavitev in zaznamkov",
+    "description": "Support link to project wiki."
+  },
+  "menuContentSupportPageResetting": {
+    "message": "Ponastavljanje ob odpiranju brskalnika",
+    "description": "Support link to project wiki."
+  },
+  "menuContentSupportPagePrivacy": {
+    "message": "Spoštovanje vaše zasebnosti",
+    "description": "Support link to project wiki."
+  },
+  "menuContentSupportPageBackgroundImageVideo": {
+    "message": "Nastavitev videoposnetka ali slike ozadja",
+    "description": "Support link to project wiki."
+  },
+  "menuContentSupportPageFirefox": {
+    "message": "Nastavitev {appName} kot domače strani v Firefoxu",
+    "description": "Support link to project wiki."
+  },
+  "menuContentSupportPara": {
+    "message": "Za dodatno podporo ali povratne informacije:",
+    "description": "Paragraph to get more support or provide feedback."
+  },
+  "menuContentSupportLink1": {
+    "message": "Prijavite težavo.",
+    "description": "Link to open an issue."
+  },
+  "menuContentSupportLink2": {
+    "message": "Preverite Wiki.",
+    "description": "Link to the project wiki."
+  },
+  "menuContentCoffeePara": {
+    "message": "{appName} je brezplačen, hvaležnost je dobrodošla v obliki kave!",
+    "description": "Paragraph to explain the project is free."
+  },
+  "menuContentCoffeeButton": {
+    "message": "Častite mi kavo",
+    "description": "Link to buy me a coffee to support the project."
+  },
+  "menuContentAppPara1": {
+    "message": "Delite svojo konfiguracijo s skupnostjo.",
+    "description": "Paragraph on where to share with the community."
+  },
+  "menuContentAppLink1": {
+    "message": "Najdete nas na Reddit/r/{appName}.",
+    "description": "Link to the community on Reddit."
+  },
+  "menuContentAppPara2": {
+    "message": "Ta projekt je odprtokoden.",
+    "description": "Paragraph on this project being open source."
+  },
+  "menuContentAppLink2": {
+    "message": "Najdete nas na GitHubu.",
+    "description": "Link to project on GitHub."
+  },
+  "menuContentAppLink3": {
+    "message": "GNU General Public Licence v3.0.",
+    "description": "Link to project project licence."
+  },
+  "bookmarkTileControlLeft": {
+    "message": "Premakni ta zaznamek levo",
+    "description": "Button for bookmark tile move left control."
+  },
+  "bookmarkTileControlSort": {
+    "message": "Povlecite zaznamek za spremembo vrstnega reda",
+    "description": "Button for bookmark tile drag to sort control."
+  },
+  "bookmarkTileControlRight": {
+    "message": "Premakni ta zaznamek desno",
+    "description": "Button for bookmark tile move right control."
+  },
+  "bookmarkTileControlEdit": {
+    "message": "Uredi ta zaznamek",
+    "description": "Button for bookmark tile edit control."
+  },
+  "bookmarkTileControlRemove": {
+    "message": "Odstrani ta zaznamek",
+    "description": "Button for bookmark tile remove control."
+  },
+  "bookmarkAddHeading": {
+    "message": "Dodaj nov zaznamek",
+    "description": "Heading for bookmark add modal."
+  },
+  "bookmarkAddSuccessText": {
+    "message": "Dodaj",
+    "description": "Button to confirm adding a bookmark."
+  },
+  "bookmarkAddCancelText": {
+    "message": "Prekliči",
+    "description": "Button to cancel adding a bookmark."
+  },
+  "bookmarkRemoveHeadingName": {
+    "message": "Odstrani",
+    "description": "Heading with a name for bookmark remove modal."
+  },
+  "bookmarkRemoveHeadingUnnamed": {
+    "message": "Odstrani neimenovan zaznamek",
+    "description": "Heading without a name for bookmark remove modal."
+  },
+  "bookmarkRemoveContent": {
+    "message": "Ali ste prepričani, da želite odstraniti ta zaznamek? Tega ni mogoče razveljaviti.",
+    "description": "Paragraph for bookmark remove modal."
+  },
+  "bookmarkRemoveSuccessText": {
+    "message": "Odstrani",
+    "description": "Button to confirm removing a bookmark."
+  },
+  "bookmarkRemoveCancelText": {
+    "message": "Prekliči",
+    "description": "Button to cancel removing a bookmark."
+  },
+  "bookmarkEditHeadingName": {
+    "message": "Uredi",
+    "description": "Heading with a name for bookmark edit modal."
+  },
+  "bookmarkEditHeadingUnnamed": {
+    "message": "Uredi neimenovan zaznamek",
+    "description": "Heading without a name for bookmark edit modal."
+  },
+  "bookmarkEditSuccessText": {
+    "message": "Shrani",
+    "description": "Button to confirm editing a bookmark."
+  },
+  "bookmarkEditCancelText": {
+    "message": "Prekliči",
+    "description": "Button to cancel editing a bookmark."
+  },
+  "bookmarkFormTabVisual": {
+    "message": "Videz in ime",
+    "description": "Label for bookmark form visual tab."
+  },
+  "bookmarkFormTabAddress": {
+    "message": "Naslov",
+    "description": "Label for bookmark form address tab."
+  },
+  "bookmarkFormTabPosition": {
+    "message": "Položaj",
+    "description": "Label for bookmark form position tab."
+  },
+  "bookmarkFormTabLayout": {
+    "message": "Postavitev",
+    "description": "Label for bookmark form layout tab."
+  },
+  "bookmarkFormTabTheme": {
+    "message": "Tema",
+    "description": "Label for bookmark form theme tab."
+  },
+  "bookmarkFormSectionVisualHeading": {
+    "message": "Videz in ime",
+    "description": "Heading for bookmark form visual page."
+  },
+  "bookmarkFormSectionVisualDescription": {
+    "message": "Na tej ploščici zaznamka prikažite črke, ikono, sliko in ime.",
+    "description": "Description for bookmark form visual page."
+  },
+  "bookmarkFormSectionAddressHeading": {
+    "message": "Naslov",
+    "description": "Heading for bookmark form address page."
+  },
+  "bookmarkFormSectionAddressDescription": {
+    "message": "Uporabite celoten naslov URL in vključite »https://...«",
+    "description": "Description for bookmark form address page."
+  },
+  "bookmarkFormSectionPositionHeading": {
+    "message": "Položaj",
+    "description": "Heading for bookmark form position page."
+  },
+  "bookmarkFormSectionPositionDescription": {
+    "message": "Skupina, v katero naj bo uvrščen ta zaznamek.",
+    "description": "Description for bookmark form position page."
+  },
+  "bookmarkFormSectionLayoutHeading": {
+    "message": "Postavitev",
+    "description": "Heading for bookmark form layout page."
+  },
+  "bookmarkFormSectionLayoutDescription": {
+    "message": "Spremenite položaj, merilo in usmerjenost vizualnega elementa in imena.",
+    "description": "Description for bookmark form layout page."
+  },
+  "bookmarkFormSectionThemeHeading": {
+    "message": "Tema",
+    "description": "Heading for bookmark form theme page."
+  },
+  "bookmarkFormSectionThemeDescription": {
+    "message": "Preglasite temo in poudarno barvo.",
+    "description": "Description for bookmark form theme page."
+  },
+  "bookmarkFormUrlLabel": {
+    "message": "URL",
+    "description": "Label for bookmark url."
+  },
+  "bookmarkFormUrlPlaceholder": {
+    "message": "https://www.example.com/",
+    "description": "Placeholder for bookmark url."
+  },
+  "bookmarkFormDisplayAlignmentLabel": {
+    "message": "Poravnava vizualnega elementa in imena",
+    "description": "Label for bookmark tile display alignment."
+  },
+  "bookmarkFormDisplayAlignmentTopLeft": {
+    "message": "Zgoraj levo",
+    "description": "Radio to align bookmark tile display top left."
+  },
+  "bookmarkFormDisplayAlignmentTopCenter": {
+    "message": "Zgoraj na sredini",
+    "description": "Radio to align bookmark tile display top centre."
+  },
+  "bookmarkFormDisplayAlignmentTopRight": {
+    "message": "Zgoraj desno",
+    "description": "Radio to align bookmark tile display top right."
+  },
+  "bookmarkFormDisplayAlignmentCenterLeft": {
+    "message": "Na sredini levo",
+    "description": "Radio to align bookmark tile display centre left."
+  },
+  "bookmarkFormDisplayAlignmentCenterCenter": {
+    "message": "Na sredini",
+    "description": "Radio to align bookmark tile display centre centre."
+  },
+  "bookmarkFormDisplayAlignmentCenterRight": {
+    "message": "Na sredini desno",
+    "description": "Radio to align bookmark tile display centre right."
+  },
+  "bookmarkFormDisplayAlignmentBottomLeft": {
+    "message": "Spodaj levo",
+    "description": "Radio to align bookmark tile display bottom left."
+  },
+  "bookmarkFormDisplayAlignmentBottomCenter": {
+    "message": "Spodaj na sredini",
+    "description": "Radio to align bookmark tile display bottom centre."
+  },
+  "bookmarkFormDisplayAlignmentBottomRight": {
+    "message": "Spodaj desno",
+    "description": "Radio to align bookmark tile display bottom right."
+  },
+  "bookmarkFormDisplayDirectionVerticalLabel": {
+    "message": "Navpično",
+    "description": "Label for bookmark tile display vertical direction."
+  },
+  "bookmarkFormDisplayDirectionVerticalDescription": {
+    "message": "Vizualni element in ime postavi enega nad drugega.",
+    "description": "Description for bookmark tile display vertical direction."
+  },
+  "bookmarkFormDisplayDirectionHorizontalLabel": {
+    "message": "Vodoravno",
+    "description": "Label for bookmark tile display horizontal direction."
+  },
+  "bookmarkFormDisplayDirectionHorizontalDescription": {
+    "message": "Vizualni element in ime razporedi enega ob drugem.",
+    "description": "Description for bookmark tile display horizontal direction."
+  },
+  "bookmarkFormDisplayOrderVisualNameLabel": {
+    "message": "Vizualni element, nato ime",
+    "description": "Label for bookmark tile display visual then name order."
+  },
+  "bookmarkFormDisplayOrderVisualNameDescription": {
+    "message": "Vizualni element postavi pred ime.",
+    "description": "Description for bookmark tile display visual then name order."
+  },
+  "bookmarkFormDisplayOrderNameVisualLabel": {
+    "message": "Ime, nato vizualni element",
+    "description": "Label for bookmark tile display name then visual order."
+  },
+  "bookmarkFormDisplayOrderNameVisualDescription": {
+    "message": "Ime postavi pred vizualni element.",
+    "description": "Description for bookmark tile display name then visual order."
+  },
+  "bookmarkFormDisplayRotate": {
+    "message": "Zasuk",
+    "description": "Range for bookmark tile visual rotation."
+  },
+  "bookmarkFormDisplayTranslateLabel": {
+    "message": "Prilagodite položaj vizualnega elementa",
+    "description": "Label for bookmark tile visual translation."
+  },
+  "bookmarkFormDisplayTranslateX": {
+    "message": "Vodoravno",
+    "description": "Range for bookmark tile visual translation along the x axis."
+  },
+  "bookmarkFormDisplayTranslateY": {
+    "message": "Navpično",
+    "description": "Range for bookmark tile visual translation along the y axis."
+  },
+  "bookmarkFormDisplayGutter": {
+    "message": "Razmik",
+    "description": "Range for bookmark tile gutter space between visual and name."
+  },
+  "bookmarkFormDisplayVisualShowLabel": {
+    "message": "Pokaži vizualni element",
+    "description": "Checkbox to show bookmark tile visual."
+  },
+  "bookmarkFormDisplayVisualShowDescription": {
+    "message": "Na tem šestkotniku zaznamka prikaže črke, ikono ali sliko.",
+    "description": "Description to show bookmark tile visual."
+  },
+  "bookmarkFormDisplayVisualTypeLetter": {
+    "message": "Črka",
+    "description": "Radio for bookmark tile visual letter."
+  },
+  "bookmarkFormDisplayVisualTypeIcon": {
+    "message": "Ikona",
+    "description": "Radio for bookmark tile visual icon."
+  },
+  "bookmarkFormDisplayVisualTypeImage": {
+    "message": "Slika",
+    "description": "Radio for bookmark tile visual image."
+  },
+  "bookmarkFormDisplayVisualSize": {
+    "message": "Velikost vizualnega elementa",
+    "description": "Range for bookmark tile visual size."
+  },
+  "bookmarkFormDisplayVisualLetterTextLabel": {
+    "message": "Črka zaznamka",
+    "description": "Label for bookmark tile visual text."
+  },
+  "bookmarkFormDisplayVisualLetterTextPlaceholder": {
+    "message": "E",
+    "description": "Placeholder for bookmark tile visual text."
+  },
+  "bookmarkFormDisplayVisualIconTextLabel": {
+    "message": "Ikona zaznamka",
+    "description": "Label for bookmark tile visual icon."
+  },
+  "bookmarkFormDisplayVisualIconTextPlaceholder": {
+    "message": "FontAwesome Brands ali Icons",
+    "description": "Placeholder for bookmark tile visual icon."
+  },
+  "bookmarkFormDisplayVisualIconRemove": {
+    "message": "Odstrani ikono",
+    "description": "Button to remove the bookmark tile visual icon."
+  },
+  "bookmarkFormDisplayVisualImageUrlLabel": {
+    "message": "Slika zaznamka",
+    "description": "Label for bookmark tile visual image URL."
+  },
+  "bookmarkFormDisplayVisualImageUrlPlaceholder": {
+    "message": "https://www.example.com/image.jpg",
+    "description": "Placeholder for bookmark tile visual image URL."
+  },
+  "bookmarkFormDisplayVisualShadowSize": {
+    "message": "Senca vizualnega elementa",
+    "description": "Range for bookmark tile visual shadow."
+  },
+  "bookmarkFormDisplayVisualShadowHelperPara1": {
+    "message": "Senca vizualnega elementa velja samo za črko ali ikono.",
+    "description": "Helper text for bookmark tile visual shadow."
+  },
+  "bookmarkFormDisplayNameShow": {
+    "message": "Pokaži ime",
+    "description": "Checkbox to show bookmark tile name."
+  },
+  "bookmarkFormDisplayNameTextLabel": {
+    "message": "Ime zaznamka",
+    "description": "Label for bookmark tile name."
+  },
+  "bookmarkFormDisplayNameTextPlaceholder": {
+    "message": "Primer",
+    "description": "Placeholder for bookmark tile name."
+  },
+  "bookmarkFormDisplayNameSize": {
+    "message": "Velikost imena",
+    "description": "Range for bookmark tile name size."
+  },
+  "bookmarkFormAccentByThemeLabel": {
+    "message": "Poudarek teme",
+    "description": "Label for bookmark tile to use the theme accent."
+  },
+  "bookmarkFormAccentByThemeDescription": {
+    "message": "Uporabi poudarno barvo, določeno s temo.",
+    "description": "Description for bookmark tile to use the theme accent."
+  },
+  "bookmarkFormAccentByCustomLabel": {
+    "message": "Poudarek po meri",
+    "description": "Label for bookmark tile to use a custom accent."
+  },
+  "bookmarkFormAccentByCustomDescription": {
+    "message": "Preglasi poudarno barvo teme.",
+    "description": "Description for bookmark tile to use a custom accent."
+  },
+  "bookmarkFormAccentColor": {
+    "message": "Poudarek",
+    "description": "Label for bookmark tile accent."
+  },
+  "bookmarkFormColorByThemeLabel": {
+    "message": "Barva teme",
+    "description": "Label for bookmark tile to use the theme colour."
+  },
+  "bookmarkFormColorByThemeDescription": {
+    "message": "Uporabi barvo, določeno s temo.",
+    "description": "Description for bookmark tile to use the theme colour."
+  },
+  "bookmarkFormColorByCustomLabel": {
+    "message": "Barva po meri",
+    "description": "Label for bookmark tile to use a custom colour."
+  },
+  "bookmarkFormColorByCustomDescription": {
+    "message": "Preglasi barvo teme.",
+    "description": "Description for bookmark tile to use a custom colour."
+  },
+  "bookmarkFormColorColor": {
+    "message": "Barva",
+    "description": "Label for bookmark tile colour."
+  },
+  "bookmarkFormColorOpacity": {
+    "message": "Prosojnost",
+    "description": "Range for bookmark tile opacity."
+  },
+  "bookmarkFormBackgroundShowLabel": {
+    "message": "Pokaži ozadje",
+    "description": "Label for bookmark tile background."
+  },
+  "bookmarkFormBackgroundShowDescription": {
+    "message": "Na tej ploščici zaznamka prikaže sliko ali videoposnetek kot ozadje.",
+    "description": "Description for bookmark tile background."
+  },
+  "bookmarkFormBackgroundTypeImage": {
+    "message": "Slika",
+    "description": "Radio for bookmark tile image background."
+  },
+  "bookmarkFormBackgroundTypeVideo": {
+    "message": "Videoposnetek",
+    "description": "Radio for bookmark tile video background."
+  },
+  "bookmarkFormBackgroundOpacity": {
+    "message": "Prosojnost",
+    "description": "Range for bookmark tile background opacity."
+  },
+  "bookmarkFormBackgroundImageLabel": {
+    "message": "URL slike ozadja",
+    "description": "Label for bookmark tile background image URL."
+  },
+  "bookmarkFormBackgroundImagePlaceholder": {
+    "message": "https://www.example.com/image.jpg",
+    "description": "Placeholder for bookmark tile background image URL."
+  },
+  "bookmarkFormBackgroundImageHelperPara1": {
+    "message": "Slika ozadja podpira samo neposredni URL do slikovne datoteke.",
+    "description": "Helper text for bookmark tile background image URL."
+  },
+  "bookmarkFormBackgroundVideoLabel": {
+    "message": "URL videoposnetka ozadja",
+    "description": "Label for bookmark tile background video URL."
+  },
+  "bookmarkFormBackgroundVideoPlaceholder": {
+    "message": "https://www.example.com/video.mp4",
+    "description": "Placeholder for bookmark tile background video URL."
+  },
+  "bookmarkFormBackgroundVideoHelperPara1": {
+    "message": "Videoposnetek ozadja podpira samo neposredni URL do videodatoteke. Podprta sta formata MP4 in WebM.",
+    "description": "Helper text for bookmark tile background video URL."
+  },
+  "bookmarkFormBackgroundVideoHelperPara2": {
+    "message": "URL-jev strani YouTube ni mogoče uporabiti.",
+    "description": "Helper text for bookmark tile background video URL."
+  },
+  "bookmarkFormBorder": {
+    "message": "Obroba",
+    "description": "Range for bookmark tile border."
+  },
+  "bookmarkFormShapeWideLabel": {
+    "message": "Široka ploščica",
+    "description": "Label for bookmark tile wide shape."
+  },
+  "bookmarkFormShapeWideDescription": {
+    "message": "Ploščica zaznamka se razteza čez dva stolpca.",
+    "description": "Description for bookmark tile wide shape."
+  },
+  "bookmarkFormShapeTallLabel": {
+    "message": "Visoka ploščica",
+    "description": "Label for bookmark tile tall shape."
+  },
+  "bookmarkFormShapeTallDescription": {
+    "message": "Ploščica zaznamka se razteza čez dve vrstici.",
+    "description": "Description for bookmark tile tall shape."
+  },
+  "bookmarkFormGroupDestinationExisting": {
+    "message": "Obstoječa skupina",
+    "description": "Radio for bookmark position in existing bookmark group."
+  },
+  "bookmarkFormGroupDestinationNew": {
+    "message": "Nova skupina",
+    "description": "Radio for bookmark position in new bookmark group."
+  },
+  "bookmarkFormGroupNameLabel": {
+    "message": "URL",
+    "description": "Label for bookmark group name."
+  },
+  "bookmarkFormGroupNamePlaceholder": {
+    "message": "Primer skupine",
+    "description": "Placeholder for bookmark group name."
+  },
+  "bookmarkFormGroupRandom": {
+    "message": "Naključno ime skupine",
+    "description": "Button for random group name."
+  },
+  "bookmarkFormGroupPositionGroup": {
+    "message": "Skupina",
+    "description": "Select for bookmark group position."
+  },
+  "bookmarkFormGroupPositionItem": {
+    "message": "Položaj",
+    "description": "Select for bookmark position in a group."
+  },
+  "bookmarkFormPropagateVisualLabel": {
+    "message": "Uporabi »Pokaži vizualni element« in »Pokaži ime« za druge zaznamke",
+    "description": "Checkbox to share current bookmark visual settings to all other bookmarks."
+  },
+  "bookmarkFormPropagateVisualDescriptionPara1": {
+    "message": "Črka, ikona, slika in besedilo imena ne bodo deljeni.",
+    "description": "Helper text to share current bookmark visual settings to all other bookmarks."
+  },
+  "bookmarkFormPropagateVisualDescriptionPara2": {
+    "message": "Uporabno za skrivanje vizualnih elementov ali imen na vseh zaznamkih.",
+    "description": "Helper text to share current bookmark visual settings to all other bookmarks."
+  },
+  "bookmarkFormPropagateLayoutLabel": {
+    "message": "Uporabi postavitev za druge zaznamke",
+    "description": "Checkbox to share current bookmark layout settings to all other bookmarks."
+  },
+  "bookmarkFormPropagateLayoutDescriptionPara1": {
+    "message": "Ob shranjevanju zgornjo postavitev uporabi za vse druge zaznamke.",
+    "description": "Helper text to share current bookmark layout settings to all other bookmarks."
+  },
+  "bookmarkFormPropagateLayoutDescriptionPara2": {
+    "message": "Za vse bodo uporabljeni samo velikost vizualnega elementa in imena, poravnava, vrstni red, položaj in razmik.",
+    "description": "Helper text to share current bookmark layout settings to all other bookmarks."
+  },
+  "bookmarkFormPropagateThemeLabel": {
+    "message": "Uporabi temo za druge zaznamke",
+    "description": "Checkbox to share current bookmark theme settings to all other bookmarks."
+  },
+  "bookmarkFormPropagateThemeDescriptionPara1": {
+    "message": "Ob shranjevanju zgornjo temo uporabi za vse druge zaznamke.",
+    "description": "Helper text to share current bookmark theme settings to all other bookmarks."
+  },
+  "bookmarkFormPropagateThemeDescriptionPara2": {
+    "message": "Za vse bodo uporabljeni samo barva, poudarek, prosojnost, obroba in senca vizualnega elementa.",
+    "description": "Helper text to share current bookmark theme settings to all other bookmarks."
+  },
+  "bookmarkPreviewFull": {
+    "message": "Predogled",
+    "description": "Paragraph for bookmark full size preview."
+  },
+  "bookmarkPreviewHalf": {
+    "message": "Predogled (merilo 50 %)",
+    "description": "Paragraph for bookmark half size preview."
+  },
+  "groupAreaControlUp": {
+    "message": "Premakni to skupino navzgor",
+    "description": "Button for bookmark group move up control."
+  },
+  "groupAreaControlSort": {
+    "message": "Povlecite skupino za spremembo vrstnega reda",
+    "description": "Button for bookmark group drag to sort control."
+  },
+  "groupAreaControlDown": {
+    "message": "Premakni to skupino navzdol",
+    "description": "Button for bookmark group move down control."
+  },
+  "groupAreaControlEdit": {
+    "message": "Uredi to skupino",
+    "description": "Button for bookmark group edit control."
+  },
+  "groupAreaControlRemove": {
+    "message": "Odstrani to skupino",
+    "description": "Button for bookmark group remove control."
+  },
+  "groupAreaControlOpenAll": {
+    "message": "Odpri vse zaznamke v tej skupini",
+    "description": "Button for bookmark group control to open all bookmarks."
+  },
+  "groupAreaControlCollapse": {
+    "message": "Strni to skupino",
+    "description": "Button for bookmark group control to collapse bookmark group."
+  },
+  "groupAddHeading": {
+    "message": "Dodaj novo skupino",
+    "description": "Heading for bookmark group add modal."
+  },
+  "groupAddSuccessText": {
+    "message": "Dodaj",
+    "description": "Button to confirm adding a bookmark group."
+  },
+  "groupAddCancelText": {
+    "message": "Prekliči",
+    "description": "Button to cancel adding a bookmark group."
+  },
+  "groupRemoveHeadingName": {
+    "message": "Odstrani",
+    "description": "Heading with a name for bookmark group remove modal."
+  },
+  "groupRemoveHeadingUnnamed": {
+    "message": "Odstrani neimenovano skupino",
+    "description": "Heading without a name for bookmark group remove modal."
+  },
+  "groupRemoveContent": {
+    "message": "Ali ste prepričani, da želite odstraniti to skupino in vse zaznamke v njej? Tega ni mogoče razveljaviti.",
+    "description": "Paragraph for bookmark group remove modal."
+  },
+  "groupRemoveSuccessText": {
+    "message": "Odstrani",
+    "description": "Button to confirm removing a bookmark group."
+  },
+  "groupRemoveCancelText": {
+    "message": "Prekliči",
+    "description": "Button to cancel removing a bookmark group."
+  },
+  "groupEditHeadingName": {
+    "message": "Uredi",
+    "description": "Heading with a name for bookmark group edit modal."
+  },
+  "groupEditHeadingUnnamed": {
+    "message": "Uredi neimenovano skupino",
+    "description": "Heading without a name for bookmark group edit modal."
+  },
+  "groupEditSuccessText": {
+    "message": "Shrani",
+    "description": "Button to confirm editing a bookmark group."
+  },
+  "groupEditCancelText": {
+    "message": "Prekliči",
+    "description": "Button to cancel editing a bookmark group."
+  },
+  "groupFormSectionNameHeading": {
+    "message": "Ime",
+    "description": "Heading for bookmark group form name."
+  },
+  "groupFormSectionNameDescription": {
+    "message": "Nad to skupino prikaže ime.",
+    "description": "Description for bookmark group form name."
+  },
+  "groupFormSectionToolbarHeading": {
+    "message": "Orodna vrstica",
+    "description": "Heading for bookmark group form toolbar."
+  },
+  "groupFormSectionToolbarDescription": {
+    "message": "Prikaže kontrolnike za odpiranje vseh ali prikaz/skrivanje zaznamkov v tej skupini.",
+    "description": "Description for bookmark group form toolbar."
+  },
+  "groupFormSectionOrderingHeading": {
+    "message": "Vrstni red",
+    "description": "Heading for bookmark group form order."
+  },
+  "groupFormSectionOrderingDescription": {
+    "message": "Položaj te skupine.",
+    "description": "Description for bookmark group form order."
+  },
+  "groupFormNameShow": {
+    "message": "Pokaži ime skupine",
+    "description": "Checkbox to show bookmark group name."
+  },
+  "groupFormNameTextLabel": {
+    "message": "Ime skupine",
+    "description": "Label for bookmark group name."
+  },
+  "groupFormNameTextPlaceholder": {
+    "message": "Primer skupine",
+    "description": "Placeholder for bookmark group name."
+  },
+  "groupFormNameRandom": {
+    "message": "Naključno ime skupine",
+    "description": "Button for random bookmark group name."
+  },
+  "groupFormCollapseShowLabel": {
+    "message": "Pokaži gumb Strni",
+    "description": "Label to show bookmark group toolbar collapse button."
+  },
+  "groupFormCollapseShowDescription": {
+    "message": "Gumb Strni pokaže ali skrije zaznamke v tej skupini.",
+    "description": "Description to show bookmark group toolbar collapse button."
+  },
+  "groupFormOpenAllShowLabel": {
+    "message": "Pokaži gumb Odpri vse",
+    "description": "Label to show bookmark group toolbar open all button."
+  },
+  "groupFormOpenAllShowDescription": {
+    "message": "Gumb Odpri vse se prikaže, če je v tej skupini vsaj en zaznamek.",
+    "description": "Description to show bookmark group toolbar open all button."
+  },
+  "groupFormDestination": {
+    "message": "Položaj",
+    "description": "Select for bookmark group position."
+  },
+  "themeCustomTileControlEdit": {
+    "message": "Uredi to shranjeno temo po meri",
+    "description": "Button to edit saved custom theme."
+  },
+  "themeCustomTileControlRemove": {
+    "message": "Odstrani to shranjeno temo po meri",
+    "description": "Button to remove saved custom theme."
+  },
+  "themeCustomFormNameLabel": {
+    "message": "Ime",
+    "description": "Label for saved custom theme name."
+  },
+  "themeCustomFormNamePlaceholder": {
+    "message": "Primer teme",
+    "description": "Placeholder for saved custom theme name."
+  },
+  "themeCustomFormRandom": {
+    "message": "Naključno ime teme",
+    "description": "Button for random saved custom theme name."
+  },
+  "themeCustomAddHeading": {
+    "message": "Shrani trenutno temo",
+    "description": "Heading for saved custom theme add modal."
+  },
+  "themeCustomAddSuccessText": {
+    "message": "Shrani",
+    "description": "Button to confirm adding a saved custom theme."
+  },
+  "themeCustomAddCancelText": {
+    "message": "Prekliči",
+    "description": "Button to cancel adding a saved custom theme."
+  },
+  "themeCustomRemoveHeadingName": {
+    "message": "Odstrani",
+    "description": "Heading with a name for saved custom theme remove modal."
+  },
+  "themeCustomRemoveHeadingUnnamed": {
+    "message": "Odstrani neimenovano temo po meri",
+    "description": "Heading without a name for saved custom theme remove modal."
+  },
+  "themeCustomRemoveContent": {
+    "message": "Ali ste prepričani, da želite odstraniti to shranjeno temo po meri? Tega ni mogoče razveljaviti.",
+    "description": "Paragraph for saved custom theme remove modal."
+  },
+  "themeCustomRemoveSuccessText": {
+    "message": "Shrani",
+    "description": "Button to confirm removing a saved custom theme."
+  },
+  "themeCustomRemoveCancelText": {
+    "message": "Prekliči",
+    "description": "Button to cancel removing a saved custom theme."
+  },
+  "themeCustomEditHeadingName": {
+    "message": "Uredi",
+    "description": "Heading with a name for saved custom theme edit modal."
+  },
+  "themeCustomEditHeadingUnnamed": {
+    "message": "Uredi neimenovano temo po meri",
+    "description": "Heading without a name for saved custom theme edit modal."
+  },
+  "themeCustomEditSuccessText": {
+    "message": "Odstrani",
+    "description": "Button to confirm editing a saved custom theme."
+  },
+  "themeCustomEditCancelText": {
+    "message": "Prekliči",
+    "description": "Button to cancel editing a saved custom theme."
+  },
+  "toolbarAccent": {
+    "message": "Poudarna barva",
+    "description": "Button for toolbar accent control."
+  },
+  "toolbarAddLabel": {
+    "message": "Dodaj",
+    "description": "Button for toolbar control to add."
+  },
+  "toolbarAddGroup": {
+    "message": "Nova skupina",
+    "description": "Button for toolbar control to add a new bookmark."
+  },
+  "toolbarAddBookmark": {
+    "message": "Nov zaznamek",
+    "description": "Button for toolbar control to add a new bookmark group."
+  },
+  "toolbarEdit": {
+    "message": "Uredi skupine in zaznamke",
+    "description": "Button for toolbar to toggle edit mode."
+  },
+  "toolbarSetting": {
+    "message": "Odpri meni z nastavitvami",
+    "description": "Button for toolbar to open settings menu."
+  },
+  "dataFormDescription": {
+    "message": "Obnovite lahko celotno varnostno kopijo ali le njene dele. Obnovljeni bodo naslednji podatki:",
+    "description": "Description for restoring from backup data."
+  },
+  "dataFormBookmarkIncludeLabel": {
+    "message": "Zaznamki",
+    "description": "Heading for restoring backup data bookmarks."
+  },
+  "dataFormBookmarkIncludeDescriptionPara1": {
+    "message": "To vključuje vse skupine in zaznamke",
+    "description": "Description for restoring backup data bookmarks."
+  },
+  "dataFormBookmarkIncludeDescriptionPara2": {
+    "message": "Zaznamki bodo ob uvozu ohranili vse barve, poudarke in obrobe po meri.",
+    "description": "Description for restoring backup data bookmarks."
+  },
+  "dataFormBookmarkTypeRestore": {
+    "message": "Zamenjaj obstoječe zaznamke",
+    "description": "Radio to replace existing bookmarks when restoring from backup data."
+  },
+  "dataFormBookmarkTypeAppend": {
+    "message": "Dodaj k obstoječim zaznamkom",
+    "description": "Radio to append to existing bookmarks when restoring from backup data."
+  },
+  "dataFormThemeIncludeLabel": {
+    "message": "Tema",
+    "description": "Label to restore theme date from backup data."
+  },
+  "dataFormThemeIncludeDescription": {
+    "message": "To vključuje barvo, poudarek, pisave, ozadje in vse shranjene teme po meri.",
+    "description": "Description to restore theme date from backup data."
+  },
+  "dataFormSetupIncludeLabel": {
+    "message": "Nastavitve",
+    "description": "Label to restore setting date from backup data."
+  },
+  "dataFormSetupIncludeDescription": {
+    "message": "To vključuje velikost in položaj postavitve, velikost območja glave, velikost območja zaznamkov in druge uporabniške nastavitve.",
+    "description": "Description to restore setting date from backup data."
+  },
+  "dataRestoreHeading": {
+    "message": "Obnavljanje iz varnostne kopije {appName}",
+    "description": "Heading for restore backup data modal."
+  },
+  "dataRestoreSuccessText": {
+    "message": "Uvozi",
+    "description": "Button to confirm restoring from backup data."
+  },
+  "dataRestoreCancelText": {
+    "message": "Prekliči",
+    "description": "Button to cancel restoring from backup data."
+  },
+  "dataClearAllHeading": {
+    "message": "Želite počistiti vse podatke {appName}?",
+    "description": "Heading for clear all data modal."
+  },
+  "dataClearAllContentPara1": {
+    "message": "Ali ste prepričani, da želite počistiti vse zaznamke in nastavitve {appName}? {appName} bo obnovljen v privzeto stanje.",
+    "description": "Paragraph for clear all data modal."
+  },
+  "dataClearAllContentPara2": {
+    "message": "Tega ni mogoče razveljaviti.",
+    "description": "Paragraph for clear all data modal."
+  },
+  "dataClearAllSuccessText": {
+    "message": "Počisti vse podatke",
+    "description": "Button to confirm clear all data."
+  },
+  "dataClearAllCancelText": {
+    "message": "Prekliči",
+    "description": "Button to cancel clear all data."
+  },
+  "dataClearPartialHeading": {
+    "message": "Želite počistiti podatke {appName} razen zaznamkov?",
+    "description": "Heading for clear partial data modal."
+  },
+  "dataClearPartialContentPara1": {
+    "message": "Ali ste prepričani, da želite počistiti vse nastavitve {appName}? {appName} bo obnovljen v privzeto stanje, vaši zaznamki in skupine pa bodo ostali.",
+    "description": "Paragraph for clear partial data modal."
+  },
+  "dataClearPartialContentPara2": {
+    "message": "Tega ni mogoče razveljaviti.",
+    "description": "Paragraph for clear partial data modal."
+  },
+  "dataClearPartialSuccessText": {
+    "message": "Počisti vse razen zaznamkov",
+    "description": "Button to confirm clear partial data."
+  },
+  "dataClearPartialCancelText": {
+    "message": "Prekliči",
+    "description": "Button to cancel clear partial data."
+  },
+  "dataExportBackup": {
+    "message": "varnostna kopija",
+    "description": "String for backup data file name."
+  },
+  "dataFeedbackEmpty": {
+    "message": "Za uvoz ni izbrano nič.",
+    "description": "Paragraph for validation when backup data is empty."
+  },
+  "dataFeedbackSuccess": {
+    "message": "Uspelo! Obnavljanje zaznamkov in nastavitev {appName}.",
+    "description": "Paragraph for when backup data is valid."
+  },
+  "dataFeedbackFailNotJson": {
+    "message": "To ni datoteka JSON. Prepričajte se, da izbrana datoteka izvira iz {appName}.",
+    "description": "Paragraph for when backup data is not valid JSON."
+  },
+  "dataFeedbackFailNotAppJson": {
+    "message": "To ni prava vrsta datoteke JSON. Prepričajte se, da izbrana datoteka izvira iz {appName}.",
+    "description": "Paragraph for when backup data is not valid JSON from this project."
+  },
+  "dataFeedbackFailNotClipboardJson": {
+    "message": "To ni prava vrsta podatkov. Prepričajte se, da odložišče vsebuje podatke iz {appName} ali datoteko JSON z varnostno kopijo {appName}.",
+    "description": "Paragraph for when backup data in clipboard is not valid JSON."
+  },
+  "controlGeneralReset": {
+    "message": "Ponastavi na privzeto",
+    "description": "Button for reset button control."
+  },
+  "controlColorTextPlaceholder": {
+    "message": "Šestnajstiška koda",
+    "description": "Placeholder for hex colour code."
+  },
+  "controlColorRandom": {
+    "message": "Naključna barva",
+    "description": "Button for random colour."
+  },
+  "controlColorMixerMoreControls": {
+    "message": "Več kontrolnikov",
+    "description": "Button to show more colour controls."
+  },
+  "controlColorMixerSliderH": {
+    "message": "Odtenek",
+    "description": "Label for colour control hue."
+  },
+  "controlColorMixerSliderS": {
+    "message": "Nasičenost",
+    "description": "Label for colour control saturation."
+  },
+  "controlColorMixerSliderL": {
+    "message": "Svetlost",
+    "description": "Label for colour control lightness."
+  },
+  "controlColorMixerSliderR": {
+    "message": "Rdeča",
+    "description": "Label for colour control red."
+  },
+  "controlColorMixerSliderG": {
+    "message": "Zelena",
+    "description": "Label for colour control green."
+  },
+  "controlColorMixerSliderB": {
+    "message": "Modra",
+    "description": "Label for colour control blue."
+  }
+}
